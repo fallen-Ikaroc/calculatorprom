@@ -1,0 +1,57 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+#block1{
+  max-width: 1910px;
+  font-family: 'Russo One', sans-serif;
+}
+.flip-horizontal{
+-moz-transform: scale(-1, 1);
+-ms-transform: scale(-1, 1);
+-webkit-transform: scale(-1, 1);
+-o-transform: scale(-1, 1);
+transform: scale(-1, 1);
+filter: FlipH;
+-ms-filter: "FlipH";
+}
+.line_1{
+  height: 11px;
+  width: 130px;
+  background-color: #ffa700;
+  transform: skewX(30deg);
+  -webkit-transform: skewX(30deg);
+  -moz-transform: skewX(30deg);
+  -ms-transform: skewX(30deg);
+  -o-transform: skewX(30deg);
+}
+.line_2{
+  height: 5px;
+  width: 200px;
+  background-color: #58778c;
+  transform: skewX(30deg);
+  -webkit-transform: skewX(30deg);
+  -moz-transform: skewX(30deg);
+  -ms-transform: skewX(30deg);
+  -o-transform: skewX(30deg);
+}
+.line_3{
+  height: 5px;
+  width: 400px;
+  background-color: #58778c;
+  transform: skewX(30deg);
+  -webkit-transform: skewX(30deg);
+  -moz-transform: skewX(30deg);
+  -ms-transform: skewX(30deg);
+  -o-transform: skewX(30deg);
+}
+.line_4{
+  height: 5px;
+  width: 400px;
+  background-color: #58778c;
+  transform: skewX(30deg);
+  -webkit-transform: skewX(30deg);
+  -moz-transform: skewX(30deg);
+  -ms-transform: skewX(30deg);
+  -o-transform: skewX(30deg);
+}
