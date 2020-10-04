@@ -34,10 +34,10 @@
     </div>
 
     <div id="block1_plaster">
-      <input type="radio" id="block1_knaufg" name="plaster" value="435" class="radio">
-      <input type="radio" id="block1_volma" name="plaster" value="500" class="radio">
-      <input type="radio" id="block1_knaufc" name="plaster" value="550" class="radio">
-      <input type="radio" id="block1_plitonit" name="plaster" value="560" class="radio">
+      <input type="radio" id="block1_knaufg" name="plaster" value="435" class="radio_plaster" checked>
+      <input type="radio" id="block1_volma" name="plaster" value="500" class="radio_plaster">
+      <input type="radio" id="block1_knaufc" name="plaster" value="550" class="radio_plaster">
+      <input type="radio" id="block1_plitonit" name="plaster" value="560" class="radio_plaster">
     </div>
 
   </section>
@@ -49,7 +49,7 @@
     <div id="block2_wall">
 
       <div id="block2_wall_plaster" style="display: flex">
-        штукатурка
+        штукатурка стены<div style="width:100px"></div>
         <input id="wall_plaster_square" type="text" value="0"></input>
         <div id="wall_plaster_price">435</div>
         <select id="wall_plaster_thickness">
@@ -70,9 +70,9 @@
       </div>
 
       <div id="block2_wall_primer" style="display: flex">
-        грунтовка
-        <input type="radio" id="block2_wall_primer_knauf" name="primer" value="1" class="radio2" checked>
-        <input type="radio" id="block2_wall_primer_kreps" name="primer" value="2" class="radio2">
+        грунтовка стены<div style="width:100px"></div>
+        <input type="radio" id="block2_wall_primer_knauf" name="wall_primer" value="1" class="radio_wall_primer" checked>
+        <input type="radio" id="block2_wall_primer_kreps" name="wall_primer" value="2" class="radio_wall_primer">
         <div id="wall_primer_square">0</div>
         <div>|</div>
         <div id="wall_primer_price">2064</div>
@@ -83,101 +83,121 @@
         <div>|</div>
         <div id="wall_primer_weight">0</div>
         <div>|</div>
-        <div id="wall_primer_quantity"></div>
+        <div id="wall_primer_quantity">0</div>
         <div>|</div>
-        <div id="wall_primer_sum"></div>
+        <div id="wall_primer_sum">0</div>
       </div>
 
-      <div id="block2_wall_grid">
-        <a id="block2_wall_grid_glass"></a>
-        <a id="block2_wall_grid_zinс"></a>
-        <div id="wall_plaster_square"></div>
-        <div id="wall_plaster_price"></div>
-        <div id="wall_plaster_consumeperone"></div>
-        <div id="wall_plaster_consume"></div>
-        <div id="wall_plaster_weight"></div>
-        <div id="wall_plaster_quantity"></div>
-        <div id="wall_plaster_sum"></div>
+      <div id="block2_wall_grid" style="display: flex">
+        сетка стены<div style="width:100px"></div>
+        <input type="radio" id="block2_wall_grid_glass" name="grid" value="1" class="radio_wall_grid" checked>
+        <input type="radio" id="block2_wall_grid_zinc" name="grid" value="2" class="radio_wall_grid">
+        <div id="wall_grid_square">0</div>
+        <div>|</div>
+        <div id="wall_grid_price">943</div>
+        <div>|</div>
+        <div id="wall_grid_consumeperone">1x20</div>
+        <div>|</div>
+        <div id="wall_grid_consume">0</div>
+        <div>|</div>
+        <div id="wall_grid_weight">0</div>
+        <div>|</div>
+        <div id="wall_grid_quantity">0</div>
+        <div>|</div>
+        <div id="wall_grid_sum">0</div>
       </div>
 
     </div>
 
     <div id="block2_roof">
 
-      <div id="block2_roof_plaster">
-        <input id="roof_plaster_square"></input>
-        <div id="roof_plaster_price"></div>
-        <div class="dropdown">
-          <button class="btn dropdown-toggle"
-              type="button" id="roof_plaster_thickness" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <a class="dropdown-item" href="#!">15</a>
-            <a class="dropdown-item" href="#!">20</a>
-            <a class="dropdown-item" href="#!">25</a>
-            <a class="dropdown-item" href="#!">30</a>
-            <a class="dropdown-item" href="#!">35</a>
-            <a class="dropdown-item" href="#!">40</a>
-          </div>
-        </div>
-        <div id="roof_plaster_consume"></div>
-        <div id="roof_plaster_weight"></div>
-        <div id="roof_plaster_quantity"></div>
-        <div id="roof_plaster_sum"></div>
+      <div id="block2_roof_plaster"style="display: flex">
+        штукатурка потолка<div style="width:100px"></div>
+        <input id="roof_plaster_square" type="text" value="0"></input>
+        <div>|</div>
+        <div id="roof_plaster_price">435</div>
+        <div>|</div>
+        <select id="roof_plaster_thickness">
+            <option value="15" selected>15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+            <option value="40">40</option>
+        </select>
+        <div>|</div>
+        <div id="roof_plaster_consume">15</div>
+        <div>|</div>
+        <div id="roof_plaster_weight">0</div>
+        <div>|</div>
+        <div id="roof_plaster_quantity">0</div>
+        <div>|</div>
+        <div id="roof_plaster_sum">0</div>
       </div>
 
-      <div id="block2_roof_primer">
-        <a id="block2_roof_primer_knauf"></a>
-        <a id="block2_roof_primer_kreps"></a>
-        <div id="roof_plaster_square"></div>
-        <div id="roof_plaster_price"></div>
-        <div id="roof_plaster_consumeperone"></div>
-        <div id="roof_plaster_consume"></div>
-        <div id="roof_plaster_weight"></div>
-        <div id="roof_plaster_quantity"></div>
-        <div id="roof_plaster_sum"></div>
+      <div id="block2_roof_primer"style="display: flex">
+        грунтовка потолка<div style="width:100px"></div>
+        <input type="radio" id="block2_roof_primer_knauf" name="roof_primer" value="1" class="radio_roof_primer" checked>
+        <input type="radio" id="block2_roof_primer_kreps" name="roof_primer" value="2" class="radio_roof_primer">
+        <div id="roof_primer_square">0</div>
+        <div>|</div>
+        <div id="roof_primer_price">2064</div>
+        <div>|</div>
+        <div id="roof_primer_consumeperone">0.1</div>
+        <div>|</div>
+        <div id="roof_primer_consume">0</div>
+        <div>|</div>
+        <div id="roof_primer_weight">0</div>
+        <div>|</div>
+        <div id="roof_primer_quantity">0</div>
+        <div>|</div>
+        <div id="roof_primer_sum">0</div>
       </div>
 
     </div>
 
     <div id="block2_window">
 
-      <div id="block2_window_plaster">
-        <input id="window_plaster_square"></input>
-        <div id="window_plaster_price"></div>
-        <div class="dropdown">
-          <button class="btn dropdown-toggle"
-              type="button" id="window_plaster_thickness" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenu3">
-            <a class="dropdown-item" href="#!">15</a>
-            <a class="dropdown-item" href="#!">20</a>
-            <a class="dropdown-item" href="#!">25</a>
-            <a class="dropdown-item" href="#!">30</a>
-            <a class="dropdown-item" href="#!">35</a>
-            <a class="dropdown-item" href="#!">40</a>
-          </div>
-        </div>
-        <div id="window_plaster_consume"></div>
-        <div id="window_plaster_weight"></div>
-        <div id="window_plaster_quantity"></div>
-        <div id="window_plaster_sum"></div>
+      <div id="block2_window_plaster"style="display: flex">
+        штукатурка откосы<div style="width:100px"></div>
+        <input id="window_plaster_square" type="text" value="0"></input>
+        <div id="window_plaster_price">435</div>
+
+        <select id="window_plaster_thickness">
+            <option value="15" selected>15</option>
+            <option value="20">20</option>
+            <option value="25">25</option>
+            <option value="30">30</option>
+            <option value="35">35</option>
+            <option value="40">40</option>
+        </select>
+
+        <div id="window_plaster_consume">15</div>
+        <div>|</div>
+        <div id="window_plaster_weight">0</div>
+        <div>|</div>
+        <div id="window_plaster_quantity">0</div>
+        <div>|</div>
+        <div id="window_plaster_sum">0</div>
       </div>
 
-      <div id="block2_window_primer">
-        <a id="block2_window_primer_knauf"></a>
-        <a id="block2_window_primer_kreps"></a>
-        <div id="window_plaster_square"></div>
-        <div id="window_plaster_price"></div>
-        <div id="window_plaster_consumeperone"></div>
-        <div id="window_plaster_consume"></div>
-        <div id="window_plaster_weight"></div>
-        <div id="window_plaster_quantity"></div>
-        <div id="window_plaster_sum"></div>
+      <div id="block2_window_primer"style="display: flex">
+        грунтовка откосы<div style="width:100px"></div>
+        <input type="radio" id="block2_window_primer_knauf" name="window_primer" value="1" class="radio_window_primer" checked>
+        <input type="radio" id="block2_window_primer_kreps" name="window_primer" value="2" class="radio_window_primer">
+        <div id="window_primer_square">0</div>
+        <div>|</div>
+        <div id="window_primer_price">2064</div>
+        <div>|</div>
+        <div id="window_primer_consumeperone">0.1</div>
+        <div>|</div>
+        <div id="window_primer_consume">0</div>
+        <div>|</div>
+        <div id="window_primer_weight">0</div>
+        <div>|</div>
+        <div id="window_primer_quantity">0</div>
+        <div>|</div>
+        <div id="window_primer_sum">0</div>
       </div>
 
     </div>
