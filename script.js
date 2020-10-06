@@ -10,6 +10,7 @@ function wall_plaster(){
   document.getElementById("wall_plaster_sum").innerHTML =  priceperone * thickness * square/VesPaketa;
   document.getElementById("plaster_wall_outlay_quantity").innerHTML =thickness*square/VesPaketa;
   document.getElementById("plaster_wall_outlay_sum").innerHTML = priceperone * thickness * square/VesPaketa;
+  document.getElementById("work_outlay_wall_thickness").innerHTML =thickness;
   material_sum();
 }
 
@@ -73,7 +74,10 @@ function roof_plaster(){
 
   document.getElementById("plaster_roof_outlay_quantity").innerHTML =thickness*square/VesPaketa;
   document.getElementById("plaster_roof_outlay_sum").innerHTML = priceperone * thickness * square/VesPaketa;
+
+  document.getElementById("work_outlay_roof_thickness").innerHTML =thickness;
 }
+
 
 function roof_primer(){
   var square=document.getElementById("roof_primer_square").innerHTML;
@@ -101,6 +105,8 @@ function window_plaster(){
 
   document.getElementById("plaster_window_outlay_quantity").innerHTML =thickness*square/VesPaketa;
   document.getElementById("plaster_window_outlay_sum").innerHTML = priceperone * thickness * square/VesPaketa;
+
+  document.getElementById("work_outlay_window_thickness").innerHTML =thickness;
 }
 
 function window_primer(){
@@ -164,6 +170,26 @@ $(function(){
       document.getElementById("plaster_wall_outlay_price").innerHTML =price;
       document.getElementById("plaster_roof_outlay_price").innerHTML =price;
       document.getElementById("plaster_window_outlay_price").innerHTML =price;
+      if(price==='435'){
+        document.getElementById("work_outlay_wall_plaster").innerHTML ="штукатурка 1";
+        document.getElementById("work_outlay_roof_plaster").innerHTML ="штукатурка 1";
+        document.getElementById("work_outlay_window_plaster").innerHTML ="штукатурка 1";
+      }
+      if(price==='500'){
+        document.getElementById("work_outlay_wall_plaster").innerHTML ="штукатурка 2";
+        document.getElementById("work_outlay_roof_plaster").innerHTML ="штукатурка 2";
+        document.getElementById("work_outlay_window_plaster").innerHTML ="штукатурка 2";
+      }
+      if(price==='550'){
+        document.getElementById("work_outlay_wall_plaster").innerHTML ="штукатурка 3";
+        document.getElementById("work_outlay_roof_plaster").innerHTML ="штукатурка 3";
+        document.getElementById("work_outlay_window_plaster").innerHTML ="штукатурка 3";
+      }
+      if(price==='560'){
+        document.getElementById("work_outlay_wall_plaster").innerHTML ="штукатурка 4";
+        document.getElementById("work_outlay_roof_plaster").innerHTML ="штукатурка 4";
+        document.getElementById("work_outlay_window_plaster").innerHTML ="штукатурка 4";
+      }
   });
 
   // wall
@@ -172,7 +198,7 @@ $(function(){
       var square=document.getElementById("wall_plaster_square").value;
       document.getElementById("wall_primer_square").innerHTML=square;
       document.getElementById("wall_grid_square").innerHTML=square;
-
+      document.getElementById("work_outlay_wall_square").innerHTML=square;
       wall_plaster();
       wall_primer();
       grid();
@@ -209,6 +235,7 @@ $(function(){
   $('#roof_plaster_square').change(function a(){
       var square=document.getElementById("roof_plaster_square").value;
       document.getElementById("roof_primer_square").innerHTML=square;
+      document.getElementById("work_outlay_roof_square").innerHTML=square;
       roof_plaster();
       roof_primer();
       pharos();
@@ -240,6 +267,7 @@ $(function(){
   $('#window_plaster_square').change(function(){
       var square=document.getElementById("window_plaster_square").value;
       document.getElementById("window_primer_square").innerHTML=square;
+      document.getElementById("work_outlay_window_square").innerHTML=square;
       window_plaster();
       window_primer();
       pharos();
@@ -271,6 +299,18 @@ $(function(){
     document.getElementById("wall_plaster_price").innerHTML = price;
     document.getElementById("plaster_wall_outlay_price").innerHTML = price;
     wall_plaster();
+    if(price==='435'){
+      document.getElementById("work_outlay_wall_plaster").innerHTML ="штукатурка 1";
+    }
+    if(price==='500'){
+      document.getElementById("work_outlay_wall_plaster").innerHTML ="штукатурка 2";
+    }
+    if(price==='550'){
+      document.getElementById("work_outlay_wall_plaster").innerHTML ="штукатурка 3";
+    }
+    if(price==='560'){
+      document.getElementById("work_outlay_wall_plaster").innerHTML ="штукатурка 4";
+    }
   });
 
   $('#plaster_roof_outlay').change(function(){
@@ -278,6 +318,18 @@ $(function(){
     document.getElementById("roof_plaster_price").innerHTML = price;
     document.getElementById("plaster_roof_outlay_price").innerHTML = price;
     roof_plaster();
+    if(price==='435'){
+      document.getElementById("work_outlay_roof_plaster").innerHTML ="штукатурка 1";
+    }
+    if(price==='500'){
+      document.getElementById("work_outlay_roof_plaster").innerHTML ="штукатурка 2";
+    }
+    if(price==='550'){
+      document.getElementById("work_outlay_roof_plaster").innerHTML ="штукатурка 3";
+    }
+    if(price==='560'){
+      document.getElementById("work_outlay_roof_plaster").innerHTML ="штукатурка 4";
+    }
   });
 
   $('#plaster_window_outlay').change(function(){
@@ -285,6 +337,18 @@ $(function(){
     document.getElementById("window_plaster_price").innerHTML = price;
     document.getElementById("plaster_window_outlay_price").innerHTML = price;
     window_plaster();
+    if(price==='435'){
+      document.getElementById("work_outlay_window_plaster").innerHTML ="штукатурка 1";
+    }
+    if(price==='500'){
+      document.getElementById("work_outlay_window_plaster").innerHTML ="штукатурка 2";
+    }
+    if(price==='550'){
+      document.getElementById("work_outlay_window_plaster").innerHTML ="штукатурка 3";
+    }
+    if(price==='560'){
+      document.getElementById("work_outlay_window_plaster").innerHTML ="штукатурка 4";
+    }
   });
 
   $('#primer_wall_outlay').change(function(){
@@ -377,4 +441,183 @@ $(function(){
     material_sum();
   });
 
+  $('#work_outlay_wall_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    var square=parseFloat(document.getElementById("work_outlay_wall_square").innerHTML);
+    document.getElementById("work_outlay_wall_quantity").innerHTML=square*220;
+    if(square<170){
+      document.getElementById("work_outlay_wall_sale").innerHTML=0;
+      document.getElementById("work_outlay_wall_sum").innerHTML=square*220;
+    }
+    if(square>=170 && square<250){
+      document.getElementById("work_outlay_wall_sale").innerHTML=2;
+      document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*2/100);
+    }
+    if(square>=250 && square<450){
+      document.getElementById("work_outlay_wall_sale").innerHTML=3;
+      document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*3/100);
+    }
+    if(square>=450 && square<650){
+      document.getElementById("work_outlay_wall_sale").innerHTML=5;
+      document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*5/100);
+    }
+    if(square>=650 && square<900){
+      document.getElementById("work_outlay_wall_sale").innerHTML=7;
+      document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*7/100);
+    }
+    if(square>=900 && square<1200){
+      document.getElementById("work_outlay_wall_sale").innerHTML=8;
+      document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*8/100);
+    }
+    if(square>1200){
+      document.getElementById("work_outlay_wall_sale").innerHTML=10;
+      document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*10/100);
+    }
+    var square1=parseFloat(document.getElementById("work_outlay_wall_square").innerHTML);
+    var square2=parseFloat(document.getElementById("work_outlay_roof_square").innerHTML);
+    var square3=parseFloat(document.getElementById("work_outlay_window_square").innerHTML);
+    document.getElementById("common_sum_square").innerHTML=square1+square2+square3;
+  });
+
+  $('#work_outlay_roof_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    var square=parseFloat(document.getElementById("work_outlay_roof_square").innerHTML);
+    document.getElementById("work_outlay_roof_quantity").innerHTML=square*220;
+    if(square<170){
+      document.getElementById("work_outlay_roof_sale").innerHTML=0;
+      document.getElementById("work_outlay_roof_sum").innerHTML=square*220;
+    }
+    if(square>=170 && square<250){
+      document.getElementById("work_outlay_roof_sale").innerHTML=2;
+      document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*2/100);
+    }
+    if(square>=250 && square<450){
+      document.getElementById("work_outlay_roof_sale").innerHTML=3;
+      document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*3/100);
+    }
+    if(square>=450 && square<650){
+      document.getElementById("work_outlay_roof_sale").innerHTML=5;
+      document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*5/100);
+    }
+    if(square>=650 && square<900){
+      document.getElementById("work_outlay_roof_sale").innerHTML=7;
+      document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*7/100);
+    }
+    if(square>=900 && square<1200){
+      document.getElementById("work_outlay_roof_sale").innerHTML=8;
+      document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*8/100);
+    }
+    if(square>1200){
+      document.getElementById("work_outlay_roof_sale").innerHTML=10;
+      document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*10/100);
+    }
+    var square1=parseFloat(document.getElementById("work_outlay_wall_square").innerHTML);
+    var square2=parseFloat(document.getElementById("work_outlay_roof_square").innerHTML);
+    var square3=parseFloat(document.getElementById("work_outlay_window_square").innerHTML);
+    document.getElementById("common_sum_square").innerHTML=square1+square2+square3;
+
+  });
+
+  $('#work_outlay_window_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    var square=parseFloat(document.getElementById("work_outlay_window_square").innerHTML);
+    document.getElementById("work_outlay_window_quantity").innerHTML=square*280;
+    if(square<170){
+      document.getElementById("work_outlay_window_sale").innerHTML=0;
+      document.getElementById("work_outlay_window_sum").innerHTML=square*280;
+    }
+    if(square>=170 && square<250){
+      document.getElementById("work_outlay_window_sale").innerHTML=2;
+      document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*2/100);
+    }
+    if(square>=250 && square<450){
+      document.getElementById("work_outlay_window_sale").innerHTML=3;
+      document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*3/100);
+    }
+    if(square>=450 && square<650){
+      document.getElementById("work_outlay_window_sale").innerHTML=5;
+      document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*5/100);
+    }
+    if(square>=650 && square<900){
+      document.getElementById("work_outlay_window_sale").innerHTML=7;
+      document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*7/100);
+    }
+    if(square>=900 && square<1200){
+      document.getElementById("work_outlay_window_sale").innerHTML=8;
+      document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*8/100);
+    }
+    if(square>1200){
+      document.getElementById("work_outlay_window_sale").innerHTML=10;
+      document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*10/100);
+    }
+    var square1=parseFloat(document.getElementById("work_outlay_wall_square").innerHTML);
+    var square2=parseFloat(document.getElementById("work_outlay_roof_square").innerHTML);
+    var square3=parseFloat(document.getElementById("work_outlay_window_square").innerHTML);
+    document.getElementById("common_sum_square").innerHTML=square1+square2+square3;
+  });
+
+  $('#work_outlay_wall_sale').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    var sale1=parseFloat(document.getElementById("work_outlay_wall_sale").innerHTML);
+    var sale2=parseFloat(document.getElementById("work_outlay_roof_sale").innerHTML);
+    var sale3=parseFloat(document.getElementById("work_outlay_window_sale").innerHTML);
+    document.getElementById("work_outlay_sale_percent").innerHTML=(sale1+sale2+sale3)/3;
+    var quantity1=parseFloat(document.getElementById("work_outlay_wall_quantity").innerHTML);
+    var quantity2=parseFloat(document.getElementById("work_outlay_roof_quantity").innerHTML);
+    var quantity3=parseFloat(document.getElementById("work_outlay_window_quantity").innerHTML);
+    document.getElementById("work_outlay_sale_sum").innerHTML=(quantity1+quantity2+quantity3)*(sale1+sale2+sale3)/3/100;
+  });
+
+  $('#work_outlay_roof_sale').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    var sale1=parseFloat(document.getElementById("work_outlay_wall_sale").innerHTML);
+    var sale2=parseFloat(document.getElementById("work_outlay_roof_sale").innerHTML);
+    var sale3=parseFloat(document.getElementById("work_outlay_window_sale").innerHTML);
+    document.getElementById("work_outlay_sale_percent").innerHTML=(sale1+sale2+sale3)/3;
+    var quantity1=parseFloat(document.getElementById("work_outlay_wall_quantity").innerHTML);
+    var quantity2=parseFloat(document.getElementById("work_outlay_roof_quantity").innerHTML);
+    var quantity3=parseFloat(document.getElementById("work_outlay_window_quantity").innerHTML);
+    document.getElementById("work_outlay_sale_sum").innerHTML=(quantity1+quantity2+quantity3)*(sale1+sale2+sale3)/3/100;
+  });
+
+  $('#work_outlay_window_sale').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    var sale1=parseFloat(document.getElementById("work_outlay_wall_sale").innerHTML);
+    var sale2=parseFloat(document.getElementById("work_outlay_roof_sale").innerHTML);
+    var sale3=parseFloat(document.getElementById("work_outlay_window_sale").innerHTML);
+    document.getElementById("work_outlay_sale_percent").innerHTML=(sale1+sale2+sale3)/3;
+    var quantity1=parseFloat(document.getElementById("work_outlay_wall_quantity").innerHTML);
+    var quantity2=parseFloat(document.getElementById("work_outlay_roof_quantity").innerHTML);
+    var quantity3=parseFloat(document.getElementById("work_outlay_window_quantity").innerHTML);
+    document.getElementById("work_outlay_sale_sum").innerHTML=(quantity1+quantity2+quantity3)*(sale1+sale2+sale3)/3/100;
+  });
+
+  $('#work_outlay_wall_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    var sum1=parseFloat(document.getElementById("work_outlay_wall_sum").innerHTML);
+    var sum2=parseFloat(document.getElementById("work_outlay_roof_sum").innerHTML);
+    var sum3=parseFloat(document.getElementById("work_outlay_window_sum").innerHTML);
+    document.getElementById("work_outlay_common_sum").innerHTML=sum1+sum2+sum3;
+  });
+
+  $('#work_outlay_roof_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    var sum1=parseFloat(document.getElementById("work_outlay_wall_sum").innerHTML);
+    var sum2=parseFloat(document.getElementById("work_outlay_roof_sum").innerHTML);
+    var sum3=parseFloat(document.getElementById("work_outlay_window_sum").innerHTML);
+    document.getElementById("work_outlay_common_sum").innerHTML=sum1+sum2+sum3;
+  });
+
+  $('#work_outlay_window_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    var sum1=parseFloat(document.getElementById("work_outlay_wall_sum").innerHTML);
+    var sum2=parseFloat(document.getElementById("work_outlay_roof_sum").innerHTML);
+    var sum3=parseFloat(document.getElementById("work_outlay_window_sum").innerHTML);
+    document.getElementById("work_outlay_common_sum").innerHTML=sum1+sum2+sum3;
+  });
+
+  $('#work_outlay_sale_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    document.getElementById("common_sum_sale_").innerHTML=document.getElementById("work_outlay_sale_sum").innerHTML;
+  });
+
+  $('#material_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    document.getElementById("common_sum_material").innerHTML=document.getElementById("material_sum").innerHTML;
+    document.getElementById("common_sum").innerHTML=parseFloat(document.getElementById("common_sum_material").innerHTML)+parseFloat(document.getElementById("common_sum_work").innerHTML);
+  });
+
+  $('#work_outlay_common_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    document.getElementById("common_sum_work").innerHTML=document.getElementById("work_outlay_common_sum").innerHTML;
+    document.getElementById("common_sum").innerHTML=parseFloat(document.getElementById("common_sum_material").innerHTML)+parseFloat(document.getElementById("common_sum_work").innerHTML);
+  });
 })
