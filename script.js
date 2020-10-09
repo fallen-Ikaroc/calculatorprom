@@ -150,6 +150,117 @@ function material_sum(){
   parseFloat(document.getElementById("pharos_outlay_sum").innerHTML)+parseFloat(document.getElementById("shim_outlay_sum").innerHTML)+
   parseFloat(document.getElementById("nail_outlay_sum").innerHTML);
 }
+
+function work_roof_sum(){
+  var square=parseFloat(document.getElementById("work_outlay_roof_square").innerHTML);
+  document.getElementById("work_outlay_roof_quantity").innerHTML=square*220;
+  if(square<170){
+    document.getElementById("work_outlay_roof_sale").innerHTML=0;
+    document.getElementById("work_outlay_roof_sum").innerHTML=square*220;
+  }
+  if(square>=170 && square<250){
+    document.getElementById("work_outlay_roof_sale").innerHTML=2;
+    document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*2/100);
+  }
+  if(square>=250 && square<450){
+    document.getElementById("work_outlay_roof_sale").innerHTML=3;
+    document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*3/100);
+  }
+  if(square>=450 && square<650){
+    document.getElementById("work_outlay_roof_sale").innerHTML=5;
+    document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*5/100);
+  }
+  if(square>=650 && square<900){
+    document.getElementById("work_outlay_roof_sale").innerHTML=7;
+    document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*7/100);
+  }
+  if(square>=900 && square<1200){
+    document.getElementById("work_outlay_roof_sale").innerHTML=8;
+    document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*8/100);
+  }
+  if(square>1200){
+    document.getElementById("work_outlay_roof_sale").innerHTML=10;
+    document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*10/100);
+  }
+  var square1=parseFloat(document.getElementById("work_outlay_wall_square").innerHTML);
+  var square2=parseFloat(document.getElementById("work_outlay_roof_square").innerHTML);
+  var square3=parseFloat(document.getElementById("work_outlay_window_square").innerHTML);
+  document.getElementById("common_sum_square").innerHTML=square1+square2+square3;
+}
+
+function work_wall_sum(){
+  var square=parseFloat(document.getElementById("work_outlay_wall_square").innerHTML);
+  document.getElementById("work_outlay_wall_quantity").innerHTML=square*220;
+  if(square<170){
+    document.getElementById("work_outlay_wall_sale").innerHTML=0;
+    document.getElementById("work_outlay_wall_sum").innerHTML=square*220;
+  }
+  if(square>=170 && square<250){
+    document.getElementById("work_outlay_wall_sale").innerHTML=2;
+    document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*2/100);
+  }
+  if(square>=250 && square<450){
+    document.getElementById("work_outlay_wall_sale").innerHTML=3;
+    document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*3/100);
+  }
+  if(square>=450 && square<650){
+    document.getElementById("work_outlay_wall_sale").innerHTML=5;
+    document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*5/100);
+  }
+  if(square>=650 && square<900){
+    document.getElementById("work_outlay_wall_sale").innerHTML=7;
+    document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*7/100);
+  }
+  if(square>=900 && square<1200){
+    document.getElementById("work_outlay_wall_sale").innerHTML=8;
+    document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*8/100);
+  }
+  if(square>1200){
+    document.getElementById("work_outlay_wall_sale").innerHTML=10;
+    document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*10/100);
+  }
+  var square1=parseFloat(document.getElementById("work_outlay_wall_square").innerHTML);
+  var square2=parseFloat(document.getElementById("work_outlay_roof_square").innerHTML);
+  var square3=parseFloat(document.getElementById("work_outlay_window_square").innerHTML);
+  document.getElementById("common_sum_square").innerHTML=square1+square2+square3;
+}
+
+function work_window_sum(){
+  var square=parseFloat(document.getElementById("work_outlay_window_square").innerHTML);
+  document.getElementById("work_outlay_window_quantity").innerHTML=square*280;
+  if(square<170){
+    document.getElementById("work_outlay_window_sale").innerHTML=0;
+    document.getElementById("work_outlay_window_sum").innerHTML=square*280;
+  }
+  if(square>=170 && square<250){
+    document.getElementById("work_outlay_window_sale").innerHTML=2;
+    document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*2/100);
+  }
+  if(square>=250 && square<450){
+    document.getElementById("work_outlay_window_sale").innerHTML=3;
+    document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*3/100);
+  }
+  if(square>=450 && square<650){
+    document.getElementById("work_outlay_window_sale").innerHTML=5;
+    document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*5/100);
+  }
+  if(square>=650 && square<900){
+    document.getElementById("work_outlay_window_sale").innerHTML=7;
+    document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*7/100);
+  }
+  if(square>=900 && square<1200){
+    document.getElementById("work_outlay_window_sale").innerHTML=8;
+    document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*8/100);
+  }
+  if(square>1200){
+    document.getElementById("work_outlay_window_sale").innerHTML=10;
+    document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*10/100);
+  }
+  var square1=parseFloat(document.getElementById("work_outlay_wall_square").innerHTML);
+  var square2=parseFloat(document.getElementById("work_outlay_roof_square").innerHTML);
+  var square3=parseFloat(document.getElementById("work_outlay_window_square").innerHTML);
+  document.getElementById("common_sum_square").innerHTML=square1+square2+square3;
+}
 // main
 
 $(function(){
@@ -442,115 +553,15 @@ $(function(){
   });
 
   $('#work_outlay_wall_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
-    var square=parseFloat(document.getElementById("work_outlay_wall_square").innerHTML);
-    document.getElementById("work_outlay_wall_quantity").innerHTML=square*220;
-    if(square<170){
-      document.getElementById("work_outlay_wall_sale").innerHTML=0;
-      document.getElementById("work_outlay_wall_sum").innerHTML=square*220;
-    }
-    if(square>=170 && square<250){
-      document.getElementById("work_outlay_wall_sale").innerHTML=2;
-      document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*2/100);
-    }
-    if(square>=250 && square<450){
-      document.getElementById("work_outlay_wall_sale").innerHTML=3;
-      document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*3/100);
-    }
-    if(square>=450 && square<650){
-      document.getElementById("work_outlay_wall_sale").innerHTML=5;
-      document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*5/100);
-    }
-    if(square>=650 && square<900){
-      document.getElementById("work_outlay_wall_sale").innerHTML=7;
-      document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*7/100);
-    }
-    if(square>=900 && square<1200){
-      document.getElementById("work_outlay_wall_sale").innerHTML=8;
-      document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*8/100);
-    }
-    if(square>1200){
-      document.getElementById("work_outlay_wall_sale").innerHTML=10;
-      document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*10/100);
-    }
-    var square1=parseFloat(document.getElementById("work_outlay_wall_square").innerHTML);
-    var square2=parseFloat(document.getElementById("work_outlay_roof_square").innerHTML);
-    var square3=parseFloat(document.getElementById("work_outlay_window_square").innerHTML);
-    document.getElementById("common_sum_square").innerHTML=square1+square2+square3;
+    work_wall_sum();
   });
 
   $('#work_outlay_roof_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
-    var square=parseFloat(document.getElementById("work_outlay_roof_square").innerHTML);
-    document.getElementById("work_outlay_roof_quantity").innerHTML=square*220;
-    if(square<170){
-      document.getElementById("work_outlay_roof_sale").innerHTML=0;
-      document.getElementById("work_outlay_roof_sum").innerHTML=square*220;
-    }
-    if(square>=170 && square<250){
-      document.getElementById("work_outlay_roof_sale").innerHTML=2;
-      document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*2/100);
-    }
-    if(square>=250 && square<450){
-      document.getElementById("work_outlay_roof_sale").innerHTML=3;
-      document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*3/100);
-    }
-    if(square>=450 && square<650){
-      document.getElementById("work_outlay_roof_sale").innerHTML=5;
-      document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*5/100);
-    }
-    if(square>=650 && square<900){
-      document.getElementById("work_outlay_roof_sale").innerHTML=7;
-      document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*7/100);
-    }
-    if(square>=900 && square<1200){
-      document.getElementById("work_outlay_roof_sale").innerHTML=8;
-      document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*8/100);
-    }
-    if(square>1200){
-      document.getElementById("work_outlay_roof_sale").innerHTML=10;
-      document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*10/100);
-    }
-    var square1=parseFloat(document.getElementById("work_outlay_wall_square").innerHTML);
-    var square2=parseFloat(document.getElementById("work_outlay_roof_square").innerHTML);
-    var square3=parseFloat(document.getElementById("work_outlay_window_square").innerHTML);
-    document.getElementById("common_sum_square").innerHTML=square1+square2+square3;
-
+    work_roof_sum();
   });
 
   $('#work_outlay_window_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
-    var square=parseFloat(document.getElementById("work_outlay_window_square").innerHTML);
-    document.getElementById("work_outlay_window_quantity").innerHTML=square*280;
-    if(square<170){
-      document.getElementById("work_outlay_window_sale").innerHTML=0;
-      document.getElementById("work_outlay_window_sum").innerHTML=square*280;
-    }
-    if(square>=170 && square<250){
-      document.getElementById("work_outlay_window_sale").innerHTML=2;
-      document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*2/100);
-    }
-    if(square>=250 && square<450){
-      document.getElementById("work_outlay_window_sale").innerHTML=3;
-      document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*3/100);
-    }
-    if(square>=450 && square<650){
-      document.getElementById("work_outlay_window_sale").innerHTML=5;
-      document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*5/100);
-    }
-    if(square>=650 && square<900){
-      document.getElementById("work_outlay_window_sale").innerHTML=7;
-      document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*7/100);
-    }
-    if(square>=900 && square<1200){
-      document.getElementById("work_outlay_window_sale").innerHTML=8;
-      document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*8/100);
-    }
-    if(square>1200){
-      document.getElementById("work_outlay_window_sale").innerHTML=10;
-      document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*10/100);
-    }
-    var square1=parseFloat(document.getElementById("work_outlay_wall_square").innerHTML);
-    var square2=parseFloat(document.getElementById("work_outlay_roof_square").innerHTML);
-    var square3=parseFloat(document.getElementById("work_outlay_window_square").innerHTML);
-    document.getElementById("common_sum_square").innerHTML=square1+square2+square3;
+    work_window_sum();
   });
 
   $('#work_outlay_wall_sale').bind('DOMNodeInserted DOMNodeRemoved', function(){
