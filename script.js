@@ -15,6 +15,19 @@ function wall_plaster(){
 }
 
 function wall_primer(){
+  var price = $('input[name=wall_primer]:checked').val();
+  if(price==='1'){
+    document.getElementById("wall_primer_price").innerHTML = "2064";
+    document.getElementById("wall_primer_consumeperone").innerHTML = "0.1";
+    $("#primer_wall_outlay").val(2064);
+    document.getElementById("primer_wall_outlay_price").innerHTML =2064;
+  }
+  else{
+    document.getElementById("wall_primer_price").innerHTML = "1548";
+    document.getElementById("wall_primer_consumeperone").innerHTML ="0.2";
+    $("#primer_wall_outlay").val(1548);
+    document.getElementById("primer_wall_outlay_price").innerHTML =1548;
+  }
   var square=document.getElementById("wall_primer_square").innerHTML;
   var consumeperone=document.getElementById("wall_primer_consumeperone").innerHTML;
   var price=document.getElementById("wall_primer_price").innerHTML;
@@ -134,11 +147,20 @@ function pharos(){
 
 // nail and shim
 function nail_shim(){
-  var square= parseFloat(document.getElementById("wall_plaster_square").value);
-  document.getElementById("shim_outlay_quantity").innerHTML =Math.ceil(square*5/100);
-  document.getElementById("nail_outlay_quantity").innerHTML =Math.ceil(square*5/150);
-  document.getElementById("shim_outlay_sum").innerHTML =document.getElementById("shim_outlay_quantity").innerHTML*document.getElementById("shim_outlay_price").innerHTML;
-  document.getElementById("nail_outlay_sum").innerHTML =document.getElementById("nail_outlay_quantity").innerHTML*document.getElementById("nail_outlay_price").innerHTML;
+  var value=$('input[name="place"]:checked').val();
+  if(value==="1"){
+    var square= parseFloat(document.getElementById("wall_plaster_square").value);
+    document.getElementById("shim_outlay_quantity").innerHTML =Math.ceil(square*5/100);
+    document.getElementById("nail_outlay_quantity").innerHTML =Math.ceil(square*5/150);
+    document.getElementById("shim_outlay_sum").innerHTML =document.getElementById("shim_outlay_quantity").innerHTML*document.getElementById("shim_outlay_price").innerHTML;
+    document.getElementById("nail_outlay_sum").innerHTML =document.getElementById("nail_outlay_quantity").innerHTML*document.getElementById("nail_outlay_price").innerHTML;
+  }
+  else{
+    document.getElementById("shim_outlay_quantity").innerHTML =0;
+    document.getElementById("nail_outlay_quantity").innerHTML =0;
+    document.getElementById("shim_outlay_sum").innerHTML =0;
+    document.getElementById("nail_outlay_sum").innerHTML =0;
+  }
 }
 
 //material_sum
@@ -151,36 +173,37 @@ function material_sum(){
   parseFloat(document.getElementById("nail_outlay_sum").innerHTML);
 }
 
-function work_roof_sum(){
-  var square=parseFloat(document.getElementById("work_outlay_roof_square").innerHTML);
-  document.getElementById("work_outlay_roof_quantity").innerHTML=square*220;
+function work_wall_sum(){
+  var type=parseFloat($('input[name=types]:checked').val());
+  var square=parseFloat(document.getElementById("work_outlay_wall_square").innerHTML);
+  document.getElementById("work_outlay_wall_quantity").innerHTML=square*type;
   if(square<170){
-    document.getElementById("work_outlay_roof_sale").innerHTML=0;
-    document.getElementById("work_outlay_roof_sum").innerHTML=square*220;
+    document.getElementById("work_outlay_wall_sale").innerHTML=0;
+    document.getElementById("work_outlay_wall_sum").innerHTML=square*type;
   }
   if(square>=170 && square<250){
-    document.getElementById("work_outlay_roof_sale").innerHTML=2;
-    document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*2/100);
+    document.getElementById("work_outlay_wall_sale").innerHTML=2;
+    document.getElementById("work_outlay_wall_sum").innerHTML=square*type-(square*type*2/100);
   }
   if(square>=250 && square<450){
-    document.getElementById("work_outlay_roof_sale").innerHTML=3;
-    document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*3/100);
+    document.getElementById("work_outlay_wall_sale").innerHTML=3;
+    document.getElementById("work_outlay_wall_sum").innerHTML=square*type-(square*type*3/100);
   }
   if(square>=450 && square<650){
-    document.getElementById("work_outlay_roof_sale").innerHTML=5;
-    document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*5/100);
+    document.getElementById("work_outlay_wall_sale").innerHTML=5;
+    document.getElementById("work_outlay_wall_sum").innerHTML=square*type-(square*type*5/100);
   }
   if(square>=650 && square<900){
-    document.getElementById("work_outlay_roof_sale").innerHTML=7;
-    document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*7/100);
+    document.getElementById("work_outlay_wall_sale").innerHTML=7;
+    document.getElementById("work_outlay_wall_sum").innerHTML=square*type-(square*type*7/100);
   }
   if(square>=900 && square<1200){
-    document.getElementById("work_outlay_roof_sale").innerHTML=8;
-    document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*8/100);
+    document.getElementById("work_outlay_wall_sale").innerHTML=8;
+    document.getElementById("work_outlay_wall_sum").innerHTML=square*type-(square*type*8/100);
   }
   if(square>1200){
-    document.getElementById("work_outlay_roof_sale").innerHTML=10;
-    document.getElementById("work_outlay_roof_sum").innerHTML=square*220-(square*220*10/100);
+    document.getElementById("work_outlay_wall_sale").innerHTML=10;
+    document.getElementById("work_outlay_wall_sum").innerHTML=square*type-(square*type*10/100);
   }
   var square1=parseFloat(document.getElementById("work_outlay_wall_square").innerHTML);
   var square2=parseFloat(document.getElementById("work_outlay_roof_square").innerHTML);
@@ -188,36 +211,37 @@ function work_roof_sum(){
   document.getElementById("common_sum_square").innerHTML=square1+square2+square3;
 }
 
-function work_wall_sum(){
-  var square=parseFloat(document.getElementById("work_outlay_wall_square").innerHTML);
-  document.getElementById("work_outlay_wall_quantity").innerHTML=square*220;
+function work_roof_sum(){
+  var type=parseFloat($('input[name=types1]:checked').val());
+  var square=parseFloat(document.getElementById("work_outlay_roof_square").innerHTML);
+  document.getElementById("work_outlay_roof_quantity").innerHTML=square*type;
   if(square<170){
-    document.getElementById("work_outlay_wall_sale").innerHTML=0;
-    document.getElementById("work_outlay_wall_sum").innerHTML=square*220;
+    document.getElementById("work_outlay_roof_sale").innerHTML=0;
+    document.getElementById("work_outlay_roof_sum").innerHTML=square*type;
   }
   if(square>=170 && square<250){
-    document.getElementById("work_outlay_wall_sale").innerHTML=2;
-    document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*2/100);
+    document.getElementById("work_outlay_roof_sale").innerHTML=2;
+    document.getElementById("work_outlay_roof_sum").innerHTML=square*type-(square*type*2/100);
   }
   if(square>=250 && square<450){
-    document.getElementById("work_outlay_wall_sale").innerHTML=3;
-    document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*3/100);
+    document.getElementById("work_outlay_roof_sale").innerHTML=3;
+    document.getElementById("work_outlay_roof_sum").innerHTML=square*type-(square*type*3/100);
   }
   if(square>=450 && square<650){
-    document.getElementById("work_outlay_wall_sale").innerHTML=5;
-    document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*5/100);
+    document.getElementById("work_outlay_roof_sale").innerHTML=5;
+    document.getElementById("work_outlay_roof_sum").innerHTML=square*type-(square*type*5/100);
   }
   if(square>=650 && square<900){
-    document.getElementById("work_outlay_wall_sale").innerHTML=7;
-    document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*7/100);
+    document.getElementById("work_outlay_roof_sale").innerHTML=7;
+    document.getElementById("work_outlay_roof_sum").innerHTML=square*type-(square*type*7/100);
   }
   if(square>=900 && square<1200){
-    document.getElementById("work_outlay_wall_sale").innerHTML=8;
-    document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*8/100);
+    document.getElementById("work_outlay_roof_sale").innerHTML=8;
+    document.getElementById("work_outlay_roof_sum").innerHTML=square*type-(square*type*8/100);
   }
   if(square>1200){
-    document.getElementById("work_outlay_wall_sale").innerHTML=10;
-    document.getElementById("work_outlay_wall_sum").innerHTML=square*220-(square*220*10/100);
+    document.getElementById("work_outlay_roof_sale").innerHTML=10;
+    document.getElementById("work_outlay_roof_sum").innerHTML=square*type-(square*type*10/100);
   }
   var square1=parseFloat(document.getElementById("work_outlay_wall_square").innerHTML);
   var square2=parseFloat(document.getElementById("work_outlay_roof_square").innerHTML);
@@ -226,35 +250,36 @@ function work_wall_sum(){
 }
 
 function work_window_sum(){
+  var type=parseFloat($('input[name=types2]:checked').val());
   var square=parseFloat(document.getElementById("work_outlay_window_square").innerHTML);
-  document.getElementById("work_outlay_window_quantity").innerHTML=square*280;
+  document.getElementById("work_outlay_window_quantity").innerHTML=square*type;
   if(square<170){
     document.getElementById("work_outlay_window_sale").innerHTML=0;
-    document.getElementById("work_outlay_window_sum").innerHTML=square*280;
+    document.getElementById("work_outlay_window_sum").innerHTML=square*type;
   }
   if(square>=170 && square<250){
     document.getElementById("work_outlay_window_sale").innerHTML=2;
-    document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*2/100);
+    document.getElementById("work_outlay_window_sum").innerHTML=square*type-(square*type*2/100);
   }
   if(square>=250 && square<450){
     document.getElementById("work_outlay_window_sale").innerHTML=3;
-    document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*3/100);
+    document.getElementById("work_outlay_window_sum").innerHTML=square*type-(square*type*3/100);
   }
   if(square>=450 && square<650){
     document.getElementById("work_outlay_window_sale").innerHTML=5;
-    document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*5/100);
+    document.getElementById("work_outlay_window_sum").innerHTML=square*type-(square*type*5/100);
   }
   if(square>=650 && square<900){
     document.getElementById("work_outlay_window_sale").innerHTML=7;
-    document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*7/100);
+    document.getElementById("work_outlay_window_sum").innerHTML=square*type-(square*type*7/100);
   }
   if(square>=900 && square<1200){
     document.getElementById("work_outlay_window_sale").innerHTML=8;
-    document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*8/100);
+    document.getElementById("work_outlay_window_sum").innerHTML=square*type-(square*type*8/100);
   }
   if(square>1200){
     document.getElementById("work_outlay_window_sale").innerHTML=10;
-    document.getElementById("work_outlay_window_sum").innerHTML=square*280-(square*280*10/100);
+    document.getElementById("work_outlay_window_sum").innerHTML=square*type-(square*type*10/100);
   }
   var square1=parseFloat(document.getElementById("work_outlay_wall_square").innerHTML);
   var square2=parseFloat(document.getElementById("work_outlay_roof_square").innerHTML);
@@ -322,23 +347,9 @@ $(function(){
   });
 
   $('.radio_wall_primer').change(function(){
-      var price = $(this).val();
-      var _price;
-      if(price==='1'){
-        document.getElementById("wall_primer_price").innerHTML = "2064";
-        document.getElementById("wall_primer_consumeperone").innerHTML = "0.1";
-        $("#primer_wall_outlay").val(2064);
-        document.getElementById("primer_wall_outlay_price").innerHTML =2064;
-      }
-      else{
-        document.getElementById("wall_primer_price").innerHTML = "1548";
-        document.getElementById("wall_primer_consumeperone").innerHTML ="0.2";
-        $("#primer_wall_outlay").val(1548);
-        document.getElementById("primer_wall_outlay_price").innerHTML =1548;
-      }
+
       wall_primer();
   });
-
   $('.radio_wall_grid').change(function(){
     grid();
   });
@@ -630,5 +641,62 @@ $(function(){
   $('#work_outlay_common_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
     document.getElementById("common_sum_work").innerHTML=document.getElementById("work_outlay_common_sum").innerHTML;
     document.getElementById("common_sum").innerHTML=parseFloat(document.getElementById("common_sum_material").innerHTML)+parseFloat(document.getElementById("common_sum_work").innerHTML);
+  });
+
+  $('.radio_type').change(function(){
+    work_wall_sum();
+  });
+
+  $('.radio_type1').change(function(){
+    work_roof_sum();
+  });
+
+  $('.radio_type2').change(function(){
+    work_window_sum();
+  });
+
+  $('.block1_place_').change(function(){
+    nail_shim();
+    var value=parseFloat($('input[name=place]:checked').val());
+    switch (value){
+      case 1:
+        $('input[name=wall_primer][value=2]').prop('checked', true);
+        $('input[name=roof_primer][value=2]').prop('checked', true);
+        $('input[name=window_primer][value=2]').trigger('click');
+        wall_primer();
+        $('input[name=grid][value=2]').prop('checked', true);
+        $('#block2_wall_grid_glass').prop('disabled', true);
+        grid();
+
+        break;
+      case 2:
+        $('input[name=wall_primer][value=2]').prop('checked', true);
+        $('input[name=roof_primer][value=2]').prop('checked', true);
+        $('input[name=window_primer][value=2]').prop('checked', true);
+        wall_primer();
+        $('input[name=grid][value=1]').prop('checked', true);
+        $('#block2_wall_grid_glass').prop('disabled', false);
+        $('#block2_wall_grid_zinc').prop('disabled', true);
+        break;
+      case 3:
+        $('input[name=wall_primer][value=1]').prop('checked', true);
+        $('input[name=roof_primer][value=1]').prop('checked', true);
+        $('input[name=window_primer][value=1]').prop('checked', true);
+        wall_primer();
+        $('input[name=grid][value=1]').prop('checked', true);
+        $('#block2_wall_grid_zinc').prop('disabled', true);
+        $('#block2_wall_grid_glass').prop('disabled', false);
+        break;
+      case 4:
+        $('input[name=wall_primer][value=1]').prop('checked', true);
+        $('input[name=roof_primer][value=1]').prop('checked', true);
+        $('input[name=window_primer][value=1]').prop('checked', true);
+        wall_primer();
+        $('input[name=grid][value=1]').prop('checked', true);
+        $('#block2_wall_grid_zinc').prop('disabled', true);
+        $('#block2_wall_grid_glass').prop('disabled', false);
+        break;
+    }
+
   });
 })

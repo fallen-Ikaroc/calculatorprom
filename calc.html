@@ -64,10 +64,10 @@
 
 
     <div id="block1_place">
-      <input type="radio" id="block1_brick" name="place"></input>
-      <input type="radio" id="block1_monolith" name="place">
-      <input type="radio" id="block1_aerocrete" name="place">
-      <input type="radio" id="block1_cinder" name="place">
+      <input type="radio" id="block1_brick" name="place" value="1"  class="block1_place_">
+      <input type="radio" id="block1_monolith" name="place" value="2" class="block1_place_">
+      <input type="radio" id="block1_aerocrete" name="place" value="3" class="block1_place_">
+      <input type="radio" id="block1_cinder" name="place" value="4" class="block1_place_">
     </div>
 
     <div id="block1_plaster">
@@ -84,8 +84,8 @@
   <section id="block2_area">
 
     <div id="block2_wall">
-      <input type="radio" id="block2_wall_type_dirty" name="types" value="" checked>
-      <input type="radio" id="block2_wall_type_clear" name="types" value="">
+      <input type="radio" id="block2_wall_type_dirty" name="types" value="220" checked class="radio_type">
+      <input type="radio" id="block2_wall_type_clear" name="types" value="280" class="radio_type">
       <div id="block2_wall_plaster" style="display: flex">
         штукатурка стены<div style="width:100px"></div>
         <input id="wall_plaster_square" type="text" value="0"></input>
@@ -148,8 +148,8 @@
     </div>
 
     <div id="block2_roof">
-      <input type="radio" id="block2_roof_type_dirty" name="types1" value="" checked>
-      <input type="radio" id="block2_roof_type_clear" name="types1" value="">
+      <input type="radio" id="block2_roof_type_dirty" name="types1" value="220" checked class="radio_type1">
+      <input type="radio" id="block2_roof_type_clear" name="types1" value="280" class="radio_type1">
       <div id="block2_roof_plaster"style="display: flex">
         штукатурка потолка<div style="width:100px"></div>
         <input id="roof_plaster_square" type="text" value="0"></input>
@@ -196,8 +196,8 @@
     </div>
 
     <div id="block2_window">
-      <input type="radio" id="block2_window_type_dirty" name="types2" value="" checked>
-      <input type="radio" id="block2_window_type_clear" name="types2" value="">
+      <input type="radio" id="block2_window_type_dirty" name="types2" value="220" checked class="radio_type2">
+      <input type="radio" id="block2_window_type_clear" name="types2" value="280" class="radio_type2">
       <div id="block2_window_plaster"style="display: flex">
         штукатурка откосы<div style="width:100px"></div>
         <input id="window_plaster_square" type="text" value="0"></input>
@@ -397,7 +397,7 @@
     <!-- Строка 11 -->
     <div style="display: flex;">
       <div>Итого по материалам:</div>
-      <div id="material_sum"></div>
+      <div id="material_sum">0</div>
     </div>
 
   </section>
