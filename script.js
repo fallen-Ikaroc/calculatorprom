@@ -1,3 +1,10 @@
+/* Modal Plaster */
+jQuery(document).ready(function($) {
+    $('.popup-content').magnificPopup({
+        type: 'inline'
+    });
+});
+
 var VesPaketa=30;
 // wall
 function wall_plaster(){
