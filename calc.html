@@ -217,8 +217,9 @@
   <section id="block2_area" class="pt-4 pb-4">
 
     <div id="block2_wall">
-      <!-- <input type="radio" id="block2_wall_type_dirty" name="types" value="220" checked class="radio_type">
+      <input type="radio" id="block2_wall_type_dirty" name="types" value="220" checked class="radio_type">
       <input type="radio" id="block2_wall_type_clear" name="types" value="280" class="radio_type">
+      <!--
       <div id="block2_wall_plaster" style="display: flex">
         штукатурка стены<div style="width:100px"></div>
         <input id="wall_plaster_square" type="text" value="0"></input>
@@ -291,9 +292,10 @@
         <a class="nav-item flex-fill text-center nav-link" style=" margin-left: -5px; margin-right:-5px; z-index: 1; background: #fff"  id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><div style="color: #2C3E50;">Потолки</div></a>
         <a class="nav-item col-4 text-center nav-link" style=" margin-left: -5px;  z-index: 0; background: #fff"  id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><div style="color: #2C3E50;">Откосы</div></a>
       </div>
-    <!-- <div id="block2_roof">
       <input type="radio" id="block2_roof_type_dirty" name="types1" value="220" checked class="radio_type1">
       <input type="radio" id="block2_roof_type_clear" name="types1" value="280" class="radio_type1">
+    <!-- <div id="block2_roof">
+
       <div id="block2_roof_plaster"style="display: flex">
         штукатурка потолка<div style="width:100px"></div>
         <input id="roof_plaster_square" type="text" value="0"></input>
@@ -454,11 +456,11 @@
           </div>
 </div>
         </div>
-
+        <input type="radio" id="block2_window_type_dirty" name="types2" value="220" checked class="radio_type2">
+        <input type="radio" id="block2_window_type_clear" name="types2" value="280" class="radio_type2">
 
         <!-- <div id="block2_window">
-          <input type="radio" id="block2_window_type_dirty" name="types2" value="220" checked class="radio_type2">
-          <input type="radio" id="block2_window_type_clear" name="types2" value="280" class="radio_type2">
+
           <div id="block2_window_plaster"style="display: flex">
             штукатурка откосы<div style="width:100px"></div>
             <input id="window_plaster_square" type="text" value="0"></input>
@@ -1074,12 +1076,9 @@
 
     <!-- Строка 4 -->
     <div style="display: flex;">
-      <div>СТЕНЫ
-        <select id="primer_wall_outlay">
-            <option value="2064" selected>грунтовка 1</option>
-            <option value="1548">грунтовка 2</option>
-        </select>
-      </div>
+      СТЕНЫ<div>|</div>
+      <div id="primer_wall_outlay"> грунтовка 1 </div>
+      <div>|</div>
       <div id="primer_wall_outlay_quantity">0</div>
       <div>|</div>
       <div id="primer_wall_outlay_price">2064</div>
@@ -1089,12 +1088,8 @@
 
     <!-- Строка 5 -->
     <div style="display: flex;">
-      <div>ПОТОЛКИ
-        <select id="primer_roof_outlay">
-            <option value="2064" selected>грунтовка 1</option>
-            <option value="1548">грунтовка 2</option>
-        </select>
-      </div>
+      ПОТОЛКИ
+      <div id="primer_roof_outlay">грунтовка 1</div>
       <div id="primer_roof_outlay_quantity">0</div>
       <div>|</div>
       <div id="primer_roof_outlay_price">2064</div>
@@ -1105,12 +1100,13 @@
 
     <!-- Строка 6 -->
     <div style="display: flex;">
-      <div>ОТКОСЫ
-        <select id="primer_window_outlay">
+      ОТКОСЫ
+      <div id="primer_window_outlay">Грунтовка 1</div>
+        <!-- <select id="primer_window_outlay">
             <option value="2064" selected>грунтовка 1</option>
             <option value="1548">грунтовка 2</option>
-        </select>
-      </div>
+        </select> -->
+
       <div id="primer_window_outlay_quantity">0</div>
       <div>|</div>
       <div id="primer_window_outlay_price">2064</div>
@@ -1120,11 +1116,7 @@
 
     <!-- Строка 7 -->
     <div style="display: flex;">
-      <div>
-        <select id="grid_outlay">
-            <option value="1" selected>сетка 1</option>
-            <option value="2">сетка 2</option>
-        </select>
+      <div id="grid_outlay">сетка 1
       </div>
       <div id="grid_outlay_quantity">0</div>
       <div>|</div>

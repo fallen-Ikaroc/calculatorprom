@@ -199,7 +199,7 @@ body{
   display: none;
 }
 #block1_plaster{
-  display: none;
+  /* display: none; */
 }
 
 
@@ -441,5 +441,5 @@ body{
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
   color: #2C3E50;
-  display: none;
+  
 }
