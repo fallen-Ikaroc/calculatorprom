@@ -5,11 +5,11 @@ function wall_plaster(){
   var square = document.getElementById("wall_plaster_square").value;
   document.getElementById("wall_plaster_consume").innerHTML = thickness;
   document.getElementById("wall_plaster_weight").innerHTML = thickness*square;
-  document.getElementById("wall_plaster_quantity").innerHTML = thickness*square/VesPaketa;
+  document.getElementById("wall_plaster_quantity").innerHTML = Math.ceil(thickness*square/VesPaketa);
   var priceperone=document.getElementById("wall_plaster_price").innerHTML;
-  document.getElementById("wall_plaster_sum").innerHTML =  priceperone * thickness * square/VesPaketa;
-  document.getElementById("plaster_wall_outlay_quantity").innerHTML =thickness*square/VesPaketa;
-  document.getElementById("plaster_wall_outlay_sum").innerHTML = priceperone * thickness * square/VesPaketa;
+  document.getElementById("wall_plaster_sum").innerHTML = priceperone * Math.ceil(thickness * square/VesPaketa);
+  document.getElementById("plaster_wall_outlay_quantity").innerHTML =Math.ceil(thickness*square/VesPaketa);
+  document.getElementById("plaster_wall_outlay_sum").innerHTML = priceperone * Math.ceil(thickness * square/VesPaketa);
   document.getElementById("work_outlay_wall_thickness").innerHTML =thickness;
   material_sum();
 }
@@ -31,13 +31,13 @@ function wall_primer(){
   var square=document.getElementById("wall_primer_square").innerHTML;
   var consumeperone=document.getElementById("wall_primer_consumeperone").innerHTML;
   var price=document.getElementById("wall_primer_price").innerHTML;
-  document.getElementById("wall_primer_consume").innerHTML =square*consumeperone;
-  document.getElementById("wall_primer_weight").innerHTML=square*consumeperone;
-  document.getElementById("wall_primer_quantity").innerHTML=square*consumeperone/10;
-  document.getElementById("wall_primer_sum").innerHTML=price*square*consumeperone/10;
+  document.getElementById("wall_primer_consume").innerHTML =(square*consumeperone).toFixed(2);
+  document.getElementById("wall_primer_weight").innerHTML=(square*consumeperone).toFixed(2);
+  document.getElementById("wall_primer_quantity").innerHTML=Math.ceil(square*consumeperone/10);
+  document.getElementById("wall_primer_sum").innerHTML=Math.ceil(price*square*consumeperone/10);
 
-  document.getElementById("primer_wall_outlay_quantity").innerHTML =square*consumeperone/10;
-  document.getElementById("primer_wall_outlay_sum").innerHTML = price*square*consumeperone/10;
+  document.getElementById("primer_wall_outlay_quantity").innerHTML =Math.ceil(square*consumeperone/10);
+  document.getElementById("primer_wall_outlay_sum").innerHTML = Math.ceil(price*square*consumeperone/10);
 }
 
 function grid(){
@@ -52,25 +52,25 @@ function grid(){
       document.getElementById("wall_grid_consume").innerHTML = "2";
     if(square>300)
       document.getElementById("wall_grid_consume").innerHTML = "3";
-    document.getElementById("wall_grid_weight").innerHTML = document.getElementById("wall_grid_consume").innerHTML*2.4;
+    document.getElementById("wall_grid_weight").innerHTML = (document.getElementById("wall_grid_consume").innerHTML*2.4).toFixed(2);
     document.getElementById("wall_grid_quantity").innerHTML = document.getElementById("wall_grid_consume").innerHTML;
-    document.getElementById("wall_grid_sum").innerHTML = document.getElementById("wall_grid_price").innerHTML*document.getElementById("wall_grid_quantity").innerHTML;
+    document.getElementById("wall_grid_sum").innerHTML = Math.ceil(document.getElementById("wall_grid_price").innerHTML*document.getElementById("wall_grid_quantity").innerHTML);
 
-    document.getElementById("grid_outlay_quantity").innerHTML =document.getElementById("wall_grid_quantity").innerHTML;
+    document.getElementById("grid_outlay_quantity").innerHTML =(document.getElementById("wall_grid_quantity").innerHTML).toFixed(2);
     document.getElementById("grid_outlay_price").innerHTML = "943";
-    document.getElementById("grid_outlay_sum").innerHTML =document.getElementById("wall_grid_sum").innerHTML;
+    document.getElementById("grid_outlay_sum").innerHTML =Math.ceil(document.getElementById("wall_grid_sum").innerHTML);
   }
   else{
     document.getElementById("wall_grid_price").innerHTML = "2460";
     document.getElementById("wall_grid_consumeperone").innerHTML = "1x30";
-    document.getElementById("wall_grid_consume").innerHTML = square/30;
-    document.getElementById("wall_grid_weight").innerHTML = document.getElementById("wall_grid_consume").innerHTML*10;
+    document.getElementById("wall_grid_consume").innerHTML = (square/30).toFixed(2);
+    document.getElementById("wall_grid_weight").innerHTML = (document.getElementById("wall_grid_consume").innerHTML*10).toFixed(2);
     document.getElementById("wall_grid_quantity").innerHTML = document.getElementById("wall_grid_consume").innerHTML;
-    document.getElementById("wall_grid_sum").innerHTML = document.getElementById("wall_grid_price").innerHTML*document.getElementById("wall_grid_quantity").innerHTML;
+    document.getElementById("wall_grid_sum").innerHTML = Math/ceil(document.getElementById("wall_grid_price").innerHTML*document.getElementById("wall_grid_quantity").innerHTML);
 
     document.getElementById("grid_outlay_quantity").innerHTML =document.getElementById("wall_grid_quantity").innerHTML;
     document.getElementById("grid_outlay_price").innerHTML = "2460";
-    document.getElementById("grid_outlay_sum").innerHTML =document.getElementById("wall_grid_sum").innerHTML;
+    document.getElementById("grid_outlay_sum").innerHTML =Math.ceil(document.getElementById("wall_grid_sum").innerHTML);
   }
 }
 
@@ -81,12 +81,12 @@ function roof_plaster(){
   var square=document.getElementById("roof_plaster_square").value;
   document.getElementById("roof_plaster_consume").innerHTML = thickness;
   document.getElementById("roof_plaster_weight").innerHTML = thickness*square;
-  document.getElementById("roof_plaster_quantity").innerHTML = thickness*square/VesPaketa;
+  document.getElementById("roof_plaster_quantity").innerHTML = Math.ceil(thickness*square/VesPaketa);
   var priceperone=document.getElementById("roof_plaster_price").innerHTML;
-  document.getElementById("roof_plaster_sum").innerHTML =  priceperone * thickness * square/VesPaketa;
+  document.getElementById("roof_plaster_sum").innerHTML =  priceperone * Math.ceil(thickness * square/VesPaketa);
 
-  document.getElementById("plaster_roof_outlay_quantity").innerHTML =thickness*square/VesPaketa;
-  document.getElementById("plaster_roof_outlay_sum").innerHTML = priceperone * thickness * square/VesPaketa;
+  document.getElementById("plaster_roof_outlay_quantity").innerHTML =Math.ceil(thickness*square/VesPaketa);
+  document.getElementById("plaster_roof_outlay_sum").innerHTML = priceperone * Math.ceil(thickness * square/VesPaketa);
 
   document.getElementById("work_outlay_roof_thickness").innerHTML =thickness;
 }
@@ -96,13 +96,13 @@ function roof_primer(){
   var square=document.getElementById("roof_primer_square").innerHTML;
   var consumeperone=document.getElementById("roof_primer_consumeperone").innerHTML;
   var price=document.getElementById("roof_primer_price").innerHTML;
-  document.getElementById("roof_primer_consume").innerHTML =square*consumeperone;
-  document.getElementById("roof_primer_weight").innerHTML=square*consumeperone;
-  document.getElementById("roof_primer_quantity").innerHTML=square*consumeperone/10;
-  document.getElementById("roof_primer_sum").innerHTML=price*square*consumeperone/10;
+  document.getElementById("roof_primer_consume").innerHTML =(square*consumeperone).toFixed(2);
+  document.getElementById("roof_primer_weight").innerHTML=(square*consumeperone).toFixed(2);
+  document.getElementById("roof_primer_quantity").innerHTML=(square*consumeperone/10).toFixed(2);
+  document.getElementById("roof_primer_sum").innerHTML=Math.ceil(price*square*consumeperone/10);
 
-  document.getElementById("primer_roof_outlay_quantity").innerHTML =square*consumeperone/10;
-  document.getElementById("primer_roof_outlay_sum").innerHTML = price*square*consumeperone/10;
+  document.getElementById("primer_roof_outlay_quantity").innerHTML =(square*consumeperone/10).toFixed(2);
+  document.getElementById("primer_roof_outlay_sum").innerHTML = Math.ceil(price*square*consumeperone/10);
 }
 
 // window
@@ -112,12 +112,12 @@ function window_plaster(){
   var square=document.getElementById("window_plaster_square").value;
   document.getElementById("window_plaster_consume").innerHTML = thickness;
   document.getElementById("window_plaster_weight").innerHTML = thickness*square;
-  document.getElementById("window_plaster_quantity").innerHTML = thickness*square/VesPaketa;
+  document.getElementById("window_plaster_quantity").innerHTML = Math.ceil(thickness*square/VesPaketa);
   var priceperone=document.getElementById("window_plaster_price").innerHTML;
-  document.getElementById("window_plaster_sum").innerHTML =  priceperone * thickness * square/VesPaketa;
+  document.getElementById("window_plaster_sum").innerHTML =  priceperone * Math.ceil(thickness * square/VesPaketa);
 
-  document.getElementById("plaster_window_outlay_quantity").innerHTML =thickness*square/VesPaketa;
-  document.getElementById("plaster_window_outlay_sum").innerHTML = priceperone * thickness * square/VesPaketa;
+  document.getElementById("plaster_window_outlay_quantity").innerHTML =Math.ceil(thickness*square/VesPaketa);
+  document.getElementById("plaster_window_outlay_sum").innerHTML = priceperone * Math.ceil(thickness * square/VesPaketa);
 
   document.getElementById("work_outlay_window_thickness").innerHTML =thickness;
 }
@@ -126,13 +126,13 @@ function window_primer(){
   var square=document.getElementById("window_primer_square").innerHTML;
   var consumeperone=document.getElementById("window_primer_consumeperone").innerHTML;
   var price=document.getElementById("window_primer_price").innerHTML;
-  document.getElementById("window_primer_consume").innerHTML =square*consumeperone;
-  document.getElementById("window_primer_weight").innerHTML=square*consumeperone;
-  document.getElementById("window_primer_quantity").innerHTML=square*consumeperone/10;
-  document.getElementById("window_primer_sum").innerHTML=price*square*consumeperone/10;
+  document.getElementById("window_primer_consume").innerHTML =(square*consumeperone).toFixed(2);
+  document.getElementById("window_primer_weight").innerHTML=(square*consumeperone).toFixed(2);
+  document.getElementById("window_primer_quantity").innerHTML=(square*consumeperone/10).toFixed(2);
+  document.getElementById("window_primer_sum").innerHTML=Math.ceil(price*square*consumeperone/10);
 
-  document.getElementById("primer_window_outlay_quantity").innerHTML =square*consumeperone/10;
-  document.getElementById("primer_window_outlay_sum").innerHTML = price*square*consumeperone/10;
+  document.getElementById("primer_window_outlay_quantity").innerHTML =(square*consumeperone/10).toFixed(2);
+  document.getElementById("primer_window_outlay_sum").innerHTML =Math.ceil(price*square*consumeperone/10);
 
 }
 
@@ -579,33 +579,33 @@ $(function(){
     var sale1=parseFloat(document.getElementById("work_outlay_wall_sale").innerHTML);
     var sale2=parseFloat(document.getElementById("work_outlay_roof_sale").innerHTML);
     var sale3=parseFloat(document.getElementById("work_outlay_window_sale").innerHTML);
-    document.getElementById("work_outlay_sale_percent").innerHTML=(sale1+sale2+sale3)/3;
+    document.getElementById("work_outlay_sale_percent").innerHTML=Math.ceil((sale1+sale2+sale3)/3);
     var quantity1=parseFloat(document.getElementById("work_outlay_wall_quantity").innerHTML);
     var quantity2=parseFloat(document.getElementById("work_outlay_roof_quantity").innerHTML);
     var quantity3=parseFloat(document.getElementById("work_outlay_window_quantity").innerHTML);
-    document.getElementById("work_outlay_sale_sum").innerHTML=(quantity1+quantity2+quantity3)*(sale1+sale2+sale3)/3/100;
+    document.getElementById("work_outlay_sale_sum").innerHTML=Math.ceil((quantity1+quantity2+quantity3)*(sale1+sale2+sale3)/3/100);
   });
 
   $('#work_outlay_roof_sale').bind('DOMNodeInserted DOMNodeRemoved', function(){
     var sale1=parseFloat(document.getElementById("work_outlay_wall_sale").innerHTML);
     var sale2=parseFloat(document.getElementById("work_outlay_roof_sale").innerHTML);
     var sale3=parseFloat(document.getElementById("work_outlay_window_sale").innerHTML);
-    document.getElementById("work_outlay_sale_percent").innerHTML=(sale1+sale2+sale3)/3;
+    document.getElementById("work_outlay_sale_percent").innerHTML=Math.ceil((sale1+sale2+sale3)/3);
     var quantity1=parseFloat(document.getElementById("work_outlay_wall_quantity").innerHTML);
     var quantity2=parseFloat(document.getElementById("work_outlay_roof_quantity").innerHTML);
     var quantity3=parseFloat(document.getElementById("work_outlay_window_quantity").innerHTML);
-    document.getElementById("work_outlay_sale_sum").innerHTML=(quantity1+quantity2+quantity3)*(sale1+sale2+sale3)/3/100;
+    document.getElementById("work_outlay_sale_sum").innerHTML=Math.ceil((quantity1+quantity2+quantity3)*(sale1+sale2+sale3)/3/100);
   });
 
   $('#work_outlay_window_sale').bind('DOMNodeInserted DOMNodeRemoved', function(){
     var sale1=parseFloat(document.getElementById("work_outlay_wall_sale").innerHTML);
     var sale2=parseFloat(document.getElementById("work_outlay_roof_sale").innerHTML);
     var sale3=parseFloat(document.getElementById("work_outlay_window_sale").innerHTML);
-    document.getElementById("work_outlay_sale_percent").innerHTML=(sale1+sale2+sale3)/3;
+    document.getElementById("work_outlay_sale_percent").innerHTML=Math.ceil((sale1+sale2+sale3)/3);
     var quantity1=parseFloat(document.getElementById("work_outlay_wall_quantity").innerHTML);
     var quantity2=parseFloat(document.getElementById("work_outlay_roof_quantity").innerHTML);
     var quantity3=parseFloat(document.getElementById("work_outlay_window_quantity").innerHTML);
-    document.getElementById("work_outlay_sale_sum").innerHTML=(quantity1+quantity2+quantity3)*(sale1+sale2+sale3)/3/100;
+    document.getElementById("work_outlay_sale_sum").innerHTML=Math.ceil((quantity1+quantity2+quantity3)*(sale1+sale2+sale3)/3/100);
   });
 
   $('#work_outlay_wall_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
