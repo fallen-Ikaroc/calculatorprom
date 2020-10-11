@@ -650,6 +650,7 @@ $(function(){
   });
 
   $('.block1_place_').change(function(){
+
     nail_shim();
     var value=parseFloat($('input[name=place]:checked').val());
     switch (value){
@@ -711,6 +712,19 @@ $(function(){
         $('#block2_wall_grid_glass').prop('disabled', false);
         break;
     }
-
   });
+  (function() {
+    var cards = document.querySelectorAll(".card.effect__click");
+    for ( var i  = 0, len = cards.length; i < len; i++ ) {
+      var card = cards[i];
+      clickListener( card );
+    }
+
+    function clickListener(card) {
+      card.addEventListener( "click", function() {
+        var c = this.classList;
+         c.add("flipped");
+      });
+    }
+  })();
 })
