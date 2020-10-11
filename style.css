@@ -223,16 +223,14 @@ body{
   font-family: 'Russo One', sans-serif;
 }
 .arrow{
-  content: '\f061';
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  color: #ffa700;
+  height: 20px;
 }
 .string_1{
   color: #ffffff;
   background-color: #ffa700;
   height: 60px;
   font-size: 20px;
+  width: 1100px;
 }
 .string_2{
   height: 60px;
@@ -472,11 +470,30 @@ body{
   width: 365px;
 }
 
-
 #block4_workresult{
   max-width: 1110px;
   min-width: 1100px;
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
   color: #2C3E50;
+}
+
+#block0_commonresult{
+  max-width: 1110px;
+  min-width: 1100px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  color: #2C3E50;
+}
+.d18 {
+position: relative;
+width: 100px;
+height: 80px;
+}
+.d19{
+width: 50px;
+height: 80px;
+background: #EE4156;
+border-radius: 50px 50px 0 0;
+transform-origin: 0 100%;
 }
