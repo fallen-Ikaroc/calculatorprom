@@ -16,19 +16,19 @@
 
   <!-- Block1 -->
 
-<div style="background: linear-gradient(90deg, #ffffff, #fafafa);">
+<div style="background: linear-gradient(90deg, #ffffff, #fafafa); min-width: 1200px;">
 
-  <section id="block1" class="pt-4 pb-4">
+  <section id="block1" class="p-5">
 
-    <div class="d-flex" style="max-width: 1110px;">
+    <div class="d-flex">
       <div class="flex-fill"></div>
       <div class="heading">Калькулятор штукатурных работ</div>
     </div>
-    <div class="flip-horizontal">
+    <div class="flip-horizontal pb-4">
       <div class="line_3"></div>
     </div>
 
-    <div class="d-flex mb-4" style="max-width: 1110px;">
+    <div class="d-flex mb-4">
       <div class="m-0">
         <div class="heading">Выберите тип объекта</div>
         <div class="line_1 mb-1"></div>
@@ -38,24 +38,43 @@
       <a class="align-self-end text-center block1_ver2_plaster_choice button_ver2_plaster_choice m-0 font-weight-bold" style="width:260px !important">Изменить тип объекта</a>
     </div>
 <!-- card effect__click -->
-    <!-- Выбор стены -->
-    <div class="d-flex align-items-center justify-content-center p-1" styles=" ">
-      <div class="shadow_1 p-3 " style="margin: 0 auto">
-        <div id="block1_ver1" class="card__front">
-          <div class="d-flex" style="margin-bottom: 20px">
-            <label class="bg-primary mb-0" for="block1_brick" style="height: 340px; width: 340px; margin-right: 20px;"><div class="brick"></div></label>
-            <label class="bg-primary mb-0" for="block1_monolith" style="height: 340px; width: 340px"><div class="monolith"></div></label>
+
+    <div class="d-flex align-items-center justify-content-center p-1">
+      <div class="shadow_1 p-4" style="margin: 0 auto">
+
+      <!-- Выбор стены -->
+        <div id="block1_ver1" class="d-flex card__front">
+
+          <div class="d-flex block1_ver1_1">
+
+            <label class="block1_brick" for="block1_brick">
+              <div class="brick"></div>
+            </label>
+            <label class="block1_monolith" class="block1_monolith" for="block1_monolith">
+              <div class="monolith"></div>
+            </label>
+
           </div>
-          <div class="d-flex">
-            <label class="bg-primary mb-0" for="block1_aerocrete" style="height: 340px; width: 340px; margin-right: 20px;"><div class="aerocrete"></div></label>
-            <label class="bg-primary mb-0" for="block1_cinder" style="height: 340px; width: 340px"><div class="cinder"></div></label>
+
+          <div class="d-flex block1_ver1_2">
+
+            <label class="block1_aerocrete" class="block1_aerocrete" for="block1_aerocrete">
+              <div class="aerocrete"></div>
+            </label>
+            <label class="block1_cinder" class="block1_cinder" for="block1_cinder">
+              <div class="cinder"></div>
+            </label>
+
           </div>
+
         </div>
 
       <!-- Выбор штукатурки -->
-        <div id="block1_ver2" class="card__back" >
-          <div class="d-flex block1_ver2_1" style="margin-bottom: 20px">
-            <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: 340px; width: 340px; margin-right: 20px;">
+        <div id="block1_ver2" class="d-flex card__back">
+
+           <div class="d-flex block1_ver2_1">
+
+            <div class="block1_brick flex-column text-center block1_ver2_plaster shadow_2">
               <div class="d-flex p-2">
                 <div class="d-flex align-self-center">
                   <div class="block1_ver2_plaster_info_position m-0"></div>
@@ -88,7 +107,7 @@
               <div class="p-2"><label for="block1_knaufg" class="block1_ver2_plaster_choice button_ver2_plaster_choice m-0 font-weight-bold">Выбрать</label></div>
             </div>
 
-            <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: 340px; width: 340px">
+            <div class="block1_monolith flex-column text-center block1_ver2_plaster shadow_2">
               <div class="d-flex p-2">
                 <div class="d-flex align-self-center">
                   <div class="block1_ver2_plaster_info_position m-0"></div>
@@ -120,10 +139,12 @@
               </div>
               <div class="p-2"><label for="block1_volma" class="block1_ver2_plaster_choice button_ver2_plaster_choice m-0 font-weight-bold">Выбрать</label></div>
             </div>
+
           </div>
 
-          <div class="d-flex block1_ver2_1">
-            <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: 340px; width: 340px; margin-right: 20px">
+          <div class="d-flex block1_ver2_2">
+
+            <div class="block1_aerocrete flex-column text-center block1_ver2_plaster shadow_2">
               <div class="d-flex p-2">
                 <div class="d-flex align-self-center">
                   <div class="block1_ver2_plaster_info_position m-0"></div>
@@ -156,7 +177,7 @@
               <div class="p-2"><label for="block1_knaufc" class="block1_ver2_plaster_choice button_ver2_plaster_choice m-0 font-weight-bold">Выбрать</label></div>
             </div>
 
-            <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: 340px; width: 340px">
+            <div class="block1_cinder flex-column text-center block1_ver2_plaster shadow_2">
               <div class="d-flex p-2">
                 <div class="d-flex align-self-center">
                   <div class="block1_ver2_plaster_info_position m-0"></div>
@@ -188,6 +209,7 @@
               </div>
               <div class="p-2"><label for="block1_plitonit" class="block1_ver2_plaster_choice button_ver2_plaster_choice m-0 font-weight-bold">Выбрать</label></div>
             </div>
+
           </div>
 
         </div>
@@ -203,7 +225,7 @@
       <input type="radio" id="block1_cinder" name="place" value="4" class="block1_place_">
     </div>
 
-    <div id="block1_plaster" style="display: none;">
+    <div id="block1_plaster">
       <input type="radio" id="block1_knaufg" name="plaster" value="435" class="radio_plaster" checked>
       <input type="radio" id="block1_volma" name="plaster" value="500" class="radio_plaster">
       <input type="radio" id="block1_knaufc" name="plaster" value="550" class="radio_plaster">
@@ -216,9 +238,9 @@
 
   <!-- Block2 Area -->
 
-<div style="  background: linear-gradient(90deg, #fafafa, #ffffff);">
+<div style="background: linear-gradient(90deg, #fafafa, #ffffff); min-width: 1200px;">
 
-  <section id="block2_area" class="pt-4 pb-4">
+  <section id="block2_area" class="p-5">
 
     <div id="block2_wall">
 
@@ -241,7 +263,7 @@
       <input type="radio" id="block2_window_type_clear" name="types2" value="280" class="radio_type2">
     </div>
 
-    <nav class="heading_nav">
+    <nav class="heading_nav col">
       <div class="nav nav-tabs d-flex" id="nav-tab" role="tablist">
         <a class="nav-item col-4 text-center nav-link active"  style="  margin-right:-5px; z-index: 2; background: #fff"  id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><div style="color: #2C3E50;">Стены</div></a>
         <a class="nav-item flex-fill text-center nav-link" style=" margin-left: -5px; margin-right:-5px; z-index: 1; background: #fff"  id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><div style="color: #2C3E50;">Потолки</div></a>
@@ -306,13 +328,13 @@
         </div>
         <div class="">
           <div class="d-flex font-weight-bold string_1">
-            <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
-            <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Цена мешка</div></div>
-            <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Толщина слоя</div></div>
-            <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Расход</div></div>
-            <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Вес</div></div>
-            <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Количество </div></div>
-            <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
+            <div class="d-flex flex-fill col p-0 border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
+            <div class="d-flex flex-fill col p-0 border_top"><div class="text-center align-self-center w-100">Цена мешка</div></div>
+            <div class="d-flex flex-fill col p-0 border_top"><div class="text-center align-self-center w-100">Толщина слоя</div></div>
+            <div class="d-flex flex-fill col p-0 border_top"><div class="text-center align-self-center w-100">Расход</div></div>
+            <div class="d-flex flex-fill col p-0 border_top"><div class="text-center align-self-center w-100">Вес</div></div>
+            <div class="d-flex flex-fill col p-0 border_top"><div class="text-center align-self-center w-100">Количество </div></div>
+            <div class="d-flex flex-fill col p-0 border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
           </div>
           <div class="d-flex string_2">
             <div class="d-flex flex-fill border_bottom_left"><div class="text-center align-self-center w-100"><input id="wall_plaster_square" class="text-center p-0" style="width:40%; height:" type="text" type="number" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="4" value="0"></input>&nbsp;м&sup2;</div></div>
@@ -320,7 +342,7 @@
             <div class="d-flex flex-fill border_bottom">
               <div class="d-flex text-center justify-content-center align-self-center w-100">
                 <div class="d-flex text-center">
-                  <select style="height:34px;" id="wall_plaster_thickness">
+                  <select id="wall_plaster_thickness">
                     <option value="15" selected>15</option>
                     <option value="20">20</option>
                     <option value="25">25</option>
@@ -346,7 +368,7 @@
           <div class="heading_block2">Грунтовка</div>
         </div>
 
-        <div class="d-flex block1_ver2_1 justify-content-center pb-4 pl-4 pr-4" style="">
+        <!-- <div class="d-flex block1_ver2_1 justify-content-center pb-4 pl-4 pr-4" style="">
           <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px;">
             <div class="d-flex p-2">
               <div class="d-flex align-self-center">
@@ -377,7 +399,7 @@
               </div>
             </div>
           </div>
-<div style="display:none;">
+
           <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px;">
             <div class="d-flex p-2">
               <div class="d-flex align-self-center">
@@ -408,8 +430,7 @@
               </div>
             </div>
           </div>
-</div>
-        </div>
+        </div> -->
 
         <div class="">
           <div class="d-flex font-weight-bold string_1">
@@ -439,7 +460,7 @@
           <div class="heading_block2">Сетка</div>
         </div>
 
-        <div class="d-flex block1_ver2_1 justify-content-center pb-4 pl-4 pr-4">
+        <!-- <div class="d-flex block1_ver2_1 justify-content-center pb-4 pl-4 pr-4">
           <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px;">
             <div class="d-flex p-2">
               <div class="d-flex align-self-center">
@@ -472,7 +493,6 @@
               </div>
             </div>
           </div>
-<div style="display:none;">
           <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px">
             <div class="d-flex p-2">
               <div class="d-flex align-self-center">
@@ -505,8 +525,7 @@
               </div>
             </div>
           </div>
-</div>
-        </div>
+        </div> -->
 
         <div class="">
           <div class="d-flex font-weight-bold string_1">
@@ -557,7 +576,7 @@
               <div class="d-flex flex-fill border_bottom">
                 <div class="d-flex text-center justify-content-center align-self-center w-100">
                   <div class="d-flex text-center">
-                    <select style="height:34px;" id="roof_plaster_thickness">
+                    <select id="roof_plaster_thickness">
                       <option value="15" selected>15</option>
                       <option value="20">20</option>
                       <option value="25">25</option>
@@ -583,7 +602,7 @@
             <div class="heading_block2">Грунтовка</div>
           </div>
 
-          <div class="d-flex block1_ver2_1 justify-content-center pb-4 pl-4 pr-4">
+          <!-- <div class="d-flex block1_ver2_1 justify-content-center pb-4 pl-4 pr-4">
             <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px;">
               <div class="d-flex p-2">
                 <div class="d-flex align-self-center">
@@ -614,7 +633,7 @@
                 </div>
               </div>
             </div>
-<div style="display:none;">
+
             <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px">
               <div class="d-flex p-2">
                 <div class="d-flex align-self-center">
@@ -645,8 +664,7 @@
                 </div>
               </div>
             </div>
-</div>
-          </div>
+          </div> -->
 
           <div class="">
             <div class="d-flex font-weight-bold string_1">
@@ -696,7 +714,7 @@
               <div class="d-flex flex-fill border_bottom">
                 <div class="d-flex text-center justify-content-center align-self-center w-100">
                   <div class="d-flex text-center">
-                    <select style="height:34px;" id="window_plaster_thickness">
+                    <select id="window_plaster_thickness">
                       <option value="15" selected>15</option>
                       <option value="20">20</option>
                       <option value="25">25</option>
@@ -722,7 +740,7 @@
             <div class="heading_block2">Грунтовка</div>
           </div>
 
-          <div class="d-flex block1_ver2_1 justify-content-center pb-4 pl-4 pr-4">
+          <!-- <div class="d-flex block1_ver2_1 justify-content-center pb-4 pl-4 pr-4">
             <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px;">
               <div class="d-flex p-2">
                 <div class="d-flex align-self-center">
@@ -753,7 +771,7 @@
                 </div>
               </div>
             </div>
-<div style="display:none;">
+
             <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px">
               <div class="d-flex p-2">
                 <div class="d-flex align-self-center">
@@ -784,8 +802,7 @@
                 </div>
               </div>
             </div>
-</div>
-          </div>
+          </div> -->
 
           <div class="">
             <div class="d-flex font-weight-bold string_1">
@@ -865,9 +882,9 @@
 
   <!-- Block3 Material -->
 
-<div style="background: linear-gradient(90deg, #ffffff, #fafafa);">
+<div style="background: linear-gradient(90deg, #ffffff, #fafafa); min-width: 1200px;">
 
-  <section id="block3_material" class="pt-4 pb-4">
+  <section id="block3_material" class="p-5">
 
     <div class="d-flex mb-4" style="max-width: 1110px;">
       <div class="m-0">
@@ -877,19 +894,24 @@
       </div>
     </div>
 
-    <div class="">
+    <div class="col">
 
     <!-- Строка 0 -->
       <div class="d-flex string_3 font-weight-bold">
         <div class="d-flex flex-fill border_top_left_2"><div class="text-center align-self-center w-100">Материал</div></div>
+        <div class="d-flex flex-fill border_top_2"><div class="text-center align-self-center w-100">Вес</div></div>
         <div class="d-flex flex-fill border_top_2"><div class="text-center align-self-center w-100">Количество</div></div>
         <div class="d-flex flex-fill border_top_2"><div class="text-center align-self-center w-100">Цена</div></div>
         <div class="d-flex flex-fill border_top_right_2"><div class="text-center align-self-center w-100">Сумма</div></div>
       </div>
 
     <!-- Строка 1 -->
+      <div class="d-flex string_4 font-weight-bold">
+        <div class="d-flex flex-fill border_middle_4"><div class="d-flex align-self-center justify-content-center w-100">Стены</div></div>
+      </div>
+
+    <!-- Строка 2 -->
       <div class="d-flex string_4">
-        <div class="d-flex" style="height: 120px;width: 120px; border-bottom: 3px solid #2C3E50; border-right: 3px solid #2C3E50;"><div class="text-center font-weight-bold align-self-center w-100">Стены</div></div>
         <div class="d-flex flex-fill border_middle_left"><div class="text-center align-self-center w-100">
           <select id="plaster_wall_outlay" class="font-weight-bold" style="height: 30px;">
               <option value="435" selected>штукатурка 1</option>
@@ -898,23 +920,46 @@
               <option value="560">штукатурка 4</option>
           </select>
         </div></div>
+        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="plaster_wall_outlay_weight">0</div></div></div>
         <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="plaster_wall_outlay_quantity">0</div></div></div>
         <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="plaster_wall_outlay_price">435</div></div></div>
         <div class="d-flex flex-fill border_middle_right"><div class="text-center align-self-center w-100"><div id="plaster_wall_outlay_sum">0</div></div></div>
       </div>
 
-    <!-- Строка 2 -->
+    <!-- Строка 3 -->
       <div class="d-flex string_4">
-        <div class="d-flex" style="width: 120px;"><div class="text-center font-weight-bold align-self-center w-100"></div></div>
-        <div class="d-flex flex-fill border_middle_left"><div class="text-center font-weight-bold align-self-center w-100"><div id="primer_wall_outlay"> грунтовка 1 </div></div></div>
+        <div class="d-flex flex-fill border_middle_left"><div class="text-center font-weight-bold align-self-center w-100"><div id="primer_wall_outlay">грунтовка 1</div></div></div>
+        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="primer_wall_outlay_weight">0</div></div></div>
         <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="primer_wall_outlay_quantity">0</div></div></div>
         <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="primer_wall_outlay_price">2064</div></div></div>
         <div class="d-flex flex-fill border_middle_right"><div class="text-center align-self-center w-100"><div id="primer_wall_outlay_sum">0</div></div></div>
       </div>
 
-    <!-- Строка 3 -->
+    <!-- Строка 4 -->
       <div class="d-flex string_4">
-        <div class="d-flex" style="height: 120px;width: 120px; border-bottom: 3px solid #2C3E50; border-right: 3px solid #2C3E50;"><div class="text-center font-weight-bold align-self-center w-100">Потолки</div></div>
+        <div class="d-flex flex-fill border_middle_left"><div class="text-center font-weight-bold align-self-center w-100"><div id="pharos_wall_outlay">профиль маячковый</div></div></div>
+        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="pharos_wall_outlay_weight">0</div></div></div>
+        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="pharos_wall_outlay_quantity">0</div></div></div>
+        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="pharos_wall_outlay_price">116</div></div></div>
+        <div class="d-flex flex-fill border_middle_right"><div class="text-center align-self-center w-100"><div id="pharos_wall_outlay_sum">0</div></div></div>
+      </div>
+
+    <!-- Строка 5 -->
+      <div class="d-flex string_4">
+        <div class="d-flex flex-fill border_middle_left"><div class="text-center font-weight-bold align-self-center w-100"><div id="grid_outlay">сетка 1</div></div></div>
+        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="gris_outlay_weight">0</div></div></div>
+        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="grid_outlay_quantity">0</div></div></div>
+        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="grid_outlay_price">943</div></div></div>
+        <div class="d-flex flex-fill border_middle_right"><div class="text-center align-self-center w-100"><div id="grid_outlay_sum">0</div></div></div>
+      </div>
+
+    <!-- Строка 6 -->
+      <div class="d-flex string_4 font-weight-bold">
+        <div class="d-flex flex-fill border_middle_4"><div class="d-flex align-self-center justify-content-center w-100">Потолки</div></div>
+      </div>
+
+    <!-- Строка 7 -->
+      <div class="d-flex string_4">
         <div class="d-flex flex-fill border_middle_left"><div class="text-center font-weight-bold align-self-center w-100">
           <select id="plaster_roof_outlay" class="font-weight-bold" style="height: 30px;">
               <option value="435" selected>штукатурка 1</option>
@@ -923,23 +968,37 @@
               <option value="560">штукатурка 4</option>
           </select>
         </div></div>
+        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="plaster_roof_outlay_weight">0</div></div></div>
         <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="plaster_roof_outlay_quantity">0</div></div></div>
         <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="plaster_roof_outlay_price">435</div></div></div>
         <div class="d-flex flex-fill border_middle_right"><div class="text-center align-self-center w-100"><div id="plaster_roof_outlay_sum">0</div></div></div>
       </div>
 
-    <!-- Строка 4 -->
+    <!-- Строка 8 -->
       <div class="d-flex string_4">
-        <div class="d-flex" style="width: 120px;"><div class="text-center font-weight-bold align-self-center w-100"></div></div>
         <div class="d-flex flex-fill border_middle_left"><div class="text-center font-weight-bold align-self-center w-100"><div id="primer_roof_outlay">грунтовка 1</div></div></div>
+        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="primer_roof_outlay_weight">0</div></div></div>
         <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="primer_roof_outlay_quantity">0</div></div></div>
         <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="primer_roof_outlay_price">2064</div></div></div>
         <div class="d-flex flex-fill border_middle_right"><div class="text-center align-self-center w-100"><div id="primer_roof_outlay_sum">0</div></div></div>
       </div>
 
-    <!-- Строка 5 -->
+    <!-- Строка 9 -->
       <div class="d-flex string_4">
-        <div class="d-flex" style="height: 120px;width: 120px; border-bottom: 3px solid #2C3E50; border-right: 3px solid #2C3E50;"><div class="text-center font-weight-bold align-self-center w-100">Откосы</div></div>
+        <div class="d-flex flex-fill border_middle_left"><div class="text-center font-weight-bold align-self-center w-100"><div id="pharos_roof_outlay">профиль маячковый</div></div></div>
+        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="pharos_roof_outlay_weight">0</div></div></div>
+        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="pharos_roof_outlay_quantity">0</div></div></div>
+        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="pharos_roof_outlay_price">116</div></div></div>
+        <div class="d-flex flex-fill border_middle_right"><div class="text-center align-self-center w-100"><div id="pharos_roof_outlay_sum">0</div></div></div>
+      </div>
+
+    <!-- Строка 10 -->
+      <div class="d-flex string_4 font-weight-bold">
+        <div class="d-flex flex-fill border_middle_4"><div class="d-flex align-self-center justify-content-center w-100">Откосы</div></div>
+      </div>
+
+    <!-- Строка 11 -->
+      <div class="d-flex string_4">
         <div class="d-flex flex-fill border_middle_left"><div class="text-center font-weight-bold align-self-center w-100">
           <select id="plaster_window_outlay" class="font-weight-bold" style="height: 30px;">
               <option value="435" selected>штукатурка 1</option>
@@ -948,68 +1007,63 @@
               <option value="560">штукатурка 4</option>
           </select>
         </div></div>
+        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="plaster_window_outlay_weight">0</div></div></div>
         <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="plaster_window_outlay_quantity">0</div></div></div>
         <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="plaster_window_outlay_price">435</div></div></div>
         <div class="d-flex flex-fill border_middle_right"><div class="text-center align-self-center w-100"><div id="plaster_window_outlay_sum">0</div></div></div>
       </div>
 
-    <!-- Строка 6 -->
+    <!-- Строка 12 -->
       <div class="d-flex string_4">
-        <div class="d-flex" style="width: 120px;"><div class="text-center font-weight-bold align-self-center w-100"></div></div>
         <div class="d-flex flex-fill border_middle_left"><div class="text-center font-weight-bold align-self-center w-100"><div id="primer_window_outlay">Грунтовка 1</div></div></div>
+        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="primer_window_outlay_weight">0</div></div></div>
         <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="primer_window_outlay_quantity">0</div></div></div>
         <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="primer_window_outlay_price">2064</div></div></div>
         <div class="d-flex flex-fill border_middle_right"><div class="text-center align-self-center w-100"><div id="primer_window_outlay_sum">0</div></div></div>
       </div>
 
-    <!-- Строка 7 -->
-      <div class="d-flex string_4">
-        <div class="d-flex flex-fill border_middle_left"><div class="text-center align-self-center w-100"><div id="grid_outlay">сетка 1</div></div></div>
-        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="grid_outlay_quantity">0</div></div></div>
-        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="grid_outlay_price">943</div></div></div>
-        <div class="d-flex flex-fill border_middle_right"><div class="text-center align-self-center w-100"><div id="grid_outlay_sum">0</div></div></div>
-      </div>
-
-    <!-- Строка 8 -->
-      <div class="d-flex string_4">
-        <div class="d-flex flex-fill border_middle_left"><div class="text-center align-self-center w-100"><div id="pharos_outlay">профиль маячковый</div></div></div>
-        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="pharos_outlay_quantity">0</div></div></div>
-        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="pharos_outlay_price">116</div></div></div>
-        <div class="d-flex flex-fill border_middle_right"><div class="text-center align-self-center w-100"><div id="pharos_outlay_sum">0</div></div></div>
-      </div>
-
-    <!-- Строка 9 -->
-      <div class="d-flex string_4">
-        <div class="d-flex flex-fill border_middle_left"><div class="text-center align-self-center w-100"><div id="shim_outlay">шайба</div></div></div>
-        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="shim_outlay_quantity">0</div></div></div>
-        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="shim_outlay_price">199</div></div></div>
-        <div class="d-flex flex-fill border_middle_right"><div class="text-center align-self-center w-100"><div id="shim_outlay_sum">0</div></div></div>
-      </div>
-
-    <!-- Строка 10 -->
-      <div class="d-flex string_4">
-        <div class="d-flex flex-fill border_middle_left"><div class="text-center align-self-center w-100"><div id="nail_outlay">гвоздик</div></div></div>
-        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="nail_outlay_quantity">0</div></div></div>
-        <div class="d-flex flex-fill border_middle"><div class="text-center align-self-center w-100"><div id="nail_outlay_price">600</div></div></div>
-        <div class="d-flex flex-fill border_middle_right"><div class="text-center align-self-center w-100"><div id="nail_outlay_sum">0</div></div></div>
-      </div>
-
-    <!-- Строка 11 -->
+    <!-- Строка 13 -->
       <div class="d-flex string_5 font-weight-bold">
         <div class="d-flex flex-fill border_middle_left_2"><div class="text-center align-self-center w-100"></div></div>
         <div class="d-flex flex-fill border_bottom_2"><div class="text-center align-self-center w-100">Итого по материалам:</div></div>
         <div class="d-flex flex-fill border_bottom_right_2"><div class="d-flex align-self-center justify-content-center w-100"><div id="material_sum">0</div>&nbsp;руб</div></div>
       </div>
 
+      <div style="display: none;">
+        <div class="d-flex">
+          <div id="nail_outlay">гвоздик</div>|
+          <div id="nail_outlay_quantity">0</div>|
+          <div id="nail_outlay_price">600</div>|
+          <div id="nail_outlay_sum">0</div>|
+        </div>
+
+        <div class="d-flex">
+          <div id="shim_outlay">шайба</div>|
+          <div id="shim_outlay_quantity">0</div>|
+          <div id="shim_outlay_price">199</div>|
+          <div id="shim_outlay_sum">0</div>|
+        </div>
+
+        <div class="d-flex">
+          <div id="pharos_outlay">профиль маячковый</div>|
+          <div id="pharos_outlay_weight">0</div>|
+          <div id="pharos_outlay_quantity">0</div>|
+          <div id="pharos_outlay_price">116</div>|
+          <div id="pharos_outlay_sum">0</div>|
+        </div>
+      </div>
+
     </div>
 
   </section>
 
+</div>
+
   <!-- Block4 Workresult -->
 
-<div style="background: linear-gradient(90deg, #fafafa, #ffffff);">
+<div style="background: linear-gradient(90deg, #fafafa, #ffffff); min-width: 1200px;">
 
-  <section id="block4_workresult">
+  <section id="block4_workresult" class="p-5">
 
     <div class="d-flex pt-4 pb-4" style="max-width: 1110px;">
       <div class="m-0">
@@ -1035,7 +1089,10 @@
 
     <!-- Строка 1 -->
       <div class="d-flex font-weight-bold string_4">
-        <div class="d-flex flex-fill border_middle_2"><div class="d-flex align-self-center justify-content-center w-100">Стены</div></div>
+        <div class="d-flex flex-fill border_middle_2" style="position: relative">
+          <div class="d-flex align-self-center justify-content-center w-100">Стены</div>
+          <img src="img/cross-sign.svg" style="position: absolute; " class="arrow align-self-center p-1 m-3">
+        </div>
       </div>
 
     <!-- Строка 2 -->
@@ -1083,19 +1140,21 @@
 
     <!-- Строка 7 -->
       <div class="d-flex font-weight-bold string_4">
-        <div class="d-flex flex-fill border_middle_left_3"><div class="d-flex align-self-center justify-content-center w-100">Ваша скидка:</div></div>
-        <div class="d-flex flex-fill border_middle_3"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_sale_percent">0</div>&nbsp;%</div></div>
-        <div class="d-flex flex-fill border_middle_right_3"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_sale_sum">0</div>&nbsp;руб</div></div>
+        <div class="d-flex flex-fill col-4 border_middle_left_3"><div class="d-flex align-self-center justify-content-center w-100">Ваша скидка:</div></div>
+        <div class="d-flex flex-fill col-4 border_middle_3"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_sale_percent">0</div>&nbsp;%</div></div>
+        <div class="d-flex flex-fill col-4 border_middle_right_3"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_sale_sum">0</div>&nbsp;руб</div></div>
       </div>
 
     <!-- Строка 8 -->
       <div class="d-flex string_5 font-weight-bold">
-        <div class="d-flex flex-fill border_middle_left_2"><div class="text-center align-self-center w-100"></div></div>
-        <div class="d-flex flex-fill border_bottom_3"><div class="text-center align-self-center w-100">Итого по работе:</div></div>
-        <div class="d-flex flex-fill border_bottom_right_3"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_common_sum">0</div>&nbsp;руб</div></div>
+        <div class="d-flex flex-fill col-4 border_middle_left_2"><div class="text-center align-self-center w-100"></div></div>
+        <div class="d-flex flex-fill col-4 border_bottom_3"><div class="text-center align-self-center w-100">Итого по работе:</div></div>
+        <div class="d-flex flex-fill col-4 border_bottom_right_3"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_common_sum">0</div>&nbsp;руб</div></div>
       </div>
 
     </div>
+
+    <div style="height: 90px"></div>
 
   </section>
 
@@ -1103,30 +1162,32 @@
 
     <!-- Block0 Commonresult-->
 
-  <section id="block0_commonresult">
+  <section id="block0_commonresult" class="fixed-bottom">
 
-<!-- <div class="d18">
-  <div class="d19">
-  </div>
-</div> -->
-
-
-    <div style="display: flex;">
-      <div>Сумма площадей</div>
-      <div id="common_sum_square">0</div>
-      <div>Ваша скидка</div>
-      <div id="common_sum_sale_">0</div>
-      <div>Стоимость материалов</div>
-      <div id="common_sum_material">0</div>
-      <div>Стоимость работ</div>
-      <div id="common_sum_work">0</div>
-      <div>Общая стоимость</div>
-      <div id="common_sum">0</div>
+    <div class="d-flex string_6">
+      <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Сумма<br>площадей</div></div></div>
+      <div class="common_border align-self-center"></div>
+      <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum_square">0</div>&nbsp;м&sup2;</div></div>
+      <div class="common_border align-self-center"></div>
+      <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Ваша<br>скидка</div></div></div>
+      <div class="common_border align-self-center"></div>
+      <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum_sale_">0</div>&nbsp;руб</div></div>
+      <div class="common_border align-self-center"></div>
+      <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Стоимость<br>материалов</div></div></div>
+      <div class="common_border align-self-center"></div>
+      <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum_material">0</div>&nbsp;руб</div></div>
+      <div class="common_border align-self-center"></div>
+      <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Стоимость<br>работ</div></div></div>
+      <div class="common_border align-self-center"></div>
+      <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum_work">0</div>&nbsp;руб</div></div>
+      <div class="common_border align-self-center"></div>
+      <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Общая<br>стоимость</div></div></div>
+      <div class="common_border align-self-center"></div>
+      <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum">0</div>&nbsp;руб</div></div>
     </div>
 
   </section>
 
-</div>
 
 <!-- Modal Plaster -->
 <div id="text-popup" class="white-popup mfp-hide">
