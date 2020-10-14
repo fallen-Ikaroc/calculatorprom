@@ -116,34 +116,42 @@ $(function(){
         $('#window_plaster_price').text('435');
 
         $('#plaster_wall_outlay').val(435);
+        $('#plaster_roof_outlay').val(435);
+        $('#plaster_window_outlay').val(435);
         $('#plaster_wall_outlay_price').text('435');
         break;
       case 2:
         plaster=2;
-        $('#wall_plaster_price').text('500');
-        $('#roof_plaster_price').text('500');
-        $('#window_plaster_price').text('500');
+        $('#wall_plaster_price').text('402');
+        $('#roof_plaster_price').text('402');
+        $('#window_plaster_price').text('402');
 
-        $('#plaster_wall_outlay').val(500);
-        $('#plaster_wall_outlay_price').text('500');
+        $('#plaster_wall_outlay').val(402);
+        $('#plaster_roof_outlay').val(402);
+        $('#plaster_window_outlay').val(402);
+        $('#plaster_wall_outlay_price').text('402');
         break;
       case 3:
         plaster=3;
-        $('#wall_plaster_price').text('550');
-        $('#roof_plaster_price').text('550');
-        $('#window_plaster_price').text('550');
+        $('#wall_plaster_price').text('306');
+        $('#roof_plaster_price').text('306');
+        $('#window_plaster_price').text('306');
 
-        $('#plaster_wall_outlay').val(550);
-        $('#plaster_wall_outlay_price').text('550');
+        $('#plaster_wall_outlay').val(306);
+        $('#plaster_roof_outlay').val(306);
+        $('#plaster_window_outlay').val(306);
+        $('#plaster_wall_outlay_price').text('306');
         break;
       case 4:
         plaster=4;
-        $('#wall_plaster_price').text('560');
-        $('#roof_plaster_price').text('560');
-        $('#window_plaster_price').text('560');
+        $('#wall_plaster_price').text('289');
+        $('#roof_plaster_price').text('289');
+        $('#window_plaster_price').text('289');
 
-        $('#plaster_wall_outlay').val(560);
-        $('#plaster_wall_outlay_price').text('560');
+        $('#plaster_wall_outlay').val(289);
+        $('#plaster_roof_outlay').val(289);
+        $('#plaster_window_outlay').val(289);
+        $('#plaster_wall_outlay_price').text('289');
         break;
     }
     wall_plaster();
@@ -413,8 +421,8 @@ function wall_plaster(){
   $('#wall_plaster_consume').text(thickness);
   $('#wall_plaster_weight').text(thickness*square);
   if(plaster===1 || plaster===2){
-      $('#wall_plaster_quantity').text( Math.ceil(thickness*square/20));
-      $('#wall_plaster_sum').text(priceperone * Math.ceil(thickness * square/20));
+      $('#wall_plaster_quantity').text( Math.ceil(thickness*square/30));
+      $('#wall_plaster_sum').text(priceperone * Math.ceil(thickness * square/30));
     }
   if(plaster===3 || plaster===4){
     $('#wall_plaster_quantity').text( Math.ceil(thickness*square/25));
@@ -457,8 +465,8 @@ function roof_plaster(){
   $('#roof_plaster_consume').text(thickness);
   $('#roof_plaster_weight').text(thickness*square);
   if(plaster===1 || plaster===2){
-      $('#roof_plaster_quantity').text( Math.ceil(thickness*square/20));
-      $('#roof_plaster_sum').text(priceperone * Math.ceil(thickness * square/20));
+      $('#roof_plaster_quantity').text( Math.ceil(thickness*square/30));
+      $('#roof_plaster_sum').text(priceperone * Math.ceil(thickness * square/30));
     }
   if(plaster===3 || plaster===4){
     $('#roof_plaster_quantity').text( Math.ceil(thickness*square/25));
@@ -483,8 +491,8 @@ function window_plaster(){
   $('#window_plaster_consume').text(thickness);
   $('#window_plaster_weight').text(thickness*square);
   if(plaster===1 || plaster===2){
-      $('#window_plaster_quantity').text( Math.ceil(thickness*square/20));
-      $('#window_plaster_sum').text(priceperone * Math.ceil(thickness * square/20));
+      $('#window_plaster_quantity').text( Math.ceil(thickness*square/30));
+      $('#window_plaster_sum').text(priceperone * Math.ceil(thickness * square/30));
     }
   if(plaster===3 || plaster===4){
     $('#window_plaster_quantity').text( Math.ceil(thickness*square/25));
