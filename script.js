@@ -31,11 +31,17 @@ $(function(){
       case 1:
         place=1;
         $('#wall_primer_price').text('2064');
+        $('#roof_primer_price').text('2064');
+        $('#window_primer_price').text('2064');
         $('#wall_grid_price').text('2460');
         $('#wall_grid_consumeperone').text('30');
 
         $('#primer_wall_outlay').text('грунтовка 1');
+        $('#primer_roof_outlay').text('грунтовка 1');
+        $('#primer_window_outlay').text('грунтовка 1');
         $('#primer_wall_outlay_price').text('2064');
+        $('#primer_roof_outlay_price').text('2064');
+        $('#primer_window_outlay_price').text('2064');
         $('#work_outlay_wall_object_type').text('Старый фонд');
         $('#work_outlay_roof_object_type').text('Старый фонд');
         $('#work_outlay_window_object_type').text('Старый фонд');
@@ -43,11 +49,17 @@ $(function(){
       case 2:
         place=2;
         $('#wall_primer_price').text('2064');
+        $('#roof_primer_price').text('2064');
+        $('#window_primer_price').text('2064');
         $('#wall_grid_price').text('943');
         $('#wall_grid_consumeperone').text('20');
 
         $('#primer_wall_outlay').text('грунтовка 1');
+        $('#primer_roof_outlay').text('грунтовка 1');
+        $('#primer_window_outlay').text('грунтовка 1');
         $('#primer_wall_outlay_price').text('2064');
+        $('#primer_roof_outlay_price').text('2064');
+        $('#primer_window_outlay_price').text('2064');
         $('#work_outlay_wall_object_type').text('Монолит');
         $('#work_outlay_roof_object_type').text('Монолит');
         $('#work_outlay_window_object_type').text('Монолит');
@@ -55,11 +67,17 @@ $(function(){
       case 3:
         place=3;
         $('#wall_primer_price').text('792');
+        $('#roof_primer_price').text('792');
+        $('#window_primer_price').text('792');
         $('#wall_grid_price').text('943');
         $('#wall_grid_consumeperone').text('20');
 
         $('#primer_wall_outlay').text('грунтовка 2');
+        $('#primer_roof_outlay').text('грунтовка 2');
+        $('#primer_window_outlay').text('грунтовка 2');
         $('#primer_wall_outlay_price').text('792');
+        $('#primer_roof_outlay_price').text('792');
+        $('#primer_window_outlay_price').text('792');
         $('#work_outlay_wall_object_type').text('Газобетон');
         $('#work_outlay_roof_object_type').text('Газобетон');
         $('#work_outlay_window_object_type').text('Газобетон');
@@ -67,17 +85,25 @@ $(function(){
       case 4:
         place=4;
         $('#wall_primer_price').text('792');
+        $('#roof_primer_price').text('792');
+        $('#window_primer_price').text('792');
         $('#wall_grid_price').text('943');
         $('#wall_grid_consumeperone').text('20');
 
         $('#primer_wall_outlay').text('грунтовка 2');
+        $('#primer_roof_outlay').text('грунтовка 2');
+        $('#primer_window_outlay').text('грунтовка 2');
         $('#primer_wall_outlay_price').text('792');
+        $('#primer_roof_outlay_price').text('792');
+        $('#primer_window_outlay_price').text('792');
         $('#work_outlay_wall_object_type').text('Шлакоблок');
         $('#work_outlay_roof_object_type').text('Шлакоблок');
         $('#work_outlay_window_object_type').text('Шлакоблок');
         break;
     }
     wall_primer();
+    roof_primer();
+    window_primer();
     wall_grid();
   });
   $('.radio_plaster').change(function(){
@@ -224,34 +250,52 @@ $(function(){
   });
   //material sum
   $('#plaster_wall_outlay_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
-    var wall=parseFloat($('#plaster_wall_outlay_sum').html())+parseFloat($('#primer_wall_outlay_sum').html())+parseFloat($('#pharos_wall_outlay_sum').html())+parseFloat($('#grid_outlay_sum').html());
-    var roof=parseFloat($('#plaster_roof_outlay_sum').html())+parseFloat($('#primer_roof_outlay_sum').html())+parseFloat($('#pharos_roof_outlay_sum').html());
-    var window_=parseFloat($('#plaster_window_outlay_sum').html())+parseFloat($('#primer_window_outlay_sum').html());
-    $('#material_sum').text(wall+roof+window_);
+    materilares();
   });
+  $('#primer_wall_outlay_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    materilares();
+  });
+  $('#pharos_wall_outlay_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    materilares();
+  });
+  $('#grid_outlay_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    materilares();
+  });
+
   $('#plaster_roof_outlay_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
-    var wall=parseFloat($('#plaster_wall_outlay_sum').html())+parseFloat($('#primer_wall_outlay_sum').html())+parseFloat($('#pharos_wall_outlay_sum').html())+parseFloat($('#grid_outlay_sum').html());
-    var roof=parseFloat($('#plaster_roof_outlay_sum').html())+parseFloat($('#primer_roof_outlay_sum').html())+parseFloat($('#pharos_roof_outlay_sum').html());
-    var window_=parseFloat($('#plaster_window_outlay_sum').html())+parseFloat($('#primer_window_outlay_sum').html());
-    $('#material_sum').text(wall+roof+window_);
+    materilares();
   });
+  $('#primer_roof_outlay_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    materilares();
+  });
+  $('#pharos_roof_outlay_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    materilares();
+  });
+
   $('#plaster_window_outlay_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
-    var wall=parseFloat($('#plaster_wall_outlay_sum').html())+parseFloat($('#primer_wall_outlay_sum').html())+parseFloat($('#pharos_wall_outlay_sum').html())+parseFloat($('#grid_outlay_sum').html());
-    var roof=parseFloat($('#plaster_roof_outlay_sum').html())+parseFloat($('#primer_roof_outlay_sum').html())+parseFloat($('#pharos_roof_outlay_sum').html());
-    var window_=parseFloat($('#plaster_window_outlay_sum').html())+parseFloat($('#primer_window_outlay_sum').html());
-    $('#material_sum').text(wall+roof+window_);
+    materilares();
+  });
+  $('#primer_window_outlay_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    materilares();
   });
   //worksum
   $('#wall_primer_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
-    $('#work_outlay_wall_square').text($('#wall_primer_square').html());
+    var price = parseFloat($('input[name=types]:checked').val());
+    var square=parseFloat($('#wall_primer_square').html());
+    $('#work_outlay_wall_square').text(square);
+    $('#work_outlay_wall_quantity').text(price);
+    $('#work_outlay_wall_sum').text(square*price);
   });
   $('#roof_primer_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
-    $('#work_outlay_roof_square').text($('#roof_primer_square').html());
+    var square=parseFloat($('#roof_primer_square').html());
+    $('#work_outlay_roof_square').text(square);
+    $('#work_outlay_roof_sum').text(square*450);
   });
   $('#window_primer_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
-    $('#work_outlay_window_square').text($('#window_primer_square').html());
+    var square=parseFloat($('#window_primer_square').html());
+    $('#work_outlay_window_square').text(square);
+    $('#work_outlay_window_sum').text(square*250);
   });
-
   $('#plaster_wall_outlay_price').bind('DOMNodeInserted DOMNodeRemoved', function(){
     var price=parseFloat($('#plaster_wall_outlay_price').html())  ;
     switch(price){
@@ -290,6 +334,75 @@ $(function(){
   $('#window_plaster_consume').bind('DOMNodeInserted DOMNodeRemoved', function(){
     var thickness = parseFloat($('#window_plaster_consume').html());
     $('#work_outlay_window_thickness').text(thickness);
+  });
+  $('.radio_type').change(function(){
+    var price = parseFloat($('input[name=types]:checked').val());
+    var square=parseFloat($('#wall_primer_square').html());
+    $('#work_outlay_wall_quantity').text(price);
+    $('#work_outlay_wall_sum').text(square*price);
+  });
+  $('#work_outlay_wall_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    sale1();
+    var sale=parseFloat($('#work_outlay_sale_percent').html());
+    var sum1=parseFloat($('#work_outlay_wall_sum').html());
+    var sum2=parseFloat($('#work_outlay_roof_sum').html());
+    var sum3=parseFloat($('#work_outlay_window_sum').html());
+    var sumsale=(sum1+sum2+sum3)*sale/100;
+    $('#work_outlay_sale_sum').text(sumsale);
+    $('#work_outlay_common_sum').text((sum1+sum2+sum3)-sumsale);
+  });
+  $('#work_outlay_roof_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    sale1();
+    var sale=parseFloat($('#work_outlay_sale_percent').html());
+    var sum1=parseFloat($('#work_outlay_wall_sum').html());
+    var sum2=parseFloat($('#work_outlay_roof_sum').html());
+    var sum3=parseFloat($('#work_outlay_window_sum').html());
+    var sumsale=(sum1+sum2+sum3)*sale/100;
+    $('#work_outlay_sale_sum').text(sumsale);
+    $('#work_outlay_common_sum').text((sum1+sum2+sum3)-sumsale);
+  });
+  $('#work_outlay_window_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    sale1();
+    var sale=parseFloat($('#work_outlay_sale_percent').html());
+    var sum1=parseFloat($('#work_outlay_wall_sum').html());
+    var sum2=parseFloat($('#work_outlay_roof_sum').html());
+    var sum3=parseFloat($('#work_outlay_window_sum').html());
+    var sumsale=(sum1+sum2+sum3)*sale/100;
+    $('#work_outlay_sale_sum').text(sumsale);
+    $('#work_outlay_common_sum').text((sum1+sum2+sum3)-sumsale);
+  });
+  $('#work_outlay_wall_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    var square=parseFloat( $('#wall_primer_square').html() )+
+              parseFloat( $('#roof_primer_square').html() )+
+              parseFloat( $('#window_primer_square').html() );
+    $('#common_sum_square').text(square)
+  });
+  $('#work_outlay_roof_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    var square=parseFloat( $('#wall_primer_square').html() )+
+              parseFloat( $('#roof_primer_square').html() )+
+              parseFloat( $('#window_primer_square').html() );
+    $('#common_sum_square').text(square)
+  });
+  $('#work_outlay_window_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    var square=parseFloat( $('#wall_primer_square').html() )+
+              parseFloat( $('#roof_primer_square').html() )+
+              parseFloat( $('#window_primer_square').html() );
+    $('#common_sum_square').text(square)
+  });
+  $('#work_outlay_sale_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    $('#common_sum_sale_').text($('#work_outlay_sale_sum').html());
+  });
+  $('#material_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    $('#common_sum_material').text($('#material_sum').html());
+  });
+  $('#work_outlay_common_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    $('#common_sum_work').text($('#work_outlay_common_sum').html());
+  });
+  $('#common_sum_material').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    $('#common_sum').text(parseFloat($('#common_sum_material').html())+parseFloat($('#common_sum_material').html()));
+  });
+  $('#common_sum_work').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    $('#common_sum').text(parseFloat($('#common_sum_material').html())+parseFloat($('#common_sum_material').html()));
   });
 })
 function wall_plaster(){
@@ -361,6 +474,7 @@ function roof_primer(){
   $('#roof_primer_quantity').text(Math.ceil(square*0.2/10));
   $('#roof_primer_sum').text(Math.ceil(price*Math.ceil(square*0.2/10)));
 }
+
 function window_plaster(){
   var square = parseFloat($('#window_plaster_square').val());
   var thickness = parseFloat($('#window_plaster_thickness').find(':selected').val());
@@ -385,4 +499,38 @@ function window_primer(){
   $('#window_primer_weight').text((square*0.2).toFixed(2));
   $('#window_primer_quantity').text(Math.ceil(square*0.2/10));
   $('#window_primer_sum').text(Math.ceil(price*Math.ceil(square*0.2/10)));
+}
+
+function materilares(){
+  var wall=parseFloat($('#plaster_wall_outlay_sum').html())+parseFloat($('#primer_wall_outlay_sum').html())+parseFloat($('#pharos_wall_outlay_sum').html())+parseFloat($('#grid_outlay_sum').html());
+  var roof=parseFloat($('#plaster_roof_outlay_sum').html())+parseFloat($('#primer_roof_outlay_sum').html())+parseFloat($('#pharos_roof_outlay_sum').html());
+  var window_=parseFloat($('#plaster_window_outlay_sum').html())+parseFloat($('#primer_window_outlay_sum').html());
+  $('#material_sum').text(wall+roof+window_);
+}
+
+function sale1(){
+  var square=parseFloat( $('#wall_primer_square').html() )+
+            parseFloat( $('#roof_primer_square').html() )+
+            parseFloat( $('#window_primer_square').html() );
+  if(square<200){
+    $('#work_outlay_sale_percent').text('0');
+  }
+  if(square>=200 && square<300){
+    $('#work_outlay_sale_percent').text('2');
+  }
+  if(square>=300 && square<400){
+   $('#work_outlay_sale_percent').text('3');
+  }
+  if(square>=400 && square<700){
+   $('#work_outlay_sale_percent').text('4');
+  }
+  if(square>=700 && square<1000){
+   $('#work_outlay_sale_percent').text('6');
+  }
+  if(square>=1000 && square<1400){
+   $('#work_outlay_sale_percent').text('8');
+  }
+  if(square>=1400){
+   $('#work_outlay_sale_percent').text('10');
+  }
 }
