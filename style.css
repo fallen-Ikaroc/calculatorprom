@@ -640,3 +640,25 @@ div.box{
   -webkit-transform: rotateY(0);
           transform: rotateY(0);
 }
+
+.block4_workresult_wall{
+  display: none;
+}
+.block4_workresult_roof{
+  display: none;
+}
+.block4_workresult_window{
+  display: none;
+}
+.block3_material_wall{
+  display: none;
+}
+.block3_material_roof{
+  display: none;
+}
+.block3_material_window{
+  display: none;
+}
+.block3_material_dn{
+  display: none;
+}
