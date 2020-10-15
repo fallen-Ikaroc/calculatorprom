@@ -328,28 +328,28 @@ $(function(){
   $('#plaster_wall_outlay_price').bind('DOMNodeInserted DOMNodeRemoved', function(){
     var price=parseFloat($('#plaster_wall_outlay_price').html())  ;
     switch(price){
-      case 435: $('#work_outlay_wall_plaster').text('Штукатурка гипсовая Knauf MP 75'); break;
-      case 402: $('#work_outlay_wall_plaster').text('Штукатурка гипсовая ВОЛМА-Гипс-Актив'); break;
-      case 306: $('#work_outlay_wall_plaster').text('Штукатурка цементная Knauf UNTERPUTZ'); break;
-      case 289: $('#work_outlay_wall_plaster').text('Штукатурка цементная Plitonit T1+'); break;
+      case 435: $('#work_outlay_wall_plaster').text('Knauf MP 75'); break;
+      case 402: $('#work_outlay_wall_plaster').text('ВОЛМА-Актив'); break;
+      case 306: $('#work_outlay_wall_plaster').text('Knauf UNTERPUTZ'); break;
+      case 289: $('#work_outlay_wall_plaster').text('Plitonit T1+'); break;
     }
   });
   $('#plaster_roof_outlay_price').bind('DOMNodeInserted DOMNodeRemoved', function(){
     var price=parseFloat($('#plaster_roof_outlay_price').html())  ;
     switch(price){
-      case 435: $('#work_outlay_roof_plaster').text('Штукатурка гипсовая Knauf MP 75'); break;
-      case 402: $('#work_outlay_roof_plaster').text('Штукатурка гипсовая ВОЛМА-Гипс-Актив'); break;
-      case 306: $('#work_outlay_roof_plaster').text('Штукатурка цементная Knauf UNTERPUTZ'); break;
-      case 289: $('#work_outlay_roof_plaster').text('Штукатурка цементная Plitonit T1+'); break;
+      case 435: $('#work_outlay_roof_plaster').text('Knauf MP 75'); break;
+      case 402: $('#work_outlay_roof_plaster').text('ВОЛМА-Актив'); break;
+      case 306: $('#work_outlay_roof_plaster').text('Knauf UNTERPUTZ'); break;
+      case 289: $('#work_outlay_roof_plaster').text('Plitonit T1+'); break;
     }
   });
   $('#plaster_window_outlay_price').bind('DOMNodeInserted DOMNodeRemoved', function(){
     var price=parseFloat($('#plaster_window_outlay_price').html())  ;
     switch(price){
-      case 435: $('#work_outlay_window_plaster').text('Штукатурка гипсовая Knauf MP 75'); break;
-      case 402: $('#work_outlay_window_plaster').text('Штукатурка гипсовая ВОЛМА-Гипс-Актив'); break;
-      case 306: $('#work_outlay_window_plaster').text('Штукатурка цементная Knauf UNTERPUTZ'); break;
-      case 289: $('#work_outlay_window_plaster').text('Штукатурка цементная Plitonit T1+'); break;
+      case 435: $('#work_outlay_window_plaster').text('Knauf MP 75'); break;
+      case 402: $('#work_outlay_window_plaster').text('ВОЛМА-Актив'); break;
+      case 306: $('#work_outlay_window_plaster').text('Knauf UNTERPUTZ'); break;
+      case 289: $('#work_outlay_window_plaster').text('Plitonit T1+'); break;
     }
   });
   $('#wall_plaster_consume').bind('DOMNodeInserted DOMNodeRemoved', function(){
@@ -472,10 +472,12 @@ $(function(){
     if(sum===0){
       $('#block3_material').addClass('block3_material_dn');
       $('#block4_workresult').addClass('block3_material_dn');
+      $('#block0_commonresult').addClass('block3_material_dn');
     }
     else{
       $('#block3_material').removeClass('block3_material_dn');
       $('#block4_workresult').removeClass('block3_material_dn');
+      $('#block0_commonresult').removeClass('block3_material_dn');
     }
   });
 })
