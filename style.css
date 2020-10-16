@@ -153,7 +153,7 @@ body{
 .block1_ver2_plaster_choice {
   color: #fff !important;
   font-size: 16px;
-  background-color: #ffa700;
+  background: #ffa700;
   border-radius: 1rem;
   width: 12rem;
   padding: 0.125rem;
@@ -291,8 +291,16 @@ body{
   height: 20px;
 }
 .button_info{
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
+}
+.button_info_position{
+  position: absolute;
+  right: 0%;
+}
+.button_info_press_zone{
+  width: 60px;
+  height:60px;
 }
 .cross{
   height: 60px;
@@ -499,6 +507,7 @@ div.box{
   width: 150px;
 }
 .border_middle_left{
+  position: relative;
   border-bottom: 3px solid #2C3E50;
   border-right: 3px solid #2C3E50;
 }
