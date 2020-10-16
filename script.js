@@ -214,9 +214,9 @@ $(function(){
     $('#plaster_wall_outlay_weight').text($('#wall_plaster_weight').html());
     $('#plaster_wall_outlay_quantity').text($('#wall_plaster_quantity').html());
     $('#plaster_wall_outlay_sum').text($('#wall_plaster_sum').html());
-    $('#pharos_wall_outlay_quantity').text(Math.ceil(Math.ceil($('#wall_plaster_square').val()/2)/20));
-    $('#pharos_wall_outlay_sum').text((Math.ceil(Math.ceil($('#wall_plaster_square').val()/2)/20))*116);
-    $('#pharos_wall_outlay_weight').text((Math.ceil(Math.ceil($('#wall_plaster_square').val()/2)/20))*0.48);
+    $('#pharos_wall_outlay_quantity').text(Math.ceil(Math.ceil($('#wall_plaster_square').val()/2)));
+    $('#pharos_wall_outlay_sum').text((Math.ceil(Math.ceil($('#wall_plaster_square').val()/2)))*116);
+    $('#pharos_wall_outlay_weight').text((Math.ceil(Math.ceil($('#wall_plaster_square').val()/2)))*0.48);
   });
   $('#wall_primer_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
     $('#primer_wall_outlay_weight').text($('#wall_primer_weight').html());
