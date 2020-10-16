@@ -35,7 +35,7 @@
         <div class="line_2"></div>
       </div>
       <div class="flex-fill"></div>
-      <a class="align-self-end text-center block1_ver2_plaster_choice button_ver2_plaster_choice m-0 font-weight-bold" style="width:260px !important">Изменить тип объекта</a>
+      <a class="align-self-end text-center block1_ver2_plaster_choice button_ver2_plaster_choice m-0 font-weight-bold" style="width:260px !important" id="return_to_font">Изменить тип объекта</a>
     </div>
 
     <div class="d-flex align-items-center justify-content-center">
@@ -963,7 +963,7 @@
 
 <div style="background: linear-gradient(90deg, #ffffff, #fafafa); min-width: 1200px;">
 
-  <section id="block3_material" class="p-5">
+  <section id="block3_material" class="p-5 block3_material_dn">
 
     <div class="d-flex mb-4" style="max-width: 1110px;">
       <div class="m-0">
@@ -984,12 +984,12 @@
         <div class="d-flex flex-fill border_top_right_2"><div class="text-center align-self-center w-100">Сумма</div></div>
       </div>
 
-      <div class="block3_material_wall">
+      <div class="block3_material_wall" id="block3_material_wall_id">
       <!-- Строка 1 -->
         <div class="d-flex string_4 font-weight-bold">
           <div class="d-flex flex-fill border_middle_4">
             <div class="d-flex align-self-center justify-content-center w-100">Стены</div>
-            <img src="img/cross-sign.svg" class="cross align-self-center">
+            <img src="img/cross-sign.svg" class="cross align-self-center" id="cross_wall">
           </div>
         </div>
 
@@ -997,10 +997,10 @@
         <div class="d-flex string_4">
           <div class="d-flex flex-fill border_middle_left"><div class="d-flex text-center justify-content-center align-self-center w-100">
             <select id="plaster_wall_outlay" class="font-weight-bold" style="height: 30px;">
-                <option value="435" selected>штукатурка 1</option>
-                <option value="402">штукатурка 2</option>
-                <option value="306">штукатурка 3</option>
-                <option value="289">штукатурка 4</option>
+                <option value="435" selected>Штукатурка гипсовая Knauf MP 75</option>
+                <option value="402">Штукатурка гипсовая ВОЛМА-Гипс-Актив</option>
+                <option value="306">Штукатурка цементная Knauf UNTERPUTZ</option>
+                <option value="289">Штукатурка цементная Plitonit T1+</option>
             </select></div>
             <div class="d-flex align-self-center button_info_position">
               <a href="#text-popup" class="d-flex popup-content justify-content-center button_info_press_zone">
@@ -1018,7 +1018,7 @@
         <div class="d-flex string_4">
           <div class="d-flex flex-fill border_middle_left">
             <div class="text-center align-self-center font-weight-bold w-100">
-              <div id="primer_wall_outlay">грунтовка 1</div>
+              <div id="primer_wall_outlay">Грунт Knauf Миттельгрунд</div>
             </div>
             <div class="d-flex align-self-center button_info_position">
               <a href="#text-popup" class="d-flex popup-content justify-content-center button_info_press_zone">
@@ -1026,6 +1026,7 @@
               </a>
             </div>
           </div>
+          <div class="d-flex flex-fill border_middle_left"><div class="text-center align-self-center font-weight-bold w-100"><div id="primer_wall_outlay">Грунт Knauf Миттельгрунд</div></div></div>>>>>>> 54b14ddce17e351b794b1592af64646b3b55d8c5
           <div class="d-flex flex-fill border_middle"><div class="d-flex align-self-center justify-content-center w-100"><div id="primer_wall_outlay_weight">0</div>&nbsp;кг</div></div>
           <div class="d-flex flex-fill border_middle"><div class="d-flex align-self-center justify-content-center w-100"><div id="primer_wall_outlay_quantity">0</div>&nbsp;шт</div></div>
           <div class="d-flex flex-fill border_middle"><div class="d-flex align-self-center justify-content-center w-100"><div id="primer_wall_outlay_price">2064</div>&nbsp;руб</div></div>
@@ -1069,12 +1070,12 @@
         </div>
       </div>
 
-      <div class="block3_material_roof">
+      <div class="block3_material_roof" id="block3_material_roof_id">
       <!-- Строка 6 -->
         <div class="d-flex string_4 font-weight-bold">
           <div class="d-flex flex-fill border_middle_4">
             <div class="d-flex align-self-center justify-content-center w-100">Потолки</div>
-            <img src="img/cross-sign.svg" class="cross align-self-center">
+            <img src="img/cross-sign.svg" class="cross align-self-center" id="cross_roof">
           </div>
         </div>
 
@@ -1082,10 +1083,10 @@
         <div class="d-flex string_4">
           <div class="d-flex flex-fill border_middle_left"><div class="text-center font-weight-bold align-self-center w-100">
             <select id="plaster_roof_outlay" class="font-weight-bold" style="height: 30px;">
-                <option value="435" selected>штукатурка 1</option>
-                <option value="402">штукатурка 2</option>
-                <option value="306">штукатурка 3</option>
-                <option value="289">штукатурка 4</option>
+                <option value="435" selected>Штукатурка гипсовая Knauf MP 75</option>
+                <option value="402">Штукатурка гипсовая ВОЛМА-Гипс-Актив</option>
+                <option value="306">Штукатурка цементная Knauf UNTERPUTZ</option>
+                <option value="289">Штукатурка цементная Plitonit T1+</option>
             </select></div>
             <div class="d-flex align-self-center button_info_position">
               <a href="#text-popup" class="d-flex popup-content justify-content-center button_info_press_zone">
@@ -1103,7 +1104,7 @@
         <div class="d-flex string_4">
           <div class="d-flex flex-fill border_middle_left">
             <div class="text-center font-weight-bold align-self-center w-100">
-              <div id="primer_roof_outlay">грунтовка 1</div>
+              <div id="primer_roof_outlay">Грунт Knauf Миттельгрунд</div>
             </div>
             <div class="d-flex align-self-center button_info_position">
               <a href="#text-popup" class="d-flex popup-content justify-content-center button_info_press_zone">
@@ -1136,12 +1137,12 @@
         </div>
       </div>
 
-      <div class="block3_material_window">
+      <div class="block3_material_window" id="block3_material_window_id">
       <!-- Строка 10 -->
         <div class="d-flex string_4 font-weight-bold">
           <div class="d-flex flex-fill border_middle_4">
             <div class="d-flex align-self-center justify-content-center w-100">Откосы</div>
-            <img src="img/cross-sign.svg" class="cross align-self-center">
+            <img src="img/cross-sign.svg" class="cross align-self-center" id="cross_window">
           </div>
         </div>
 
@@ -1149,10 +1150,10 @@
         <div class="d-flex string_4">
           <div class="d-flex flex-fill border_middle_left"><div class="text-center font-weight-bold align-self-center w-100">
             <select id="plaster_window_outlay" class="font-weight-bold" style="height: 30px;">
-                <option value="435" selected>штукатурка 1</option>
-                <option value="402">штукатурка 2</option>
-                <option value="306">штукатурка 3</option>
-                <option value="289">штукатурка 4</option>
+                <option value="435" selected>Штукатурка гипсовая Knauf MP 75</option>
+                <option value="402">Штукатурка гипсовая ВОЛМА-Гипс-Актив</option>
+                <option value="306">Штукатурка цементная Knauf UNTERPUTZ</option>
+                <option value="289">Штукатурка цементная Plitonit T1+</option>
             </select></div>
             <div class="d-flex align-self-center button_info_position">
               <a href="#text-popup" class="d-flex popup-content justify-content-center button_info_press_zone">
@@ -1170,7 +1171,7 @@
         <div class="d-flex string_4">
           <div class="d-flex flex-fill border_middle_left">
             <div class="text-center font-weight-bold align-self-center w-100">
-              <div id="primer_window_outlay">Грунтовка 1</div>
+              <div id="primer_window_outlay">Грунт Knauf Миттельгрунд</div>
             </div>
             <div class="d-flex align-self-center button_info_position">
               <a href="#text-popup" class="d-flex popup-content justify-content-center button_info_press_zone">
@@ -1226,7 +1227,7 @@
 
 <div style="background: linear-gradient(90deg, #fafafa, #ffffff); min-width: 1200px;">
 
-  <section id="block4_workresult" class="p-5">
+  <section id="block4_workresult" class="p-5 block3_material_dn">
 
     <div class="d-flex pt-4 pb-4" style="max-width: 1110px;">
       <div class="m-0">
@@ -1248,7 +1249,7 @@
         <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
       </div>
 
-      <div class="block4_workresult_wall">
+      <div class="block4_workresult_wall aaaa" id="block4_workresult_wall_id">
       <!-- Строка 1 -->
         <div class="d-flex font-weight-bold string_4">
           <div class="d-flex flex-fill border_middle_2"><div class="d-flex align-self-center justify-content-center w-100">Стены</div></div>
@@ -1258,14 +1259,14 @@
         <div class="d-flex string_4">
           <div class="d-flex flex-fill border_bottom_left"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_object_type">Старый фонд</div>&nbsp;</div></div>
           <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_square">0</div>&nbsp;м&sup2;</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_plaster">штукатурка 1</div></div></div>
+          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_plaster">Knauf MP 75</div></div></div>
           <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_thickness">15</div>&nbsp;мм</div></div>
           <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_quantity">0</div>&nbsp;руб</div></div>
           <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_sum">0</div>&nbsp;руб</div></div>
         </div>
       </div>
 
-      <div class="block4_workresult_roof">
+      <div class="block4_workresult_roof" id="block4_workresult_roof_id">
       <!-- Строка 3 -->
         <div class="d-flex font-weight-bold string_4">
           <div class="d-flex flex-fill border_middle_2"><div class="d-flex align-self-center justify-content-center w-100">Потолки</div></div>
@@ -1275,14 +1276,14 @@
         <div class="d-flex string_4">
           <div class="d-flex flex-fill border_bottom_left"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_roof_object_type">Старый фонд</div>&nbsp;</div></div>
           <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_roof_square">0</div>&nbsp;м&sup2;</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_roof_plaster">штукатурка 1</div></div></div>
+          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_roof_plaster">Knauf MP 75</div></div></div>
           <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_roof_thickness">15</div>&nbsp;мм</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_roof_quantity">0</div>&nbsp;руб</div></div>
+          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_roof_quantity">450</div>&nbsp;руб</div></div>
           <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_roof_sum">0</div>&nbsp;руб</div></div>
         </div>
       </div>
 
-      <div class="block4_workresult_window">
+      <div class="block4_workresult_window" id="block4_workresult_window_id">
       <!-- Строка 5 -->
         <div class="d-flex font-weight-bold string_4">
           <div class="d-flex flex-fill border_middle_2"><div class="d-flex align-self-center justify-content-center w-100">Откосы</div></div>
@@ -1292,9 +1293,9 @@
         <div class="d-flex string_4">
           <div class="d-flex flex-fill border_bottom_left"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_window_object_type">Старый фонд</div>&nbsp;</div></div>
           <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_window_square">0</div>&nbsp;м&sup2;</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_window_plaster">штукатурка 1</div></div></div>
+          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_window_plaster">Knauf MP 75</div></div></div>
           <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_window_thickness">15</div>&nbsp;мм</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_window_quantity">0</div>&nbsp;руб</div></div>
+          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_window_quantity">250</div>&nbsp;руб</div></div>
           <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_window_sum">0</div>&nbsp;руб</div></div>
         </div>
       </div>
@@ -1323,7 +1324,7 @@
 
     <!-- Block0 Commonresult-->
 
-  <section id="block0_commonresult" class="fixed-bottom">
+  <section id="block0_commonresult" class="fixed-bottom block3_material_dn">
 
     <div class="d-flex string_6">
       <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Сумма<br>площадей</div></div></div>
