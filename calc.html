@@ -93,7 +93,7 @@
                 <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
                   <div class="d-flex" style="flex:1;">
                     <div class="d-flex align-self-center">
-                      Вес мешка: 20 кг
+                      Вес мешка: 30 кг
                       Рекомендуемая толщина слоя:
                       <br>&bull; для стен 8-50 мм
                       <br>&bull; для потолка 8-15 мм
@@ -126,7 +126,7 @@
                 <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
                   <div class="d-flex" style="flex:1;">
                     <div class="d-flex align-self-center">
-                      Вес мешка: 20 кг
+                      Вес мешка: 30 кг
                       Рекомендуемая толщина слоя:
                       <br>&bull; для стен 8-50 мм
                       <br>&bull; для потолка 8-15 мм
@@ -780,7 +780,8 @@
             <div class="d-flex font-weight-bold string_1">
               <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
               <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Цена мешка</div></div>
-              <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Толщина слоя</div></div>
+              <div class="d-flex flex-fill border_top_thickness"><div class="text-center align-self-center w-100">Толщина слоя</div></div>
+              <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Ширина</div></div>
               <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Расход</div></div>
               <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Вес</div></div>
               <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Количество</div></div>
@@ -789,7 +790,7 @@
             <div class="d-flex string_2">
               <div class="d-flex flex-fill border_bottom_left"><div class="text-center align-self-center w-100"><input id="window_plaster_square" class="text-center p-0" style="width:40%; height:" type="text" type="number" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="4" value="0"></input>&nbsp;м. п.</div></div>
               <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div class=""id="window_plaster_price">435</div>&nbsp;руб</div></div>
-              <div class="d-flex flex-fill border_bottom">
+              <div class="d-flex flex-fill border_bottom_thickness">
                 <div class="d-flex text-center justify-content-center align-self-center w-100">
                   <div class="d-flex text-center">
                     <select id="window_plaster_thickness">
@@ -804,7 +805,8 @@
                   </div>
                 </div>
               </div>
-              <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_consume" class="content">15</div>&nbsp;кг/м. п.</div></div>
+              <div class="d-flex flex-fill border_bottom"><div class="text-center align-self-center w-100"><input id="window_plaster_width" class="text-center p-0" style="width:40%; height:" type="text" type="number" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="3" value="0"></input>&nbsp;мм</div></div>
+              <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_consume" class="content">15</div>&nbsp;кг/м&sup2;</div></div>
               <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_weight">0</div>&nbsp;кг</div></div>
               <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_quantity">0</div>&nbsp;шт</div></div>
               <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_sum">0</div>&nbsp;руб</div></div>
@@ -978,10 +980,12 @@
     <!-- Строка 0 -->
       <div class="d-flex string_3 font-weight-bold">
         <div class="d-flex flex-fill border_top_left_2"><div class="text-center align-self-center w-100">Материал</div></div>
-        <div class="d-flex flex-fill border_top_2"><div class="text-center align-self-center w-100">Вес</div></div>
+        <div class="d-flex flex-fill border_top_2"><div class="text-center align-self-center w-100">Площадь</div></div>
+        <div class="d-flex flex-fill border_top_2"><div class="text-center align-self-center w-100">Расход</div></div>
         <div class="d-flex flex-fill border_top_2"><div class="text-center align-self-center w-100">Количество</div></div>
+        <div class="d-flex flex-fill border_top_2"><div class="text-center align-self-center w-100">Вес</div></div>
         <div class="d-flex flex-fill border_top_2"><div class="text-center align-self-center w-100">Цена</div></div>
-        <div class="d-flex flex-fill border_top_right_2"><div class="text-center align-self-center w-100">Сумма</div></div>
+        <div class="d-flex flex-fill border_top_right_2"><div class="text-center align-self-center w-100">Стоимость</div></div>
       </div>
 
       <div class="block3_material_wall" id="block3_material_wall_id">
@@ -1002,11 +1006,6 @@
                 <option value="306">Штукатурка цементная Knauf UNTERPUTZ</option>
                 <option value="289">Штукатурка цементная Plitonit T1+</option>
             </select></div>
-            <div class="d-flex align-self-center button_info_position">
-              <a href="#text-popup" class="d-flex popup-content justify-content-center button_info_press_zone">
-                <img src="img/info-button.svg" class="button_info align-self-center">
-              </a>
-            </div>
           </div>
           <div class="d-flex flex-fill border_middle"><div class="d-flex align-self-center justify-content-center w-100"><div id="plaster_wall_outlay_weight">0</div>&nbsp;кг</div></div>
           <div class="d-flex flex-fill border_middle"><div class="d-flex align-self-center justify-content-center w-100"><div id="plaster_wall_outlay_quantity">0</div>&nbsp;шт</div></div>
@@ -1026,7 +1025,6 @@
               </a>
             </div>
           </div>
-          <div class="d-flex flex-fill border_middle_left"><div class="text-center align-self-center font-weight-bold w-100"><div id="primer_wall_outlay">Грунт Knauf Миттельгрунд</div></div></div>>>>>>> 54b14ddce17e351b794b1592af64646b3b55d8c5
           <div class="d-flex flex-fill border_middle"><div class="d-flex align-self-center justify-content-center w-100"><div id="primer_wall_outlay_weight">0</div>&nbsp;кг</div></div>
           <div class="d-flex flex-fill border_middle"><div class="d-flex align-self-center justify-content-center w-100"><div id="primer_wall_outlay_quantity">0</div>&nbsp;шт</div></div>
           <div class="d-flex flex-fill border_middle"><div class="d-flex align-self-center justify-content-center w-100"><div id="primer_wall_outlay_price">2064</div>&nbsp;руб</div></div>
@@ -1088,11 +1086,6 @@
                 <option value="306">Штукатурка цементная Knauf UNTERPUTZ</option>
                 <option value="289">Штукатурка цементная Plitonit T1+</option>
             </select></div>
-            <div class="d-flex align-self-center button_info_position">
-              <a href="#text-popup" class="d-flex popup-content justify-content-center button_info_press_zone">
-                <img src="img/info-button.svg" class="button_info align-self-center">
-              </a>
-            </div>
           </div>
           <div class="d-flex flex-fill border_middle"><div class="d-flex align-self-center justify-content-center w-100"><div id="plaster_roof_outlay_weight">0</div>&nbsp;кг</div></div>
           <div class="d-flex flex-fill border_middle"><div class="d-flex align-self-center justify-content-center w-100"><div id="plaster_roof_outlay_quantity">0</div>&nbsp;шт</div></div>
@@ -1155,11 +1148,6 @@
                 <option value="306">Штукатурка цементная Knauf UNTERPUTZ</option>
                 <option value="289">Штукатурка цементная Plitonit T1+</option>
             </select></div>
-            <div class="d-flex align-self-center button_info_position">
-              <a href="#text-popup" class="d-flex popup-content justify-content-center button_info_press_zone">
-                <img src="img/info-button.svg" class="button_info align-self-center">
-              </a>
-            </div>
           </div>
           <div class="d-flex flex-fill border_middle"><div class="d-flex align-self-center justify-content-center w-100"><div id="plaster_window_outlay_weight">0</div>&nbsp;кг</div></div>
           <div class="d-flex flex-fill border_middle"><div class="d-flex align-self-center justify-content-center w-100"><div id="plaster_window_outlay_quantity">0</div>&nbsp;шт</div></div>
