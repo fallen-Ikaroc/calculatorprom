@@ -236,9 +236,9 @@ $(function(){
     $('#plaster_wall_outlay_weight').text($('#wall_plaster_weight').html());
     $('#plaster_wall_outlay_quantity').text($('#wall_plaster_quantity').html());
     $('#plaster_wall_outlay_sum').text($('#wall_plaster_sum').html());
-    $('#pharos_wall_outlay_quantity').text(Math.ceil(Math.ceil($('#wall_plaster_square').val()/2)));
-    $('#pharos_wall_outlay_sum').text((Math.ceil(Math.ceil($('#wall_plaster_square').val()/2)))*116);
-    $('#pharos_wall_outlay_weight').text((Math.ceil(Math.ceil($('#wall_plaster_square').val()/2)))*0.48);
+    $('#pharos_wall_outlay_quantity').text(Math.ceil(Math.ceil($('#wall_plaster_square').val()/3)));
+    $('#pharos_wall_outlay_sum').text((Math.ceil(Math.ceil($('#wall_plaster_square').val()/3)))*116);
+    $('#pharos_wall_outlay_weight').text(((Math.ceil(Math.ceil($('#wall_plaster_square').val()/3)))*0.024).toFixed(2));
   });
   $('#wall_primer_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
     $('#primer_wall_outlay_weight').text($('#wall_primer_weight').html());
@@ -251,7 +251,7 @@ $(function(){
     $('#grid_outlay_sum').text($('#wall_grid_sum').html());
     $('#grid_outlay_price').text($('#wall_grid_price').html());
     if($('#wall_grid_price').html()==='2460')
-      $('#grid_outlay').text('Сетка штукатурная тканая оцинкованная');
+      $('#grid_outlay').text('Сетка тканая оцинкованная');
     if($('#wall_grid_price').html()==='943')
       $('#grid_outlay').text('Сетка стеклотканевая фасадная');
   });
@@ -537,7 +537,7 @@ $(function(){
   });
   $('#grid_outlay').bind('DOMNodeInserted DOMNodeRemoved', function(){
     var value=$('#grid_outlay').html();
-    if(value==='Сетка штукатурная тканая оцинкованная'){
+    if(value==='Сетка тканая оцинкованная'){
       $('#info_grid_zink').removeClass('forcards');
       $('#info_grid_glass').addClass('forcards');
     }
@@ -545,6 +545,26 @@ $(function(){
       $('#info_grid_zink').addClass('forcards');
       $('#info_grid_glass').removeClass('forcards');
     }
+  });
+  $('#wall_primer_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    $('#plaster_wall_outlay_square').text($('#wall_primer_square').html());
+    $('#pharos_wall_outlay_square').text($('#wall_primer_square').html())
+  });
+  $('#roof_primer_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    $('#plaster_roof_outlay_square').text($('#roof_primer_square').html());
+    $('#pharos_roof_outlay_square').text($('#roof_primer_square').html())
+  });
+  $('#window_primer_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    $('#plaster_window_outlay_square').text($('#window_primer_square').html());
+  });
+  $('#wall_plaster_consume').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    $('#plaster_wall_outlay_consume').text($('#wall_plaster_consume').html());
+  });
+  $('#roof_plaster_consume').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    $('#plaster_roof_outlay_consume').text($('#roof_plaster_consume').html());
+  });
+  $('#window_plaster_consume').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    $('#plaster_window_outlay_consume').text($('#window_plaster_consume').html());
   });
 })
 function wall_plaster(){
