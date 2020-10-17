@@ -302,9 +302,11 @@ body{
 }
 #wall_plaster_thickness, #roof_plaster_thickness, #window_plaster_thickness, #plaster_wall_outlay, #plaster_roof_outlay, #plaster_window_outlay{
   border: 0px;
+  background: #fff !important;
 }
 #wall_plaster_thickness, #roof_plaster_thickness, #window_plaster_thickness, #plaster_wall_outlay, #plaster_roof_outlay, #plaster_window_outlay:focus{
   outline: -webkit-focus-ring-color auto 0px;
+  background: #fff !important;
 }
 .arrow{
   height: 20px;
@@ -467,7 +469,7 @@ div.box{
   padding-left: 61px;
 }
 /* Modal Plaster */
-.white-popup {
+.white-popup{
   font-family: 'Roboto', sans-serif;
   color: #ffffff;
   position: relative;
@@ -477,20 +479,21 @@ div.box{
   min-width: 1060px;
   margin: 20px auto;
 }
-.mfp-close {
+.mfp-close{
   color: inherit !important;
   font-size: 45px !important;
   height: 61px !important;
   width: 61px !important;
 }
-.mfp-container {
-    width: 100%;
-    height: 100%;
-    min-width: 1210px;
+.mfp-container{
+  width: 100%;
+  height: 100%;
+  min-width: 1210px;
 }
-.mfp-bg {
-    width: 100%;
-    min-width: 1210px;
+.mfp-bg{
+  height: 100%;
+  width: 100%;
+  min-width: 1210px;
 }
 .modal_plaster{
   color: #2C3E50;
@@ -516,7 +519,7 @@ div.box{
 .modal_plaster_info_text_2 p{
   line-height: 1;
 }
-.modal_plaster_info_text_3{  color: #2C3E50;
+.modal_plaster_info_text_3{
   color: #2C3E50;
   font-size: 20px;
   border-top: 6px solid #2C3E50;
