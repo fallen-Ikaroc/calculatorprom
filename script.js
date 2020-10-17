@@ -188,6 +188,9 @@ $(function(){
     wall_plaster();
     wall_primer();
     wall_grid();
+    $('html, body').animate({
+        scrollTop: $("#block3_material").offset().top
+      }, 1000);
   });
   $('#wall_plaster_thickness').change(function(){
       wall_plaster();
@@ -204,6 +207,9 @@ $(function(){
 
     roof_plaster();
     roof_primer();
+    $('html, body').animate({
+        scrollTop: $("#block3_material").offset().top
+      }, 1000);
   });
   $('#roof_plaster_thickness').change(function(){
       roof_plaster();
@@ -220,6 +226,12 @@ $(function(){
 
     window_plaster();
     window_primer();
+
+    if($('#window_plaster_square').val()!='0' && $('#window_plaster_width').val()!='0'){
+      $('html, body').animate({
+          scrollTop: $("#block3_material").offset().top
+        }, 1000);
+      }
   });
   $('#window_plaster_thickness').change(function(){
     window_plaster();
@@ -230,6 +242,12 @@ $(function(){
     $('#window_primer_square').text(parseFloat($('#window_plaster_square').val())*parseFloat($('#window_plaster_width').val())/1000);
     window_plaster();
     window_primer();
+
+    if($('#window_plaster_square').val()!='0' && $('#window_plaster_width').val()!='0'){
+      $('html, body').animate({
+          scrollTop: $("#block3_material").offset().top
+        }, 1000);
+      }
   });
   //material wall
   $('#wall_plaster_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
@@ -253,7 +271,7 @@ $(function(){
     if($('#wall_grid_price').html()==='2460')
       $('#grid_outlay').text('Сетка тканая оцинкованная');
     if($('#wall_grid_price').html()==='943')
-      $('#grid_outlay').text('Сетка стеклотканевая фасадная');
+      $('#grid_outlay').text('Сетка стеклотканевая');
   });
 
   //material roof
@@ -542,7 +560,7 @@ $(function(){
       $('#info_grid_zink').removeClass('forcards');
       $('#info_grid_glass').addClass('forcards');
     }
-    if(value==='Сетка стеклотканевая фасадная'){
+    if(value==='Сетка стеклотканевая'){
       $('#info_grid_zink').addClass('forcards');
       $('#info_grid_glass').removeClass('forcards');
     }

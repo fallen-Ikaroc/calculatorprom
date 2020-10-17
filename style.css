@@ -289,10 +289,10 @@ body{
   font-weight: 500;
   font-family: 'Russo One', sans-serif;
 }
-#wall_plaster_thickness, #roof_plaster_thickness, #window_plaster_thickness{
+#wall_plaster_thickness, #roof_plaster_thickness, #window_plaster_thickness, #plaster_wall_outlay, #plaster_roof_outlay, #plaster_window_outlay{
   border: 0px;
 }
-#wall_plaster_thickness, #roof_plaster_thickness, #window_plaster_thickness:focus{
+#wall_plaster_thickness, #roof_plaster_thickness, #window_plaster_thickness, #plaster_wall_outlay, #plaster_roof_outlay, #plaster_window_outlay:focus{
   outline: -webkit-focus-ring-color auto 0px;
 }
 .arrow{
@@ -540,6 +540,20 @@ div.box{
   max-width: 125px;
   width: 125px;
 }
+.border_top_2_small{
+  border-bottom: 6px solid #2C3E50;
+  border-right: 3px solid #2C3E50;
+  border-left: 3px solid #2C3E50;
+  max-width: 110px;
+  width: 110px;
+}
+.border_top_2_smaller{
+  border-bottom: 6px solid #2C3E50;
+  border-right: 3px solid #2C3E50;
+  border-left: 3px solid #2C3E50;
+  max-width: 120px;
+  width: 120px;
+}
 .border_top_right_2{
   border-bottom: 6px solid #2C3E50;
   border-left: 3px solid #2C3E50;
@@ -550,6 +564,7 @@ div.box{
   position: relative;
   border-bottom: 3px solid #2C3E50;
   border-right: 3px solid #2C3E50;
+  padding-right: 60px;
 }
 .border_middle{
   border-bottom: 3px solid #2C3E50;
@@ -557,6 +572,20 @@ div.box{
   border-left: 3px solid #2C3E50;
   max-width: 125px;
   width: 125px;
+}
+.border_middle_small{
+  border-bottom: 3px solid #2C3E50;
+  border-right: 3px solid #2C3E50;
+  border-left: 3px solid #2C3E50;
+  max-width: 110px;
+  width: 110px;
+}
+.border_middle_smaller{
+  border-bottom: 3px solid #2C3E50;
+  border-right: 3px solid #2C3E50;
+  border-left: 3px solid #2C3E50;
+  max-width: 120px;
+  width: 120px;
 }
 .border_middle_right{
   border-bottom: 3px solid #2C3E50;
@@ -575,8 +604,8 @@ div.box{
 }
 .border_bottom_right_2{
   border-left: 3px solid #2C3E50;
-  max-width: 300px;
-  width: 300px;
+  max-width: 305px;
+  width: 305px;
 }
 .border_middle_2{
   border-top: 3px solid #2C3E50;
@@ -697,7 +726,7 @@ div.box{
           transform: rotateY(0);
 }
 
-/* .block4_workresult_wall{
+.block4_workresult_wall{
   display: none;
 }
 .block4_workresult_roof{
@@ -717,7 +746,7 @@ div.box{
 }
 .block3_material_dn{
   display: none;
-} */
+}
 .forcards{
   display: none !important;
 }
