@@ -343,8 +343,9 @@ $(function(){
   });
   $('#window_primer_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
     var square=parseFloat($('#window_primer_square').html());
+    var square2=parseFloat($('#window_plaster_square').val());
     $('#work_outlay_window_square').text(square);
-    $('#work_outlay_window_sum').text(square*250);
+    $('#work_outlay_window_sum').text(square2*250);
   });
   $('#plaster_wall_outlay_price').bind('DOMNodeInserted DOMNodeRemoved', function(){
     var price=parseFloat($('#plaster_wall_outlay_price').html())  ;
