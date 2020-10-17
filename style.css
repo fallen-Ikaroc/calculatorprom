@@ -715,3 +715,6 @@ div.box{
 .block3_material_dn{
   display: none;
 } */
+.forcards{
+  display: none !important;
+}

@@ -254,8 +254,10 @@
     </div>
 
     <div style="display: none">
+      <input type="radio" id="block2_wall_type_dirty_fond" name="types_fond" value="320" checked class="radio_type1">
+      <input type="radio" id="block2_wall_type_clear_fond" name="types_fond" value="360" class="radio_type1">
       <input type="radio" id="block2_wall_type_dirty" name="types" value="220" checked class="radio_type">
-      <input type="radio" id="block2_wall_type_clear" name="types" value="280" class="radio_type">
+      <input type="radio" id="block2_wall_type_clear" name="types" value="260" class="radio_type">
     </div>
 
     <nav class="heading_nav">
@@ -321,7 +323,7 @@
         <div class="heading_block2">Выберите тип отделки</div>
       </div>
 
-      <div class="d-flex">
+      <div class="d-flex forcards" id="other_card">
 
         <div class="d-flex w-50 justify-content-center">
           <div class="d-flex w-75 align-self-center justify-content-center card effect__hover">
@@ -363,7 +365,47 @@
         </div>
 
       </div>
+      <div class="d-flex" id="fond_card">
 
+        <div class="d-flex w-50 justify-content-center">
+          <div class="d-flex w-75 align-self-center justify-content-center card effect__hover">
+
+            <div class="align-self-center w-100 p-3 card__front box">
+              <div class="text-center heading_block2">Черновая отделка</div>
+              <div class="text-center" style="color: #838f9c; font-size:">от 320 руб/м&sup2;</div>
+            </div>
+
+            <div class="align-self-center text-center block2_finish_text w-100 h-100 p-2 box card__back">
+              <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
+              Под плитку<br>
+              <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
+              Под камень
+              <div class="text-center"><label for="block2_wall_type_dirty_fond" class="w-50 block2_choice button_choice font-weight-bold">Выбрать</label></div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="d-flex w-50 justify-content-center">
+          <div class="d-flex w-75 align-self-center justify-content-center card effect__hover">
+
+            <div class="align-self-center p-3 w-100 card__front box">
+              <div class="text-center heading_block2">Чистовая отделка</div>
+              <div class="text-center" style="color: #838f9c; font-size:">от 360 руб/м&sup2;</div>
+            </div>
+
+            <div class="align-self-center text-center block2_finish_text w-100 h-100 p-2 card__back box">
+              <img src="img/right-arrow.svg" class="arrow alignsself-center pr-2">
+              Под шпатлёвку<br>
+              <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
+              Под обои
+              <div class="text-center"><label for="block2_wall_type_clear_fond" class="w-50 block2_choice button_choice font-weight-bold">Выбрать</label></div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
       <div class="">
 
         <div class="d-flex p-3">
@@ -1249,7 +1291,7 @@
           <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_square">0</div>&nbsp;м&sup2;</div></div>
           <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_plaster">Knauf MP 75</div></div></div>
           <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_thickness">15</div>&nbsp;мм</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_quantity">0</div>&nbsp;руб</div></div>
+          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_quantity">320</div>&nbsp;руб</div></div>
           <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_sum">0</div>&nbsp;руб</div></div>
         </div>
       </div>

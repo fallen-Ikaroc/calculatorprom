@@ -48,6 +48,9 @@ $(function(){
         $('#work_outlay_wall_object_type').text('Старый фонд');
         $('#work_outlay_roof_object_type').text('Старый фонд');
         $('#work_outlay_window_object_type').text('Старый фонд');
+
+        $('#fond_card').removeClass('forcards');
+        $('#other_card').addClass('forcards');
         break;
       case 2:
         place=2;
@@ -66,6 +69,9 @@ $(function(){
         $('#work_outlay_wall_object_type').text('Монолит');
         $('#work_outlay_roof_object_type').text('Монолит');
         $('#work_outlay_window_object_type').text('Монолит');
+
+        $('#fond_card').addClass('forcards');
+        $('#other_card').removeClass('forcards');
         break;
       case 3:
         place=3;
@@ -84,6 +90,9 @@ $(function(){
         $('#work_outlay_wall_object_type').text('Газобетон');
         $('#work_outlay_roof_object_type').text('Газобетон');
         $('#work_outlay_window_object_type').text('Газобетон');
+
+        $('#fond_card').addClass('forcards');
+        $('#other_card').removeClass('forcards');
         break;
       case 4:
         place=4;
@@ -102,12 +111,16 @@ $(function(){
         $('#work_outlay_wall_object_type').text('Шлакоблок');
         $('#work_outlay_roof_object_type').text('Шлакоблок');
         $('#work_outlay_window_object_type').text('Шлакоблок');
+
+        $('#fond_card').addClass('forcards');
+        $('#other_card').removeClass('forcards');
         break;
     }
     wall_primer();
     roof_primer();
     window_primer();
     wall_grid();
+    recalc();
   });
   $('.radio_plaster').change(function(){
     var value =parseFloat($('input[name=plaster]:checked').val());
@@ -315,11 +328,7 @@ $(function(){
   });
   //worksum
   $('#wall_primer_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
-    var price = parseFloat($('input[name=types]:checked').val());
-    var square=parseFloat($('#wall_primer_square').html());
-    $('#work_outlay_wall_square').text(square);
-    $('#work_outlay_wall_quantity').text(price);
-    $('#work_outlay_wall_sum').text(square*price);
+    recalc();
   });
   $('#roof_primer_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
     var square=parseFloat($('#roof_primer_square').html());
@@ -371,10 +380,10 @@ $(function(){
     $('#work_outlay_window_thickness').text(thickness);
   });
   $('.radio_type').change(function(){
-    var price = parseFloat($('input[name=types]:checked').val());
-    var square=parseFloat($('#wall_primer_square').html());
-    $('#work_outlay_wall_quantity').text(price);
-    $('#work_outlay_wall_sum').text(square*price);
+    recalc();
+  });
+  $('.radio_type1').change(function(){
+    recalc();
   });
   $('#work_outlay_wall_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
     sale1();
@@ -615,4 +624,15 @@ function sale1(){
   if(square>=1400){
    $('#work_outlay_sale_percent').text('10');
   }
+}
+
+function recalc(){
+  if(place===1)
+    var price=parseFloat($('input[name=types_fond]:checked').val());
+  else
+    var price = parseFloat($('input[name=types]:checked').val());
+  var square=parseFloat($('#wall_primer_square').html());
+  $('#work_outlay_wall_square').text(square);
+  $('#work_outlay_wall_quantity').text(price);
+  $('#work_outlay_wall_sum').text(square*price);
 }
