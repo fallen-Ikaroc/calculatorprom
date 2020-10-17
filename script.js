@@ -173,6 +173,9 @@ $(function(){
     wall_plaster();
     roof_plaster();
     window_plaster();
+    info_but1();
+    info_but2();
+    info_but3();
   });
   //wall
   $('#wall_plaster_square').change(function(){
@@ -248,9 +251,9 @@ $(function(){
     $('#grid_outlay_sum').text($('#wall_grid_sum').html());
     $('#grid_outlay_price').text($('#wall_grid_price').html());
     if($('#wall_grid_price').html()==='2460')
-      $('#grid_outlay').text('сетка оцинкованная');
+      $('#grid_outlay').text('Сетка штукатурная тканая оцинкованная');
     if($('#wall_grid_price').html()==='943')
-      $('#grid_outlay').text('сетка стеклотканевая');
+      $('#grid_outlay').text('Сетка стеклотканевая фасадная');
   });
 
   //material roof
@@ -285,16 +288,19 @@ $(function(){
     $('#wall_plaster_price').text($('#plaster_wall_outlay').find(':selected').val());
     $('#plaster_wall_outlay_price').text($('#plaster_wall_outlay').find(':selected').val());
     wall_plaster();
+    info_but1();
   });
   $('#plaster_roof_outlay').change(function(){
     $('#roof_plaster_price').text($('#plaster_roof_outlay').find(':selected').val());
     $('#plaster_roof_outlay_price').text($('#plaster_roof_outlay').find(':selected').val());
     roof_plaster();
+    info_but2();
   });
   $('#plaster_window_outlay').change(function(){
     $('#window_plaster_price').text($('#plaster_window_outlay').find(':selected').val());
     $('#plaster_window_outlay_price').text($('#plaster_window_outlay').find(':selected').val());
     window_plaster();
+    info_but3();
   });
   //material sum
   $('#plaster_wall_outlay_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
@@ -495,6 +501,51 @@ $(function(){
       $('#block0_commonresult').removeClass('block3_material_dn');
     }
   });
+
+  $('#primer_wall_outlay').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    var value=$('#primer_wall_outlay').html();
+    if(value==='Грунт Knauf Миттельгрунд'){
+      $('#info_primer_knauf').removeClass('forcards');
+      $('#info_primer_kreps').addClass('forcards');
+    }
+    if(value==='Грунт Крепс Праймер'){
+      $('#info_primer_knauf').addClass('forcards');
+      $('#info_primer_kreps').removeClass('forcards');
+    }
+  });
+  $('#primer_roof_outlay').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    var value=$('#primer_roof_outlay').html();
+    if(value==='Грунт Knauf Миттельгрунд'){
+      $('#info_primer_knauf1').removeClass('forcards');
+      $('#info_primer_kreps1').addClass('forcards');
+    }
+    if(value==='Грунт Крепс Праймер'){
+      $('#info_primer_knauf1').addClass('forcards');
+      $('#info_primer_kreps1').removeClass('forcards');
+    }
+  });
+  $('#primer_window_outlay').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    var value=$('#primer_window_outlay').html();
+    if(value==='Грунт Knauf Миттельгрунд'){
+      $('#info_primer_knauf2').removeClass('forcards');
+      $('#info_primer_kreps2').addClass('forcards');
+    }
+    if(value==='Грунт Крепс Праймер'){
+      $('#info_primer_knauf2').addClass('forcards');
+      $('#info_primer_kreps2').removeClass('forcards');
+    }
+  });
+  $('#grid_outlay').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    var value=$('#grid_outlay').html();
+    if(value==='Сетка штукатурная тканая оцинкованная'){
+      $('#info_grid_zink').removeClass('forcards');
+      $('#info_grid_glass').addClass('forcards');
+    }
+    if(value==='Сетка стеклотканевая фасадная'){
+      $('#info_grid_zink').addClass('forcards');
+      $('#info_grid_glass').removeClass('forcards');
+    }
+  });
 })
 function wall_plaster(){
   var square = parseFloat($('#wall_plaster_square').val());
@@ -635,4 +686,92 @@ function recalc(){
   $('#work_outlay_wall_square').text(square);
   $('#work_outlay_wall_quantity').text(price);
   $('#work_outlay_wall_sum').text(square*price);
+}
+
+function info_but1(){
+  var value=parseFloat($('#plaster_wall_outlay').find(':selected').val());
+  switch(value){
+    case 435:
+      $('#info_plaster_knaufg').removeClass('forcards');
+      $('#info_plaster_volma').addClass('forcards');
+      $('#info_plaster_knaufc').addClass('forcards');
+      $('#info_plaster_plitonit').addClass('forcards');
+      break;
+    case 402:
+      $('#info_plaster_knaufg').addClass('forcards');
+      $('#info_plaster_volma').removeClass('forcards');
+      $('#info_plaster_knaufc').addClass('forcards');
+      $('#info_plaster_plitonit').addClass('forcards');
+      break;
+    case 306:
+      $('#info_plaster_knaufg').addClass('forcards');
+      $('#info_plaster_volma').addClass('forcards');
+      $('#info_plaster_knaufc').removeClass('forcards');
+      $('#info_plaster_plitonit').addClass('forcards');
+      break;
+    case 289:
+      $('#info_plaster_knaufg').addClass('forcards');
+      $('#info_plaster_volma').addClass('forcards');
+      $('#info_plaster_knaufc').addClass('forcards');
+      $('#info_plaster_plitonit').removeClass('forcards');
+      break;
+  }
+}
+function info_but2(){
+  var value=parseFloat($('#plaster_roof_outlay').find(':selected').val());
+  switch(value){
+    case 435:
+      $('#info_plaster_knaufg1').removeClass('forcards');
+      $('#info_plaster_volma1').addClass('forcards');
+      $('#info_plaster_knaufc1').addClass('forcards');
+      $('#info_plaster_plitonit1').addClass('forcards');
+      break;
+    case 402:
+      $('#info_plaster_knaufg1').addClass('forcards');
+      $('#info_plaster_volma1').removeClass('forcards');
+      $('#info_plaster_knaufc1').addClass('forcards');
+      $('#info_plaster_plitonit1').addClass('forcards');
+      break;
+    case 306:
+      $('#info_plaster_knaufg1').addClass('forcards');
+      $('#info_plaster_volma1').addClass('forcards');
+      $('#info_plaster_knaufc1').removeClass('forcards');
+      $('#info_plaster_plitonit1').addClass('forcards');
+      break;
+    case 289:
+      $('#info_plaster_knaufg1').addClass('forcards');
+      $('#info_plaster_volma1').addClass('forcards');
+      $('#info_plaster_knaufc1').addClass('forcards');
+      $('#info_plaster_plitonit1').removeClass('forcards');
+      break;
+  }
+}
+function info_but3(){
+  var value=parseFloat($('#plaster_window_outlay').find(':selected').val());
+  switch(value){
+    case 435:
+      $('#info_plaster_knaufg2').removeClass('forcards');
+      $('#info_plaster_volma2').addClass('forcards');
+      $('#info_plaster_knaufc2').addClass('forcards');
+      $('#info_plaster_plitonit2').addClass('forcards');
+      break;
+    case 402:
+      $('#info_plaster_knaufg2').addClass('forcards');
+      $('#info_plaster_volma2').removeClass('forcards');
+      $('#info_plaster_knaufc2').addClass('forcards');
+      $('#info_plaster_plitonit2').addClass('forcards');
+      break;
+    case 306:
+      $('#info_plaster_knaufg2').addClass('forcards');
+      $('#info_plaster_volma2').addClass('forcards');
+      $('#info_plaster_knaufc2').removeClass('forcards');
+      $('#info_plaster_plitonit2').addClass('forcards');
+      break;
+    case 289:
+      $('#info_plaster_knaufg2').addClass('forcards');
+      $('#info_plaster_volma2').addClass('forcards');
+      $('#info_plaster_knaufc2').addClass('forcards');
+      $('#info_plaster_plitonit2').removeClass('forcards');
+      break;
+  }
 }
