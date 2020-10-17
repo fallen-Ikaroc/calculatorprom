@@ -445,6 +445,7 @@ div.box{
 #modal_sale{
   color: #2C3E50;
   max-width: 1200px;
+  min-width: 1200px;
 }
 .modal_sale_name{
   font-size: 30px;
@@ -462,6 +463,7 @@ div.box{
   background: #ffffff;
   width: auto;
   max-width: 1060px;
+  min-width: 1060px;
   margin: 20px auto;
 }
 .mfp-close {
