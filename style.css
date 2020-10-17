@@ -6,9 +6,16 @@ html{
 body{
   margin: 0;
   padding: 0;
-  margin: 0 auto
+  margin: 0 auto;
+  max-width: 1600px;
+  min-width: 1600px;
 }
-
+@media screen and (max-device-width: 1550px) {
+  body{
+    max-width: 1210px;
+    min-width: 1210px;
+  }
+}
 /* Block1 */
 #block1{
   max-width: 1600px;
@@ -48,7 +55,7 @@ body{
 @media screen and (max-device-width: 1550px) {
   #block1{
     max-width: 1210px;
-    min-width: 1200px;
+    min-width: 1210px;
   }
   #block1_ver1 {
    display: block !important;
@@ -272,7 +279,7 @@ body{
 /* Block2_area */
 #block2_area{
   max-width: 1210px;
-  min-width: 1200px;
+  min-width: 1210px;
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
   color: #2C3E50;
@@ -504,7 +511,7 @@ div.box{
 
 #block3_material{
   max-width: 1210px;
-  min-width: 1200px;
+  min-width: 1210px;
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
   color: #2C3E50;
@@ -651,7 +658,7 @@ div.box{
 
 #block4_workresult{
   max-width: 1210px;
-  min-width: 1200px;
+  min-width: 1210px;
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
   color: #2C3E50;
