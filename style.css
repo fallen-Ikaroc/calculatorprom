@@ -491,6 +491,9 @@ div.box{
   color: #2C3E50;
   font-size: 18px;
 }
+.modal_plaster_info_text_2 p{
+  line-height: 1;
+}
 .modal_plaster_info_text_3{  color: #2C3E50;
   color: #2C3E50;
   font-size: 20px;
