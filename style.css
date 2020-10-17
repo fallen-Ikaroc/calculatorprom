@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 html{
-  max-width: 1600px;
-  min-width: 1600px;
   margin: 0;
   padding: 0;
   margin: 0 auto;
@@ -11,8 +9,6 @@ body{
   margin: 0;
   padding: 0;
   margin: 0 auto;
-  max-width: 1600px;
-  min-width: 1600px;
 }
 @media screen and (max-device-width: 1550px) {
   html{
@@ -486,6 +482,15 @@ div.box{
   font-size: 45px !important;
   height: 61px !important;
   width: 61px !important;
+}
+.mfp-container {
+    width: 100%;
+    height: 100%;
+    min-width: 1210px;
+}
+.mfp-bg {
+    width: 100%;
+    min-width: 1210px;
 }
 .modal_plaster{
   color: #2C3E50;
