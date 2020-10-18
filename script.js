@@ -639,11 +639,11 @@ function roof_plaster(){
   $('#roof_plaster_consume').text(thickness);
   $('#roof_plaster_weight').text(thickness*square);
   if(plaster===1 || plaster===2){
-      $('#roof_plaster_quantity').text( Math.ceil(thickness*square/30));
+      $('#roof_plaster_quantity').text(Math.ceil(thickness*square/30));
       $('#roof_plaster_sum').text(priceperone * Math.ceil(thickness * square/30));
     }
   if(plaster===3 || plaster===4){
-    $('#roof_plaster_quantity').text( Math.ceil(thickness*square/25));
+    $('#roof_plaster_quantity').text(Math.ceil(thickness*square/25));
     $('#roof_plaster_sum').text(priceperone * Math.ceil(thickness * square/25));
     }
 }
@@ -654,7 +654,7 @@ function roof_primer(){
   $('#roof_primer_consume').text((square*0.2).toFixed(2));
   $('#roof_primer_weight').text((square*0.2).toFixed(2));
   $('#roof_primer_quantity').text(Math.ceil(square*0.2/10));
-  $('#roof_primer_sum').text(Math.ceil(price*Math.ceil(square*0.2/10)));
+  $('#roof_primer_sum').text(Math.ceil(price * Math.ceil(square*0.2/10)));
 }
 
 function window_plaster(){
@@ -663,9 +663,9 @@ function window_plaster(){
   var priceperone = parseFloat($('#window_plaster_price').html());
 
   $('#window_plaster_consume').text(thickness);
-  $('#window_plaster_weight').text(thickness*square);
+  $('#window_plaster_weight').text((thickness*square).toFixed(1));
   if(plaster===1 || plaster===2){
-      $('#window_plaster_quantity').text( Math.ceil(thickness*square/30));
+      $('#window_plaster_quantity').text(Math.ceil(thickness*square/30));
       $('#window_plaster_sum').text(priceperone * Math.ceil(thickness * square/30));
     }
   if(plaster===3 || plaster===4){
