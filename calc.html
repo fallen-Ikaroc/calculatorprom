@@ -8,7 +8,6 @@
   <link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
   <script src="bootstrap.min.js" type="text/javascript"></script>
   <link rel="stylesheet" type="text/css" href="style.css"/>
-
   <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 </head>
@@ -16,9 +15,9 @@
 
   <!-- Block1 -->
 
-<div style="background: linear-gradient(90deg, #ffffff, #fafafa); min-width: 1200px;">
+<section id="block1">
 
-  <section id="block1" class="p-5">
+  <div id="block1_position" class="p-5">
 
     <div class="d-flex">
       <div class="flex-fill"></div>
@@ -28,19 +27,19 @@
       <div class="line_3"></div>
     </div>
 
-    <div class="d-flex mb-4">
+    <div class="d-flex pb-4">
       <div class="m-0">
         <div class="heading">Выберите тип объекта</div>
         <div class="line_1 mb-1"></div>
         <div class="line_2"></div>
       </div>
       <div class="flex-fill"></div>
-      <a class="align-self-end text-center block1_ver2_plaster_choice button_ver2_plaster_choice m-0 font-weight-bold" style="width:260px !important" id="return_to_font">Изменить тип объекта</a>
+      <a class="align-self-end text-center button_type_object button_ver2_plaster_choice m-0 font-weight-bold" id="return_to_font">Изменить тип объекта</a>
     </div>
 
     <div class="d-flex align-items-center justify-content-center">
 
-      <div class="shadow_1 card effect__click p-4" style="margin: 0 auto">
+      <div class="shadow_1 card effect__click p-4 justify-content-center">
 
       <!-- Выбор стены -->
         <div id="block1_ver1" class="d-flex card__front">
@@ -218,7 +217,6 @@
 
     </div>
 
-
     <div id="block1_place">
       <input type="radio" id="block1_brick" name="place" value="1"  class="block1_place_">
       <input type="radio" id="block1_monolith" name="place" value="2" class="block1_place_">
@@ -233,468 +231,624 @@
       <input type="radio" id="block1_plitonit" name="plaster" value="4" class="radio_plaster">
     </div>
 
-  </section>
+  </div>
 
-</div>
+</section>
+
 
   <!-- Block2 Area -->
 
-<div style="background: linear-gradient(90deg, #fafafa, #ffffff); min-width: 1200px;">
+<section id="block2_area">
 
-  <section id="block2_area" class="p-5">
+  <div class="block_position p-5">
 
     <div id="block2_wall">
 
-    <div class="d-flex mb-4" style="max-width: 1110px;">
-      <div class="m-0">
-        <div class="heading">Выберите область работ</div>
-        <div class="line_1 mb-1"></div>
-        <div class="line_2"></div>
+      <div class="d-flex pb-4">
+        <div class="m-0">
+          <div class="heading">Выберите область работ</div>
+          <div class="line_1 mb-1"></div>
+          <div class="line_2"></div>
+        </div>
       </div>
-    </div>
 
-    <div style="display: none">
-      <input type="radio" id="block2_wall_type_dirty_fond" name="types_fond" value="320" checked class="radio_type1">
-      <input type="radio" id="block2_wall_type_clear_fond" name="types_fond" value="360" class="radio_type1">
-      <input type="radio" id="block2_wall_type_dirty" name="types" value="220" checked class="radio_type">
-      <input type="radio" id="block2_wall_type_clear" name="types" value="260" class="radio_type">
-    </div>
+      <div class="out_display">
+        <input type="radio" id="block2_wall_type_dirty_fond" name="types_fond" value="320" checked class="radio_type1">
+        <input type="radio" id="block2_wall_type_clear_fond" name="types_fond" value="360" class="radio_type1">
+        <input type="radio" id="block2_wall_type_dirty" name="types" value="220" checked class="radio_type">
+        <input type="radio" id="block2_wall_type_clear" name="types" value="260" class="radio_type">
+      </div>
 
-    <nav class="heading_nav">
+      <nav class="heading_nav">
       <div class="nav nav-tabs d-flex" id="nav-tab" role="tablist">
-        <a class="nav-item col-4 text-center nav-link active"  style="  margin-right:-5px; z-index: 2; " id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><div style="color: #2C3E50;">Стены</div></a>
-        <a class="nav-item flex-fill text-center nav-link" style=" margin-left: -5px; margin-right:-5px; z-index: 1;" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><div style="color: #2C3E50;">Потолки</div></a>
-        <a class="nav-item col-4 text-center nav-link" style=" margin-left: -5px;  z-index: 0;" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><div style="color: #2C3E50;">Откосы</div></a>
+        <a class="nav-item col-4 text-center nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Стены</a>
+        <a class="nav-item flex-fill text-center nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Потолки</a>
+        <a class="nav-item col-4 text-center nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Откосы</a>
       </div>
 
-    <!-- <div id="block2_roof">
+      <!-- <div id="block2_roof">
 
-      <div id="block2_roof_plaster"style="display: flex">
-        штукатурка потолка<div style="width:100px"></div>
-        <input id="roof_plaster_square" type="text" value="0"></input>
-        <div>|</div>
-        <div id="roof_plaster_price">435</div>
-        <div>|</div>
-        <select id="roof_plaster_thickness">
-            <option value="15" selected>15</option>
-            <option value="20">20</option>
-            <option value="25">25</option>
-            <option value="30">30</option>
-            <option value="35">35</option>
-            <option value="40">40</option>
-        </select>
-        <div>|</div>
-        <div id="roof_plaster_consume">15</div>
-        <div>|</div>
-        <div id="roof_plaster_weight">0</div>
-        <div>|</div>
-        <div id="roof_plaster_quantity">0</div>
-        <div>|</div>
-        <div id="roof_plaster_sum">0</div>
-      </div>
-
-      <div id="block2_roof_primer"style="display: flex">
-        Грунт потолка<div style="width:100px"></div>
-        <input type="radio" id="block2_roof_primer_knauf" name="roof_primer" value="1" class="radio_roof_primer" checked>
-        <input type="radio" id="block2_roof_primer_kreps" name="roof_primer" value="2" class="radio_roof_primer">
-        <div id="roof_primer_square">0</div>
-        <div>|</div>
-        <div id="roof_primer_price">2064</div>
-        <div>|</div>
-        <div id="roof_primer_consumeperone">0.1</div>
-        <div>|</div>
-        <div id="roof_primer_consume">0</div>
-        <div>|</div>
-        <div id="roof_primer_weight">0</div>
-        <div>|</div>
-        <div id="roof_primer_quantity">0</div>
-        <div>|</div>
-        <div id="roof_primer_sum">0</div>
-      </div>
-    </nav> -->
-
-    <div class="tab-content" id="nav-tabContent" style="position:relative; z-index: 3;">
-
-    <!-- Стены -->
-    <div class="tab-pane show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-
-      <div class="d-flex p-3">
-        <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-        <div class="heading_block2">Выберите тип отделки</div>
-      </div>
-
-      <div class="d-flex forcards" id="other_card">
-
-        <div class="d-flex w-50 justify-content-center">
-          <div class="d-flex w-75 align-self-center justify-content-center card effect__hover">
-
-            <div class="align-self-center w-100 p-3 card__front box">
-              <div class="text-center heading_block2">Черновая отделка</div>
-              <div class="text-center" style="color: #838f9c; font-size:">от 220 руб/м&sup2;</div>
-            </div>
-
-            <div class="align-self-center text-center block2_finish_text w-100 h-100 p-2 box card__back">
-              <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-              Под плитку<br>
-              <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-              Под камень
-              <div class="text-center"><label for="block2_wall_type_dirty" class="w-50 block2_choice button_choice font-weight-bold">Выбрать</label></div>
-            </div>
-
-          </div>
+        <div id="block2_roof_plaster"style="display: flex">
+          штукатурка потолка<div style="width:100px"></div>
+          <input id="roof_plaster_square" type="text" value="0"></input>
+          <div>|</div>
+          <div id="roof_plaster_price">435</div>
+          <div>|</div>
+          <select id="roof_plaster_thickness">
+              <option value="15" selected>15</option>
+              <option value="20">20</option>
+              <option value="25">25</option>
+              <option value="30">30</option>
+              <option value="35">35</option>
+              <option value="40">40</option>
+          </select>
+          <div>|</div>
+          <div id="roof_plaster_consume">15</div>
+          <div>|</div>
+          <div id="roof_plaster_weight">0</div>
+          <div>|</div>
+          <div id="roof_plaster_quantity">0</div>
+          <div>|</div>
+          <div id="roof_plaster_sum">0</div>
         </div>
 
-        <div class="d-flex w-50 justify-content-center">
-
-          <div class="d-flex w-75 align-self-center justify-content-center card effect__hover">
-
-            <div class="align-self-center p-3 w-100 card__front box">
-              <div class="text-center heading_block2">Чистовая отделка</div>
-              <div class="text-center" style="color: #838f9c; font-size:">от 260 руб/м&sup2;</div>
-            </div>
-
-            <div class="align-self-center text-center block2_finish_text w-100 h-100 p-2 card__back box">
-              <img src="img/right-arrow.svg" class="arrow alignsself-center pr-2">
-              Под шпатлёвку<br>
-              <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-              Под обои
-              <div class="text-center"><label for="block2_wall_type_clear" class="w-50 block2_choice button_choice font-weight-bold">Выбрать</label></div>
-            </div>
-
-          </div>
+        <div id="block2_roof_primer"style="display: flex">
+          Грунт потолка<div style="width:100px"></div>
+          <input type="radio" id="block2_roof_primer_knauf" name="roof_primer" value="1" class="radio_roof_primer" checked>
+          <input type="radio" id="block2_roof_primer_kreps" name="roof_primer" value="2" class="radio_roof_primer">
+          <div id="roof_primer_square">0</div>
+          <div>|</div>
+          <div id="roof_primer_price">2064</div>
+          <div>|</div>
+          <div id="roof_primer_consumeperone">0.1</div>
+          <div>|</div>
+          <div id="roof_primer_consume">0</div>
+          <div>|</div>
+          <div id="roof_primer_weight">0</div>
+          <div>|</div>
+          <div id="roof_primer_quantity">0</div>
+          <div>|</div>
+          <div id="roof_primer_sum">0</div>
         </div>
+      </nav> -->
 
-      </div>
-      <div class="d-flex" id="fond_card">
+      <div class="tab-content" id="nav-tabContent">
 
-        <div class="d-flex w-50 justify-content-center">
-          <div class="d-flex w-75 align-self-center justify-content-center card effect__hover">
+        <!-- Стены -->
+        <div class="tab-pane show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
-            <div class="align-self-center w-100 p-3 card__front box">
-              <div class="text-center heading_block2">Черновая отделка</div>
-              <div class="text-center" style="color: #838f9c; font-size:">от 320 руб/м&sup2;</div>
-            </div>
-
-            <div class="align-self-center text-center block2_finish_text w-100 h-100 p-2 box card__back">
-              <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-              Под плитку<br>
-              <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-              Под камень
-              <div class="text-center"><label for="block2_wall_type_dirty_fond" class="w-50 block2_choice button_choice font-weight-bold">Выбрать</label></div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="d-flex w-50 justify-content-center">
-          <div class="d-flex w-75 align-self-center justify-content-center card effect__hover">
-
-            <div class="align-self-center p-3 w-100 card__front box">
-              <div class="text-center heading_block2">Чистовая отделка</div>
-              <div class="text-center" style="color: #838f9c; font-size:">от 360 руб/м&sup2;</div>
-            </div>
-
-            <div class="align-self-center text-center block2_finish_text w-100 h-100 p-2 card__back box">
-              <img src="img/right-arrow.svg" class="arrow alignsself-center pr-2">
-              Под шпатлёвку<br>
-              <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-              Под обои
-              <div class="text-center"><label for="block2_wall_type_clear_fond" class="w-50 block2_choice button_choice font-weight-bold">Выбрать</label></div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-      <div class="">
-
-        <div class="d-flex p-3">
-          <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-          <div class="heading_block2">Штукатурка</div>
-        </div>
-
-        <div class="">
-          <div class="d-flex font-weight-bold string_1">
-            <div class="d-flex flex-fill col p-0 border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
-            <div class="d-flex flex-fill col p-0 border_top"><div class="text-center align-self-center w-100">Цена мешка</div></div>
-            <div class="d-flex flex-fill col p-0 border_top"><div class="text-center align-self-center w-100">Толщина слоя</div></div>
-            <div class="d-flex flex-fill col p-0 border_top"><div class="text-center align-self-center w-100">Расход</div></div>
-            <div class="d-flex flex-fill col p-0 border_top"><div class="text-center align-self-center w-100">Вес</div></div>
-            <div class="d-flex flex-fill col p-0 border_top"><div class="text-center align-self-center w-100">Количество</div></div>
-            <div class="d-flex flex-fill col p-0 border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
-          </div>
-          <div class="d-flex string_2">
-            <div class="d-flex flex-fill border_bottom_left"><div class="text-center align-self-center w-100"><input id="wall_plaster_square" class="text-center p-0" style="width:40%; height:" type="text" type="number" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="4" value="0"></input>&nbsp;м&sup2;</div></div>
-            <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div class=""id="wall_plaster_price">435</div>&nbsp;руб</div></div>
-            <div class="d-flex flex-fill border_bottom">
-              <div class="d-flex text-center justify-content-center align-self-center w-100">
-                <div class="d-flex text-center">
-                  <select id="wall_plaster_thickness">
-                    <option value="15" selected>15</option>
-                    <option value="20">20</option>
-                    <option value="25">25</option>
-                    <option value="30">30</option>
-                    <option value="35">35</option>
-                    <option value="40">40</option>
-                  </select>
-                  <div>&nbsp;мм</div>
-                </div>
-              </div>
-            </div>
-            <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_plaster_consume" class="content">15</div>&nbsp;кг/м&sup2;</div></div>
-            <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_plaster_weight">0</div>&nbsp;кг</div></div>
-            <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_plaster_quantity">0</div>&nbsp;шт</div></div>
-            <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_plaster_sum">0</div>&nbsp;руб</div></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- <div class="pb-5">
-        <div class="d-flex p-3">
-          <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-          <div class="heading_block2">Грунт</div>
-        </div>
-
-        <div class="d-flex block1_ver2_1 justify-content-center pb-4 pl-4 pr-4" style="">
-          <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px;">
-            <div class="d-flex p-2">
-              <div class="d-flex align-self-center">
-                <div class="block1_ver2_plaster_info_position m-0"></div>
-              </div>
-              <div class="flex-fill font-weight-bold">Грунт Knauf Миттельгрунд</div>
-              <div class="d-flex align-self-center text-white">
-                <a href="#text-popup" class="button_ver2_plaster_choice popup-content">
-                  <div class="block1_ver2_plaster_info font-weight-bold m-0">i</div>
-                </a>
-              </div>
-            </div>
-            <div class="d-flex pb-2" flex_priority>
-              <a href="#text-popup" class="d-flex align-items-center w-50 p-1 popup-content">
-                <img src="img/primer_knauf.jpg" class="img-fluid" alt="Responsive image">
-              </a>
-              <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
-                <div class="d-flex" flex_priority>
-                  <div class="d-flex align-self-center">
-                    Объём: 10 л
-                    <br>Предназначен для обработки поверхностей: газо – и пенобетона, керамического и силикатного кирпича, керамзито – и шлакоблоков, гипсовых и цементных штукатурок; бетонной, цементной и гипсовой стяжки.
-                    <br>Состав: полимерная дисперсия.
-                  </div>
-                </div>
-                <div class="text-center">
-                  Цена: 2064 руб
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px;">
-            <div class="d-flex p-2">
-              <div class="d-flex align-self-center">
-                <div class="block1_ver2_plaster_info_position m-0"></div>
-              </div>
-              <div class="flex-fill font-weight-bold">Грунт Крепс Праймер</div>
-              <div class="d-flex align-self-center text-white">
-                <a href="#text-popup" class="button_ver2_plaster_choice popup-content">
-                  <div class="block1_ver2_plaster_info font-weight-bold m-0">i</div>
-                </a>
-              </div>
-            </div>
-            <div class="d-flex pb-2" flex_priority>
-              <a href="#text-popup" class="d-flex align-items-center w-50 p-1 popup-content">
-                <img src="img/primer_kreps.jpg" class="img-fluid" alt="Responsive image">
-              </a>
-              <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
-                <div class="d-flex" flex_priority>
-                  <div class="d-flex align-self-center">
-                    Объём: 10 л
-                    <br>Наносится на все пористые основания, цементные плиты, газобетон, цементные, цементно-известковые и известковые штукатурки, бетон, железобетон, гипсокартон и другие гипсосодержащие основания.
-                    <br>Для внутренних и наружных работ.
-                  </div>
-                </div>
-                <div class="text-center">
-                  Цена: 1548 руб
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div> -->
-
-        <div class="" style="display: none;">
-          <div class="d-flex font-weight-bold string_1">
-            <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
-            <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Упаковка</div></div>
-            <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">м&sup2;/граммы</div></div>
-            <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Расход</div></div>
-            <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Вес</div></div>
-            <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Количество</div></div>
-            <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
-          </div>
-          <div class="d-flex string_2">
-            <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_primer_price">2064</div>&nbsp;руб</div></div>
-            <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_primer_consume">0</div>&nbsp;кг/м&sup2;</div></div>
-            <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_primer_weight">0</div>&nbsp;кг</div></div>
-            <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_primer_quantity">0</div>&nbsp;шт</div></div>
-            <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_primer_sum">0</div>&nbsp;руб</div></div>
-          </div>
-        </div>
-
-      <!-- <div class="">
-        <div class="d-flex p-3">
-          <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-          <div class="heading_block2">Сетка</div>
-        </div>
-
-        <div class="d-flex block1_ver2_1 justify-content-center pb-4 pl-4 pr-4">
-          <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px;">
-            <div class="d-flex p-2">
-              <div class="d-flex align-self-center">
-                <div class="block1_ver2_plaster_info_position m-0"></div>
-              </div>
-              <div class="flex-fill font-weight-bold">Сетка стеклотканевая фасадная SD-Glass</div>
-              <div class="d-flex align-self-center text-white">
-                <a href="#text-popup" class="button_ver2_plaster_choice popup-content">
-                  <div class="block1_ver2_plaster_info font-weight-bold m-0">i</div>
-                </a>
-              </div>
-            </div>
-            <div class="d-flex pb-2" flex_priority>
-              <a href="#text-popup" class="d-flex align-items-center w-50 p-1 pl-3 pr-3 popup-content">
-                <img src="img/grid_glass.jpg" class="img-fluid" alt="Responsive image">
-              </a>
-              <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
-                <div class="d-flex" flex_priority>
-                  <div class="d-flex align-self-center">
-                    Вес рулона: 2.4 кг
-                    <br>Размеры: ячейка - 5х5 мм,
-                    <br>рулон - 1х20 м
-                    <br>Плотность: 145 г/м2
-                    <br>Имеет повышенные разрывные нагрузки, пропитана специальным полимерным щелочестойким составом.
-                  </div>
-                </div>
-                <div class="text-center">
-                  Цена: 943 руб
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px">
-            <div class="d-flex p-2">
-              <div class="d-flex align-self-center">
-                <div class="block1_ver2_plaster_info_position m-0"></div>
-              </div>
-              <div class="flex-fill font-weight-bold">Сетка штукатурная тканая оцинкованная</div>
-              <div class="d-flex align-self-center text-white">
-                <a href="#text-popup" class="button_ver2_plaster_choice popup-content">
-                  <div class="block1_ver2_plaster_info font-weight-bold m-0">i</div>
-                </a>
-              </div>
-            </div>
-            <div class="d-flex pb-2" flex_priority>
-              <a href="#text-popup" class="d-flex align-items-center w-50 p-1 pl-3 pr-3 popup-content">
-                <img src="img/grid_zinc.png" class="img-fluid" alt="Responsive image">
-              </a>
-              <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
-                <div class="d-flex" flex_priority>
-                  <div class="d-flex align-self-center">
-                    Вес рулона: 10 кг
-                    <br>Размеры: ячейка - 10х10 мм,
-                    <br>рулон - 1х30 м,
-                    <br>диаметр рулона - 0,5-0,6 мм
-                    <br>Предназначена для армирования строительных смесей.  Применяется при грубом выравнивании стен и полов цементными составами.
-                  </div>
-                </div>
-                <div class="text-center">
-                  Цена: 2460 руб
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div> -->
-
-        <div class="" style="display: none;">
-          <div class="d-flex font-weight-bold string_1">
-            <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
-            <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Упаковка</div></div>
-            <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Размеры</div></div>
-            <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Расход</div></div>
-            <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Вес</div></div>
-            <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Количество</div></div>
-            <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
-          </div>
-          <div class="d-flex string_2">
-            <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_grid_price">2460</div>&nbsp;руб</div></div>
-            <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">1 шт/<div id="wall_grid_consume">0</div>&nbsp;м&sup2;</div></div>
-            <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_grid_weight">0</div>&nbsp;кг</div></div>
-            <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_grid_quantity">0</div>&nbsp;шт</div></div>
-            <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_grid_sum">0</div>&nbsp;руб</div></div>
-          </div>
-        </div>
-
-      </div>
-
-    <!-- Потолки -->
-    <div class="tab-pane" style="" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-
-      <div class="d-flex p-3">
-        <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-        <div class="heading_block2">Тип отделки</div>
-      </div>
-
-      <div class="d-flex">
-        <div class="d-flex w-100 justify-content-center">
-          <div class="d-flex w-50 align-self-center justify-content-center box">
-            <div class="align-self-center p-3">
-              <div class="text-center heading_block2">Чистовая отделка</div>
-              <div class="text-center" style="color: #838f9c; font-size:">от 450 руб/м&sup2;</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-        <div class="">
           <div class="d-flex p-3">
             <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-            <div class="heading_block2">Штукатурка</div>
+            <div class="heading_block2">Выберите тип отделки</div>
+          </div>
+
+          <div class="d-flex forcards" id="other_card">
+
+            <div class="d-flex w-50 justify-content-center">
+              <div class="d-flex w-75 align-self-center justify-content-center card effect__hover">
+
+                <div class="align-self-center w-100 p-3 card__front box">
+                  <div class="text-center heading_block2">Черновая отделка</div>
+                  <div class="text-center block2_type_text_cost">от 220 руб/м&sup2;</div>
+                </div>
+
+                <div class="align-self-center text-center block2_finish_text w-100 h-100 p-2 box card__back">
+                  <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
+                  Под плитку<br>
+                  <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
+                  Под камень
+                  <div class="text-center"><label for="block2_wall_type_dirty" class="w-50 block2_choice button_choice font-weight-bold">Выбрать</label></div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="d-flex w-50 justify-content-center">
+
+              <div class="d-flex w-75 align-self-center justify-content-center card effect__hover">
+
+                <div class="align-self-center p-3 w-100 card__front box">
+                  <div class="text-center heading_block2">Чистовая отделка</div>
+                  <div class="text-center block2_type_text_cost">от 260 руб/м&sup2;</div>
+                </div>
+
+                <div class="align-self-center text-center block2_finish_text w-100 h-100 p-2 card__back box">
+                  <img src="img/right-arrow.svg" class="arrow alignsself-center pr-2">
+                  Под шпатлёвку<br>
+                  <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
+                  Под обои
+                  <div class="text-center"><label for="block2_wall_type_clear" class="w-50 block2_choice button_choice font-weight-bold">Выбрать</label></div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="d-flex" id="fond_card">
+
+            <div class="d-flex w-50 justify-content-center">
+              <div class="d-flex w-75 align-self-center justify-content-center card effect__hover">
+
+                <div class="align-self-center w-100 p-3 card__front box">
+                  <div class="text-center heading_block2">Черновая отделка</div>
+                  <div class="text-center block2_type_text_cost">от 320 руб/м&sup2;</div>
+                </div>
+
+                <div class="align-self-center text-center block2_finish_text w-100 h-100 p-2 box card__back">
+                  <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
+                  Под плитку<br>
+                  <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
+                  Под камень
+                  <div class="text-center"><label for="block2_wall_type_dirty_fond" class="w-50 block2_choice button_choice font-weight-bold">Выбрать</label></div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="d-flex w-50 justify-content-center">
+              <div class="d-flex w-75 align-self-center justify-content-center card effect__hover">
+
+                <div class="align-self-center p-3 w-100 card__front box">
+                  <div class="text-center heading_block2">Чистовая отделка</div>
+                  <div class="text-center block2_type_text_cost">от 360 руб/м&sup2;</div>
+                </div>
+
+                <div class="align-self-center text-center block2_finish_text w-100 h-100 p-2 card__back box">
+                  <img src="img/right-arrow.svg" class="arrow alignsself-center pr-2">
+                  Под шпатлёвку<br>
+                  <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
+                  Под обои
+                  <div class="text-center"><label for="block2_wall_type_clear_fond" class="w-50 block2_choice button_choice font-weight-bold">Выбрать</label></div>
+                </div>
+
+              </div>
+            </div>
+
           </div>
           <div class="">
-            <div class="d-flex font-weight-bold string_1 col p-0">
-              <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
-              <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Цена мешка</div></div>
-              <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Толщина слоя</div></div>
-              <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Расход</div></div>
-              <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Вес</div></div>
-              <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Количество</div></div>
-              <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
+
+            <div class="d-flex p-3">
+              <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
+              <div class="heading_block2">Штукатурка</div>
             </div>
-            <div class="d-flex string_2">
-              <div class="d-flex flex-fill border_bottom_left"><div class="text-center align-self-center w-100"><input id="roof_plaster_square" class="text-center p-0" style="width:40%; height:" type="text" type="number" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="4" value="0"></input>&nbsp;м&sup2;</div></div>
-              <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div class=""id="roof_plaster_price">435</div>&nbsp;руб</div></div>
-              <div class="d-flex flex-fill border_bottom">
-                <div class="d-flex text-center justify-content-center align-self-center w-100">
-                  <div class="d-flex text-center">
-                    <select id="roof_plaster_thickness">
-                      <option value="15" selected>15</option>
-                      <option value="20">20</option>
-                      <option value="25">25</option>
-                      <option value="30">30</option>
-                      <option value="35">35</option>
-                      <option value="40">40</option>
-                    </select>
-                    <div>&nbsp;мм</div>
+
+            <div class="">
+              <div class="d-flex font-weight-bold string_1">
+                <div class="d-flex flex-fill col p-0 border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
+                <div class="d-flex flex-fill col p-0 border_top"><div class="text-center align-self-center w-100">Цена мешка</div></div>
+                <div class="d-flex flex-fill col p-0 border_top"><div class="text-center align-self-center w-100">Толщина слоя</div></div>
+                <div class="d-flex flex-fill col p-0 border_top"><div class="text-center align-self-center w-100">Расход</div></div>
+                <div class="d-flex flex-fill col p-0 border_top"><div class="text-center align-self-center w-100">Вес</div></div>
+                <div class="d-flex flex-fill col p-0 border_top"><div class="text-center align-self-center w-100">Количество</div></div>
+                <div class="d-flex flex-fill col p-0 border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
+              </div>
+              <div class="d-flex string_2">
+                <div class="d-flex flex-fill border_bottom_left"><div class="text-center align-self-center w-100"><input id="wall_plaster_square" class="text-center p-0" type="text" type="number" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="4" value="0"></input>&nbsp;м&sup2;</div></div>
+                <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div class=""id="wall_plaster_price">435</div>&nbsp;руб</div></div>
+                <div class="d-flex flex-fill border_bottom">
+                  <div class="d-flex text-center justify-content-center align-self-center w-100">
+                    <div class="d-flex text-center">
+                      <select id="wall_plaster_thickness">
+                        <option value="15" selected>15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                        <option value="35">35</option>
+                        <option value="40">40</option>
+                      </select>
+                      <div>&nbsp;мм</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_plaster_consume" class="content">15</div>&nbsp;кг/м&sup2;</div></div>
+                <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_plaster_weight">0</div>&nbsp;кг</div></div>
+                <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_plaster_quantity">0</div>&nbsp;шт</div></div>
+                <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_plaster_sum">0</div>&nbsp;руб</div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="pb-5">
+            <div class="d-flex p-3">
+              <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
+              <div class="heading_block2">Грунт</div>
+            </div>
+
+            <div class="d-flex block1_ver2_1 justify-content-center pb-4 pl-4 pr-4" style="">
+              <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px;">
+                <div class="d-flex p-2">
+                  <div class="d-flex align-self-center">
+                    <div class="block1_ver2_plaster_info_position m-0"></div>
+                  </div>
+                  <div class="flex-fill font-weight-bold">Грунт Knauf Миттельгрунд</div>
+                  <div class="d-flex align-self-center text-white">
+                    <a href="#text-popup" class="button_ver2_plaster_choice popup-content">
+                      <div class="block1_ver2_plaster_info font-weight-bold m-0">i</div>
+                    </a>
+                  </div>
+                </div>
+                <div class="d-flex pb-2" flex_priority>
+                  <a href="#text-popup" class="d-flex align-items-center w-50 p-1 popup-content">
+                    <img src="img/primer_knauf.jpg" class="img-fluid" alt="Responsive image">
+                  </a>
+                  <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
+                    <div class="d-flex" flex_priority>
+                      <div class="d-flex align-self-center">
+                        Объём: 10 л
+                        <br>Предназначен для обработки поверхностей: газо – и пенобетона, керамического и силикатного кирпича, керамзито – и шлакоблоков, гипсовых и цементных штукатурок; бетонной, цементной и гипсовой стяжки.
+                        <br>Состав: полимерная дисперсия.
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      Цена: 2064 руб
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_plaster_consume" class="content">15</div>&nbsp;кг/м&sup2;</div></div>
-              <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_plaster_weight">0</div>&nbsp;кг</div></div>
-              <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_plaster_quantity">0</div>&nbsp;шт</div></div>
-              <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_plaster_sum">0</div>&nbsp;руб</div></div>
+
+              <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px;">
+                <div class="d-flex p-2">
+                  <div class="d-flex align-self-center">
+                    <div class="block1_ver2_plaster_info_position m-0"></div>
+                  </div>
+                  <div class="flex-fill font-weight-bold">Грунт Крепс Праймер</div>
+                  <div class="d-flex align-self-center text-white">
+                    <a href="#text-popup" class="button_ver2_plaster_choice popup-content">
+                      <div class="block1_ver2_plaster_info font-weight-bold m-0">i</div>
+                    </a>
+                  </div>
+                </div>
+                <div class="d-flex pb-2" flex_priority>
+                  <a href="#text-popup" class="d-flex align-items-center w-50 p-1 popup-content">
+                    <img src="img/primer_kreps.jpg" class="img-fluid" alt="Responsive image">
+                  </a>
+                  <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
+                    <div class="d-flex" flex_priority>
+                      <div class="d-flex align-self-center">
+                        Объём: 10 л
+                        <br>Наносится на все пористые основания, цементные плиты, газобетон, цементные, цементно-известковые и известковые штукатурки, бетон, железобетон, гипсокартон и другие гипсосодержащие основания.
+                        <br>Для внутренних и наружных работ.
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      Цена: 1548 руб
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div> -->
+
+            <div class="out_display">
+              <div class="d-flex font-weight-bold string_1">
+                <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
+                <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Упаковка</div></div>
+                <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">м&sup2;/граммы</div></div>
+                <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Расход</div></div>
+                <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Вес</div></div>
+                <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Количество</div></div>
+                <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
+              </div>
+              <div class="d-flex string_2">
+                <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_primer_price">2064</div>&nbsp;руб</div></div>
+                <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_primer_consume">0</div>&nbsp;кг/м&sup2;</div></div>
+                <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_primer_weight">0</div>&nbsp;кг</div></div>
+                <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_primer_quantity">0</div>&nbsp;шт</div></div>
+                <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_primer_sum">0</div>&nbsp;руб</div></div>
+              </div>
+            </div>
+
+          <!-- <div class="">
+            <div class="d-flex p-3">
+              <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
+              <div class="heading_block2">Сетка</div>
+            </div>
+
+            <div class="d-flex block1_ver2_1 justify-content-center pb-4 pl-4 pr-4">
+              <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px;">
+                <div class="d-flex p-2">
+                  <div class="d-flex align-self-center">
+                    <div class="block1_ver2_plaster_info_position m-0"></div>
+                  </div>
+                  <div class="flex-fill font-weight-bold">Сетка стеклотканевая фасадная SD-Glass</div>
+                  <div class="d-flex align-self-center text-white">
+                    <a href="#text-popup" class="button_ver2_plaster_choice popup-content">
+                      <div class="block1_ver2_plaster_info font-weight-bold m-0">i</div>
+                    </a>
+                  </div>
+                </div>
+                <div class="d-flex pb-2" flex_priority>
+                  <a href="#text-popup" class="d-flex align-items-center w-50 p-1 pl-3 pr-3 popup-content">
+                    <img src="img/grid_glass.jpg" class="img-fluid" alt="Responsive image">
+                  </a>
+                  <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
+                    <div class="d-flex" flex_priority>
+                      <div class="d-flex align-self-center">
+                        Вес рулона: 2.4 кг
+                        <br>Размеры: ячейка - 5х5 мм,
+                        <br>рулон - 1х20 м
+                        <br>Плотность: 145 г/м2
+                        <br>Имеет повышенные разрывные нагрузки, пропитана специальным полимерным щелочестойким составом.
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      Цена: 943 руб
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px">
+                <div class="d-flex p-2">
+                  <div class="d-flex align-self-center">
+                    <div class="block1_ver2_plaster_info_position m-0"></div>
+                  </div>
+                  <div class="flex-fill font-weight-bold">Сетка штукатурная тканая оцинкованная</div>
+                  <div class="d-flex align-self-center text-white">
+                    <a href="#text-popup" class="button_ver2_plaster_choice popup-content">
+                      <div class="block1_ver2_plaster_info font-weight-bold m-0">i</div>
+                    </a>
+                  </div>
+                </div>
+                <div class="d-flex pb-2" flex_priority>
+                  <a href="#text-popup" class="d-flex align-items-center w-50 p-1 pl-3 pr-3 popup-content">
+                    <img src="img/grid_zinc.png" class="img-fluid" alt="Responsive image">
+                  </a>
+                  <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
+                    <div class="d-flex" flex_priority>
+                      <div class="d-flex align-self-center">
+                        Вес рулона: 10 кг
+                        <br>Размеры: ячейка - 10х10 мм,
+                        <br>рулон - 1х30 м,
+                        <br>диаметр рулона - 0,5-0,6 мм
+                        <br>Предназначена для армирования строительных смесей.  Применяется при грубом выравнивании стен и полов цементными составами.
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      Цена: 2460 руб
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div> -->
+
+            <div class="out_display">
+              <div class="d-flex font-weight-bold string_1">
+                <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
+                <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Упаковка</div></div>
+                <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Размеры</div></div>
+                <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Расход</div></div>
+                <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Вес</div></div>
+                <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Количество</div></div>
+                <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
+              </div>
+              <div class="d-flex string_2">
+                <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_grid_price">2460</div>&nbsp;руб</div></div>
+                <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">1 шт/<div id="wall_grid_consume">0</div>&nbsp;м&sup2;</div></div>
+                <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_grid_weight">0</div>&nbsp;кг</div></div>
+                <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_grid_quantity">0</div>&nbsp;шт</div></div>
+                <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_grid_sum">0</div>&nbsp;руб</div></div>
+              </div>
+            </div>
+
+          </div>
+
+        <!-- Потолки -->
+        <div class="tab-pane" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+          <div class="d-flex p-3">
+            <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
+            <div class="heading_block2">Тип отделки</div>
+          </div>
+
+          <div class="d-flex">
+            <div class="d-flex w-100 justify-content-center">
+              <div class="d-flex w-50 align-self-center justify-content-center box">
+                <div class="align-self-center p-3">
+                  <div class="text-center heading_block2">Чистовая отделка</div>
+                  <div class="text-center block2_type_text_cost">от 450 руб/м&sup2;</div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+
+            <div class="">
+              <div class="d-flex p-3">
+                <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
+                <div class="heading_block2">Штукатурка</div>
+              </div>
+              <div class="">
+                <div class="d-flex font-weight-bold string_1 col p-0">
+                  <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
+                  <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Цена мешка</div></div>
+                  <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Толщина слоя</div></div>
+                  <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Расход</div></div>
+                  <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Вес</div></div>
+                  <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Количество</div></div>
+                  <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
+                </div>
+                <div class="d-flex string_2">
+                  <div class="d-flex flex-fill border_bottom_left"><div class="text-center align-self-center w-100"><input id="roof_plaster_square" class="text-center p-0" type="text" type="number" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="4" value="0"></input>&nbsp;м&sup2;</div></div>
+                  <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div class=""id="roof_plaster_price">435</div>&nbsp;руб</div></div>
+                  <div class="d-flex flex-fill border_bottom">
+                    <div class="d-flex text-center justify-content-center align-self-center w-100">
+                      <div class="d-flex text-center">
+                        <select id="roof_plaster_thickness">
+                          <option value="15" selected>15</option>
+                          <option value="20">20</option>
+                          <option value="25">25</option>
+                          <option value="30">30</option>
+                          <option value="35">35</option>
+                          <option value="40">40</option>
+                        </select>
+                        <div>&nbsp;мм</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_plaster_consume" class="content">15</div>&nbsp;кг/м&sup2;</div></div>
+                  <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_plaster_weight">0</div>&nbsp;кг</div></div>
+                  <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_plaster_quantity">0</div>&nbsp;шт</div></div>
+                  <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_plaster_sum">0</div>&nbsp;руб</div></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="">
+              <div class="d-flex p-3">
+                <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
+                <div class="heading_block2">Грунт</div>
+              </div>
+
+              <div class="d-flex block1_ver2_1 justify-content-center pb-4 pl-4 pr-4">
+                <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px;">
+                  <div class="d-flex p-2">
+                    <div class="d-flex align-self-center">
+                      <div class="block1_ver2_plaster_info_position m-0"></div>
+                    </div>
+                    <div class="flex-fill font-weight-bold">Грунт Knauf Миттельгрунд</div>
+                    <div class="d-flex align-self-center text-white">
+                      <a href="#text-popup" class="button_ver2_plaster_choice popup-content">
+                        <div class="block1_ver2_plaster_info font-weight-bold m-0">i</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="d-flex pb-2" flex_priority>
+                    <a href="#text-popup" class="d-flex align-items-center w-50 p-1 popup-content">
+                      <img src="img/primer_knauf.jpg" class="img-fluid" alt="Responsive image">
+                    </a>
+                    <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
+                      <div class="d-flex" flex_priority>
+                        <div class="d-flex align-self-center">
+                          Объём: 10 л
+                          <br>Предназначен для обработки поверхностей: газо – и пенобетона, керамического и силикатного кирпича, керамзито – и шлакоблоков, гипсовых и цементных штукатурок; бетонной, цементной и гипсовой стяжки.
+                          <br>Состав: полимерная дисперсия.
+                        </div>
+                      </div>
+                      <div class="text-center">
+                        Цена: 2064 руб
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px">
+                  <div class="d-flex p-2">
+                    <div class="d-flex align-self-center">
+                      <div class="block1_ver2_plaster_info_position m-0"></div>
+                    </div>
+                    <div class="flex-fill font-weight-bold">Грунт Крепс Праймер</div>
+                    <div class="d-flex align-self-center text-white">
+                      <a href="#text-popup" class="button_ver2_plaster_choice popup-content">
+                        <div class="block1_ver2_plaster_info font-weight-bold m-0">i</div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="d-flex pb-2" flex_priority>
+                    <a href="#text-popup" class="d-flex align-items-center w-50 p-1 popup-content">
+                      <img src="img/primer_kreps.jpg" class="img-fluid" alt="Responsive image">
+                    </a>
+                    <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
+                      <div class="d-flex" flex_priority>
+                        <div class="d-flex align-self-center">
+                          Объём: 10 л
+                          <br>Наносится на все пористые основания, цементные плиты, газобетон, цементные, цементно-известковые и известковые штукатурки, бетон, железобетон, гипсокартон и другие гипсосодержащие основания.
+                          <br>Для внутренних и наружных работ.
+                        </div>
+                      </div>
+                      <div class="text-center">
+                        Цена: 1548 руб
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+
+              <div class="out_display">
+                <div class="d-flex font-weight-bold string_1">
+                  <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
+                  <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Упаковка</div></div>
+                  <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">м&sup2;/граммы</div></div>
+                  <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Расход</div></div>
+                  <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Вес</div></div>
+                  <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Количество</div></div>
+                  <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
+                </div>
+                <div class="d-flex string_2">
+                  <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_primer_price">2064</div>&nbsp;руб</div></div>
+                  <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_primer_consume">0</div>&nbsp;кг/м&sup2;</div></div>
+                  <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_primer_weight">0</div>&nbsp;кг</div></div>
+                  <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_primer_quantity">0</div>&nbsp;шт</div></div>
+                  <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_primer_sum">0</div>&nbsp;руб</div></div>
+                </div>
+              </div>
+
+          </div>
+
+        <!-- Откосы -->
+        <div class="tab-pane" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+
+          <div class="d-flex p-3">
+            <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
+            <div class="heading_block2">Тип отделки</div>
+          </div>
+
+          <div class="d-flex">
+            <div class="d-flex w-100 justify-content-center">
+              <div class="d-flex w-50 align-self-center justify-content-center box">
+                <div class="align-self-center p-3">
+                  <div class="text-center heading_block2">Чистовая отделка</div>
+                  <div class="text-center block2_type_text_cost">от 250 руб/м. п.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="">
+            <div class="d-flex p-3">
+              <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
+              <div class="heading_block2">Штукатурка</div>
+            </div>
+            <div class="">
+              <div class="d-flex font-weight-bold string_1">
+                <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
+                <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Цена мешка</div></div>
+                <div class="d-flex flex-fill border_top_thickness"><div class="text-center align-self-center w-100">Толщина слоя</div></div>
+                <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Ширина</div></div>
+                <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Расход</div></div>
+                <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Вес</div></div>
+                <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Количество</div></div>
+                <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
+              </div>
+              <div class="d-flex string_2">
+                <div class="d-flex flex-fill border_bottom_left"><div class="text-center align-self-center w-100"><input id="window_plaster_square" class="text-center p-0" type="text" type="number" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="3" value="0"></input>&nbsp;м. п.</div></div>
+                <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div class=""id="window_plaster_price">435</div>&nbsp;руб</div></div>
+                <div class="d-flex flex-fill border_bottom_thickness">
+                  <div class="d-flex text-center justify-content-center align-self-center w-100">
+                    <div class="d-flex text-center">
+                      <select id="window_plaster_thickness">
+                        <option value="15" selected>15</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="30">30</option>
+                        <option value="35">35</option>
+                        <option value="40">40</option>
+                      </select>
+                      <div>&nbsp;мм</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex flex-fill border_bottom"><div class="text-center align-self-center w-100"><input id="window_plaster_width" class="text-center p-0" type="text" type="number" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="3" value="0"></input>&nbsp;мм</div></div>
+                <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_consume" class="content">15</div>&nbsp;кг/м&sup2;</div></div>
+                <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_weight">0</div>&nbsp;кг</div></div>
+                <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_quantity">0</div>&nbsp;шт</div></div>
+                <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_sum">0</div>&nbsp;руб</div></div>
+              </div>
+            </div>
+          </div>
 
         <!-- <div class="">
           <div class="d-flex p-3">
@@ -765,164 +919,10 @@
               </div>
             </div>
           </div>
-        </div> -->
-
-          <div class="" style="display: none;">
-            <div class="d-flex font-weight-bold string_1">
-              <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
-              <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Упаковка</div></div>
-              <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">м&sup2;/граммы</div></div>
-              <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Расход</div></div>
-              <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Вес</div></div>
-              <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Количество</div></div>
-              <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
-            </div>
-            <div class="d-flex string_2">
-              <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_primer_price">2064</div>&nbsp;руб</div></div>
-              <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_primer_consume">0</div>&nbsp;кг/м&sup2;</div></div>
-              <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_primer_weight">0</div>&nbsp;кг</div></div>
-              <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_primer_quantity">0</div>&nbsp;шт</div></div>
-              <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_primer_sum">0</div>&nbsp;руб</div></div>
-            </div>
-          </div>
-
-      </div>
-
-    <!-- Откосы -->
-    <div class="tab-pane" id="nav-contact" style=" background: #fff" role="tabpanel" aria-labelledby="nav-contact-tab">
-
-      <div class="d-flex p-3">
-        <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-        <div class="heading_block2">Тип отделки</div>
-      </div>
-
-      <div class="d-flex">
-        <div class="d-flex w-100 justify-content-center">
-          <div class="d-flex w-50 align-self-center justify-content-center box">
-            <div class="align-self-center p-3">
-              <div class="text-center heading_block2">Чистовая отделка</div>
-              <div class="text-center" style="color: #838f9c; font-size:">от 250 руб/м. п.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-        <div class="">
-          <div class="d-flex p-3">
-            <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-            <div class="heading_block2">Штукатурка</div>
-          </div>
-          <div class="">
-            <div class="d-flex font-weight-bold string_1">
-              <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
-              <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Цена мешка</div></div>
-              <div class="d-flex flex-fill border_top_thickness"><div class="text-center align-self-center w-100">Толщина слоя</div></div>
-              <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Ширина</div></div>
-              <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Расход</div></div>
-              <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Вес</div></div>
-              <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Количество</div></div>
-              <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
-            </div>
-            <div class="d-flex string_2">
-              <div class="d-flex flex-fill border_bottom_left"><div class="text-center align-self-center w-100"><input id="window_plaster_square" class="text-center p-0" style="width:40%; height:" type="text" type="number" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="4" value="0"></input>&nbsp;м. п.</div></div>
-              <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div class=""id="window_plaster_price">435</div>&nbsp;руб</div></div>
-              <div class="d-flex flex-fill border_bottom_thickness">
-                <div class="d-flex text-center justify-content-center align-self-center w-100">
-                  <div class="d-flex text-center">
-                    <select id="window_plaster_thickness">
-                      <option value="15" selected>15</option>
-                      <option value="20">20</option>
-                      <option value="25">25</option>
-                      <option value="30">30</option>
-                      <option value="35">35</option>
-                      <option value="40">40</option>
-                    </select>
-                    <div>&nbsp;мм</div>
-                  </div>
-                </div>
-              </div>
-              <div class="d-flex flex-fill border_bottom"><div class="text-center align-self-center w-100"><input id="window_plaster_width" class="text-center p-0" style="width:40%; height:" type="text" type="number" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="3" value="0"></input>&nbsp;мм</div></div>
-              <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_consume" class="content">15</div>&nbsp;кг/м&sup2;</div></div>
-              <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_weight">0</div>&nbsp;кг</div></div>
-              <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_quantity">0</div>&nbsp;шт</div></div>
-              <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_sum">0</div>&nbsp;руб</div></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- <div class="">
-          <div class="d-flex p-3">
-            <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-            <div class="heading_block2">Грунт</div>
-          </div>
-
-          <div class="d-flex block1_ver2_1 justify-content-center pb-4 pl-4 pr-4">
-            <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px;">
-              <div class="d-flex p-2">
-                <div class="d-flex align-self-center">
-                  <div class="block1_ver2_plaster_info_position m-0"></div>
-                </div>
-                <div class="flex-fill font-weight-bold">Грунт Knauf Миттельгрунд</div>
-                <div class="d-flex align-self-center text-white">
-                  <a href="#text-popup" class="button_ver2_plaster_choice popup-content">
-                    <div class="block1_ver2_plaster_info font-weight-bold m-0">i</div>
-                  </a>
-                </div>
-              </div>
-              <div class="d-flex pb-2" flex_priority>
-                <a href="#text-popup" class="d-flex align-items-center w-50 p-1 popup-content">
-                  <img src="img/primer_knauf.jpg" class="img-fluid" alt="Responsive image">
-                </a>
-                <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
-                  <div class="d-flex" flex_priority>
-                    <div class="d-flex align-self-center">
-                      Объём: 10 л
-                      <br>Предназначен для обработки поверхностей: газо – и пенобетона, керамического и силикатного кирпича, керамзито – и шлакоблоков, гипсовых и цементных штукатурок; бетонной, цементной и гипсовой стяжки.
-                      <br>Состав: полимерная дисперсия.
-                    </div>
-                  </div>
-                  <div class="text-center">
-                    Цена: 2064 руб
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px">
-              <div class="d-flex p-2">
-                <div class="d-flex align-self-center">
-                  <div class="block1_ver2_plaster_info_position m-0"></div>
-                </div>
-                <div class="flex-fill font-weight-bold">Грунт Крепс Праймер</div>
-                <div class="d-flex align-self-center text-white">
-                  <a href="#text-popup" class="button_ver2_plaster_choice popup-content">
-                    <div class="block1_ver2_plaster_info font-weight-bold m-0">i</div>
-                  </a>
-                </div>
-              </div>
-              <div class="d-flex pb-2" flex_priority>
-                <a href="#text-popup" class="d-flex align-items-center w-50 p-1 popup-content">
-                  <img src="img/primer_kreps.jpg" class="img-fluid" alt="Responsive image">
-                </a>
-                <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
-                  <div class="d-flex" flex_priority>
-                    <div class="d-flex align-self-center">
-                      Объём: 10 л
-                      <br>Наносится на все пористые основания, цементные плиты, газобетон, цементные, цементно-известковые и известковые штукатурки, бетон, железобетон, гипсокартон и другие гипсосодержащие основания.
-                      <br>Для внутренних и наружных работ.
-                    </div>
-                  </div>
-                  <div class="text-center">
-                    Цена: 1548 руб
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
 
         </div> -->
 
-          <div class="" style="display: none;">
+          <div class="out_display">
             <div class="d-flex font-weight-bold string_1">
               <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
               <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Упаковка</div></div>
@@ -945,63 +945,54 @@
 
       </div>
 
+      </nav>
+
     </div>
 
-    <div style="display:none;">
+    <div class="out_display">
+
       <div id="block2_wall">
-
-        <div id="block2_wall_plaster" style="display: "></div>
-
-        <div id="block2_wall_primer" style="display: flex">
-          Грунт стены<div style="width:100px"></div>
+        <div id="block2_wall_plaster"></div>
+        <div id="block2_wall_primer">Грунт стены
           <input type="radio" id="block2_wall_primer_knauf" name="wall_primer" value="1" class="radio_wall_primer" checked>
           <input type="radio" id="block2_wall_primer_kreps" name="wall_primer" value="2" class="radio_wall_primer">
         </div>
-
-        <div id="block2_wall_grid" style="display: flex">
-          сетка стены<div style="width:100px"></div>
+        <div id="block2_wall_grid">Cетка стены
           <input type="radio" id="block2_wall_grid_glass" name="grid" value="1" class="radio_wall_grid" checked>
           <input type="radio" id="block2_wall_grid_zinc" name="grid" value="2" class="radio_wall_grid">
         </div>
-
       </div>
 
       <div id="block2_roof">
-
-        <div id="block2_roof_plaster"style="display: flex"></div>
-
-        <div id="block2_roof_primer"style="display: flex">
-          Грунт потолка<div style="width:100px"></div>
+        <div id="block2_roof_plaster"></div>
+        <div id="block2_roof_primer">Грунт потолка
           <input type="radio" id="block2_roof_primer_knauf" name="roof_primer" value="1" class="radio_roof_primer" checked>
           <input type="radio" id="block2_roof_primer_kreps" name="roof_primer" value="2" class="radio_roof_primer">
         </div>
-
       </div>
 
       <div id="block2_window">
-
-        <div id="block2_window_plaster"style="display: flex"></div>
-
-        <div id="block2_window_primer"style="display: flex">
-          Грунт откосы<div style="width:100px"></div>
+        <div id="block2_window_plaster"></div>
+        <div id="block2_window_primer">Грунт откосы
           <input type="radio" id="block2_window_primer_knauf" name="window_primer" value="1" class="radio_window_primer" checked>
           <input type="radio" id="block2_window_primer_kreps" name="window_primer" value="2" class="radio_window_primer">
         </div>
-
       </div>
+
     </div>
 
-  </section>
+  </div>
 
-</div>
+</section>
+
 
   <!-- Block3 Material -->
 
-<div style="background: linear-gradient(90deg, #ffffff, #fafafa); min-width: 1200px;">
+<section id="block3_material" class="block3_material_dn">
 
-  <section id="block3_material" class="p-5 block3_material_dn">
+  <div class="block_position p-5">
 
-    <div class="d-flex mb-4" style="max-width: 1114px;">
+    <div class="d-flex pb-4">
       <div class="m-0">
         <div class="heading">Смета материалов</div>
         <div class="line_1 mb-1"></div>
@@ -1011,7 +1002,7 @@
 
     <div class="block3_material">
 
-    <!-- Строка 0 -->
+      <!-- Строка 0 -->
       <div class="d-flex string_3 font-weight-bold">
         <div class="d-flex flex-fill border_top_left_2"><div class="text-center align-self-center w-100">Материал</div></div>
         <div class="d-flex flex-fill border_top_2"><div class="text-center align-self-center w-100">Площадь</div></div>
@@ -1034,8 +1025,8 @@
       <!-- Строка 2 -->
         <div class="d-flex string_4">
           <div class="d-flex flex-fill border_middle_left">
-            <div class="d-flex text-center align-self-center w-100" style="max-width: 309px;">
-            <select id="plaster_wall_outlay" class="font-weight-bold" style="height: 57px; text-align-last: center; text-align: center;">
+            <div class="d-flex text-center align-self-center w-100" >
+            <select id="plaster_wall_outlay" class="font-weight-bold">
                 <option value="435" selected>Гипсовая Knauf MP 75</option>
                 <option value="402">Гипсовая ВОЛМА-Гипс-Актив</option>
                 <option value="306">Цементная Knauf UNTERPUTZ</option>
@@ -1158,8 +1149,8 @@
       <!-- Строка 7 -->
         <div class="d-flex string_4">
           <div class="d-flex flex-fill border_middle_left">
-            <div class="font-weight-bold align-self-center w-100" style="max-width: 309px;">
-            <select id="plaster_roof_outlay" class="font-weight-bold" style="height: 57px; text-align-last: center; text-align: center;">
+            <div class="font-weight-bold align-self-center w-100">
+            <select id="plaster_roof_outlay" class="font-weight-bold">
                 <option value="435" selected>Гипсовая Knauf MP 75</option>
                 <option value="402">Гипсовая ВОЛМА-Гипс-Актив</option>
                 <option value="306">Цементная Knauf UNTERPUTZ</option>
@@ -1257,8 +1248,8 @@
       <!-- Строка 11 -->
         <div class="d-flex string_4">
           <div class="d-flex flex-fill border_middle_left">
-            <div class="font-weight-bold align-self-center w-100" style="max-width: 309px;">
-            <select id="plaster_window_outlay" class="font-weight-bold" style="height: 57px; text-align-last: center; text-align: center;">
+            <div class="font-weight-bold align-self-center w-100">
+            <select id="plaster_window_outlay" class="font-weight-bold">
                 <option value="435" selected>Гипсовая Knauf MP 75</option>
                 <option value="402">Гипсовая ВОЛМА-Гипс-Актив</option>
                 <option value="306">Цементная Knauf UNTERPUTZ</option>
@@ -1324,7 +1315,7 @@
         </div>
       </div>
 
-    <!-- Строка 13 -->
+      <!-- Строка 13 -->
       <div class="d-flex string_5 font-weight-bold">
         <div class="d-flex flex-fill border_middle_left_2"><div class="text-center align-self-center w-100"></div></div>
         <div class="d-flex flex-fill border_bottom_2"><div class="text-center align-self-center w-100">Итого по материалам:</div></div>
@@ -1333,17 +1324,18 @@
 
     </div>
 
-  </section>
+  </div>
 
-</div>
+</section>
+
 
   <!-- Block4 Workresult -->
 
-<div style="background: linear-gradient(90deg, #fafafa, #ffffff); min-width: 1200px;">
+<section id="block4_workresult" class="block3_material_dn">
 
-  <section id="block4_workresult" class="p-5 block3_material_dn">
+  <div class="block_position p-5">
 
-    <div class="d-flex pt-4 pb-4" style="max-width: 1114px;">
+    <div class="d-flex pb-4">
       <div class="m-0">
         <div class="heading">Смета штукатурных работ</div>
         <div class="line_1 mb-1"></div>
@@ -1353,7 +1345,7 @@
 
     <div class="block4_workresult">
 
-    <!-- Строка 0 -->
+      <!-- Строка 0 -->
       <div class="d-flex font-weight-bold string_3">
         <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">Тип объекта</div></div>
         <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Площадь</div></div>
@@ -1363,7 +1355,7 @@
         <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
       </div>
 
-      <div class="block4_workresult_wall aaaa" id="block4_workresult_wall_id">
+      <div class="block4_workresult_wall" id="block4_workresult_wall_id">
       <!-- Строка 1 -->
         <div class="d-flex font-weight-bold string_4">
           <div class="d-flex flex-fill border_middle_2"><div class="d-flex align-self-center justify-content-center w-100">Стены</div></div>
@@ -1414,7 +1406,7 @@
         </div>
       </div>
 
-    <!-- Строка 7 -->
+      <!-- Строка 7 -->
       <div class="d-flex font-weight-bold string_4">
         <div class="d-flex flex-fill col-4 border_middle_left_3">
           <div class="d-flex align-self-center justify-content-center w-100">Ваша скидка:</div>
@@ -1428,7 +1420,7 @@
         <div class="d-flex flex-fill col-4 border_middle_right_3"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_sale_sum">0</div>&nbsp;руб</div></div>
       </div>
 
-    <!-- Строка 8 -->
+      <!-- Строка 8 -->
       <div class="d-flex string_5 font-weight-bold">
         <div class="d-flex flex-fill col-4 border_middle_left_2"><div class="text-center align-self-center w-100"></div></div>
         <div class="d-flex flex-fill col-4 border_bottom_3"><div class="text-center align-self-center w-100">Итого по работе:</div></div>
@@ -1437,13 +1429,14 @@
 
     </div>
 
-    <div style="height: 90px"></div>
+    <div class="space_for_block0"></div>
 
-  </section>
+  </div>
 
-</div>
+</section>
 
-    <!-- Block0 Commonresult-->
+
+  <!-- Block0 Commonresult-->
 
   <section id="block0_commonresult" class="fixed-bottom block3_material_dn">
 
@@ -1471,390 +1464,390 @@
 
   </section>
 
-<!-- Modal Sale -->
-<div id="modal_sale" class="white-popup mfp-hide">
+  <!-- Modal Sale -->
+  <div id="modal_sale" class="white-popup mfp-hide">
 
-  <div class="modal_sale_name text-right font-weight-bold pt-2 pb-2">
-    Скидки от площади работ в м&sup2;
-  </div>
-  <div class="d-flex flex-column text-center modal_plaster">
-
-    <div class="" style="">
-      <div class="d-flex font-weight-bold string_3">
-        <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">От 200 до 299</div></div>
-        <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">От 300 до 399</div></div>
-        <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">От 400 до 699</div></div>
-        <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">От 700 до 999</div></div>
-        <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">От 1000 до 1399</div></div>
-        <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Свыше 1400</div></div>
-      </div>
-      <div class="d-flex string_4">
-        <div class="d-flex flex-fill border_bottom_left"><div class="d-flex align-self-center justify-content-center w-100">2%</div></div>
-        <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">3%</div></div>
-        <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">4%</div></div>
-        <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">6%</div></div>
-        <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">8%</div></div>
-        <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100">10%</div></div>
-      </div>
+    <div class="modal_sale_name text-right font-weight-bold pt-2 pb-2">
+      Скидки от площади работ в м&sup2;
     </div>
+    <div class="d-flex flex-column text-center modal_plaster">
 
-  </div>
-</div>
-
-<!-- Modal Plaster Knauf MP75 -->
-<div id="modal_plaster_knaufg" class="white-popup mfp-hide">
-  <div class="modal_plaster_name text-center font-weight-bold pt-2 pb-2">
-    Технические характеристики отделочных материалов
-  </div>
-  <div class="d-flex flex-column text-center modal_plaster pb-5 pr-5 pl-5">
-    <div class="d-flex pt-5">
-
-      <div class="d-flex align-items-center w-50 pr-4">
-        <div class="w-100">
-          <img src="img/knaufg.jpg" class="img-fluid w-100" alt="Responsive image">
-          <div class="text-center modal_plaster_info_text_3 font-weight-bold pt-2 pb-2">
-            Стоимость пакета: 435 руб
-          </div>
+      <div class="" style="">
+        <div class="d-flex font-weight-bold string_3">
+          <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">От 200 до 299</div></div>
+          <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">От 300 до 399</div></div>
+          <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">От 400 до 699</div></div>
+          <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">От 700 до 999</div></div>
+          <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">От 1000 до 1399</div></div>
+          <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Свыше 1400</div></div>
         </div>
-      </div>
-
-      <div class="d-flex flex-column text-left pl-4 w-50">
-        <div class="text-center">
-          <div class="flex-fill modal_plaster_info_text_1 font-weight-bold pt-2 pb-2">Штукатурка гипсовая Knauf МП-75</div>
-        </div>
-        <div class="d-flex flex_priority">
-          <div class="modal_plaster_info_text_2 pt-3">
-            Сухая штукатурная смесь на основе гипса с полимерными добавками. Предназначена для высококачественного оштукатуривания стен и потолков внутри помещений. Наносится на все обычные твердые основания: кирпичная кладка, цементная штукатурка, бетон и т.п. Наносится машинным способом.
-            <p>
-            <p><span class="font-weight-bold">Вес брутто: </span>30 кг
-            <p><span class="font-weight-bold">Расход: </span>8 – 9 кг/м²/10 мм
-            <p><span class="font-weight-bold">Толщина слоя: </span>стена 8-50 мм, потолок 8-15 мм
-            <p><span class="font-weight-bold">Высыхание: </span>~7 суток
-            <p><span class="font-weight-bold">Прочность на сжатие: </span>>2,5 МПа
-            <p><span class="font-weight-bold">Прочность на изгиб: </span>>1,0 МПа
-            <p><span class="font-weight-bold">Максимальная фракция наполнителя: </span>1,2 мм
-            <p><span class="font-weight-bold">Производитель: </span>Россия
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- Modal Plaster Volma -->
-<div id="modal_plaster_volma" class="white-popup mfp-hide">
-  <div class="modal_plaster_name text-center font-weight-bold pt-2 pb-2">
-    Технические характеристики отделочных материалов
-  </div>
-  <div class="d-flex flex-column text-center modal_plaster pb-5 pr-5 pl-5">
-    <div class="d-flex pt-5">
-
-      <div class="d-flex align-items-center w-50 pr-4">
-        <div class="w-100">
-          <img src="img/volma.png" class="img-fluid w-100" alt="Responsive image">
-          <div class="text-center modal_plaster_info_text_3 font-weight-bold pt-2 pb-2">
-            Стоимость пакета: 402 руб
-          </div>
-        </div>
-      </div>
-
-      <div class="d-flex flex-column text-left pl-4 w-50">
-        <div class="text-center">
-          <div class="flex-fill modal_plaster_info_text_1 font-weight-bold pt-2 pb-2">Штукатурка гипсовая<br>Волма-Гипс-Актив Экстра</div>
-        </div>
-        <div class="d-flex flex_priority">
-          <div class="modal_plaster_info_text_2 pt-3">
-            Сухая штукатурная смесь для профессионального машинного нанесения на основе гипсового вяжущего и легкого заполнителя с применением минеральных и химических добавок. Предназначена для выполнения внутренних однослойных гипсовых штукатурок на потолках и стенах с помощью штукатурного агрегата, а также для доведения поверхности до глянца без дополнительного шпаклевания перед нанесением декоративных покрытий (красок, декоративных составов, и т.п.).
-            <p>
-            <p><span class="font-weight-bold">Вес брутто: </span>30 кг
-            <p><span class="font-weight-bold">Расход: </span>7,5-8,5 кг/м²/10 мм
-            <p><span class="font-weight-bold">Толщина слоя: </span>5-60 мм
-            <p><span class="font-weight-bold">Высыхание: </span>~5-7 суток
-            <p><span class="font-weight-bold">Прочность на сжатие: </span>>2,0 МПа
-            <p><span class="font-weight-bold">Производитель: </span>Россия
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- Modal Plaster Knauf UNTERPUTZ -->
-<div id="modal_plaster_knaufc" class="white-popup mfp-hide">
-  <div class="modal_plaster_name text-center font-weight-bold pt-2 pb-2">
-    Технические характеристики отделочных материалов
-  </div>
-  <div class="d-flex flex-column text-center modal_plaster pb-5 pr-5 pl-5">
-    <div class="d-flex pt-5">
-
-      <div class="d-flex align-items-center w-50 pr-4">
-        <div class="w-100">
-          <img src="img/knaufc.png" class="img-fluid w-100" alt="Responsive image">
-          <div class="text-center modal_plaster_info_text_3 font-weight-bold pt-2 pb-2">
-            Стоимость пакета: 306 руб
-          </div>
-        </div>
-      </div>
-
-      <div class="d-flex flex-column text-left pl-4 w-50">
-        <div class="text-center">
-          <div class="flex-fill modal_plaster_info_text_1 font-weight-bold pt-2 pb-2">Штукатурка цементная Knauf UNTERPUTZ</div>
-        </div>
-        <div class="d-flex flex_priority">
-          <div class="modal_plaster_info_text_2 pt-3">
-            Cухая штукатурная смесь на основе цемента с фракционированным песком и специальными добавками. Применяется при наружных и внутренних работах. Предназначена для оштукатуривания фасадов зданий, поверхностей в помещениях с повышенной влажностью (подвалы, гаражи и т. п.), для выравнивания минеральных оснований (керамический или силикатный кирпич, керамзитовые, газосиликатные, газобетонные блоки, бетон, и.др.) под облицовку плиткой и природным камнем весом не более 30 кг/м² (вместе с клеем) или декоративную штукатурку. Может наноситься вручную или с помощью штукатурных машин.
-            <p>
-            <p><span class="font-weight-bold">Вес брутто: </span>25 кг
-            <p><span class="font-weight-bold">Расход: </span>17 кг/м²/10 мм
-            <p><span class="font-weight-bold">Толщина слоя: </span>10-35 мм
-            <p><span class="font-weight-bold">Адгезия к бетону: </span>>0,4 МПа
-            <p><span class="font-weight-bold">Прочность на сжатие: </span>>4,0 МПа
-            <p><span class="font-weight-bold">Максимальная фракция наполнителя: </span>1,5 мм
-            <p><span class="font-weight-bold">Производитель: </span>Россия
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Modal Plaster Plitonit -->
-<div id="modal_plaster_plitonit" class="white-popup mfp-hide">
-  <div class="modal_plaster_name text-center font-weight-bold pt-2 pb-2">
-    Технические характеристики отделочных материалов
-  </div>
-  <div class="d-flex flex-column text-center modal_plaster pb-5 pr-5 pl-5">
-    <div class="d-flex pt-5">
-
-      <div class="d-flex align-items-center w-50 pr-4">
-        <div class="w-100">
-          <img src="img/plitonit.png" class="img-fluid w-100" alt="Responsive image">
-          <div class="text-center modal_plaster_info_text_3 font-weight-bold pt-2 pb-2">
-            Стоимость пакета: 289 руб
-          </div>
-        </div>
-      </div>
-
-      <div class="d-flex flex-column text-left pl-4 w-50">
-        <div class="text-center">
-          <div class="flex-fill modal_plaster_info_text_1 font-weight-bold pt-2 pb-2">Штукатурка цементная Plitonit Т1+ армированная</div>
-        </div>
-        <div class="d-flex flex_priority">
-          <div class="modal_plaster_info_text_2 pt-3">
-            Штукатурка на цементной основе с армирующими волокнами и повышенными водоотталкивающими свойствами.
-            Предназначена для выравнивания стен из бетона, кирпича, газобетона, а также заделки стыков и отдельных неровностей бетонных и железобетонных плит в сухих, влажных помещениях.
-            Для внутренних и наружных работ.
-            Наносится ручным и машинным способом.
-            <p>
-            <p><span class="font-weight-bold">Вес брутто: </span>25 кг
-            <p><span class="font-weight-bold">Расход: </span>1,2 – 1,3 кг/м²/10 мм
-            <p><span class="font-weight-bold">Толщина слоя: </span>от 2 до 30 мм
-            <p><span class="font-weight-bold">Максимальная фракция наполнителя: </span>0,63 мм
-            <p><span class="font-weight-bold">Производитель: </span>Россия
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- Modal Primer Knauf -->
-<div id="modal_primer_knauf" class="white-popup mfp-hide">
-  <div class="modal_plaster_name text-center font-weight-bold pt-2 pb-2">
-    Технические характеристики отделочных материалов
-  </div>
-  <div class="d-flex flex-column text-center modal_plaster pb-5 pr-5 pl-5">
-    <div class="d-flex pt-5">
-
-      <div class="d-flex align-items-center w-50 pr-4">
-        <div class="w-100">
-          <img src="img/primer_knauf.jpg" class="img-fluid w-100" alt="Responsive image">
-          <div class="text-center modal_plaster_info_text_3 font-weight-bold pt-2 pb-2">
-            Стоимость пакета: 2064 руб
-          </div>
-        </div>
-      </div>
-
-      <div class="d-flex flex-column text-left pl-4 w-50">
-        <div class="text-center">
-          <div class="flex-fill modal_plaster_info_text_1 font-weight-bold pt-2 pb-2">Грунт Knauf Миттельгрунд</div>
-        </div>
-        <div class="d-flex flex_priority">
-          <div class="modal_plaster_info_text_2 pt-3">
-            Предназначен для обработки поверхностей: газо – и пенобетона, керамического и силикатного кирпича, керамзито – и шлакоблоков, гипсовых и цементных штукатурок; бетонной, цементной и гипсовой стяжки. Эффективно снижает и регулирует впитывающую способность основания, способствует равномерному схватыванию раствора гипсовых и цементных смесей.
-            <p>
-            <p><span class="font-weight-bold">Вес брутто: </span>10 кг
-            <p><span class="font-weight-bold">Состав: </span>полимерная дисперсия
-            <p><span class="font-weight-bold">Цвет продукции: </span>желтый
-            <p><span class="font-weight-bold">Расход концентрата: </span>0,2 кг/м²
-            <p><span class="font-weight-bold">Производитель: </span>Россия
-          </div>
+        <div class="d-flex string_4">
+          <div class="d-flex flex-fill border_bottom_left"><div class="d-flex align-self-center justify-content-center w-100">2%</div></div>
+          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">3%</div></div>
+          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">4%</div></div>
+          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">6%</div></div>
+          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">8%</div></div>
+          <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100">10%</div></div>
         </div>
       </div>
 
     </div>
   </div>
 
-<!-- Modal Primer Kreps -->
-<div id="modal_primer_kreps" class="white-popup mfp-hide">
-  <div class="modal_plaster_name text-center font-weight-bold pt-2 pb-2">
-    Технические характеристики отделочных материалов
-  </div>
-  <div class="d-flex flex-column text-center modal_plaster pb-5 pr-5 pl-5">
-    <div class="d-flex pt-5">
-
-      <div class="d-flex align-items-center w-50 pr-4">
-        <div class="w-100">
-          <img src="img/primer_kreps.jpg" class="img-fluid w-100" alt="Responsive image">
-          <div class="text-center modal_plaster_info_text_3 font-weight-bold pt-2 pb-2">
-            Стоимость пакета: 792 руб
-          </div>
-        </div>
-      </div>
-
-      <div class="d-flex flex-column text-left pl-4 w-50">
-        <div class="text-center">
-          <div class="flex-fill modal_plaster_info_text_1 font-weight-bold pt-2 pb-2">Грунт Крепс Праймер</div>
-        </div>
-        <div class="d-flex flex_priority">
-          <div class="modal_plaster_info_text_2 pt-3">
-            Предназначена для подготовки основания перед нанесением растворных смесей. Наносится на все пористые основания, цементные плиты, газобетон, цементные, цементно-известковые и известковые штукатурки, бетон, железобетон, гипсокартон и другие гипсосодержащие основания.
-            Применяется для обработки оснований с целью уменьшения впитывания влаги из растворов, повышения прочности сцепления с основанием растворных смесей, обеспыливания.
-            Содержит добавку, которая препятствует появлению на поверхности многих видов плесневых грибков.
-            Для внутренних и наружных работ.
-            <p>
-            <p><span class="font-weight-bold">Вес брутто: </span>10 кг
-            <p><span class="font-weight-bold">Состав: </span>полимерная дисперсия
-            <p><span class="font-weight-bold">Расход концентрата: </span>0,2 кг/м²
-            <p><span class="font-weight-bold">Производитель: </span>Россия
-          </div>
-        </div>
-      </div>
-
+  <!-- Modal Plaster Knauf MP75 -->
+  <div id="modal_plaster_knaufg" class="white-popup mfp-hide">
+    <div class="modal_plaster_name text-center font-weight-bold pt-2 pb-2">
+      Технические характеристики отделочных материалов
     </div>
-  </div>
-</div>
+    <div class="d-flex flex-column text-center modal_plaster pb-5 pr-5 pl-5">
+      <div class="d-flex pt-5">
 
-<!-- Modal Glass Grid -->
-<div id="modal_grid_glass" class="white-popup mfp-hide">
-  <div class="modal_plaster_name text-center font-weight-bold pt-2 pb-2">
-    Технические характеристики отделочных материалов
-  </div>
-  <div class="d-flex flex-column text-center modal_plaster pb-5 pr-5 pl-5">
-    <div class="d-flex pt-5">
-
-      <div class="d-flex align-items-center w-50 pr-4">
-        <div class="w-100">
-          <img src="img/grid_glass.jpg" class="img-fluid w-100" alt="Responsive image">
-          <div class="text-center modal_plaster_info_text_3 font-weight-bold pt-2 pb-2">
-            Стоимость пакета: 943 руб
+        <div class="d-flex align-items-center w-50 pr-4">
+          <div class="w-100">
+            <img src="img/knaufg.jpg" class="img-fluid w-100" alt="Responsive image">
+            <div class="text-center modal_plaster_info_text_3 font-weight-bold pt-2 pb-2">
+              Стоимость пакета: 435 руб
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="d-flex flex-column text-left pl-4 w-50">
-        <div class="text-center">
-          <div class="flex-fill modal_plaster_info_text_1 font-weight-bold pt-2 pb-2">Сетка стеклотканевая<br>фасадная SD-GLASS</div>
-        </div>
-        <div class="d-flex flex_priority">
-          <div class="modal_plaster_info_text_2 pt-3">
-            Предназначена для армирования штукатурных слоев поверхностей стен и потолков внутри и снаружи помещений, а так же на фасадах зданий.
-            Препятствует возникновению нитевидных трещин;
-            Защищает поверхность от ударных воздействий;
-            Для упрочнения штукатурного или шпаклевочного слоев при внутренней отделке зданий и сооружений всех типов и назначений.
-            Для армирования мест соединения оконных и дверных коробок к стенам, штукатурных фасадов и систем внешнего утепления.
-            Для армирования цементно-песчаных стяжек, наливных полов, в том числе под теплый пол.
-            <p>
-            <p><span class="font-weight-bold">Вес брутто: </span>2.4 кг
-            <p><span class="font-weight-bold">Количество в упаковке: </span>10 шт
-            <p><span class="font-weight-bold">Плотность: </span>145 г/м.кв.
-            <p><span class="font-weight-bold">Размер рулона: </span>1х20 м
-            <p><span class="font-weight-bold">Размер ячейки: </span>5х5 мм
-            <p><span class="font-weight-bold">Производитель: </span>Россия
+        <div class="d-flex flex-column text-left pl-4 w-50">
+          <div class="text-center">
+            <div class="flex-fill modal_plaster_info_text_1 font-weight-bold pt-2 pb-2">Штукатурка гипсовая Knauf МП-75</div>
+          </div>
+          <div class="d-flex flex_priority">
+            <div class="modal_plaster_info_text_2 pt-3">
+              Сухая штукатурная смесь на основе гипса с полимерными добавками. Предназначена для высококачественного оштукатуривания стен и потолков внутри помещений. Наносится на все обычные твердые основания: кирпичная кладка, цементная штукатурка, бетон и т.п. Наносится машинным способом.
+              <p>
+              <p><span class="font-weight-bold">Вес брутто: </span>30 кг
+              <p><span class="font-weight-bold">Расход: </span>8 – 9 кг/м²/10 мм
+              <p><span class="font-weight-bold">Толщина слоя: </span>стена 8-50 мм, потолок 8-15 мм
+              <p><span class="font-weight-bold">Высыхание: </span>~7 суток
+              <p><span class="font-weight-bold">Прочность на сжатие: </span>>2,5 МПа
+              <p><span class="font-weight-bold">Прочность на изгиб: </span>>1,0 МПа
+              <p><span class="font-weight-bold">Максимальная фракция наполнителя: </span>1,2 мм
+              <p><span class="font-weight-bold">Производитель: </span>Россия
+            </div>
           </div>
         </div>
 
       </div>
     </div>
   </div>
-</div>
 
-<!-- Modal Zinc Grid -->
-<div id="modal_grid_zink" class="white-popup mfp-hide">
-  <div class="modal_plaster_name text-center font-weight-bold pt-2 pb-2">
-    Технические характеристики отделочных материалов
-  </div>
-  <div class="d-flex flex-column text-center modal_plaster pb-5 pr-5 pl-5">
-    <div class="d-flex pt-5">
-      <div class="align-items-center w-50 pr-4">
-        <div class="w-100">
-          <img src="img/grid_zinc.png" class="img-fluid w-100" alt="Responsive image">
-          <div class="text-center modal_plaster_info_text_3 font-weight-bold pt-2 pb-2">
-            Стоимость пакета: 2460 руб
+  <!-- Modal Plaster Volma -->
+  <div id="modal_plaster_volma" class="white-popup mfp-hide">
+    <div class="modal_plaster_name text-center font-weight-bold pt-2 pb-2">
+      Технические характеристики отделочных материалов
+    </div>
+    <div class="d-flex flex-column text-center modal_plaster pb-5 pr-5 pl-5">
+      <div class="d-flex pt-5">
+
+        <div class="d-flex align-items-center w-50 pr-4">
+          <div class="w-100">
+            <img src="img/volma.png" class="img-fluid w-100" alt="Responsive image">
+            <div class="text-center modal_plaster_info_text_3 font-weight-bold pt-2 pb-2">
+              Стоимость пакета: 402 руб
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="d-flex flex-column text-left pl-4 w-50">
-        <div class="text-center">
-          <div class="flex-fill modal_plaster_info_text_1 font-weight-bold pt-2 pb-2">Сетка тканая оцинкованная</div>
+        <div class="d-flex flex-column text-left pl-4 w-50">
+          <div class="text-center">
+            <div class="flex-fill modal_plaster_info_text_1 font-weight-bold pt-2 pb-2">Штукатурка гипсовая<br>Волма-Гипс-Актив Экстра</div>
+          </div>
+          <div class="d-flex flex_priority">
+            <div class="modal_plaster_info_text_2 pt-3">
+              Сухая штукатурная смесь для профессионального машинного нанесения на основе гипсового вяжущего и легкого заполнителя с применением минеральных и химических добавок. Предназначена для выполнения внутренних однослойных гипсовых штукатурок на потолках и стенах с помощью штукатурного агрегата, а также для доведения поверхности до глянца без дополнительного шпаклевания перед нанесением декоративных покрытий (красок, декоративных составов, и т.п.).
+              <p>
+              <p><span class="font-weight-bold">Вес брутто: </span>30 кг
+              <p><span class="font-weight-bold">Расход: </span>7,5-8,5 кг/м²/10 мм
+              <p><span class="font-weight-bold">Толщина слоя: </span>5-60 мм
+              <p><span class="font-weight-bold">Высыхание: </span>~5-7 суток
+              <p><span class="font-weight-bold">Прочность на сжатие: </span>>2,0 МПа
+              <p><span class="font-weight-bold">Производитель: </span>Россия
+            </div>
+          </div>
         </div>
-        <div class="d-flex flex_priority">
-          <div class="modal_plaster_info_text_2 pt-3">
-            Сетка тканая стальная предназначена для армирования строительных смесей, наносимых на различные основания. Используется для увеличения прочности поверхностей и предотвращения появления трещин. Применяется при грубом выравнивании стен и полов цементными составами. Не рекомендуется использовать с гипсовыми составами.
-            <p>
-            <p><span class="font-weight-bold">Вес брутто: </span>10 кг
-            <p><span class="font-weight-bold">Состав: </span>оцинкованная сталь
-            <p><span class="font-weight-bold">Размер рулона: </span>1х30 м
-            <p><span class="font-weight-bold">Размер ячейки: </span>10х10 мм
-            <p><span class="font-weight-bold">Диаметр проволоки: </span>0,5-0,6 мм
-            <p><span class="font-weight-bold">Производитель: </span>Китай
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Plaster Knauf UNTERPUTZ -->
+  <div id="modal_plaster_knaufc" class="white-popup mfp-hide">
+    <div class="modal_plaster_name text-center font-weight-bold pt-2 pb-2">
+      Технические характеристики отделочных материалов
+    </div>
+    <div class="d-flex flex-column text-center modal_plaster pb-5 pr-5 pl-5">
+      <div class="d-flex pt-5">
+
+        <div class="d-flex align-items-center w-50 pr-4">
+          <div class="w-100">
+            <img src="img/knaufc.png" class="img-fluid w-100" alt="Responsive image">
+            <div class="text-center modal_plaster_info_text_3 font-weight-bold pt-2 pb-2">
+              Стоимость пакета: 306 руб
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column text-left pl-4 w-50">
+          <div class="text-center">
+            <div class="flex-fill modal_plaster_info_text_1 font-weight-bold pt-2 pb-2">Штукатурка цементная Knauf UNTERPUTZ</div>
+          </div>
+          <div class="d-flex flex_priority">
+            <div class="modal_plaster_info_text_2 pt-3">
+              Cухая штукатурная смесь на основе цемента с фракционированным песком и специальными добавками. Применяется при наружных и внутренних работах. Предназначена для оштукатуривания фасадов зданий, поверхностей в помещениях с повышенной влажностью (подвалы, гаражи и т. п.), для выравнивания минеральных оснований (керамический или силикатный кирпич, керамзитовые, газосиликатные, газобетонные блоки, бетон, и.др.) под облицовку плиткой и природным камнем весом не более 30 кг/м² (вместе с клеем) или декоративную штукатурку. Может наноситься вручную или с помощью штукатурных машин.
+              <p>
+              <p><span class="font-weight-bold">Вес брутто: </span>25 кг
+              <p><span class="font-weight-bold">Расход: </span>17 кг/м²/10 мм
+              <p><span class="font-weight-bold">Толщина слоя: </span>10-35 мм
+              <p><span class="font-weight-bold">Адгезия к бетону: </span>>0,4 МПа
+              <p><span class="font-weight-bold">Прочность на сжатие: </span>>4,0 МПа
+              <p><span class="font-weight-bold">Максимальная фракция наполнителя: </span>1,5 мм
+              <p><span class="font-weight-bold">Производитель: </span>Россия
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-<!-- Modal Pharos -->
-<div id="modal_pharos" class="white-popup mfp-hide">
-  <div class="modal_plaster_name text-center font-weight-bold pt-2 pb-2">
-    Технические характеристики отделочных материалов
-  </div>
-  <div class="d-flex flex-column text-center modal_plaster pb-5 pr-5 pl-5">
-    <div class="d-flex pt-5">
-      <div class="align-items-center w-50 pr-4">
-        <div class="w-100">
-          <img src="img/pharos.jpg" class="img-fluid w-100" alt="Responsive image">
-          <div class="text-center modal_plaster_info_text_3 font-weight-bold pt-2 pb-2">
-            Стоимость пакета: 116 руб
+  <!-- Modal Plaster Plitonit -->
+  <div id="modal_plaster_plitonit" class="white-popup mfp-hide">
+    <div class="modal_plaster_name text-center font-weight-bold pt-2 pb-2">
+      Технические характеристики отделочных материалов
+    </div>
+    <div class="d-flex flex-column text-center modal_plaster pb-5 pr-5 pl-5">
+      <div class="d-flex pt-5">
+
+        <div class="d-flex align-items-center w-50 pr-4">
+          <div class="w-100">
+            <img src="img/plitonit.png" class="img-fluid w-100" alt="Responsive image">
+            <div class="text-center modal_plaster_info_text_3 font-weight-bold pt-2 pb-2">
+              Стоимость пакета: 289 руб
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="d-flex flex-column text-left pl-4 w-50">
-        <div class="text-center">
-          <div class="flex-fill modal_plaster_info_text_1 font-weight-bold pt-2 pb-2">Профиль маячковый оцинкованный</div>
-        </div>
-        <div class="d-flex flex_priority">
-          <div class="modal_plaster_info_text_2 pt-3">
-            Предназначен для использования в качестве опорной направляющей при оштукатуривании и выравнивании полов для получения ровной поверхности.
-            Если иное не предусмотрено проектом, по завершении штукатурных работ маяки необходимо удалить и восстановить целостность поверхности тем же штукатурным составом.
-            <p>
-            <p><span class="font-weight-bold">Вес брутто: </span>0.024 кг
-            <p><span class="font-weight-bold">Состав: </span>оцинкованная сталь
-            <p><span class="font-weight-bold">Ширина: </span>10 мм
-            <p><span class="font-weight-bold">Длина: </span>3 м
-            <p><span class="font-weight-bold">Высота: </span>0,6 мм
-            <p><span class="font-weight-bold">Производитель: </span>Россия
+        <div class="d-flex flex-column text-left pl-4 w-50">
+          <div class="text-center">
+            <div class="flex-fill modal_plaster_info_text_1 font-weight-bold pt-2 pb-2">Штукатурка цементная Plitonit Т1+ армированная</div>
           </div>
+          <div class="d-flex flex_priority">
+            <div class="modal_plaster_info_text_2 pt-3">
+              Штукатурка на цементной основе с армирующими волокнами и повышенными водоотталкивающими свойствами.
+              Предназначена для выравнивания стен из бетона, кирпича, газобетона, а также заделки стыков и отдельных неровностей бетонных и железобетонных плит в сухих, влажных помещениях.
+              Для внутренних и наружных работ.
+              Наносится ручным и машинным способом.
+              <p>
+              <p><span class="font-weight-bold">Вес брутто: </span>25 кг
+              <p><span class="font-weight-bold">Расход: </span>1,2 – 1,3 кг/м²/10 мм
+              <p><span class="font-weight-bold">Толщина слоя: </span>от 2 до 30 мм
+              <p><span class="font-weight-bold">Максимальная фракция наполнителя: </span>0,63 мм
+              <p><span class="font-weight-bold">Производитель: </span>Россия
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-</div>
+
+  <!-- Modal Primer Knauf -->
+  <div id="modal_primer_knauf" class="white-popup mfp-hide">
+    <div class="modal_plaster_name text-center font-weight-bold pt-2 pb-2">
+      Технические характеристики отделочных материалов
+    </div>
+    <div class="d-flex flex-column text-center modal_plaster pb-5 pr-5 pl-5">
+      <div class="d-flex pt-5">
+
+        <div class="d-flex align-items-center w-50 pr-4">
+          <div class="w-100">
+            <img src="img/primer_knauf.jpg" class="img-fluid w-100" alt="Responsive image">
+            <div class="text-center modal_plaster_info_text_3 font-weight-bold pt-2 pb-2">
+              Стоимость пакета: 2064 руб
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column text-left pl-4 w-50">
+          <div class="text-center">
+            <div class="flex-fill modal_plaster_info_text_1 font-weight-bold pt-2 pb-2">Грунт Knauf Миттельгрунд</div>
+          </div>
+          <div class="d-flex flex_priority">
+            <div class="modal_plaster_info_text_2 pt-3">
+              Предназначен для обработки поверхностей: газо – и пенобетона, керамического и силикатного кирпича, керамзито – и шлакоблоков, гипсовых и цементных штукатурок; бетонной, цементной и гипсовой стяжки. Эффективно снижает и регулирует впитывающую способность основания, способствует равномерному схватыванию раствора гипсовых и цементных смесей.
+              <p>
+              <p><span class="font-weight-bold">Вес брутто: </span>10 кг
+              <p><span class="font-weight-bold">Состав: </span>полимерная дисперсия
+              <p><span class="font-weight-bold">Цвет продукции: </span>желтый
+              <p><span class="font-weight-bold">Расход концентрата: </span>0,2 кг/м²
+              <p><span class="font-weight-bold">Производитель: </span>Россия
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  <!-- Modal Primer Kreps -->
+  <div id="modal_primer_kreps" class="white-popup mfp-hide">
+    <div class="modal_plaster_name text-center font-weight-bold pt-2 pb-2">
+      Технические характеристики отделочных материалов
+    </div>
+    <div class="d-flex flex-column text-center modal_plaster pb-5 pr-5 pl-5">
+      <div class="d-flex pt-5">
+
+        <div class="d-flex align-items-center w-50 pr-4">
+          <div class="w-100">
+            <img src="img/primer_kreps.jpg" class="img-fluid w-100" alt="Responsive image">
+            <div class="text-center modal_plaster_info_text_3 font-weight-bold pt-2 pb-2">
+              Стоимость пакета: 792 руб
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column text-left pl-4 w-50">
+          <div class="text-center">
+            <div class="flex-fill modal_plaster_info_text_1 font-weight-bold pt-2 pb-2">Грунт Крепс Праймер</div>
+          </div>
+          <div class="d-flex flex_priority">
+            <div class="modal_plaster_info_text_2 pt-3">
+              Предназначена для подготовки основания перед нанесением растворных смесей. Наносится на все пористые основания, цементные плиты, газобетон, цементные, цементно-известковые и известковые штукатурки, бетон, железобетон, гипсокартон и другие гипсосодержащие основания.
+              Применяется для обработки оснований с целью уменьшения впитывания влаги из растворов, повышения прочности сцепления с основанием растворных смесей, обеспыливания.
+              Содержит добавку, которая препятствует появлению на поверхности многих видов плесневых грибков.
+              Для внутренних и наружных работ.
+              <p>
+              <p><span class="font-weight-bold">Вес брутто: </span>10 кг
+              <p><span class="font-weight-bold">Состав: </span>полимерная дисперсия
+              <p><span class="font-weight-bold">Расход концентрата: </span>0,2 кг/м²
+              <p><span class="font-weight-bold">Производитель: </span>Россия
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Glass Grid -->
+  <div id="modal_grid_glass" class="white-popup mfp-hide">
+    <div class="modal_plaster_name text-center font-weight-bold pt-2 pb-2">
+      Технические характеристики отделочных материалов
+    </div>
+    <div class="d-flex flex-column text-center modal_plaster pb-5 pr-5 pl-5">
+      <div class="d-flex pt-5">
+
+        <div class="d-flex align-items-center w-50 pr-4">
+          <div class="w-100">
+            <img src="img/grid_glass.jpg" class="img-fluid w-100" alt="Responsive image">
+            <div class="text-center modal_plaster_info_text_3 font-weight-bold pt-2 pb-2">
+              Стоимость пакета: 943 руб
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column text-left pl-4 w-50">
+          <div class="text-center">
+            <div class="flex-fill modal_plaster_info_text_1 font-weight-bold pt-2 pb-2">Сетка стеклотканевая<br>фасадная SD-GLASS</div>
+          </div>
+          <div class="d-flex flex_priority">
+            <div class="modal_plaster_info_text_2 pt-3">
+              Предназначена для армирования штукатурных слоев поверхностей стен и потолков внутри и снаружи помещений, а так же на фасадах зданий.
+              Препятствует возникновению нитевидных трещин;
+              Защищает поверхность от ударных воздействий;
+              Для упрочнения штукатурного или шпаклевочного слоев при внутренней отделке зданий и сооружений всех типов и назначений.
+              Для армирования мест соединения оконных и дверных коробок к стенам, штукатурных фасадов и систем внешнего утепления.
+              Для армирования цементно-песчаных стяжек, наливных полов, в том числе под теплый пол.
+              <p>
+              <p><span class="font-weight-bold">Вес брутто: </span>2.4 кг
+              <p><span class="font-weight-bold">Количество в упаковке: </span>10 шт
+              <p><span class="font-weight-bold">Плотность: </span>145 г/м.кв.
+              <p><span class="font-weight-bold">Размер рулона: </span>1х20 м
+              <p><span class="font-weight-bold">Размер ячейки: </span>5х5 мм
+              <p><span class="font-weight-bold">Производитель: </span>Россия
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Zinc Grid -->
+  <div id="modal_grid_zink" class="white-popup mfp-hide">
+    <div class="modal_plaster_name text-center font-weight-bold pt-2 pb-2">
+      Технические характеристики отделочных материалов
+    </div>
+    <div class="d-flex flex-column text-center modal_plaster pb-5 pr-5 pl-5">
+      <div class="d-flex pt-5">
+        <div class="align-items-center w-50 pr-4">
+          <div class="w-100">
+            <img src="img/grid_zinc.png" class="img-fluid w-100" alt="Responsive image">
+            <div class="text-center modal_plaster_info_text_3 font-weight-bold pt-2 pb-2">
+              Стоимость пакета: 2460 руб
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column text-left pl-4 w-50">
+          <div class="text-center">
+            <div class="flex-fill modal_plaster_info_text_1 font-weight-bold pt-2 pb-2">Сетка тканая оцинкованная</div>
+          </div>
+          <div class="d-flex flex_priority">
+            <div class="modal_plaster_info_text_2 pt-3">
+              Сетка тканая стальная предназначена для армирования строительных смесей, наносимых на различные основания. Используется для увеличения прочности поверхностей и предотвращения появления трещин. Применяется при грубом выравнивании стен и полов цементными составами. Не рекомендуется использовать с гипсовыми составами.
+              <p>
+              <p><span class="font-weight-bold">Вес брутто: </span>10 кг
+              <p><span class="font-weight-bold">Состав: </span>оцинкованная сталь
+              <p><span class="font-weight-bold">Размер рулона: </span>1х30 м
+              <p><span class="font-weight-bold">Размер ячейки: </span>10х10 мм
+              <p><span class="font-weight-bold">Диаметр проволоки: </span>0,5-0,6 мм
+              <p><span class="font-weight-bold">Производитель: </span>Китай
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Pharos -->
+  <div id="modal_pharos" class="white-popup mfp-hide">
+    <div class="modal_plaster_name text-center font-weight-bold pt-2 pb-2">
+      Технические характеристики отделочных материалов
+    </div>
+    <div class="d-flex flex-column text-center modal_plaster pb-5 pr-5 pl-5">
+      <div class="d-flex pt-5">
+        <div class="align-items-center w-50 pr-4">
+          <div class="w-100">
+            <img src="img/pharos.jpg" class="img-fluid w-100" alt="Responsive image">
+            <div class="text-center modal_plaster_info_text_3 font-weight-bold pt-2 pb-2">
+              Стоимость пакета: 116 руб
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column text-left pl-4 w-50">
+          <div class="text-center">
+            <div class="flex-fill modal_plaster_info_text_1 font-weight-bold pt-2 pb-2">Профиль маячковый оцинкованный</div>
+          </div>
+          <div class="d-flex flex_priority">
+            <div class="modal_plaster_info_text_2 pt-3">
+              Предназначен для использования в качестве опорной направляющей при оштукатуривании и выравнивании полов для получения ровной поверхности.
+              Если иное не предусмотрено проектом, по завершении штукатурных работ маяки необходимо удалить и восстановить целостность поверхности тем же штукатурным составом.
+              <p>
+              <p><span class="font-weight-bold">Вес брутто: </span>0.024 кг
+              <p><span class="font-weight-bold">Состав: </span>оцинкованная сталь
+              <p><span class="font-weight-bold">Ширина: </span>10 мм
+              <p><span class="font-weight-bold">Длина: </span>3 м
+              <p><span class="font-weight-bold">Высота: </span>0,6 мм
+              <p><span class="font-weight-bold">Производитель: </span>Россия
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <script src="script.js" type="text/javascript"></script>

@@ -291,7 +291,8 @@ $(function(){
 
   //material window
   $('#window_plaster_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
-    $('#plaster_window_outlay_weight').text($('#window_plaster_weight').html());
+    var weight=parseFloat($('#window_plaster_weight').html());
+    $('#plaster_window_outlay_weight').text(Math.ceil(weight));
     $('#plaster_window_outlay_quantity').text($('#window_plaster_quantity').html());
     $('#plaster_window_outlay_sum').text($('#window_plaster_sum').html());
   });
