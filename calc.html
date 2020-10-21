@@ -1229,8 +1229,8 @@
           </div>
           <div class="d-flex flex-fill border_middle"><div class="d-flex align-self-center justify-content-center w-100"><div id="pharos_roof_outlay_square">0</div>&nbsp;м&sup2;</div></div>
           <div class="d-flex flex-fill border_middle"><div class="d-flex align-self-center justify-content-center w-100"><div id="pharos_roof_outlay_consume">0,33</div>&nbsp;шт/м&sup2;</div></div>
-          <div class="d-flex flex-fill border_middle_small"><div class="d-flex align-self-center justify-content-center w-100"><div id="pharos_roof_outlay_weight">0</div>&nbsp;кг</div></div>
           <div class="d-flex flex-fill border_middle_small"><div class="d-flex align-self-center justify-content-center w-100"><div id="pharos_roof_outlay_quantity">0</div>&nbsp;шт</div></div>
+          <div class="d-flex flex-fill border_middle_small"><div class="d-flex align-self-center justify-content-center w-100"><div id="pharos_roof_outlay_weight">0</div>&nbsp;кг</div></div>
           <div class="d-flex flex-fill border_middle_smaller"><div class="d-flex align-self-center justify-content-center w-100"><div id="pharos_roof_outlay_price">116</div>&nbsp;руб</div></div>
           <div class="d-flex flex-fill border_middle_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="pharos_roof_outlay_sum">0</div>&nbsp;руб</div></div>
         </div>
@@ -1440,26 +1440,40 @@
 
   <section id="block0_commonresult" class="fixed-bottom block3_material_dn">
 
-    <div class="d-flex string_6">
-      <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Сумма<br>площадей</div></div></div>
-      <div class="common_border align-self-center"></div>
-      <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum_square">0</div>&nbsp;м&sup2;</div></div>
-      <div class="common_border align-self-center"></div>
-      <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Ваша<br>скидка</div></div></div>
-      <div class="common_border align-self-center"></div>
-      <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum_sale_">0</div>&nbsp;руб</div></div>
-      <div class="common_border align-self-center"></div>
-      <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Стоимость<br>материалов</div></div></div>
-      <div class="common_border align-self-center"></div>
-      <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum_material">0</div>&nbsp;руб</div></div>
-      <div class="common_border align-self-center"></div>
-      <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Стоимость<br>работ</div></div></div>
-      <div class="common_border align-self-center"></div>
-      <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum_work">0</div>&nbsp;руб</div></div>
-      <div class="common_border align-self-center"></div>
-      <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Общая<br>стоимость</div></div></div>
-      <div class="common_border align-self-center"></div>
-      <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum">0</div>&nbsp;руб</div></div>
+    <div class="d-flex string_6 block0_commonresult_ver2">
+
+      <!-- <div class="d-flex flex-fill"> -->
+        <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Сумма<br>площадей</div></div></div>
+        <div class="common_border align-self-center"></div>
+        <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum_square">0</div>&nbsp;м&sup2;</div></div>
+
+        <div class="common_border align-self-center"></div>
+
+        <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Стоимость<br>работ</div></div></div>
+        <div class="common_border align-self-center"></div>
+        <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum_work">0</div>&nbsp;руб</div></div>
+
+        <div class="common_border align-self-center"></div>
+
+        <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Стоимость<br>материалов</div></div></div>
+        <div class="common_border align-self-center"></div>
+        <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum_material">0</div>&nbsp;руб</div></div>
+      <!-- </div>
+
+      <div class="d-flex flex-fill"> -->
+        <div class="common_border align-self-center common_border_out_display"></div>
+
+        <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Ваша<br>скидка</div></div></div>
+        <div class="common_border align-self-center"></div>
+        <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum_sale_">0</div>&nbsp;руб</div></div>
+
+        <div class="common_border align-self-center"></div>
+
+        <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Общая<br>стоимость</div></div></div>
+        <div class="common_border align-self-center"></div>
+        <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum">0</div>&nbsp;руб</div></div>
+      </div>
+
     </div>
 
   </section>

@@ -753,7 +753,20 @@ div.box{
 .flex_priority{
   flex: 1;
 }
-
+/* @media screen and (max-device-width: 1350px) {
+  .block0_commonresult_ver2{
+    display: block !important;
+  }
+  .space_for_block0{
+    height: 180px;
+  }
+  .common_border_out_display{
+    display: none;
+  }
+  .string_6{
+    /* height: 180px; */
+  }
+} */
 /* Rotater */
 .card {
   position: relative;
