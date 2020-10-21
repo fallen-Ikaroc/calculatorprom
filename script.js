@@ -219,7 +219,7 @@ $(function(){
     if($('#window_plaster_square').val()==='')
       $('#window_plaster_square').val('0');
 
-    $('#window_primer_square').text(parseFloat($('#window_plaster_square').val())*parseFloat($('#window_plaster_width').val())/1000);
+    $('#window_primer_square').text((parseFloat($('#window_plaster_square').val())*parseFloat($('#window_plaster_width').val())/1000).toFixed(1));
 
     $('.block4_workresult_window').removeClass('block4_workresult_window');
     $('.block3_material_window').removeClass('block3_material_window');
@@ -239,7 +239,7 @@ $(function(){
   $('#window_plaster_width').change(function(){
     if($('#window_plaster_square').val()==='')
       $('#window_plaster_square').val('0');
-    $('#window_primer_square').text(parseFloat($('#window_plaster_square').val())*parseFloat($('#window_plaster_width').val())/1000);
+    $('#window_primer_square').text((parseFloat($('#window_plaster_square').val())*parseFloat($('#window_plaster_width').val())/1000).toFixed(1));
     window_plaster();
     window_primer();
 
@@ -575,7 +575,7 @@ $(function(){
     $('#pharos_roof_outlay_square').text($('#roof_primer_square').html())
   });
   $('#window_primer_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
-    $('#plaster_window_outlay_square').text($('#window_primer_square').html());
+    $('#plaster_window_outlay_square').text((parseFloat($('#window_primer_square').html())).toFixed(1));
   });
   $('#wall_plaster_consume').bind('DOMNodeInserted DOMNodeRemoved', function(){
     $('#plaster_wall_outlay_consume').text($('#wall_plaster_consume').html());
