@@ -469,10 +469,10 @@ $(function(){
     $('#common_sum_work').text($('#work_outlay_common_sum').html());
   });
   $('#common_sum_material').bind('DOMNodeInserted DOMNodeRemoved', function(){
-    $('#common_sum').text(parseFloat($('#common_sum_material').html())+parseFloat($('#common_sum_material').html()));
+    $('#common_sum').text(parseFloat($('#common_sum_material').html())+parseFloat($('#common_sum_work').html()));
   });
   $('#common_sum_work').bind('DOMNodeInserted DOMNodeRemoved', function(){
-    $('#common_sum').text(parseFloat($('#common_sum_material').html())+parseFloat($('#common_sum_material').html()));
+    $('#common_sum').text(parseFloat($('#common_sum_material').html())+parseFloat($('#common_sum_work').html()));
   });
 
   $('#cross_wall').click(function() {
