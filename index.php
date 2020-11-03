@@ -13,7 +13,7 @@ if($result)
       $row = mysqli_fetch_row($result);
       switch($row[0]){
         case 'plaster1': $plaster1=$row[1]; break;
-        case 'plaster2': $plaster2=$row[1]; break;
+        <!-- case 'plaster2': $plaster2=$row[1]; break; -->
         case 'plaster3': $plaster3=$row[1]; break;
         case 'plaster4': $plaster4=$row[1]; break;
         case 'primer1': $primer1=$row[1]; break;
@@ -50,6 +50,24 @@ mysqli_close($link);
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 </head>
 <body>
+  <div style="display: ;">
+    <div id="price_plaster1"><?php echo($plaster1)?></div>
+    <div id="price_plaster2"><?php echo($plaster2)?></div>
+    <div id="price_plaster3"><?php echo($plaster3)?></div>
+    <div id="price_plaster4"><?php echo($plaster4)?></div>
+    <div id="price_primer1"><?php echo($primer1)?></div>
+    <div id="price_primer2"><?php echo($primer2)?></div>
+    <div id="price_grid1"><?php echo($grid1)?></div>
+    <div id="price_grid2"><?php echo($grid2)?></div>
+    <div id="price_faros"><?php echo($faros)?></div>
+    <div id="price_shim"><?php echo($shim)?></div>
+    <div id="price_nail"><?php echo($nail)?></div>
+    <div id="price_dirty"><?php echo($dirty)?></div>
+    <div id="price_clear1"><?php echo($clear1)?></div>
+    <div id="price_clear2"><?php echo($clear2)?></div>
+    <div id="price_clear3"><?php echo($clear3)?></div>
+  </div>
+
 
   <!-- Block1 -->
   <div style="display: ;">
