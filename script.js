@@ -6,9 +6,25 @@ jQuery(document).ready(function($) {
 });
 var place=1;
 var plaster=1;
-
+var price_plaster1=parseFloat($('#price_plaster1').html());
+var price_plaster2=parseFloat($('#price_plaster2').html());
+var price_plaster3=parseFloat($('#price_plaster3').html());
+var price_plaster4=parseFloat($('#price_plaster4').html());
+var price_primer1=parseFloat($('#price_primer1').html());
+var price_primer2=parseFloat($('#price_primer2').html());
+var price_grid1=parseFloat($('#price_grid1').html());
+var price_grid2=parseFloat($('#price_grid2').html());
+var price_pharos=parseFloat($('#price_pharos').html());
+var price_shim=parseFloat($('#price_shim').html());
+var price_nail=parseFloat($('#price_nail').html());
+var price_dirty=parseFloat($('#price_dirty').html());
+var price_clear1=parseFloat($('#price_clear1').html());
+var price_clear2=parseFloat($('#price_clear2').html());
+var price_clear3=parseFloat($('#price_clear3').html());
 
 $(function(){
+
+
   //type
   (function() {
     var cards = document.querySelectorAll(".card.effect__click");
@@ -33,18 +49,18 @@ $(function(){
     switch(value){
       case 1:
         place=1;
-        $('#wall_primer_price').text('2064');
-        $('#roof_primer_price').text('2064');
-        $('#window_primer_price').text('2064');
-        $('#wall_grid_price').text('2460');
+        $('#wall_primer_price').text(price_primer1);
+        $('#roof_primer_price').text(price_primer1);
+        $('#window_primer_price').text(price_primer1);
+        $('#wall_grid_price').text(price_grid1);
         $('#wall_grid_consumeperone').text('30');
 
         $('#primer_wall_outlay').text('Грунт Knauf Миттельгрунд');
         $('#primer_roof_outlay').text('Грунт Knauf Миттельгрунд');
         $('#primer_window_outlay').text('Грунт Knauf Миттельгрунд');
-        $('#primer_wall_outlay_price').text('2064');
-        $('#primer_roof_outlay_price').text('2064');
-        $('#primer_window_outlay_price').text('2064');
+        $('#primer_wall_outlay_price').text(price_primer1);
+        $('#primer_roof_outlay_price').text(price_primer1);
+        $('#primer_window_outlay_price').text(price_primer1);
         $('#work_outlay_wall_object_type').text('Старый фонд');
         $('#work_outlay_roof_object_type').text('Старый фонд');
         $('#work_outlay_window_object_type').text('Старый фонд');
@@ -54,18 +70,18 @@ $(function(){
         break;
       case 2:
         place=2;
-        $('#wall_primer_price').text('2064');
-        $('#roof_primer_price').text('2064');
-        $('#window_primer_price').text('2064');
-        $('#wall_grid_price').text('943');
+        $('#wall_primer_price').text(price_primer1);
+        $('#roof_primer_price').text(price_primer1);
+        $('#window_primer_price').text(price_primer1);
+        $('#wall_grid_price').text(price_grid2);
         $('#wall_grid_consumeperone').text('20');
 
         $('#primer_wall_outlay').text('Грунт Knauf Миттельгрунд');
         $('#primer_roof_outlay').text('Грунт Knauf Миттельгрунд');
         $('#primer_window_outlay').text('Грунт Knauf Миттельгрунд');
-        $('#primer_wall_outlay_price').text('2064');
-        $('#primer_roof_outlay_price').text('2064');
-        $('#primer_window_outlay_price').text('2064');
+        $('#primer_wall_outlay_price').text(price_primer1);
+        $('#primer_roof_outlay_price').text(price_primer1);
+        $('#primer_window_outlay_price').text(price_primer1);
         $('#work_outlay_wall_object_type').text('Монолит');
         $('#work_outlay_roof_object_type').text('Монолит');
         $('#work_outlay_window_object_type').text('Монолит');
@@ -75,18 +91,18 @@ $(function(){
         break;
       case 3:
         place=3;
-        $('#wall_primer_price').text('792');
-        $('#roof_primer_price').text('792');
-        $('#window_primer_price').text('792');
-        $('#wall_grid_price').text('943');
+        $('#wall_primer_price').text(price_primer2);
+        $('#roof_primer_price').text(price_primer2);
+        $('#window_primer_price').text(price_primer2);
+        $('#wall_grid_price').text(price_grid2);
         $('#wall_grid_consumeperone').text('20');
 
         $('#primer_wall_outlay').text('Грунт Крепс Праймер');
         $('#primer_roof_outlay').text('Грунт Крепс Праймер');
         $('#primer_window_outlay').text('Грунт Крепс Праймер');
-        $('#primer_wall_outlay_price').text('792');
-        $('#primer_roof_outlay_price').text('792');
-        $('#primer_window_outlay_price').text('792');
+        $('#primer_wall_outlay_price').text(price_primer2);
+        $('#primer_roof_outlay_price').text(price_primer2);
+        $('#primer_window_outlay_price').text(price_primer2);
         $('#work_outlay_wall_object_type').text('Газобетон');
         $('#work_outlay_roof_object_type').text('Газобетон');
         $('#work_outlay_window_object_type').text('Газобетон');
@@ -96,18 +112,18 @@ $(function(){
         break;
       case 4:
         place=4;
-        $('#wall_primer_price').text('792');
-        $('#roof_primer_price').text('792');
-        $('#window_primer_price').text('792');
-        $('#wall_grid_price').text('943');
+        $('#wall_primer_price').text(price_primer2);
+        $('#roof_primer_price').text(price_primer2);
+        $('#window_primer_price').text(price_primer2);
+        $('#wall_grid_price').text(price_grid2);
         $('#wall_grid_consumeperone').text('20');
 
         $('#primer_wall_outlay').text('Грунт Крепс Праймер');
         $('#primer_roof_outlay').text('Грунт Крепс Праймер');
         $('#primer_window_outlay').text('Грунт Крепс Праймер');
-        $('#primer_wall_outlay_price').text('792');
-        $('#primer_roof_outlay_price').text('792');
-        $('#primer_window_outlay_price').text('792');
+        $('#primer_wall_outlay_price').text(price_primer2);
+        $('#primer_roof_outlay_price').text(price_primer2);
+        $('#primer_window_outlay_price').text(price_primer2);
         $('#work_outlay_wall_object_type').text('Шлакоблок');
         $('#work_outlay_roof_object_type').text('Шлакоблок');
         $('#work_outlay_window_object_type').text('Шлакоблок');
@@ -127,47 +143,55 @@ $(function(){
     switch(value){
       case 1:
         plaster=1;
-        $('#wall_plaster_price').text('435');
-        $('#roof_plaster_price').text('435');
-        $('#window_plaster_price').text('435');
+        $('#wall_plaster_price').text(price_plaster1);
+        $('#roof_plaster_price').text(price_plaster1);
+        $('#window_plaster_price').text(price_plaster1);
 
-        $('#plaster_wall_outlay').val(435);
-        $('#plaster_roof_outlay').val(435);
-        $('#plaster_window_outlay').val(435);
-        $('#plaster_wall_outlay_price').text('435');
+        $('#plaster_wall_outlay').val(price_plaster1);
+        $('#plaster_roof_outlay').val(price_plaster1);
+        $('#plaster_window_outlay').val(price_plaster1);
+        $('#plaster_wall_outlay_price').text(price_plaster1);
+        $('#plaster_roof_outlay_price').text(price_plaster1);
+        $('#plaster_window_outlay_price').text(price_plaster1);
         break;
       case 2:
         plaster=2;
-        $('#wall_plaster_price').text('402');
-        $('#roof_plaster_price').text('402');
-        $('#window_plaster_price').text('402');
+        $('#wall_plaster_price').text(price_plaster2);
+        $('#roof_plaster_price').text(price_plaster2);
+        $('#window_plaster_price').text(price_plaster2);
 
-        $('#plaster_wall_outlay').val(402);
-        $('#plaster_roof_outlay').val(402);
-        $('#plaster_window_outlay').val(402);
-        $('#plaster_wall_outlay_price').text('402');
+        $('#plaster_wall_outlay').val(price_plaster2);
+        $('#plaster_roof_outlay').val(price_plaster2);
+        $('#plaster_window_outlay').val(price_plaster2);
+        $('#plaster_wall_outlay_price').text(price_plaster2);
+        $('#plaster_roof_outlay_price').text(price_plaster2);
+        $('#plaster_window_outlay_price').text(price_plaster2);
         break;
       case 3:
         plaster=3;
-        $('#wall_plaster_price').text('306');
-        $('#roof_plaster_price').text('306');
-        $('#window_plaster_price').text('306');
+        $('#wall_plaster_price').text(price_plaster3);
+        $('#roof_plaster_price').text(price_plaster3);
+        $('#window_plaster_price').text(price_plaster3);
 
-        $('#plaster_wall_outlay').val(306);
-        $('#plaster_roof_outlay').val(306);
-        $('#plaster_window_outlay').val(306);
-        $('#plaster_wall_outlay_price').text('306');
+        $('#plaster_wall_outlay').val(price_plaster3);
+        $('#plaster_roof_outlay').val(price_plaster3);
+        $('#plaster_window_outlay').val(price_plaster3);
+        $('#plaster_wall_outlay_price').text(price_plaster3);
+        $('#plaster_roof_outlay_price').text(price_plaster3);
+        $('#plaster_window_outlay_price').text(price_plaster3);
         break;
       case 4:
         plaster=4;
-        $('#wall_plaster_price').text('289');
-        $('#roof_plaster_price').text('289');
-        $('#window_plaster_price').text('289');
+        $('#wall_plaster_price').text(price_plaster4);
+        $('#roof_plaster_price').text(price_plaster4);
+        $('#window_plaster_price').text(price_plaster4);
 
-        $('#plaster_wall_outlay').val(289);
-        $('#plaster_roof_outlay').val(289);
-        $('#plaster_window_outlay').val(289);
-        $('#plaster_wall_outlay_price').text('289');
+        $('#plaster_wall_outlay').val(price_plaster4);
+        $('#plaster_roof_outlay').val(price_plaster4);
+        $('#plaster_window_outlay').val(price_plaster4);
+        $('#plaster_wall_outlay_price').text(price_plaster4);
+        $('#plaster_roof_outlay_price').text(price_plaster4);
+        $('#plaster_window_outlay_price').text(price_plaster4);
         break;
     }
     wall_plaster();
@@ -255,7 +279,7 @@ $(function(){
     $('#plaster_wall_outlay_quantity').text($('#wall_plaster_quantity').html());
     $('#plaster_wall_outlay_sum').text($('#wall_plaster_sum').html());
     $('#pharos_wall_outlay_quantity').text(Math.ceil(Math.ceil($('#wall_plaster_square').val()/3)));
-    $('#pharos_wall_outlay_sum').text((Math.ceil(Math.ceil($('#wall_plaster_square').val()/3)))*116);
+    $('#pharos_wall_outlay_sum').text((Math.ceil(Math.ceil($('#wall_plaster_square').val()/3)))*price_pharos);
     $('#pharos_wall_outlay_weight').text(((Math.ceil(Math.ceil($('#wall_plaster_square').val()/3)))*0.024).toFixed(2));
   });
   $('#wall_primer_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
@@ -268,9 +292,9 @@ $(function(){
     $('#grid_outlay_quantity').text($('#wall_grid_quantity').html());
     $('#grid_outlay_sum').text($('#wall_grid_sum').html());
     $('#grid_outlay_price').text($('#wall_grid_price').html());
-    if($('#wall_grid_price').html()==='2460')
+    if($('#wall_grid_price').html()===price_grid1)
       $('#grid_outlay').text('Сетка тканая оцинкованная');
-    if($('#wall_grid_price').html()==='943')
+    if($('#wall_grid_price').html()===price_grid2)
       $('#grid_outlay').text('Сетка стеклотканевая');
   });
 
@@ -280,7 +304,7 @@ $(function(){
     $('#plaster_roof_outlay_quantity').text($('#roof_plaster_quantity').html());
     $('#plaster_roof_outlay_sum').text($('#roof_plaster_sum').html());
     $('#pharos_roof_outlay_quantity').text(Math.ceil(Math.ceil($('#roof_plaster_square').val()/2)/20));
-    $('#pharos_roof_outlay_sum').text((Math.ceil(Math.ceil($('#roof_plaster_square').val()/2)/20))*116);
+    $('#pharos_roof_outlay_sum').text((Math.ceil(Math.ceil($('#roof_plaster_square').val()/2)/20))*price_pharos);
     $('#pharos_roof_outlay_weight').text((Math.ceil(Math.ceil($('#roof_plaster_square').val()/2)/20))*0.48);
   });
   $('#roof_primer_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
@@ -358,39 +382,39 @@ $(function(){
   $('#roof_primer_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
     var square=parseFloat($('#roof_primer_square').html());
     $('#work_outlay_roof_square').text(square);
-    $('#work_outlay_roof_sum').text(square*450);
+    $('#work_outlay_roof_sum').text(square*price_clear2);
   });
   $('#window_primer_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
     var square=parseFloat($('#window_primer_square').html());
     var square2=parseFloat($('#window_plaster_square').val());
     $('#work_outlay_window_square').text(square);
-    $('#work_outlay_window_sum').text(square2*250);
+    $('#work_outlay_window_sum').text(square2*price_clear3);
   });
   $('#plaster_wall_outlay_price').bind('DOMNodeInserted DOMNodeRemoved', function(){
     var price=parseFloat($('#plaster_wall_outlay_price').html())  ;
     switch(price){
-      case 435: $('#work_outlay_wall_plaster').text('Knauf MP 75'); break;
-      case 402: $('#work_outlay_wall_plaster').text('ВОЛМА-Актив'); break;
-      case 306: $('#work_outlay_wall_plaster').text('Knauf UNTERPUTZ'); break;
-      case 289: $('#work_outlay_wall_plaster').text('Plitonit T1+'); break;
+      case price_plaster1: $('#work_outlay_wall_plaster').text('Knauf MP 75'); break;
+      case price_plaster2: $('#work_outlay_wall_plaster').text('ВОЛМА-Актив'); break;
+      case price_plaster3: $('#work_outlay_wall_plaster').text('Knauf UNTERPUTZ'); break;
+      case price_plaster4: $('#work_outlay_wall_plaster').text('Plitonit T1+'); break;
     }
   });
   $('#plaster_roof_outlay_price').bind('DOMNodeInserted DOMNodeRemoved', function(){
     var price=parseFloat($('#plaster_roof_outlay_price').html())  ;
     switch(price){
-      case 435: $('#work_outlay_roof_plaster').text('Knauf MP 75'); break;
-      case 402: $('#work_outlay_roof_plaster').text('ВОЛМА-Актив'); break;
-      case 306: $('#work_outlay_roof_plaster').text('Knauf UNTERPUTZ'); break;
-      case 289: $('#work_outlay_roof_plaster').text('Plitonit T1+'); break;
+      case price_plaster1: $('#work_outlay_roof_plaster').text('Knauf MP 75'); break;
+      case price_plaster2: $('#work_outlay_roof_plaster').text('ВОЛМА-Актив'); break;
+      case price_plaster3: $('#work_outlay_roof_plaster').text('Knauf UNTERPUTZ'); break;
+      case price_plaster4: $('#work_outlay_roof_plaster').text('Plitonit T1+'); break;
     }
   });
   $('#plaster_window_outlay_price').bind('DOMNodeInserted DOMNodeRemoved', function(){
     var price=parseFloat($('#plaster_window_outlay_price').html())  ;
     switch(price){
-      case 435: $('#work_outlay_window_plaster').text('Knauf MP 75'); break;
-      case 402: $('#work_outlay_window_plaster').text('ВОЛМА-Актив'); break;
-      case 306: $('#work_outlay_window_plaster').text('Knauf UNTERPUTZ'); break;
-      case 289: $('#work_outlay_window_plaster').text('Plitonit T1+'); break;
+      case price_plaster1: $('#work_outlay_window_plaster').text('Knauf MP 75'); break;
+      case price_plaster2: $('#work_outlay_window_plaster').text('ВОЛМА-Актив'); break;
+      case price_plaster3: $('#work_outlay_window_plaster').text('Knauf UNTERPUTZ'); break;
+      case price_plaster4: $('#work_outlay_window_plaster').text('Plitonit T1+'); break;
     }
   });
   $('#wall_plaster_consume').bind('DOMNodeInserted DOMNodeRemoved', function(){
@@ -619,8 +643,8 @@ function wall_grid(){
     $('#wall_grid_consume').text('30');
     $('#wall_grid_weight').text((Math.ceil(square/30))*10);
     $('#wall_grid_quantity').text(Math.ceil(square/30));
-    var nail=(Math.ceil(square/30))*600;
-    var shim=(Math.ceil(square*5/100))*199;
+    var nail=(Math.ceil(square/30))*price_nail;
+    var shim=(Math.ceil(square*5/100))*price_shim;
     $('#wall_grid_sum').text((Math.ceil(square/30))*price+nail+shim);
   }
   if(place===2 || place===3 || place===3){
@@ -731,25 +755,25 @@ function recalc(){
 function info_but1(){
   var value=parseFloat($('#plaster_wall_outlay').find(':selected').val());
   switch(value){
-    case 435:
+    case price_plaster1:
       $('#info_plaster_knaufg').removeClass('forcards');
       $('#info_plaster_volma').addClass('forcards');
       $('#info_plaster_knaufc').addClass('forcards');
       $('#info_plaster_plitonit').addClass('forcards');
       break;
-    case 402:
+    case price_plaster2:
       $('#info_plaster_knaufg').addClass('forcards');
       $('#info_plaster_volma').removeClass('forcards');
       $('#info_plaster_knaufc').addClass('forcards');
       $('#info_plaster_plitonit').addClass('forcards');
       break;
-    case 306:
+    case price_plaster3:
       $('#info_plaster_knaufg').addClass('forcards');
       $('#info_plaster_volma').addClass('forcards');
       $('#info_plaster_knaufc').removeClass('forcards');
       $('#info_plaster_plitonit').addClass('forcards');
       break;
-    case 289:
+    case price_plaster4:
       $('#info_plaster_knaufg').addClass('forcards');
       $('#info_plaster_volma').addClass('forcards');
       $('#info_plaster_knaufc').addClass('forcards');
@@ -760,25 +784,25 @@ function info_but1(){
 function info_but2(){
   var value=parseFloat($('#plaster_roof_outlay').find(':selected').val());
   switch(value){
-    case 435:
+    case price_plaster1:
       $('#info_plaster_knaufg1').removeClass('forcards');
       $('#info_plaster_volma1').addClass('forcards');
       $('#info_plaster_knaufc1').addClass('forcards');
       $('#info_plaster_plitonit1').addClass('forcards');
       break;
-    case 402:
+    case price_plaster2:
       $('#info_plaster_knaufg1').addClass('forcards');
       $('#info_plaster_volma1').removeClass('forcards');
       $('#info_plaster_knaufc1').addClass('forcards');
       $('#info_plaster_plitonit1').addClass('forcards');
       break;
-    case 306:
+    case price_plaster3:
       $('#info_plaster_knaufg1').addClass('forcards');
       $('#info_plaster_volma1').addClass('forcards');
       $('#info_plaster_knaufc1').removeClass('forcards');
       $('#info_plaster_plitonit1').addClass('forcards');
       break;
-    case 289:
+    case price_plaster4:
       $('#info_plaster_knaufg1').addClass('forcards');
       $('#info_plaster_volma1').addClass('forcards');
       $('#info_plaster_knaufc1').addClass('forcards');
@@ -789,25 +813,25 @@ function info_but2(){
 function info_but3(){
   var value=parseFloat($('#plaster_window_outlay').find(':selected').val());
   switch(value){
-    case 435:
+    case price_plaster1:
       $('#info_plaster_knaufg2').removeClass('forcards');
       $('#info_plaster_volma2').addClass('forcards');
       $('#info_plaster_knaufc2').addClass('forcards');
       $('#info_plaster_plitonit2').addClass('forcards');
       break;
-    case 402:
+    case price_plaster2:
       $('#info_plaster_knaufg2').addClass('forcards');
       $('#info_plaster_volma2').removeClass('forcards');
       $('#info_plaster_knaufc2').addClass('forcards');
       $('#info_plaster_plitonit2').addClass('forcards');
       break;
-    case 306:
+    case price_plaster3:
       $('#info_plaster_knaufg2').addClass('forcards');
       $('#info_plaster_volma2').addClass('forcards');
       $('#info_plaster_knaufc2').removeClass('forcards');
       $('#info_plaster_plitonit2').addClass('forcards');
       break;
-    case 289:
+    case price_plaster4:
       $('#info_plaster_knaufg2').addClass('forcards');
       $('#info_plaster_volma2').addClass('forcards');
       $('#info_plaster_knaufc2').addClass('forcards');
