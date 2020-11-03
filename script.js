@@ -4,6 +4,7 @@ jQuery(document).ready(function($) {
         type: 'inline'
     });
 });
+
 var place=1;
 var plaster=1;
 
@@ -20,12 +21,14 @@ $(function(){
     function clickListener(card) {
       card.addEventListener( "click", function() {
         var c = this.classList;
-         c.add("flipped");
+        c.add("flipped");
+        $('#return_to_font').removeClass('out_display');
       });
     }
   })();
   $('#return_to_font').click(function(){
     $('.effect__click').removeClass('flipped');
+    $('#return_to_font').addClass('out_display');
   });
   //calculator
   $('.block1_place_').change(function(){
@@ -181,6 +184,13 @@ $(function(){
   $('#wall_plaster_square').change(function(){
     if($('#wall_plaster_square').val()==='')
       $('#wall_plaster_square').val('0');
+    if($('#wall_plaster_square').val()==='0')
+      $('#checkmark_wall').removeClass('checkmark_ready');
+       $('#button_calculate').addClass('out_display');
+    if($('#wall_plaster_square').val()!='0')
+      $('#checkmark_wall').addClass('checkmark_ready');
+      $('#button_calculate').removeClass('out_display');
+
     $('#wall_primer_square').text($('#wall_plaster_square').val());
     $('#wall_grid_square').text($('#wall_plaster_square').val());
     $('.block4_workresult_wall').removeClass('block4_workresult_wall');
@@ -406,9 +416,33 @@ $(function(){
     $('#work_outlay_window_thickness').text(thickness);
   });
   $('.radio_type').change(function(){
+    var value=parseInt($('input[name=types]:checked').val());
+    if(value===220){
+      $('#finish_dirty').addClass('box_outline');
+      $('#finish_dirty_2').addClass('box_outline');
+      $('#finish_clear').removeClass('box_outline');
+      $('#finish_clear_2').removeClass('box_outline');
+    } else {
+      $('#finish_clear').addClass('box_outline');
+      $('#finish_clear_2').addClass('box_outline');
+      $('#finish_dirty').removeClass('box_outline');
+      $('#finish_dirty_2').removeClass('box_outline');
+    }
     recalc();
   });
   $('.radio_type1').change(function(){
+    var value=parseFloat($('input[name=types_fond]:checked').val());
+    if(value===320){
+      $('#finish_dirty2').addClass('box_outline');
+      $('#finish_dirty2_2').addClass('box_outline');
+      $('#finish_clear2').removeClass('box_outline');
+      $('#finish_clear2_2').removeClass('box_outline');
+    } else {
+      $('#finish_clear2').addClass('box_outline');
+      $('#finish_clear2_2').addClass('box_outline');
+      $('#finish_dirty2').removeClass('box_outline');
+      $('#finish_dirty2_2').removeClass('box_outline');
+    }
     recalc();
   });
   $('#work_outlay_wall_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
