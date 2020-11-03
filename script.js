@@ -210,7 +210,7 @@ $(function(){
       $('#wall_plaster_square').val('0');
     if($('#wall_plaster_square').val()==='0')
       $('#checkmark_wall').removeClass('checkmark_ready');
-       $('#button_calculate').addClass('out_display');
+      $('#button_calculate').addClass('out_display');
     if($('#wall_plaster_square').val()!='0')
       $('#checkmark_wall').addClass('checkmark_ready');
       $('#button_calculate').removeClass('out_display');

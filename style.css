@@ -60,7 +60,7 @@ button:focus, a:focus {
   margin-bottom: 0px;
   margin-left: 10px;
 }
-@media screen and (max-device-width: 1550px) {
+@media screen and (max-device-width: 2000px) {
   #block1_position{
     max-width: 1210px;
     min-width: 1210px;
@@ -482,6 +482,27 @@ button{
   height: 60px;
   font-size: 20px;
 }
+
+/* border_area */
+.border_area_top_left{
+  border-right: 3px solid #2C3E50;
+  border-bottom: 3px solid #2C3E50;
+}
+.border_area_top_right{
+  border-right: 6px solid #2C3E50;
+  border-left: 3px solid #2C3E50;
+  border-bottom: 3px solid #2C3E50;
+}
+.border_area_bottom_left{
+  border-right: 3px solid #2C3E50;
+  border-top: 3px solid #2C3E50;
+}
+.border_area_bottom_right{
+  border-right: 6px solid #2C3E50;
+  border-left: 3px solid #2C3E50;
+  border-top: 3px solid #2C3E50;
+}
+
 .border_top_left{
   border-right: 3px solid #2C3E50;
   border-bottom: 3px solid #2C3E50;
@@ -490,8 +511,6 @@ button{
   border-right: 3px solid #2C3E50;
   border-left: 3px solid #2C3E50;
   border-bottom: 3px solid #2C3E50;
-  max-width: 185px;
-  width: 185px;
 }
 .border_top_thickness{
   border-right: 3px solid #2C3E50;
@@ -523,6 +542,32 @@ button{
   border-top: 3px solid #2C3E50;
   border-left: 3px solid #2C3E50;
   border-right: 6px solid #2C3E50;
+}
+.border_workresult_top_left{
+  border-right: 3px solid #2C3E50;
+  border-bottom: 3px solid #2C3E50;
+}
+.border_workresult_top{
+  border-right: 3px solid #2C3E50;
+  border-left: 3px solid #2C3E50;
+  border-bottom: 3px solid #2C3E50;
+}
+.border_workresult_top_right{
+  border-left: 3px solid #2C3E50;
+  border-bottom: 3px solid #2C3E50;
+}
+.border_workresult_bottom_left{
+  border-right: 3px solid #2C3E50;
+  border-top: 3px solid #2C3E50;
+}
+.border_workresult_bottom{
+  border-right: 3px solid #2C3E50;
+  border-left: 3px solid #2C3E50;
+  border-top: 3px solid #2C3E50;
+}
+.border_workresult_bottom_right{
+  border-left: 3px solid #2C3E50;
+  border-top: 3px solid #2C3E50;
 }
 
 .tab-content>.tab-pane {
@@ -805,13 +850,9 @@ div.box{
 .border_bottom_3{
   border-right: 3px solid #2C3E50;
   border-left: 3px solid #2C3E50;
-  max-width: 368px;
-  width: 368px;
 }
 .border_bottom_right_3{
   border-left: 3px solid #2C3E50;
-  max-width: 368px;
-  width: 368px;
 }
 .border_middle_4{
   border-bottom: 3px solid #2C3E50;
@@ -867,10 +908,12 @@ div.box{
   text-align: center;
   border: 0px;
   border-radius: 0;
+  background-color: transparent;
 }
 /* card fronts and backs */
 .card__back {
   position: absolute;
+  background-color: transparent;
 }
 .card__front,
 .card__back {
