@@ -20,6 +20,8 @@ var price_shim=parseFloat($('#price_shim').html());
 var price_nail=parseFloat($('#price_nail').html());
 var price_dirty=parseFloat($('#price_dirty').html());
 var price_clear1=parseFloat($('#price_clear1').html());
+var price_dirty2=parseFloat($('#price_dirty').html());
+var price_clear4=parseFloat($('#price_clear4').html());
 var price_clear2=parseFloat($('#price_clear2').html());
 var price_clear3=parseFloat($('#price_clear3').html());
 
@@ -210,7 +212,7 @@ $(function(){
       $('#wall_plaster_square').val('0');
     if($('#wall_plaster_square').val()==='0')
       $('#checkmark_wall').removeClass('checkmark_ready');
-      $('#button_calculate').addClass('out_display');
+   $('#button_calculate').addClass('out_display');
     if($('#wall_plaster_square').val()!='0')
       $('#checkmark_wall').addClass('checkmark_ready');
       $('#button_calculate').removeClass('out_display');
@@ -252,36 +254,35 @@ $(function(){
   $('#window_plaster_square').change(function(){
     if($('#window_plaster_square').val()==='')
       $('#window_plaster_square').val('0');
-
-    $('#window_primer_square').text((parseFloat($('#window_plaster_square').val())*parseFloat($('#window_plaster_width').val())/1000).toFixed(1));
-
-    $('.block4_workresult_window').removeClass('block4_workresult_window');
-    $('.block3_material_window').removeClass('block3_material_window');
-
-    window_plaster();
-    window_primer();
-
     if($('#window_plaster_square').val()!='0' && $('#window_plaster_width').val()!='0'){
+      $('.block4_workresult_window').removeClass('block4_workresult_window');
+      $('.block3_material_window').removeClass('block3_material_window');
+      $('#window_primer_square').text((parseFloat($('#window_plaster_square').val())*parseFloat($('#window_plaster_width').val())/1000).toFixed(1));
+      window_plaster();
+      window_primer();
       $('html, body').animate({
           scrollTop: $("#block3_material").offset().top
         }, 1000);
       }
+
   });
   $('#window_plaster_thickness').change(function(){
     window_plaster();
   });
   $('#window_plaster_width').change(function(){
-    if($('#window_plaster_square').val()==='')
-      $('#window_plaster_square').val('0');
-    $('#window_primer_square').text((parseFloat($('#window_plaster_square').val())*parseFloat($('#window_plaster_width').val())/1000).toFixed(1));
-    window_plaster();
-    window_primer();
-
+    if($('#window_plaster_width').val()==='')
+      $('#window_plaster_width').val('0');
     if($('#window_plaster_square').val()!='0' && $('#window_plaster_width').val()!='0'){
+      $('.block4_workresult_window').removeClass('block4_workresult_window');
+      $('.block3_material_window').removeClass('block3_material_window');
+      $('#window_primer_square').text((parseFloat($('#window_plaster_square').val())*parseFloat($('#window_plaster_width').val())/1000).toFixed(1));
+      window_plaster();
+      window_primer();
       $('html, body').animate({
           scrollTop: $("#block3_material").offset().top
         }, 1000);
       }
+
   });
   //material wall
   $('#wall_plaster_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
@@ -557,7 +558,7 @@ $(function(){
   });
   $('#cross_window').click(function() {
     $('#window_plaster_square').val('0');
-
+    $('#window_plaster_width').val('0');
     $('#block4_workresult_window_id').addClass('block4_workresult_window');
     $('#block3_material_window_id').addClass('block3_material_window');
 
