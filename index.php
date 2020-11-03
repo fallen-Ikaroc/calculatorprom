@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 require_once 'connection.php';
 $link = mysqli_connect($host, $user, $password, $database)
     or die("Ошибка " . mysqli_error($link));
@@ -13,14 +13,14 @@ if($result)
       $row = mysqli_fetch_row($result);
       switch($row[0]){
         case 'plaster1': $plaster1=$row[1]; break;
-        case 'plaster2': $plaster2=$row[1]; break;
+        <!-- case 'plaster2': $plaster2=$row[1]; break; -->
         case 'plaster3': $plaster3=$row[1]; break;
         case 'plaster4': $plaster4=$row[1]; break;
         case 'primer1': $primer1=$row[1]; break;
         case 'primer2': $primer2=$row[1]; break;
         case 'grid1': $grid1=$row[1]; break;
         case 'grid2': $grid2=$row[1]; break;
-        case 'faros': $faros=$row[1]; break;
+        case 'pharos': $pharos=$row[1]; break;
         case 'shim': $shim=$row[1]; break;
         case 'nail': $nail=$row[1]; break;
         case 'dirty': $dirty=$row[1]; break;
@@ -33,13 +33,15 @@ if($result)
   mysqli_free_result($result);
 }
 mysqli_close($link);
- ?> -->
+ ?>
+
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="jquery-1.12.4.min.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
   <script src="bootstrap.min.js" type="text/javascript"></script>
@@ -68,7 +70,23 @@ mysqli_close($link);
   </div>
 
   <!-- Block1 -->
-
+  <div style="display: ;">
+    <div id="price_plaster1"><?php echo($plaster1)?></div>
+    <div id="price_plaster2"><?php echo($plaster2)?></div>
+    <div id="price_plaster3"><?php echo($plaster3)?></div>
+    <div id="price_plaster4"><?php echo($plaster4)?></div>
+    <div id="price_primer1"><?php echo($primer1)?></div>
+    <div id="price_primer2"><?php echo($primer2)?></div>
+    <div id="price_grid1"><?php echo($grid1)?></div>
+    <div id="price_grid2"><?php echo($grid2)?></div>
+    <div id="price_pharos"><?php echo($pharos)?></div>
+    <div id="price_shim"><?php echo($shim)?></div>
+    <div id="price_nail"><?php echo($nail)?></div>
+    <div id="price_dirty"><?php echo($dirty)?></div>
+    <div id="price_clear1"><?php echo($clear1)?></div>
+    <div id="price_clear2"><?php echo($clear2)?></div>
+    <div id="price_clear3"><?php echo($clear3)?></div>
+  </div>
 <section id="block1">
 
   <div id="block1_position" class="p-5">
@@ -1065,10 +1083,10 @@ mysqli_close($link);
           <div class="d-flex flex-fill border_middle_left">
             <div class="d-flex text-center align-self-center w-100" >
             <select id="plaster_wall_outlay" class="font-weight-bold">
-                <option value="435" selected>Гипсовая Knauf MP 75</option>
-                <option value="402">Гипсовая ВОЛМА-Гипс-Актив</option>
-                <option value="306">Цементная Knauf UNTERPUTZ</option>
-                <option value="289">Цементная Plitonit T1+</option>
+                <option value=<?php echo($plaster1) ?>  selected>Гипсовая Knauf MP 75</option>
+                <option value=<?php echo($plaster2) ?>>Гипсовая ВОЛМА-Гипс-Актив</option>
+                <option value=<?php echo($plaster3) ?>>Цементная Knauf UNTERPUTZ</option>
+                <option value=<?php echo($plaster4) ?>>Цементная Plitonit T1+</option>
             </select>
             </div>
             <div id="info_plaster_knaufg" class="d-flex align-self-center button_info_position">
@@ -1189,10 +1207,10 @@ mysqli_close($link);
           <div class="d-flex flex-fill border_middle_left">
             <div class="font-weight-bold align-self-center w-100">
             <select id="plaster_roof_outlay" class="font-weight-bold">
-                <option value="435" selected>Гипсовая Knauf MP 75</option>
-                <option value="402">Гипсовая ВОЛМА-Гипс-Актив</option>
-                <option value="306">Цементная Knauf UNTERPUTZ</option>
-                <option value="289">Цементная Plitonit T1+</option>
+                <option value=<?php echo($plaster1) ?> selected>Гипсовая Knauf MP 75</option>
+                <option value=<?php echo($plaster2) ?>>Гипсовая ВОЛМА-Гипс-Актив</option>
+                <option value=<?php echo($plaster3) ?>>Цементная Knauf UNTERPUTZ</option>
+                <option value=<?php echo($plaster4) ?>>Цементная Plitonit T1+</option>
             </select>
             </div>
             <div id="info_plaster_knaufg1" class="d-flex align-self-center button_info_position">
@@ -1288,10 +1306,10 @@ mysqli_close($link);
           <div class="d-flex flex-fill border_middle_left">
             <div class="font-weight-bold align-self-center w-100">
             <select id="plaster_window_outlay" class="font-weight-bold">
-                <option value="435" selected>Гипсовая Knauf MP 75</option>
-                <option value="402">Гипсовая ВОЛМА-Гипс-Актив</option>
-                <option value="306">Цементная Knauf UNTERPUTZ</option>
-                <option value="289">Цементная Plitonit T1+</option>
+                <option value=<?php echo($plaster1) ?> selected>Гипсовая Knauf MP 75</option>
+                <option value=<?php echo($plaster2) ?>>Гипсовая ВОЛМА-Гипс-Актив</option>
+                <option value=<?php echo($plaster3) ?>>Цементная Knauf UNTERPUTZ</option>
+                <option value=<?php echo($plaster4) ?>>Цементная Plitonit T1+</option>
             </select>
             </div>
             <div id="info_plaster_knaufg2" class="d-flex align-self-center button_info_position">
