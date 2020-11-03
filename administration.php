@@ -28,6 +28,8 @@
           case 'shim': $shim=$row[1]; break;
           case 'nail': $nail=$row[1]; break;
           case 'dirty': $dirty=$row[1]; break;
+          case 'dirty2': $dirty2=$row[1]; break;
+          case 'clear4': $clear4=$row[1]; break;
           case 'clear1': $clear1=$row[1]; break;
           case 'clear2': $clear2=$row[1]; break;
           case 'clear3': $clear3=$row[1]; break;
@@ -42,7 +44,6 @@
     if($result1)
       $good1="Успешно!";
     echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
-
   }
   if( isset( $_GET['red2'] )  && isset($_GET['Price2']) ){
     $price2=htmlentities(mysqli_real_escape_string($link, $_GET['Price2']));
@@ -51,6 +52,7 @@
     $plaster2=$price2;
     if($result2)
       $good2="Успешно!";
+      echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
   }
   if( isset( $_GET['red3'] )  && isset($_GET['Price3']) ){
     $price3=htmlentities(mysqli_real_escape_string($link, $_GET['Price3']));
@@ -59,6 +61,7 @@
     $plaster3=$price3;
     if($result3)
       $good3="Успешно!";
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
   }
   if( isset( $_GET['red4'] )  && isset($_GET['Price4']) ){
     $price4=htmlentities(mysqli_real_escape_string($link, $_GET['Price4']));
@@ -67,6 +70,7 @@
     $plaster4=$price4;
     if($result4)
       $good4="Успешно!";
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
   }
   if( isset( $_GET['red5'] )  && isset($_GET['Price5']) ){
     $price5=htmlentities(mysqli_real_escape_string($link, $_GET['Price5']));
@@ -75,6 +79,7 @@
     $grid1=$price5;
     if($result5)
       $good5="Успешно!";
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
   }
   if( isset( $_GET['red6'] )  && isset($_GET['Price6']) ){
     $price6=htmlentities(mysqli_real_escape_string($link, $_GET['Price6']));
@@ -83,6 +88,7 @@
     $grid2=$price6;
     if($result6)
       $good6="Успешно!";
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
   }
   if( isset( $_GET['red7'] )  && isset($_GET['Price7']) ){
     $price7=htmlentities(mysqli_real_escape_string($link, $_GET['Price7']));
@@ -91,6 +97,7 @@
     $primer1=$price7;
     if($result7)
       $good7="Успешно!";
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
   }
   if( isset( $_GET['red8'] )  && isset($_GET['Price8']) ){
     $price8=htmlentities(mysqli_real_escape_string($link, $_GET['Price8']));
@@ -99,6 +106,7 @@
     $primer2=$price8;
     if($result8)
       $good8="Успешно!";
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
   }
   if( isset( $_GET['red9'] )  && isset($_GET['Price9']) ){
     $price9=htmlentities(mysqli_real_escape_string($link, $_GET['Price9']));
@@ -107,6 +115,7 @@
     $pharos=$price9;
     if($result9)
       $good9="Успешно!";
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
   }
   if( isset( $_GET['red10'] )  && isset($_GET['Price10']) ){
     $price10=htmlentities(mysqli_real_escape_string($link, $_GET['Price10']));
@@ -115,6 +124,7 @@
     $shim=$price10;
     if($result10)
       $good10="Успешно!";
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
   }
   if( isset( $_GET['red11'] )  && isset($_GET['Price11']) ){
     $price11=htmlentities(mysqli_real_escape_string($link, $_GET['Price11']));
@@ -123,6 +133,7 @@
     $nail=$price11;
     if($result11)
       $good11="Успешно!";
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
   }
   if( isset( $_GET['red12'] )  && isset($_GET['Price12']) ){
     $price12=htmlentities(mysqli_real_escape_string($link, $_GET['Price12']));
@@ -131,6 +142,7 @@
     $dirty=$price12;
     if($result12)
       $good12="Успешно!";
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
   }
   if( isset( $_GET['red13'] )  && isset($_GET['Price13']) ){
     $price13=htmlentities(mysqli_real_escape_string($link, $_GET['Price13']));
@@ -139,6 +151,7 @@
     $clear1=$price13;
     if($result13)
       $good13="Успешно!";
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
   }
   if( isset( $_GET['red14'] )  && isset($_GET['Price14']) ){
     $price14=htmlentities(mysqli_real_escape_string($link, $_GET['Price14']));
@@ -147,6 +160,7 @@
     $clear2=$price14;
     if($result14)
       $good14="Успешно!";
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
   }
   if( isset( $_GET['red15'] )  && isset($_GET['Price15']) ){
     $price15=htmlentities(mysqli_real_escape_string($link, $_GET['Price15']));
@@ -155,6 +169,25 @@
     $clear3=$price15;
     if($result15)
       $good15="Успешно!";
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
+  }
+  if( isset( $_GET['red16'] )  && isset($_GET['Price16']) ){
+    $price16=htmlentities(mysqli_real_escape_string($link, $_GET['Price16']));
+    $query16="UPDATE prices SET price='$price16' WHERE name='dirty2'";
+    $result16 = mysqli_query($link, $query16) or die("Ошибка " . mysqli_error($link));
+    $dirty2=$price16;
+    if($result16)
+      $good16="Успешно!";
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
+  }
+  if( isset( $_GET['red17'] )  && isset($_GET['Price17']) ){
+    $price17=htmlentities(mysqli_real_escape_string($link, $_GET['Price17']));
+    $query17="UPDATE prices SET price='$price17' WHERE name='clear4'";
+    $result17 = mysqli_query($link, $query17) or die("Ошибка " . mysqli_error($link));
+    $clear4=$price17;
+    if($result17)
+      $good17="Успешно!";
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
   }
   mysqli_close($link);
   ?>
@@ -233,8 +266,8 @@
 
     <div style="display: flex;">
       <div>шайба -</div>
-      <div>старая цена: <?php echo($nail) ?></div>
-      <input type="text" name="Price10" size="10" value="<?php echo($nail) ?>">
+      <div>старая цена: <?php echo($shim) ?></div>
+      <input type="text" name="Price10" size="10" value="<?php echo($shim) ?>">
       <input type="submit" name="red10" value="Подтвердить">
       <div><?php echo($good10) ?></div>
     </div>
@@ -248,7 +281,7 @@
     </div>
 
     <div style="display: flex;">
-      <div>грязная отделка стен -</div>
+      <div>грязная отделка стен стрый фонд -</div>
       <div>старая цена: <?php echo($dirty) ?></div>
       <input type="text" name="Price12" size="10" value="<?php echo($dirty) ?>">
       <input type="submit" name="red12" value="Подтвердить">
@@ -256,11 +289,27 @@
     </div>
 
     <div style="display: flex;">
-      <div>чистая отделка стен -</div>
+      <div>чистая отделка стен старый фонд-</div>
       <div>старая цена: <?php echo($clear1) ?></div>
       <input type="text" name="Price13" size="10" value="<?php echo($clear1) ?>">
       <input type="submit" name="red13" value="Подтвердить">
       <div><?php echo($good13) ?></div>
+    </div>
+
+    <div style="display: flex;">
+      <div>грязная отделка стен остальные -</div>
+      <div>старая цена: <?php echo($dirty2) ?></div>
+      <input type="text" name="Price16" size="10" value="<?php echo($dirty2) ?>">
+      <input type="submit" name="red16" value="Подтвердить">
+      <div><?php echo($good16) ?></div>
+    </div>
+
+    <div style="display: flex;">
+      <div>чистая отделка стен остальные-</div>
+      <div>старая цена: <?php echo($clear4) ?></div>
+      <input type="text" name="Price17" size="10" value="<?php echo($clear4) ?>">
+      <input type="submit" name="red17" value="Подтвердить">
+      <div><?php echo($good17) ?></div>
     </div>
 
     <div style="display: flex;">
