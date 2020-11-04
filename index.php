@@ -83,7 +83,7 @@ testfun();
   </form>
 
   <!-- Block1 -->
-  <div style="display: none;">
+  <div style="display: ;">
     <div id="price_plaster1"><?php echo($plaster1)?></div>
     <div id="price_plaster2"><?php echo($plaster2)?></div>
     <div id="price_plaster3"><?php echo($plaster3)?></div>
@@ -558,7 +558,7 @@ testfun();
                   <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Количество</div></div>
                   <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
                 </div>
-                <div class="d-flex string_2">
+                <div class="d-flex string_2" >
                   <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_grid_price"><?php echo($grid1)?></div>&nbsp;руб</div></div>
                   <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">1 шт/<div id="wall_grid_consume">0</div>&nbsp;м&sup2;</div></div>
                   <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_grid_weight">0</div>&nbsp;кг</div></div>
