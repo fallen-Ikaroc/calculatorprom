@@ -35,6 +35,29 @@ if($result)
   mysqli_free_result($result);
 }
 mysqli_close($link);
+function testfun()
+{
+echo "Your test function on button click is working";
+$to = 'goshakkoshak65@gmail.com';
+$subject='the subject';
+$message=$_POST['name'];
+$headers = 'From: goshkakoshka65@gmail.com' . "\r\n" .
+    'Reply-To: goshkakoshka65@gmail.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+if(mail($to, $subject, $message, $headers)){
+  echo'Письмо успешно отправлено';
+ }
+ else {
+   echo 'Ошибка';
+ }
+ echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/index.php">';
+}
+if(array_key_exists('but',$_POST)){
+testfun();
+}
+
+
  ?>
 
 <!DOCTYPE html>
@@ -50,8 +73,14 @@ mysqli_close($link);
   <link rel="stylesheet" type="text/css" href="style.css"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <script src="script2.js" type="text/javascript"></script>
 </head>
 <body>
+
+  <form method="post">
+    <input type="text" name="name" placeholder="Введите ваше имя" >
+    <input type="submit" name="but" id="but" value="OK" /><br/>
+  </form>
 
   <!-- Block1 -->
   <div style="display: none;">
