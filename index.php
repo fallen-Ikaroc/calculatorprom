@@ -52,8 +52,9 @@ mysqli_close($link);
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 </head>
 <body>
+
   <!-- Block1 -->
-  <div style="display: ;">
+  <div style="display: none;">
     <div id="price_plaster1"><?php echo($plaster1)?></div>
     <div id="price_plaster2"><?php echo($plaster2)?></div>
     <div id="price_plaster3"><?php echo($plaster3)?></div>
@@ -85,7 +86,7 @@ mysqli_close($link);
         <div class="line_2"></div>
       </div>
       <div class="flex-fill"></div>
-      <a class="align-self-end text-center button_type_object button_ver2_plaster_choice m-0 font-weight-bold out_display" id="return_to_font">Изменить тип основания</a>
+      <a class="align-self-end text-center button_type_object button_ver2_plaster_choice m-0 font-weight-bold" id="return_to_font">Изменить тип основания</a>
     </div>
 
     <div class="d-flex align-items-center justify-content-center">
@@ -330,13 +331,23 @@ mysqli_close($link);
 
         <div class="nav nav-tabs d-flex" id="nav-tab" role="tablist">
           <a class="nav-item col-4 text-center nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
-            <div class="d-flex nav_name justify-content-center align-items-center">
-              <div>Стены</div>
-              <img id="checkmark_wall" src="img/done.svg" class="checkmark"></img>
+            <div class="pos_rel justify-content-center align-items-center">
+              Стены
+              <img id="checkmark_wall" src="img/done.svg" class="checkmark">
             </div>
           </a>
-          <a class="nav-item flex-fill text-center nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Потолки</a>
-          <a class="nav-item col-4 text-center nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Откосы</a>
+          <a class="nav-item flex-fill text-center nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">
+            <div class="pos_rel justify-content-center align-items-center">
+              Потолки
+              <img id="checkmark_roof" src="img/done.svg" class="checkmark">
+            </div>
+          </a>
+          <a class="nav-item col-4 text-center nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
+            <div class="pos_rel justify-content-center align-items-center">
+              Откосы
+              <img id="checkmark_window" src="img/done.svg" class="checkmark">
+            </div>
+          </a>
         </div>
 
         <div class="tab-content" id="nav-tabContent">
@@ -443,8 +454,8 @@ mysqli_close($link);
 
               <div class="w-50">
                 <div class="d-flex font-weight-bold string_1">
-                  <div class="d-flex col border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
-                  <div class="d-flex col border_top_right"><div class="text-center align-self-center w-100">Толщина слоя</div></div>
+                  <div class="d-flex col border_area_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
+                  <div class="d-flex col border_area_top_right"><div class="text-center align-self-center w-100">Толщина слоя</div></div>
                   <!-- <div class="d-flex flex-fill col p-0 border_top"><div class="text-center align-self-center w-100">Цена мешка</div></div>
                   <div class="d-flex flex-fill col p-0 border_top"><div class="text-center align-self-center w-100">Расход</div></div>
                   <div class="d-flex flex-fill col p-0 border_top"><div class="text-center align-self-center w-100">Вес</div></div>
@@ -452,13 +463,13 @@ mysqli_close($link);
                   <div class="d-flex flex-fill col p-0 border_top_right"><div class="text-center align-self-center w-100">Цена</div></div> -->
                 </div>
                 <div class="d-flex string_2">
-                  <div class="d-flex col border_bottom_left">
+                  <div class="d-flex col border_area_bottom_left">
                     <div class="text-center align-self-center w-100">
                       <input id="wall_plaster_square" class="text-center p-0" type="text" type="number" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="4" value="0"></input>
                       &nbsp;м&sup2;
                     </div>
                   </div>
-                  <div class="d-flex col border_bottom_right">
+                  <div class="d-flex col border_area_bottom_right">
                     <div class="d-flex text-center justify-content-center align-self-center w-100">
                       <div class="d-flex text-center">
                         <select id="wall_plaster_thickness">
@@ -474,93 +485,20 @@ mysqli_close($link);
                     </div>
                   </div>
                   <div class="out_display">
-                    <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div class=""id="wall_plaster_price">435</div>&nbsp;руб</div></div>
-                    <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_plaster_consume" class="content">15</div>&nbsp;кг/м&sup2;</div></div>
-                    <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_plaster_weight">0</div>&nbsp;кг</div></div>
-                    <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_plaster_quantity">0</div>&nbsp;шт</div></div>
-                    <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_plaster_sum">0</div>&nbsp;руб</div></div>
+                    <div class="d-flex col border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div class=""id="wall_plaster_price"><?php echo($plaster1)?></div>&nbsp;руб</div></div>
+                    <div class="d-flex col border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_plaster_consume" class="content">15</div>&nbsp;кг/м&sup2;</div></div>
+                    <div class="d-flex col border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_plaster_weight">0</div>&nbsp;кг</div></div>
+                    <div class="d-flex col border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_plaster_quantity">0</div>&nbsp;шт</div></div>
+                    <div class="d-flex col border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_plaster_sum">0</div>&nbsp;руб</div></div>
                   </div>
                 </div>
               </div>
 
               <div class="d-flex w-50 button_calculate justify-content-center">
-                <button type="button" class="align-self-center text-center button_calculate_1 button_ver2_plaster_choice font-weight-bold">Произвести рассчёт</button>
-                <div id="button_calculate" class="button_calculate_2 out_display"></div>
+                <button id="button_calculate_wall" type="button" class="align-self-center text-center button_calculate_1 font-weight-bold">Произвести рассчёт</button>
               </div>
 
             </div>
-
-            <!-- <div class="pb-5">
-              <div class="d-flex p-3">
-                <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-                <div class="heading_block2">Грунт</div>
-              </div>
-
-              <div class="d-flex block1_ver2_1 justify-content-center pb-4 pl-4 pr-4" style="">
-                <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px;">
-                  <div class="d-flex p-2">
-                    <div class="d-flex align-self-center">
-                      <div class="block1_ver2_plaster_info_position m-0"></div>
-                    </div>
-                    <div class="flex-fill font-weight-bold">Грунт Knauf Миттельгрунд</div>
-                    <div class="d-flex align-self-center text-white">
-                      <a href="#text-popup" class="button_ver2_plaster_choice popup-content">
-                        <div class="block1_ver2_plaster_info font-weight-bold m-0">i</div>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="d-flex pb-2" flex-fill>
-                    <a href="#text-popup" class="d-flex align-items-center w-50 p-1 popup-content">
-                      <img src="img/primer_knauf.jpg" class="img-fluid" alt="Responsive image">
-                    </a>
-                    <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
-                      <div class="d-flex" flex-fill>
-                        <div class="d-flex align-self-center">
-                          Объём: 10 л
-                          <br>Предназначен для обработки поверхностей: газо – и пенобетона, керамического и силикатного кирпича, керамзито – и шлакоблоков, гипсовых и цементных штукатурок; бетонной, цементной и гипсовой стяжки.
-                          <br>Состав: полимерная дисперсия.
-                        </div>
-                      </div>
-                      <div class="text-center">
-                        Цена: 2064 руб
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px;">
-                  <div class="d-flex p-2">
-                    <div class="d-flex align-self-center">
-                      <div class="block1_ver2_plaster_info_position m-0"></div>
-                    </div>
-                    <div class="flex-fill font-weight-bold">Грунт Крепс Праймер</div>
-                    <div class="d-flex align-self-center text-white">
-                      <a href="#text-popup" class="button_ver2_plaster_choice popup-content">
-                        <div class="block1_ver2_plaster_info font-weight-bold m-0">i</div>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="d-flex pb-2" flex-fill>
-                    <a href="#text-popup" class="d-flex align-items-center w-50 p-1 popup-content">
-                      <img src="img/primer_kreps.jpg" class="img-fluid" alt="Responsive image">
-                    </a>
-                    <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
-                      <div class="d-flex" flex-fill>
-                        <div class="d-flex align-self-center">
-                          Объём: 10 л
-                          <br>Наносится на все пористые основания, цементные плиты, газобетон, цементные, цементно-известковые и известковые штукатурки, бетон, железобетон, гипсокартон и другие гипсосодержащие основания.
-                          <br>Для внутренних и наружных работ.
-                        </div>
-                      </div>
-                      <div class="text-center">
-                        Цена: 1548 руб
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div> -->
 
               <div class="out_display">
                 <div class="d-flex font-weight-bold string_1">
@@ -580,81 +518,6 @@ mysqli_close($link);
                   <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_primer_sum">0</div>&nbsp;руб</div></div>
                 </div>
               </div>
-
-            <!-- <div class="">
-              <div class="d-flex p-3">
-                <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-                <div class="heading_block2">Сетка</div>
-              </div>
-
-              <div class="d-flex block1_ver2_1 justify-content-center pb-4 pl-4 pr-4">
-                <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px;">
-                  <div class="d-flex p-2">
-                    <div class="d-flex align-self-center">
-                      <div class="block1_ver2_plaster_info_position m-0"></div>
-                    </div>
-                    <div class="flex-fill font-weight-bold">Сетка стеклотканевая фасадная SD-Glass</div>
-                    <div class="d-flex align-self-center text-white">
-                      <a href="#text-popup" class="button_ver2_plaster_choice popup-content">
-                        <div class="block1_ver2_plaster_info font-weight-bold m-0">i</div>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="d-flex pb-2" flex-fill>
-                    <a href="#text-popup" class="d-flex align-items-center w-50 p-1 pl-3 pr-3 popup-content">
-                      <img src="img/grid_glass.jpg" class="img-fluid" alt="Responsive image">
-                    </a>
-                    <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
-                      <div class="d-flex" flex-fill>
-                        <div class="d-flex align-self-center">
-                          Вес рулона: 2.4 кг
-                          <br>Размеры: ячейка - 5х5 мм,
-                          <br>рулон - 1х20 м
-                          <br>Плотность: 145 г/м2
-                          <br>Имеет повышенные разрывные нагрузки, пропитана специальным полимерным щелочестойким составом.
-                        </div>
-                      </div>
-                      <div class="text-center">
-                        Цена: 943 руб
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px">
-                  <div class="d-flex p-2">
-                    <div class="d-flex align-self-center">
-                      <div class="block1_ver2_plaster_info_position m-0"></div>
-                    </div>
-                    <div class="flex-fill font-weight-bold">Сетка штукатурная тканая оцинкованная</div>
-                    <div class="d-flex align-self-center text-white">
-                      <a href="#text-popup" class="button_ver2_plaster_choice popup-content">
-                        <div class="block1_ver2_plaster_info font-weight-bold m-0">i</div>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="d-flex pb-2" flex-fill>
-                    <a href="#text-popup" class="d-flex align-items-center w-50 p-1 pl-3 pr-3 popup-content">
-                      <img src="img/grid_zinc.png" class="img-fluid" alt="Responsive image">
-                    </a>
-                    <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
-                      <div class="d-flex" flex-fill>
-                        <div class="d-flex align-self-center">
-                          Вес рулона: 10 кг
-                          <br>Размеры: ячейка - 10х10 мм,
-                          <br>рулон - 1х30 м,
-                          <br>диаметр рулона - 0,5-0,6 мм
-                          <br>Предназначена для армирования строительных смесей.  Применяется при грубом выравнивании стен и полов цементными составами.
-                        </div>
-                      </div>
-                      <div class="text-center">
-                        Цена: 2460 руб
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div> -->
 
               <div class="out_display">
                 <div class="d-flex font-weight-bold string_1">
@@ -696,136 +559,79 @@ mysqli_close($link);
               </div>
             </div>
 
-              <div class="">
-                <div class="d-flex p-3">
-                  <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-                  <div class="heading_block2">Штукатурка</div>
+            <div class="d-flex p-3">
+              <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
+              <div class="heading_block2">Штукатурка</div>
+            </div>
+
+            <div class="d-flex">
+
+              <div class="w-50">
+                <div class="d-flex font-weight-bold string_1 col p-0">
+                  <div class="d-flex col border_area_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
+                  <div class="d-flex col border_area_top_right"><div class="text-center align-self-center w-100">Толщина слоя</div></div>
+                  <!-- <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Цена мешка</div></div>
+                  <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Расход</div></div>
+                  <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Вес</div></div>
+                  <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Количество</div></div>
+                  <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Цена</div></div> -->
                 </div>
-                <div class="">
-                  <div class="d-flex font-weight-bold string_1 col p-0">
-                    <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
-                    <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Цена мешка</div></div>
-                    <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Толщина слоя</div></div>
-                    <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Расход</div></div>
-                    <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Вес</div></div>
-                    <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Количество</div></div>
-                    <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
-                  </div>
-                  <div class="d-flex string_2">
-                    <div class="d-flex flex-fill border_bottom_left"><div class="text-center align-self-center w-100"><input id="roof_plaster_square" class="text-center p-0" type="text" type="number" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="4" value="0"></input>&nbsp;м&sup2;</div></div>
-                    <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div class=""id="roof_plaster_price"><?php echo($plaster1)?></div>&nbsp;руб</div></div>
-                    <div class="d-flex flex-fill border_bottom">
-                      <div class="d-flex text-center justify-content-center align-self-center w-100">
-                        <div class="d-flex text-center">
-                          <select id="roof_plaster_thickness">
-                            <option value="15" selected>15</option>
-                            <option value="20">20</option>
-                            <option value="25">25</option>
-                            <option value="30">30</option>
-                            <option value="35">35</option>
-                            <option value="40">40</option>
-                          </select>
-                          <div>&nbsp;мм</div>
-                        </div>
-                      </div>
+                <div class="d-flex string_2">
+                  <div class="d-flex col border_area_bottom_left">
+                    <div class="text-center align-self-center w-100">
+                      <input id="roof_plaster_square" class="text-center p-0" type="text" type="number" onkeyup="this.value = this.value.replce(/[^\d]/g,'');" maxlength="4" value="0"></input>
+                      &nbsp;м&sup2;
                     </div>
-                    <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_plaster_consume" class="content">15</div>&nbsp;кг/м&sup2;</div></div>
-                    <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_plaster_weight">0</div>&nbsp;кг</div></div>
-                    <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_plaster_quantity">0</div>&nbsp;шт</div></div>
-                    <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_plaster_sum">0</div>&nbsp;руб</div></div>
                   </div>
+                  <div class="d-flex col border_area_bottom_right">
+                    <div class="d-flex text-center justify-content-center align-self-center w-100">
+                          <div class="d-flex text-center">
+                            <select id="roof_plaster_thickness">
+                              <option value="15" selected>15</option>
+                              <option value="20">20</option>
+                              <option value="25">25</option>
+                              <option value="30">30</option>
+                              <option value="35">35</option>
+                              <option value="40">40</option>
+                            </select>
+                            <div>&nbsp;мм</div>
+                          </div>
+                        </div>
+                  </div>
+                  <div class="out_display">
+                        <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div class=""id="roof_plaster_price"><?php echo($plaster1)?></div>&nbsp;руб</div></div>
+                        <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_plaster_consume" class="content">15</div>&nbsp;кг/м&sup2;</div></div>
+                        <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_plaster_weight">0</div>&nbsp;кг</div></div>
+                        <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_plaster_quantity">0</div>&nbsp;шт</div></div>
+                        <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_plaster_sum">0</div>&nbsp;руб</div></div>
+                      </div>
                 </div>
               </div>
 
-              <!-- <div class="">
-                <div class="d-flex p-3">
-                  <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-                  <div class="heading_block2">Грунт</div>
-                </div>
+              <div class="d-flex w-50 button_calculate justify-content-center">
+                <button id="button_calculate_roof" type="button" class="align-self-center text-center button_calculate_1 font-weight-bold">Произвести рассчёт</button>
+              </div>
 
-                <div class="d-flex block1_ver2_1 justify-content-center pb-4 pl-4 pr-4">
-                  <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px;">
-                    <div class="d-flex p-2">
-                      <div class="d-flex align-self-center">
-                        <div class="block1_ver2_plaster_info_position m-0"></div>
-                      </div>
-                      <div class="flex-fill font-weight-bold">Грунт Knauf Миттельгрунд</div>
-                      <div class="d-flex align-self-center text-white">
-                        <a href="#text-popup" class="button_ver2_plaster_choice popup-content">
-                          <div class="block1_ver2_plaster_info font-weight-bold m-0">i</div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="d-flex pb-2" flex-fill>
-                      <a href="#text-popup" class="d-flex align-items-center w-50 p-1 popup-content">
-                        <img src="img/primer_knauf.jpg" class="img-fluid" alt="Responsive image">
-                      </a>
-                      <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
-                        <div class="d-flex" flex-fill>
-                          <div class="d-flex align-self-center">
-                            Объём: 10 л
-                            <br>Предназначен для обработки поверхностей: газо – и пенобетона, керамического и силикатного кирпича, керамзито – и шлакоблоков, гипсовых и цементных штукатурок; бетонной, цементной и гипсовой стяжки.
-                            <br>Состав: полимерная дисперсия.
-                          </div>
-                        </div>
-                        <div class="text-center">
-                          Цена: 2064 руб
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            </div>
 
-                  <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px">
-                    <div class="d-flex p-2">
-                      <div class="d-flex align-self-center">
-                        <div class="block1_ver2_plaster_info_position m-0"></div>
-                      </div>
-                      <div class="flex-fill font-weight-bold">Грунт Крепс Праймер</div>
-                      <div class="d-flex align-self-center text-white">
-                        <a href="#text-popup" class="button_ver2_plaster_choice popup-content">
-                          <div class="block1_ver2_plaster_info font-weight-bold m-0">i</div>
-                        </a>
-                      </div>
-                    </div>
-                    <div class="d-flex pb-2" flex-fill>
-                      <a href="#text-popup" class="d-flex align-items-center w-50 p-1 popup-content">
-                        <img src="img/primer_kreps.jpg" class="img-fluid" alt="Responsive image">
-                      </a>
-                      <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
-                        <div class="d-flex" flex-fill>
-                          <div class="d-flex align-self-center">
-                            Объём: 10 л
-                            <br>Наносится на все пористые основания, цементные плиты, газобетон, цементные, цементно-известковые и известковые штукатурки, бетон, железобетон, гипсокартон и другие гипсосодержащие основания.
-                            <br>Для внутренних и наружных работ.
-                          </div>
-                        </div>
-                        <div class="text-center">
-                          Цена: 1548 руб
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+            <div class="out_display">
+                <div class="d-flex font-weight-bold string_1">
+                  <div class="d-flex col border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
+                  <div class="d-flex col border_top"><div class="text-center align-self-center w-100">Упаковка</div></div>
+                  <div class="d-flex col border_top"><div class="text-center align-self-center w-100">м&sup2;/граммы</div></div>
+                  <div class="d-flex col border_top"><div class="text-center align-self-center w-100">Расход</div></div>
+                  <div class="d-flex col border_top"><div class="text-center align-self-center w-100">Вес</div></div>
+                  <div class="d-flex col border_top"><div class="text-center align-self-center w-100">Количество</div></div>
+                  <div class="d-flex col border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
                 </div>
-              </div> -->
-
-                <div class="out_display">
-                  <div class="d-flex font-weight-bold string_1">
-                    <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
-                    <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Упаковка</div></div>
-                    <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">м&sup2;/граммы</div></div>
-                    <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Расход</div></div>
-                    <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Вес</div></div>
-                    <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Количество</div></div>
-                    <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
-                  </div>
-                  <div class="d-flex string_2">
-                    <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_primer_price"><?php echo($primer1)?></div>&nbsp;руб</div></div>
-                    <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_primer_consume">0</div>&nbsp;кг/м&sup2;</div></div>
-                    <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_primer_weight">0</div>&nbsp;кг</div></div>
-                    <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_primer_quantity">0</div>&nbsp;шт</div></div>
-                    <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_primer_sum">0</div>&nbsp;руб</div></div>
-                  </div>
+                <div class="d-flex string_2">
+                  <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_primer_price"><?php echo($primer1)?></div>&nbsp;руб</div></div>
+                  <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_primer_consume">0</div>&nbsp;кг/м&sup2;</div></div>
+                  <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_primer_weight">0</div>&nbsp;кг</div></div>
+                  <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_primer_quantity">0</div>&nbsp;шт</div></div>
+                  <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="roof_primer_sum">0</div>&nbsp;руб</div></div>
                 </div>
+              </div>
 
           </div>
 
@@ -848,26 +654,26 @@ mysqli_close($link);
               </div>
             </div>
 
-            <div class="">
-              <div class="d-flex p-3">
-                <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-                <div class="heading_block2">Штукатурка</div>
-              </div>
-              <div class="">
+            <div class="d-flex p-3">
+              <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
+              <div class="heading_block2">Штукатурка</div>
+            </div>
+
+            <div class="d-flex">
+              <div class="w-75">
                 <div class="d-flex font-weight-bold string_1">
-                  <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
-                  <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Цена мешка</div></div>
-                  <div class="d-flex flex-fill border_top_thickness"><div class="text-center align-self-center w-100">Толщина слоя</div></div>
-                  <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Ширина</div></div>
+                  <div class="d-flex col border_area_top_left"><div class="text-center align-self-center w-100">Площадь</div></div>
+                  <div class="d-flex col border_area_top"><div class="text-center align-self-center w-100">Толщина слоя</div></div>
+                  <div class="d-flex col border_area_top_right"><div class="text-center align-self-center w-100">Ширина</div></div>
+                  <!-- <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Цена мешка</div></div>
                   <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Расход</div></div>
                   <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Вес</div></div>
                   <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Количество</div></div>
-                  <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
+                  <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Цена</div></div> -->
                 </div>
                 <div class="d-flex string_2">
-                  <div class="d-flex flex-fill border_bottom_left"><div class="text-center align-self-center w-100"><input id="window_plaster_square" class="text-center p-0" type="text" type="number" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="3" value="0"></input>&nbsp;м. п.</div></div>
-                  <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div class=""id="window_plaster_price"><?php echo($plaster1)?></div>&nbsp;руб</div></div>
-                  <div class="d-flex flex-fill border_bottom_thickness">
+                  <div class="d-flex col border_area_bottom_left"><div class="text-center align-self-center w-100"><input id="window_plaster_square" class="text-center p-0" type="text" type="number" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="3" value="0"></input>&nbsp;м. п.</div></div>
+                  <div class="d-flex col border_area_bottom">
                     <div class="d-flex text-center justify-content-center align-self-center w-100">
                       <div class="d-flex text-center">
                         <select id="window_plaster_thickness">
@@ -882,86 +688,27 @@ mysqli_close($link);
                       </div>
                     </div>
                   </div>
-                  <div class="d-flex flex-fill border_bottom"><div class="text-center align-self-center w-100"><input id="window_plaster_width" class="text-center p-0" type="text" type="number" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="3" value="0"></input>&nbsp;мм</div></div>
-                  <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_consume" class="content">15</div>&nbsp;кг/м&sup2;</div></div>
-                  <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_weight">0</div>&nbsp;кг</div></div>
-                  <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_quantity">0</div>&nbsp;шт</div></div>
-                  <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_sum">0</div>&nbsp;руб</div></div>
-                </div>
-              </div>
-            </div>
-
-          <!-- <div class="">
-            <div class="d-flex p-3">
-              <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
-              <div class="heading_block2">Грунт</div>
-            </div>
-
-            <div class="d-flex block1_ver2_1 justify-content-center pb-4 pl-4 pr-4">
-              <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px;">
-                <div class="d-flex p-2">
-                  <div class="d-flex align-self-center">
-                    <div class="block1_ver2_plaster_info_position m-0"></div>
-                  </div>
-                  <div class="flex-fill font-weight-bold">Грунт Knauf Миттельгрунд</div>
-                  <div class="d-flex align-self-center text-white">
-                    <a href="#text-popup" class="button_ver2_plaster_choice popup-content">
-                      <div class="block1_ver2_plaster_info font-weight-bold m-0">i</div>
-                    </a>
-                  </div>
-                </div>
-                <div class="d-flex pb-2" flex-fill>
-                  <a href="#text-popup" class="d-flex align-items-center w-50 p-1 popup-content">
-                    <img src="img/primer_knauf.jpg" class="img-fluid" alt="Responsive image">
-                  </a>
-                  <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
-                    <div class="d-flex" flex-fill>
-                      <div class="d-flex align-self-center">
-                        Объём: 10 л
-                        <br>Предназначен для обработки поверхностей: газо – и пенобетона, керамического и силикатного кирпича, керамзито – и шлакоблоков, гипсовых и цементных штукатурок; бетонной, цементной и гипсовой стяжки.
-                        <br>Состав: полимерная дисперсия.
-                      </div>
+                  <div class="d-flex col border_area_bottom_right">
+                    <div class="text-center align-self-center w-100">
+                      <input id="window_plaster_width" class="text-center p-0" type="text" type="number" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" maxlength="3" value="0"></input>
+                      &nbsp;мм
                     </div>
-                    <div class="text-center">
-                      Цена: 2064 руб
-                    </div>
+                  </div>
+                  <div class="out_display">
+                    <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div class=""id="window_plaster_price"><?php echo($plaster1)?></div>&nbsp;руб</div></div>
+                    <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_consume" class="content">15</div>&nbsp;кг/м&sup2;</div></div>
+                    <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_weight">0</div>&nbsp;кг</div></div>
+                    <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_quantity">0</div>&nbsp;шт</div></div>
+                    <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="window_plaster_sum">0</div>&nbsp;руб</div></div>
                   </div>
                 </div>
               </div>
 
-              <div class="d-flex flex-column text-center block1_ver2_plaster bg-white shadow_2" style="height: ; width: 550px">
-                <div class="d-flex p-2">
-                  <div class="d-flex align-self-center">
-                    <div class="block1_ver2_plaster_info_position m-0"></div>
-                  </div>
-                  <div class="flex-fill font-weight-bold">Грунт Крепс Праймер</div>
-                  <div class="d-flex align-self-center text-white">
-                    <a href="#text-popup" class="button_ver2_plaster_choice popup-content">
-                      <div class="block1_ver2_plaster_info font-weight-bold m-0">i</div>
-                    </a>
-                  </div>
-                </div>
-                <div class="d-flex pb-2" flex-fill>
-                  <a href="#text-popup" class="d-flex align-items-center w-50 p-1 popup-content">
-                    <img src="img/primer_kreps.jpg" class="img-fluid" alt="Responsive image">
-                  </a>
-                  <div class="d-flex flex-column block1_ver2_plaster_info_text text-left font-weight-bold p-1 w-50">
-                    <div class="d-flex" flex-fill>
-                      <div class="d-flex align-self-center">
-                        Объём: 10 л
-                        <br>Наносится на все пористые основания, цементные плиты, газобетон, цементные, цементно-известковые и известковые штукатурки, бетон, железобетон, гипсокартон и другие гипсосодержащие основания.
-                        <br>Для внутренних и наружных работ.
-                      </div>
-                    </div>
-                    <div class="text-center">
-                      Цена: 1548 руб
-                    </div>
-                  </div>
-                </div>
+              <div class="d-flex w-50 button_calculate justify-content-center">
+                <button id="button_calculate_window" type="button" class="align-self-center text-center button_calculate_1 font-weight-bold">Произвести рассчёт</button>
               </div>
-            </div>
 
-          </div> -->
+            </div>
 
             <div class="out_display">
               <div class="d-flex font-weight-bold string_1">
@@ -1388,12 +1135,12 @@ mysqli_close($link);
 
       <!-- Строка 0 -->
       <div class="d-flex font-weight-bold string_3">
-        <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">Тип основания</div></div>
-        <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Площадь</div></div>
-        <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Штукатурка</div></div>
-        <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Толщина слоя</div></div>
-        <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">Стоимость</div></div>
-        <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
+        <div class="d-flex col border_top_left"><div class="text-center align-self-center w-100">Тип основания</div></div>
+        <div class="d-flex col border_top"><div class="text-center align-self-center w-100">Площадь</div></div>
+        <div class="d-flex col border_top"><div class="text-center align-self-center w-100">Штукатурка</div></div>
+        <div class="d-flex col border_top"><div class="text-center align-self-center w-100">Толщина слоя</div></div>
+        <div class="d-flex col border_top"><div class="text-center align-self-center w-100">Стоимость</div></div>
+        <div class="d-flex col border_top_right"><div class="text-center align-self-center w-100">Цена</div></div>
       </div>
 
       <div class="block4_workresult_wall" id="block4_workresult_wall_id">
@@ -1404,12 +1151,12 @@ mysqli_close($link);
 
       <!-- Строка 2 -->
         <div class="d-flex string_4">
-          <div class="d-flex flex-fill border_bottom_left"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_object_type">Старый фонд</div>&nbsp;</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_square">0</div>&nbsp;м&sup2;</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_plaster">Knauf MP 75</div></div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_thickness">15</div>&nbsp;мм</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_quantity"><?php echo($dirty)?></div>&nbsp;руб</div></div>
-          <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_sum">0</div>&nbsp;руб</div></div>
+          <div class="d-flex col border_bottom_left"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_object_type">Старый фонд</div>&nbsp;</div></div>
+          <div class="d-flex col border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_square">0</div>&nbsp;м&sup2;</div></div>
+          <div class="d-flex col border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_plaster">Knauf MP 75</div></div></div>
+          <div class="d-flex col border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_thickness">15</div>&nbsp;мм</div></div>
+          <div class="d-flex col border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_quantity"><?php echo($dirty)?></div>&nbsp;руб</div></div>
+          <div class="d-flex col border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_wall_sum">0</div>&nbsp;руб</div></div>
         </div>
       </div>
 
@@ -1421,12 +1168,12 @@ mysqli_close($link);
 
       <!-- Строка 4 -->
         <div class="d-flex string_4">
-          <div class="d-flex flex-fill border_bottom_left"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_roof_object_type">Старый фонд</div>&nbsp;</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_roof_square">0</div>&nbsp;м&sup2;</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_roof_plaster">Knauf MP 75</div></div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_roof_thickness">15</div>&nbsp;мм</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_roof_quantity"><?php echo($clear2)?></div>&nbsp;руб</div></div>
-          <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_roof_sum">0</div>&nbsp;руб</div></div>
+          <div class="d-flex col border_bottom_left"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_roof_object_type">Старый фонд</div>&nbsp;</div></div>
+          <div class="d-flex col border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_roof_square">0</div>&nbsp;м&sup2;</div></div>
+          <div class="d-flex col border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_roof_plaster">Knauf MP 75</div></div></div>
+          <div class="d-flex col border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_roof_thickness">15</div>&nbsp;мм</div></div>
+          <div class="d-flex col border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_roof_quantity"><?php echo($clear2)?></div>&nbsp;руб</div></div>
+          <div class="d-flex col border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_roof_sum">0</div>&nbsp;руб</div></div>
         </div>
       </div>
 
@@ -1438,18 +1185,18 @@ mysqli_close($link);
 
       <!-- Строка 6 -->
         <div class="d-flex string_4">
-          <div class="d-flex flex-fill border_bottom_left"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_window_object_type">Старый фонд</div>&nbsp;</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_window_square">0</div>&nbsp;м&sup2;</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_window_plaster">Knauf MP 75</div></div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_window_thickness">15</div>&nbsp;мм</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_window_quantity"><?php echo($clear3)?></div>&nbsp;руб</div></div>
-          <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_window_sum">0</div>&nbsp;руб</div></div>
+          <div class="d-flex col border_bottom_left"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_window_object_type">Старый фонд</div>&nbsp;</div></div>
+          <div class="d-flex col border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_window_square">0</div>&nbsp;м&sup2;</div></div>
+          <div class="d-flex col border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_window_plaster">Knauf MP 75</div></div></div>
+          <div class="d-flex col border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_window_thickness">15</div>&nbsp;мм</div></div>
+          <div class="d-flex col border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_window_quantity"><?php echo($clear3)?></div>&nbsp;руб</div></div>
+          <div class="d-flex col border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_window_sum">0</div>&nbsp;руб</div></div>
         </div>
       </div>
 
       <!-- Строка 7 -->
       <div class="d-flex font-weight-bold string_4">
-        <div class="d-flex flex-fill col-4 border_middle_left_3">
+        <div class="d-flex col border_middle_left_3">
           <div class="d-flex align-self-center justify-content-center w-100">Ваша скидка:</div>
           <div class="d-flex align-self-center button_info_position">
             <a href="#modal_sale" class="d-flex popup-content justify-content-center button_info_press_zone">
@@ -1457,15 +1204,15 @@ mysqli_close($link);
             </a>
           </div>
         </div>
-        <div class="d-flex flex-fill col-4 border_middle_3"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_sale_percent">0</div>&nbsp;%</div></div>
-        <div class="d-flex flex-fill col-4 border_middle_right_3"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_sale_sum">0</div>&nbsp;руб</div></div>
+        <div class="d-flex col border_middle_3"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_sale_percent">0</div>&nbsp;%</div></div>
+        <div class="d-flex col border_middle_right_3"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_sale_sum">0</div>&nbsp;руб</div></div>
       </div>
 
       <!-- Строка 8 -->
       <div class="d-flex string_5 font-weight-bold">
-        <div class="d-flex flex-fill col-4 border_middle_left_2"><div class="text-center align-self-center w-100"></div></div>
-        <div class="d-flex flex-fill col-4 border_bottom_3"><div class="text-center align-self-center w-100">Итого по работе:</div></div>
-        <div class="d-flex flex-fill col-4 border_bottom_right_3"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_common_sum">0</div>&nbsp;руб</div></div>
+        <div class="d-flex col border_middle_left_2"><div class="text-center align-self-center w-100"></div></div>
+        <div class="d-flex col border_bottom_3"><div class="text-center align-self-center w-100">Итого по работе:</div></div>
+        <div class="d-flex col border_bottom_right_3"><div class="d-flex align-self-center justify-content-center w-100"><div id="work_outlay_common_sum">0</div>&nbsp;руб</div></div>
       </div>
 
     </div>
@@ -1743,6 +1490,7 @@ mysqli_close($link);
 
       </div>
     </div>
+  </div>
 
   <!-- Modal Primer Kreps -->
   <div id="modal_primer_kreps" class="white-popup mfp-hide">
@@ -1897,11 +1645,11 @@ mysqli_close($link);
               <p><span class="font-weight-bold">Высота: </span>0,6 мм
               <p><span class="font-weight-bold">Производитель: </span>Россия
             </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
 
   <script src="script.js" type="text/javascript"></script>
 </body>

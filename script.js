@@ -27,6 +27,28 @@ var price_clear3=parseFloat($('#price_clear3').html());
 
 $(function(){
 
+  $('#wall_plaster_square').focus(function(){
+    $('#button_calculate_wall').addClass('button_calculate_2');
+    $('#button_calculate_wall').addClass('button_ver2_plaster_choice');
+  });
+
+  $('#roof_plaster_square').focus(function(){
+    $('#button_calculate_roof').addClass('button_calculate_2');
+    $('#button_calculate_roof').addClass('button_ver2_plaster_choice');
+  });
+
+  $('#window_plaster_square').focus(function(){
+    if($('#window_plaster_width').val()!='0'){
+      $('#button_calculate_window').addClass('button_calculate_2');
+      $('#button_calculate_window').addClass('button_ver2_plaster_choice');
+    }
+  });
+  $('#window_plaster_width').focus(function(){
+    if($('#window_plaster_square').val()!='0'){
+      $('#button_calculate_window').addClass('button_calculate_2');
+      $('#button_calculate_window').addClass('button_ver2_plaster_choice');
+    }
+  });
 
   //type
   (function() {
@@ -40,13 +62,13 @@ $(function(){
       card.addEventListener( "click", function() {
         var c = this.classList;
         c.add("flipped");
-        $('#return_to_font').removeClass('out_display');
+        $('#return_to_font').addClass('button_type_object_ready');
       });
     }
   })();
   $('#return_to_font').click(function(){
     $('.effect__click').removeClass('flipped');
-    $('#return_to_font').addClass('out_display');
+    $('#return_to_font').removeClass('button_type_object_ready');
   });
   //calculator
   $('.block1_place_').change(function(){
@@ -212,10 +234,8 @@ $(function(){
       $('#wall_plaster_square').val('0');
     if($('#wall_plaster_square').val()==='0')
       $('#checkmark_wall').removeClass('checkmark_ready');
-   $('#button_calculate').addClass('out_display');
     if($('#wall_plaster_square').val()!='0')
       $('#checkmark_wall').addClass('checkmark_ready');
-      $('#button_calculate').removeClass('out_display');
 
     $('#wall_primer_square').text($('#wall_plaster_square').val());
     $('#wall_grid_square').text($('#wall_plaster_square').val());
@@ -235,6 +255,10 @@ $(function(){
   $('#roof_plaster_square').change(function(){
     if($('#roof_plaster_square').val()==='')
       $('#roof_plaster_square').val('0');
+    if($('#roof_plaster_square').val()==='0')
+      $('#checkmark_roof').removeClass('checkmark_ready');
+    if($('#roof_plaster_square').val()!='0')
+      $('#checkmark_roof').addClass('checkmark_ready');
 
     $('#roof_primer_square').text($('#roof_plaster_square').val());
 
@@ -254,9 +278,13 @@ $(function(){
   $('#window_plaster_square').change(function(){
     if($('#window_plaster_square').val()==='')
       $('#window_plaster_square').val('0');
+    if($('#window_plaster_square').val()==='0' && $('#window_plaster_width').val()==='0')
+      $('#checkmark_window').removeClass('checkmark_ready');
     if($('#window_plaster_square').val()!='0' && $('#window_plaster_width').val()!='0'){
       $('.block4_workresult_window').removeClass('block4_workresult_window');
       $('.block3_material_window').removeClass('block3_material_window');
+      $('#checkmark_window').addClass('checkmark_ready');
+
       $('#window_primer_square').text((parseFloat($('#window_plaster_square').val())*parseFloat($('#window_plaster_width').val())/1000).toFixed(1));
       window_plaster();
       window_primer();
@@ -272,9 +300,12 @@ $(function(){
   $('#window_plaster_width').change(function(){
     if($('#window_plaster_width').val()==='')
       $('#window_plaster_width').val('0');
+    if($('#window_plaster_square').val()==='0' && $('#window_plaster_width').val()==='0')
+      $('#checkmark_window').removeClass('checkmark_ready');
     if($('#window_plaster_square').val()!='0' && $('#window_plaster_width').val()!='0'){
       $('.block4_workresult_window').removeClass('block4_workresult_window');
       $('.block3_material_window').removeClass('block3_material_window');
+      $('#checkmark_window').addClass('checkmark_ready');
       $('#window_primer_square').text((parseFloat($('#window_plaster_square').val())*parseFloat($('#window_plaster_width').val())/1000).toFixed(1));
       window_plaster();
       window_primer();
