@@ -35,6 +35,29 @@ if($result)
   mysqli_free_result($result);
 }
 mysqli_close($link);
+function testfun()
+{
+echo "Your test function on button click is working";
+$to = 'goshakkoshak65@gmail.com';
+$subject='the subject';
+$message=$_POST['name'];
+$headers = 'From: goshkakoshka65@gmail.com' . "\r\n" .
+    'Reply-To: goshkakoshka65@gmail.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+if(mail($to, $subject, $message, $headers)){
+  echo'Письмо успешно отправлено';
+ }
+ else {
+   echo 'Ошибка';
+ }
+ echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/index.php">';
+}
+if(array_key_exists('but',$_POST)){
+testfun();
+}
+
+
  ?>
 
 <!DOCTYPE html>
@@ -50,8 +73,13 @@ mysqli_close($link);
   <link rel="stylesheet" type="text/css" href="style.css"/>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <script src="script2.js" type="text/javascript"></script>
 </head>
 <body>
+  <form method="post">
+    <input type="text" name="name" placeholder="Введите ваше имя" >
+    <input type="submit" name="but" id="but" value="OK" /><br/>
+  </form>
   <!-- Block1 -->
   <div style="display: ;">
     <div id="price_plaster1"><?php echo($plaster1)?></div>
@@ -474,7 +502,7 @@ mysqli_close($link);
                     </div>
                   </div>
                   <div class="out_display">
-                    <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div class=""id="wall_plaster_price">435</div>&nbsp;руб</div></div>
+                    <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div class=""id="wall_plaster_price"><?php echo($plaster1)?></div>&nbsp;руб</div></div>
                     <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_plaster_consume" class="content">15</div>&nbsp;кг/м&sup2;</div></div>
                     <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_plaster_weight">0</div>&nbsp;кг</div></div>
                     <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100"><div id="wall_plaster_quantity">0</div>&nbsp;шт</div></div>
@@ -484,8 +512,8 @@ mysqli_close($link);
               </div>
 
               <div class="d-flex w-50 button_calculate justify-content-center">
-                <button type="button" class="align-self-center text-center button_calculate_1 button_ver2_plaster_choice font-weight-bold">Произвести рассчёт</button>
-                <div id="button_calculate" class="button_calculate_2 out_display"></div>
+                <button type="button" id="usless_but" class="align-self-center text-center button_calculate_1  font-weight-bold">Произвести рассчёт</button>
+
               </div>
 
             </div>

@@ -26,7 +26,9 @@ var price_clear2=parseFloat($('#price_clear2').html());
 var price_clear3=parseFloat($('#price_clear3').html());
 
 $(function(){
-
+  $('#wall_plaster_square').focus(function(){
+    $('#usless_but').addClass('button_calculate_2');
+  });
 
   //type
   (function() {
