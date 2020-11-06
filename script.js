@@ -20,7 +20,7 @@ var price_shim=parseFloat($('#price_shim').html());
 var price_nail=parseFloat($('#price_nail').html());
 var price_dirty=parseFloat($('#price_dirty').html());
 var price_clear1=parseFloat($('#price_clear1').html());
-var price_dirty2=parseFloat($('#price_dirty').html());
+var price_dirty2=parseFloat($('#price_dirty2').html());
 var price_clear4=parseFloat($('#price_clear4').html());
 var price_clear2=parseFloat($('#price_clear2').html());
 var price_clear3=parseFloat($('#price_clear3').html());
@@ -76,6 +76,7 @@ $(function(){
     switch(value){
       case 1:
         place=1;
+        $('#type_of_wall').val('1');
         $('#wall_primer_price').text(price_primer1);
         $('#roof_primer_price').text(price_primer1);
         $('#window_primer_price').text(price_primer1);
@@ -94,9 +95,12 @@ $(function(){
 
         $('#fond_card').removeClass('forcards');
         $('#other_card').addClass('forcards');
+
+
         break;
       case 2:
         place=2;
+        $('#type_of_wall').val('2');
         $('#wall_primer_price').text(price_primer1);
         $('#roof_primer_price').text(price_primer1);
         $('#window_primer_price').text(price_primer1);
@@ -115,9 +119,12 @@ $(function(){
 
         $('#fond_card').addClass('forcards');
         $('#other_card').removeClass('forcards');
+
+
         break;
       case 3:
         place=3;
+        $('#type_of_wall').val('3');
         $('#wall_primer_price').text(price_primer2);
         $('#roof_primer_price').text(price_primer2);
         $('#window_primer_price').text(price_primer2);
@@ -136,9 +143,12 @@ $(function(){
 
         $('#fond_card').addClass('forcards');
         $('#other_card').removeClass('forcards');
+
+
         break;
       case 4:
         place=4;
+        $('#type_of_wall').val('4');
         $('#wall_primer_price').text(price_primer2);
         $('#roof_primer_price').text(price_primer2);
         $('#window_primer_price').text(price_primer2);
@@ -157,6 +167,8 @@ $(function(){
 
         $('#fond_card').addClass('forcards');
         $('#other_card').removeClass('forcards');
+
+
         break;
     }
     wall_primer();
@@ -170,6 +182,9 @@ $(function(){
     switch(value){
       case 1:
         plaster=1;
+        $('#plaster_wall_for_mail').val('1');
+        $('#plaster_roof_for_mail').val('1');
+        $('#plaster_window_for_mails').val('1');
         $('#wall_plaster_price').text(price_plaster1);
         $('#roof_plaster_price').text(price_plaster1);
         $('#window_plaster_price').text(price_plaster1);
@@ -183,6 +198,9 @@ $(function(){
         break;
       case 2:
         plaster=2;
+        $('#plaster_wall_for_mail').val('2');
+        $('#plaster_roof_for_mail').val('2');
+        $('#plaster_window_for_mail').val('2');
         $('#wall_plaster_price').text(price_plaster2);
         $('#roof_plaster_price').text(price_plaster2);
         $('#window_plaster_price').text(price_plaster2);
@@ -196,6 +214,9 @@ $(function(){
         break;
       case 3:
         plaster=3;
+        $('#plaster_wall_for_mail').val('3');
+        $('#plaster_roof_for_mail').val('3');
+        $('#plaster_window_for_mail').val('3');
         $('#wall_plaster_price').text(price_plaster3);
         $('#roof_plaster_price').text(price_plaster3);
         $('#window_plaster_price').text(price_plaster3);
@@ -209,6 +230,9 @@ $(function(){
         break;
       case 4:
         plaster=4;
+        $('#plaster_wall_for_mail').val('4');
+        $('#plaster_roof_for_mail').val('4');
+        $('#plaster_window_for_mail').val('4');
         $('#wall_plaster_price').text(price_plaster4);
         $('#roof_plaster_price').text(price_plaster4);
         $('#window_plaster_price').text(price_plaster4);
@@ -230,13 +254,15 @@ $(function(){
   });
   //wall
   $('#wall_plaster_square').change(function(){
+
     if($('#wall_plaster_square').val()==='')
       $('#wall_plaster_square').val('0');
     if($('#wall_plaster_square').val()==='0')
       $('#checkmark_wall').removeClass('checkmark_ready');
     if($('#wall_plaster_square').val()!='0')
       $('#checkmark_wall').addClass('checkmark_ready');
-
+    var sss=$('#wall_plaster_square').val();
+    $('#square_wall_for_mail').val(sss);
     $('#wall_primer_square').text($('#wall_plaster_square').val());
     $('#wall_grid_square').text($('#wall_plaster_square').val());
     $('.block4_workresult_wall').removeClass('block4_workresult_wall');
@@ -247,12 +273,15 @@ $(function(){
     $('html, body').animate({
         scrollTop: $("#block3_material").offset().top
       }, 1000);
+
   });
   $('#wall_plaster_thickness').change(function(){
+      $('#thikness_wall_for_mail').val($('#wall_plaster_thickness').find(':selected').val());
       wall_plaster();
   });
   //roof
   $('#roof_plaster_square').change(function(){
+    $('#square_roof_for_mail').val($('#roof_plaster_square').val());
     if($('#roof_plaster_square').val()==='')
       $('#roof_plaster_square').val('0');
     if($('#roof_plaster_square').val()==='0')
@@ -272,10 +301,12 @@ $(function(){
       }, 1000);
   });
   $('#roof_plaster_thickness').change(function(){
+    $('#thikness_roof_for_mail').val($('#roof_plaster_thickness').find(':selected').val());
       roof_plaster();
   });
   //window
   $('#window_plaster_square').change(function(){
+    $('#square_window_for_mail').val($('#window_plaster_square').val());
     if($('#window_plaster_square').val()==='')
       $('#window_plaster_square').val('0');
     if($('#window_plaster_square').val()==='0' && $('#window_plaster_width').val()==='0')
@@ -295,9 +326,11 @@ $(function(){
 
   });
   $('#window_plaster_thickness').change(function(){
+    $('#thikness_window_for_mail').val($('#window_plaster_thickness').find(':selected').val());
     window_plaster();
   });
   $('#window_plaster_width').change(function(){
+    $('#width_window_for_mail').val($('#window_plaster_width').val());
     if($('#window_plaster_width').val()==='')
       $('#window_plaster_width').val('0');
     if($('#window_plaster_square').val()==='0' && $('#window_plaster_width').val()==='0')
@@ -370,18 +403,36 @@ $(function(){
 
   //material plaster change
   $('#plaster_wall_outlay').change(function(){
+    switch(parseFloat($('#plaster_wall_outlay').find(':selected').val())){
+      case price_plaster1: $('#plaster_wall_for_mail').val('1'); break;
+      case price_plaster2: $('#plaster_wall_for_mail').val('2'); break;
+      case price_plaster3: $('#plaster_wall_for_mail').val('3'); break;
+      case price_plaster4: $('#plaster_wall_for_mail').val('4'); break;
+    }
     $('#wall_plaster_price').text($('#plaster_wall_outlay').find(':selected').val());
     $('#plaster_wall_outlay_price').text($('#plaster_wall_outlay').find(':selected').val());
     wall_plaster();
     info_but1();
   });
   $('#plaster_roof_outlay').change(function(){
+    switch(parseFloat($('#plaster_roof_outlay').find(':selected').val())){
+      case price_plaster1: $('#plaster_roof_for_mail').val('1'); break;
+      case price_plaster2: $('#plaster_roof_for_mail').val('2'); break;
+      case price_plaster3: $('#plaster_roof_for_mail').val('3'); break;
+      case price_plaster4: $('#plaster_roof_for_mail').val('4'); break;
+    }
     $('#roof_plaster_price').text($('#plaster_roof_outlay').find(':selected').val());
     $('#plaster_roof_outlay_price').text($('#plaster_roof_outlay').find(':selected').val());
     roof_plaster();
     info_but2();
   });
   $('#plaster_window_outlay').change(function(){
+    switch(parseFloat($('#plaster_window_outlay').find(':selected').val())){
+      case price_plaster1: $('#plaster_window_for_mail').val('1'); break;
+      case price_plaster2: $('#plaster_window_for_mail').val('2'); break;
+      case price_plaster3: $('#plaster_window_for_mail').val('3'); break;
+      case price_plaster4: $('#plaster_window_for_mail').val('4'); break;
+    }
     $('#window_plaster_price').text($('#plaster_window_outlay').find(':selected').val());
     $('#plaster_window_outlay_price').text($('#plaster_window_outlay').find(':selected').val());
     window_plaster();
@@ -473,31 +524,35 @@ $(function(){
   });
   $('.radio_type').change(function(){
     var value=parseInt($('input[name=types]:checked').val());
-    if(value===220){
+    if(value===price_dirty2){
       $('#finish_dirty').addClass('box_outline');
       $('#finish_dirty_2').addClass('box_outline');
       $('#finish_clear').removeClass('box_outline');
       $('#finish_clear_2').removeClass('box_outline');
+      $('#facing_wall_for_mail').val('1');
     } else {
       $('#finish_clear').addClass('box_outline');
       $('#finish_clear_2').addClass('box_outline');
       $('#finish_dirty').removeClass('box_outline');
       $('#finish_dirty_2').removeClass('box_outline');
+      $('#facing_wall_for_mail').val('2');
     }
     recalc();
   });
   $('.radio_type1').change(function(){
     var value=parseFloat($('input[name=types_fond]:checked').val());
-    if(value===320){
+    if(value===price_dirty){
       $('#finish_dirty2').addClass('box_outline');
       $('#finish_dirty2_2').addClass('box_outline');
       $('#finish_clear2').removeClass('box_outline');
       $('#finish_clear2_2').removeClass('box_outline');
+      $('#facing_wallk_for_mail').val('1');
     } else {
       $('#finish_clear2').addClass('box_outline');
       $('#finish_clear2_2').addClass('box_outline');
       $('#finish_dirty2').removeClass('box_outline');
       $('#finish_dirty2_2').removeClass('box_outline');
+      $('#facing_wallk_for_mail').val('2');
     }
     recalc();
   });
@@ -676,6 +731,22 @@ $(function(){
   $('#window_plaster_consume').bind('DOMNodeInserted DOMNodeRemoved', function(){
     $('#plaster_window_outlay_consume').text($('#window_plaster_consume').html());
   });
+  $('#common_sum_square').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    $('#sum_square_for_mail').val(  $('#common_sum_square').html());
+  });
+  $('#common_sum_work').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    $('#sum_work_for_mail').val($('#common_sum_work').html());
+  });
+  $('#common_sum_material').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    $('#sum_material_for_mail').val($('#common_sum_material').html());
+  });
+  $('#common_sum_sale_').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    $('#sale_for_mail').val($('#common_sum_sale_').html());
+  });
+  $('#common_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
+    $('#sum_for_mail').val($('#common_sum').html());
+  });
+
 })
 function wall_plaster(){
   var square = parseFloat($('#wall_plaster_square').val());

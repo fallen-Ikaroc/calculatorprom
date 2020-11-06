@@ -1,64 +1,127 @@
+<script src="script2.js" type="text/javascript"></script>
 <?php
-require_once 'connection.php';
-$link = mysqli_connect($host, $user, $password, $database)
-    or die("Ошибка " . mysqli_error($link));
-$query ="SELECT * FROM prices";
-$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
-if($result)
-{
-  $rows = mysqli_num_rows($result); // количество полученных строк
+    require_once 'connection.php';
+    $link = mysqli_connect($host, $user, $password, $database)
+        or die("Ошибка " . mysqli_error($link));
+    $query ="SELECT * FROM prices";
+    $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
+    if($result)
+    {
+      $rows = mysqli_num_rows($result); // количество полученных строк
 
-  for ($i = 0 ; $i < $rows ; ++$i)
-  {
-      $row = mysqli_fetch_row($result);
-      switch($row[0]){
-        case 'plaster1': $plaster1=$row[1]; break;
-        case 'plaster2': $plaster2=$row[1]; break;
-        case 'plaster3': $plaster3=$row[1]; break;
-        case 'plaster4': $plaster4=$row[1]; break;
-        case 'primer1': $primer1=$row[1]; break;
-        case 'primer2': $primer2=$row[1]; break;
-        case 'grid1': $grid1=$row[1]; break;
-        case 'grid2': $grid2=$row[1]; break;
-        case 'pharos': $pharos=$row[1]; break;
-        case 'shim': $shim=$row[1]; break;
-        case 'nail': $nail=$row[1]; break;
-        case 'dirty': $dirty=$row[1]; break;
-        case 'dirty2': $dirty2=$row[1]; break;
-        case 'clear4': $clear4=$row[1]; break;
-        case 'clear1': $clear1=$row[1]; break;
-        case 'clear2': $clear2=$row[1]; break;
-        case 'clear3': $clear3=$row[1]; break;
+      for ($i = 0 ; $i < $rows ; ++$i)
+      {
+          $row = mysqli_fetch_row($result);
+          switch($row[0]){
+            case 'plaster1': $plaster1=$row[1]; break;
+            case 'plaster2': $plaster2=$row[1]; break;
+            case 'plaster3': $plaster3=$row[1]; break;
+            case 'plaster4': $plaster4=$row[1]; break;
+            case 'primer1': $primer1=$row[1]; break;
+            case 'primer2': $primer2=$row[1]; break;
+            case 'grid1': $grid1=$row[1]; break;
+            case 'grid2': $grid2=$row[1]; break;
+            case 'pharos': $pharos=$row[1]; break;
+            case 'shim': $shim=$row[1]; break;
+            case 'nail': $nail=$row[1]; break;
+            case 'dirty': $dirty=$row[1]; break;
+            case 'dirty2': $dirty2=$row[1]; break;
+            case 'clear4': $clear4=$row[1]; break;
+            case 'clear1': $clear1=$row[1]; break;
+            case 'clear2': $clear2=$row[1]; break;
+            case 'clear3': $clear3=$row[1]; break;
+          }
       }
-  }
-  // очищаем результат
-  mysqli_free_result($result);
-}
-mysqli_close($link);
-function testfun()
-{
-echo "Your test function on button click is working";
-$to = 'goshakkoshak65@gmail.com';
-$subject='the subject';
-$message=$_POST['name'];
-$headers = 'From: goshkakoshka65@gmail.com' . "\r\n" .
-    'Reply-To: goshkakoshka65@gmail.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
+      // очищаем результат
+      mysqli_free_result($result);
+    }
+    mysqli_close($link);
+    function testfun()
+    {
+      $to = 'goshakkoshak65@gmail.com';
+      $subject='the subject';
+      $message='Имя: '.$_POST['name']."\r\n".
+               'Фамилия: '.$_POST['surname']."\r\n".
+              'Почта: '.$_POST['email']."\r\n".
+              'Телефон: '.$_POST['telephone']."\r\n"."\r\n";
+      switch($_POST['type_of_wall']){
+        case 1: $message= $message.'Тип стены: кирпич'."\r\n"; break;
+        case 2: $message= $message.'Тип стены: монолит'."\r\n"; break;
+        case 3: $message= $message.'Тип стены: газобетон'."\r\n"; break;
+        case 4: $message= $message.'Тип стены: шлакоблок'."\r\n"; break;
+      }
+      if($_POST['square_wall']!=0)
+      {
+        $message= $message."\r\n".'СТЕНЫ'."\r\n";
+        switch($_POST['plaster_wall']){
+          case 1: $message= $message.'Штукатурка: гипсовая Knauf MP 75.'."\r\n"; break;
+          case 2: $message= $message.'Штукатурка: гипсовая ВОЛМА-Гипс-Актив.'."\r\n"; break;
+          case 3: $message= $message.'Штукатурка: цементная Knauf UNTERPUTZ.'."\r\n"; break;
+          case 4: $message= $message.'Штукатурка: цементная Plitonit T1+.'."\r\n"; break;
+        }
+        $message= $message.'Площадь стен: '.$_POST['square_wall']." м²"."\r\n".
+                  'Толщина слоя: '.$_POST['thikness_wall']." мм"."\r\n";
+        if($_POST['type_of_wall']==1)
+        {
+          if($_POST['facing_wallk']==1)
+            $message= $message.'Тип отделки: черновая'."\r\n";
+          else
+            $message= $message.'Тип отделки: чистовая'."\r\n";
+        }
+        else
+        {
+          if($_POST['facing_wall']==1)
+            $message= $message.'Тип отделки: черновая'."\r\n";
+          else
+            $message= $message.'Тип отделки: чистовая'."\r\n";
+        }
+      }
 
-if(mail($to, $subject, $message, $headers)){
-  echo'Письмо успешно отправлено';
- }
- else {
-   echo 'Ошибка';
- }
- echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/index.php">';
-}
-if(array_key_exists('but',$_POST)){
-testfun();
-}
+      if($_POST['square_roof']!=0){
+        $message= $message."\r\n".'ПОТОЛКИ'."\r\n";
+        switch($_POST['plaster_roof']){
+          case 1: $message= $message.'Штукатурка: гипсовая Knauf MP 75.'."\r\n"; break;
+          case 2: $message= $message.'Штукатурка: гипсовая ВОЛМА-Гипс-Актив.'."\r\n"; break;
+          case 3: $message= $message.'Штукатурка: цементная Knauf UNTERPUTZ.'."\r\n"; break;
+          case 4: $message= $message.'Штукатурка: цементная Plitonit T1+.'."\r\n"; break;
+        }
+        $message= $message.'Площадь потолков: '.$_POST['square_roof']." м²"."\r\n".
+                  'Толщина слоя: '.$_POST['thikness_roof']." мм"."\r\n";
+      }
 
+      if($_POST['square_window']!=0 && $_POST['width_window']!=0){
+        $message= $message."\r\n".'ОТКОСЫ'."\r\n";
+        switch($_POST['plaster_window']){
+          case 1: $message= $message.'Штукатурка: гипсовая Knauf MP 75.'."\r\n"; break;
+          case 2: $message= $message.'Штукатурка: гипсовая ВОЛМА-Гипс-Актив.'."\r\n"; break;
+          case 3: $message= $message.'Штукатурка: цементная Knauf UNTERPUTZ.'."\r\n"; break;
+          case 4: $message= $message.'Штукатурка: цементная Plitonit T1+.'."\r\n"; break;
+        }
+        $message= $message.'Площадь откосов: '.$_POST['square_window']." мп"."\r\n".
+                           'Ширина откосов: '.$_POST['width_window']." мм"."\r\n".
+                           'Толщина слоя: '.$_POST['thikness_window']." мм"."\r\n";
+      }
+      $message=$message."\r\n"."Общая смета"."\r\n".
+                        "Сумма площадей: ".$_POST['sum_square']." м²"."\r\n".
+                        "Стоимость работ: ".$_POST['sum_work']." руб"."\r\n".
+                        "Стоимость материалов: ".$_POST['sum_material']." руб"."\r\n".
+                        "Скидка: ".$_POST['sale']." руб"."\r\n".
+                        "Общая стоимость: ".$_POST['sum']." руб";
+      $headers = 'From: Строительный вопрос' . "\r\n";
 
- ?>
+      if(mail($to, $subject, $message, $headers)){
+        echo 'Письмо успешно отправлено';
+       }
+       else {
+         echo 'Ошибка';
+       }
+       echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/">';
+    }
+    if(array_key_exists('but',$_POST))
+    {
+      testfun();
+    }
+?>
 
 <!DOCTYPE html>
 <html>
@@ -78,12 +141,40 @@ testfun();
 <body>
 
   <form method="post">
-    <input type="text" name="name" placeholder="Введите ваше имя" >
-    <input type="submit" name="but" id="but" value="OK" /><br/>
+    <input type="text" name="name" placeholder="Введите ваше имя" style="display: block">
+    <input type="text" name="surname" placeholder="Введите вашу фамилию" style="display: block">
+    <input type="text" name="email" placeholder="Введите вашу почту" style="display: block">
+    <input type="text" name="telephone" placeholder="Введите ваш номер" style="display: block">
+    <div style="display: none">
+      <input id="type_of_wall" type"text" name="type_of_wall"  value='1'style="display: block">
+
+      <input id="square_wall_for_mail" type"text" name="square_wall"  value='0' style="display: block">
+
+      <input id="thikness_wall_for_mail" type"text" name="thikness_wall"  value='15' style="display: block">
+      <input id="facing_wallk_for_mail" type"text" name="facing_wallk"  value='1' style="display: block">
+      <input id="facing_wall_for_mail" type"text" name="facing_wall"  value='1' style="display: block">
+      <input id="plaster_wall_for_mail" type"text" name="plaster_wall"  value='1' style="display: block">
+
+      <input id="square_roof_for_mail" type"text" name="square_roof"  value='0' style="display: block">
+      <input id="thikness_roof_for_mail" type"text" name="thikness_roof"  value='15' style="display: block">
+      <input id="plaster_roof_for_mail" type"text" name="plaster_roof"  value='1' style="display: block">
+
+      <input id="square_window_for_mail" type"text" name="square_window"  value='0' style="display: block">
+      <input id="width_window_for_mail" type"text" name="width_window"  value='0' style="display: block">
+      <input id="thikness_window_for_mail" type"text" name="thikness_window"  value='15' style="display: block">
+      <input id="plaster_window_for_mail" type"text" name="plaster_window"  value='1' style="display: block">
+
+      <input id="sum_square_for_mail" type"text" name="sum_square"  value='0' style="display: block">
+      <input id="sum_work_for_mail" type"text" name="sum_work"  value='0' style="display: block">
+      <input id="sum_material_for_mail" type"text" name="sum_material"  value='0' style="display: block">
+      <input id="sale_for_mail" type"text" name="sale"  value='0' style="display: block">
+      <input id="sum_for_mail" type"text" name="sum"  value='0' style="display: block">
+    </div>
+    <input type="submit" name="but" id="but" value="Отправить" /><br/>
   </form>
 
   <!-- Block1 -->
-  <div style="display: ;">
+  <div style="display: none;">
     <div id="price_plaster1"><?php echo($plaster1)?></div>
     <div id="price_plaster2"><?php echo($plaster2)?></div>
     <div id="price_plaster3"><?php echo($plaster3)?></div>
