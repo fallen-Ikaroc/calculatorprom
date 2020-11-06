@@ -138,16 +138,6 @@ button:focus, a:focus {
   -ms-transform: skewX(30deg);
   -o-transform: skewX(30deg);
 }
-.line_4{
-  height: 5px;
-  width: 400px;
-  background-color: #58778c;
-  transform: skewX(30deg);
-  -webkit-transform: skewX(30deg);
-  -moz-transform: skewX(30deg);
-  -ms-transform: skewX(30deg);
-  -o-transform: skewX(30deg);
-}
 .shadow_1{
   box-shadow: 12px 0px 0px 3px rgba(88, 119, 140, 0.48);
 }

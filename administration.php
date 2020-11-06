@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <title>Админ-панель</title>
+  <link rel="stylesheet" type="text/css" href="style_admin.css"/>
 </head>
 <body>
   <?php
@@ -191,143 +192,355 @@
   }
   mysqli_close($link);
   ?>
-  <form name="form" method="GET" >
-    <div style="display: flex;">
-      <div>Штукатурка Knauf MP 75 -</div>
-      <div>старая цена: <?php echo($plaster1) ?></div>
-      <input type="text" name="Price" size="10" value="<?php echo($plaster1) ?>">
-      <input type="submit" name="red1" value="Подтвердить">
-      <div><?php echo($good1) ?></div>
-    </div>
 
-    <div style="display: flex;">
-      <div>Штукатурка 2 -</div>
-      <div>старая цена: <?php echo($plaster2) ?></div>
-      <input type="text" name="Price2" size="10" value="<?php echo($plaster2) ?>">
-      <input type="submit" name="red2" value="Подтвердить">
-      <div><?php echo($good2) ?></div>
-    </div>
+<section class="administrative">
 
-    <div style="display: flex;">
-      <div>Штукатурка 3 -</div>
-      <div>старая цена: <?php echo($plaster3) ?></div>
-      <input type="text" name="Price3" size="10" value="<?php echo($plaster3) ?>">
-      <input type="submit" name="red3" value="Подтвердить">
-      <div><?php echo($good3) ?></div>
-    </div>
+  <div class="heading">Строительный вопрос
+    <div class="line_1"></div>
+    <div class="line_2"></div>
+  </div>
 
-    <div style="display: flex;">
-      <div>Штукатурка 4 -</div>
-      <div>старая цена: <?php echo($plaster4) ?></div>
-      <input type="text" name="Price4" size="10" value="<?php echo($plaster4) ?>">
-      <input type="submit" name="red4" value="Подтвердить">
-      <div><?php echo($good4) ?></div>
-    </div>
+  <form name="form" method="GET">
 
-    <div style="display: flex;">
-      <div>сетка 1 -</div>
-      <div>старая цена: <?php echo($grid1) ?></div>
-      <input type="text" name="Price5" size="10" value="<?php echo($grid1) ?>">
-      <input type="submit" name="red5" value="Подтвердить">
-      <div><?php echo($good5) ?></div>
-    </div>
+    <table class="table_pos" border="1">
 
-    <div style="display: flex;">
-      <div>сетка 2 -</div>
-      <div>старая цена: <?php echo($grid2) ?></div>
-      <input type="text" name="Price6" size="10" value="<?php echo($grid2) ?>">
-      <input type="submit" name="red6" value="Подтвердить">
-      <div><?php echo($good6) ?></div>
-    </div>
+      <!-- line 0 -->
+      <tr class="heading_table">
+        <td class="heading_table_left text-center">Название штукатурки</td>
+        <td class="heading_table text-center">Старая цена</td>
+        <td class="heading_table text-center">Новая цена</td>
+        <td class="heading_table_right change_1 text-center">Статус изменения</td>
+        <td class="heading_table_right change_2 text-center">Статус</td>
+      </tr>
 
-    <div style="display: flex;">
-      <div>грунтовка1 -</div>
-      <div>старая цена: <?php echo($primer1) ?></div>
-      <input type="text" name="Price7" size="10" value="<?php echo($primer1) ?>">
-      <input type="submit" name="red7" value="Подтвердить">
-      <div><?php echo($good7) ?></div>
-    </div>
+      <!-- line 1 -->
+      <tr>
+        <td class="column1">
+          <div>Штукатурка Knauf MP 75</div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($plaster1) ?></div>
+        </td>
+        <td>
+          <div class="d-flex">
+            <input class="column3_1" type="text" name="Price" size="6">
+            <input type="submit" name="red1" value="Подтвердить">
+          </div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($good1) ?></div>
+        </td>
+      </tr>
 
-    <div style="display: flex;">
-      <div>грунтовка2 -</div>
-      <div>старая цена: <?php echo($primer2) ?></div>
-      <input type="text" name="Price8" size="10" value="<?php echo($primer2) ?>">
-      <input type="submit" name="red8" value="Подтвердить">
-      <div><?php echo($good8) ?></div>
-    </div>
+      <!-- line 2 -->
+      <tr>
+        <td class="column1">
+          <div сlass="column1">Штукатурка ВОЛМА-Гипс-Актив</div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($plaster2) ?></div>
+        </td>
+        <td>
+          <div class="d-flex">
+            <input class="column3_1" type="text" name="Price2" size="6">
+            <input type="submit" name="red2" value="Подтвердить">
+          </div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($good2) ?></div>
+        </td>
+      </tr>
 
-    <div style="display: flex;">
-      <div>маяк -</div>
-      <div>старая цена: <?php echo($pharos) ?></div>
-      <input type="text" name="Price9" size="10" value="<?php echo($pharos) ?>">
-      <input type="submit" name="red9" value="Подтвердить">
-      <div><?php echo($good9) ?></div>
-    </div>
+      <!-- line 3 -->
+      <tr>
+        <td class="column1">
+          <div>Штукатурка Knauf UNTERPUTZ</div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($plaster3) ?></div>
+        </td>
+        <td>
+          <div class="d-flex">
+            <input class="column3_1" type="text" name="Price3" size="6">
+            <input type="submit" name="red3" value="Подтвердить">
+          </div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($good3) ?></div>
+        </td>
+      </tr>
 
-    <div style="display: flex;">
-      <div>шайба -</div>
-      <div>старая цена: <?php echo($shim) ?></div>
-      <input type="text" name="Price10" size="10" value="<?php echo($shim) ?>">
-      <input type="submit" name="red10" value="Подтвердить">
-      <div><?php echo($good10) ?></div>
-    </div>
+      <!-- line 4 -->
+      <tr>
+        <td class="column1">
+          <div сlass="column1">Штукатурка Plitonit T1+</div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($plaster4) ?></div>
+        </td>
+        <td>
+          <div class="d-flex">
+            <input class="column3_1" type="text" name="Price4" size="6">
+            <input type="submit" name="red4" value="Подтвердить">
+          </div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($good4) ?></div>
+        </td>
+      </tr>
 
-    <div style="display: flex;">
-      <div>гвоздь -</div>
-      <div>старая цена: <?php echo($nail) ?></div>
-      <input type="text" name="Price11" size="10" value="<?php echo($nail) ?>">
-      <input type="submit" name="red11" value="Подтвердить">
-      <div><?php echo($good11) ?></div>
-    </div>
+      <!-- line 5 -->
+      <tr>
+        <td class="column1">
+          <div сlass="column1">Сетка тканая оцинкованная</div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($grid1) ?></div>
+        </td>
+        <td>
+          <div class="d-flex">
+            <input class="column3_1" type="text" name="Price5" size="6">
+            <input type="submit" name="red5" value="Подтвердить">
+          </div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($good5) ?></div>
+        </td>
+      </tr>
 
-    <div style="display: flex;">
-      <div>грязная отделка стен стрый фонд -</div>
-      <div>старая цена: <?php echo($dirty) ?></div>
-      <input type="text" name="Price12" size="10" value="<?php echo($dirty) ?>">
-      <input type="submit" name="red12" value="Подтвердить">
-      <div><?php echo($good12) ?></div>
-    </div>
+      <!-- line 6 -->
+      <tr>
+        <td class="column1">
+          <div сlass="column1">Сетка стеклотканевая</div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($grid2) ?></div>
+        </td>
+        <td>
+          <div class="d-flex">
+            <input class="column3_1" type="text" name="Price6" size="6">
+            <input type="submit" name="red6" value="Подтвердить">
+          </div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($good6) ?></div>
+        </td>
+      </tr>
 
-    <div style="display: flex;">
-      <div>чистая отделка стен старый фонд-</div>
-      <div>старая цена: <?php echo($clear1) ?></div>
-      <input type="text" name="Price13" size="10" value="<?php echo($clear1) ?>">
-      <input type="submit" name="red13" value="Подтвердить">
-      <div><?php echo($good13) ?></div>
-    </div>
+      <!-- line 7 -->
+      <tr>
+        <td class="column1">
+          <div>Грунт Knauf Миттельгрунд</div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($primer1) ?></div>
+        </td>
+        <td>
+          <div class="d-flex">
+            <input class="column3_1" type="text" name="Price7" size="6">
+            <input type="submit" name="red7" value="Подтвердить">
+          </div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($good7) ?></div>
+        </td>
+      </tr>
 
-    <div style="display: flex;">
-      <div>грязная отделка стен остальные -</div>
-      <div>старая цена: <?php echo($dirty2) ?></div>
-      <input type="text" name="Price16" size="10" value="<?php echo($dirty2) ?>">
-      <input type="submit" name="red16" value="Подтвердить">
-      <div><?php echo($good16) ?></div>
-    </div>
+      <!-- line 8 -->
+      <tr>
+        <td class="column1">
+          <div>Грунт Крепс Праймер</div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($primer2) ?></div>
+        </td>
+        <td>
+          <div class="d-flex">
+            <input class="column3_1" type="text" name="Price8" size="6">
+            <input type="submit" name="red8" value="Подтвердить">
+          </div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($good8) ?></div>
+        </td>
+      </tr>
 
-    <div style="display: flex;">
-      <div>чистая отделка стен остальные-</div>
-      <div>старая цена: <?php echo($clear4) ?></div>
-      <input type="text" name="Price17" size="10" value="<?php echo($clear4) ?>">
-      <input type="submit" name="red17" value="Подтвердить">
-      <div><?php echo($good17) ?></div>
-    </div>
+      <!-- line 9 -->
+      <tr>
+        <td class="column1">
+          <div>Профиль маячковый</div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($pharos) ?></div>
+        </td>
+        <td>
+          <div class="d-flex">
+            <input class="column3_1" type="text" name="Price9" size="6">
+            <input type="submit" name="red9" value="Подтвердить">
+          </div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($good9) ?></div>
+        </td>
+      </tr>
 
-    <div style="display: flex;">
-      <div>чистая отделка потолков -</div>
-      <div>старая цена: <?php echo($clear2) ?></div>
-      <input type="text" name="Price14" size="10" value="<?php echo($clear2) ?>">
-      <input type="submit" name="red14" value="Подтвердить">
-      <div><?php echo($good14) ?></div>
-    </div>
+      <!-- line 10 -->
+      <tr>
+        <td class="column1">
+          <div>Шайба</div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($shim) ?></div>
+        </td>
+        <td>
+          <div class="d-flex">
+            <input class="column3_1" type="text" name="Price10" size="6">
+            <input type="submit" name="red10" value="Подтвердить">
+          </div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($good10) ?></div>
+        </td>
+      </tr>
 
-    <div style="display: flex;">
-      <div>чистая отделка потолков -</div>
-      <div>старая цена: <?php echo($clear3) ?></div>
-      <input type="text" name="Price15" size="10" value="<?php echo($clear3) ?>">
-      <input type="submit" name="red15" value="Подтвердить">
-      <div><?php echo($good15) ?></div>
-    </div>
+      <!-- line 11 -->
+      <tr>
+        <td class="column1">
+          <div>Дюбель-гвоздь</div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($nail) ?></div>
+        </td>
+        <td>
+          <div class="d-flex">
+            <input class="column3_1" type="text" name="Price11" size="6">
+            <input type="submit" name="red11" value="Подтвердить">
+          </div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($good11) ?></div>
+        </td>
+      </tr>
+
+      <!-- line 12 -->
+      <tr>
+        <td class="column1">
+          <div>Черновая отделка стен. Старый фонд</div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($dirty) ?></div>
+        </td>
+        <td>
+          <div class="d-flex">
+            <input class="column3_1" type="text" name="Price12" size="6">
+            <input type="submit" name="red12" value="Подтвердить">
+          </div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($good12) ?></div>
+        </td>
+      </tr>
+
+      <!-- line 13 -->
+      <tr>
+        <td class="column1">
+          <div>Чистовая отделка стен. Старый фонд</div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($clear1) ?></div>
+        </td>
+        <td>
+          <div class="d-flex">
+            <input class="column3_1" type="text" name="Price13" size="6">
+            <input type="submit" name="red13" value="Подтвердить">
+          </div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($good13) ?></div>
+        </td>
+      </tr>
+
+      <!-- line 14 -->
+      <tr>
+        <td class="column1">
+          <div>Черновая отделка стен. Остальные</div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($dirty2) ?></div>
+        </td>
+        <td>
+          <div class="d-flex">
+            <input class="column3_1" type="text" name="Price16" size="6">
+            <input type="submit" name="red16" value="Подтвердить">
+          </div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($good16) ?></div>
+        </td>
+      </tr>
+
+      <!-- line 15 -->
+      <tr>
+        <td class="column1">
+          <div>Чистовая отделка стен. Остальные</div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($clear4) ?></div>
+        </td>
+        <td>
+          <div class="d-flex">
+            <input class="column3_1" type="text" name="Price17" size="6">
+            <input type="submit" name="red17" value="Подтвердить">
+          </div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($good17) ?></div>
+        </td>
+      </tr>
+
+      <!-- line 16 -->
+      <tr>
+        <td class="column1">
+          <div>Чистовая отделка потолков</div>
+        </td>
+        <td class="text-center">
+          <div class="text-center"><?php echo($clear2) ?></div>
+        </td>
+        <td>
+          <div class="d-flex">
+            <input class="column3_1" type="text" name="Price14" size="6">
+            <input type="submit" name="red14" value="Подтвердить">
+          </div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($good14) ?></div>
+        </td>
+      </tr>
+
+      <!-- line 17 -->
+      <tr>
+        <td class="column1">
+          <div>Чистовая отделка откосов</div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($clear3) ?></div>
+        </td>
+        <td>
+          <div class="d-flex">
+            <input class="column3_1" type="text" name="Price15" size="6">
+            <input type="submit" name="red15" value="Подтвердить">
+          </div>
+        </td>
+        <td class="text-center">
+          <div><?php echo($good15) ?></div>
+        </td>
+      </tr>
+
+    </table>
+
   </form>
+
+</section>
 
 </body>
 </html>
