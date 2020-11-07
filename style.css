@@ -196,26 +196,6 @@ button:focus, a:focus {
   padding-right: 6px;;
   padding-left: 18px;
 }
-.button_ver2_plaster_choice {
-  background-image: -webkit-linear-gradient(135deg, #fff 50%, transparent 50%);
-  background-image: linear-gradient(135deg, #fff 50%, transparent 50%);
-  background-position: 100%;
-  background-size: 400%;
-  -webkit-transition: background 700ms ease-in-out;
-  transition: background 700ms ease-in-out;
-}
-.button_ver2_plaster_choice:hover {
-  background-position: 0;
-  color: #ffa700 !important;
-  -webkit-transition: color 500ms ease-in-out;
-  transition: color 500ms ease-in-out;
-  text-decoration: none;
-  outline: 0;
-  box-shadow: 0 0 0 0.2rem #ffa700 inset;
-}
-.button_ver2_plaster_choice, .button_choice:not(:disabled):not(.disabled) {
-  cursor: pointer;
-}
 .brick{
   height: 340px;
   width: 340px;
@@ -278,10 +258,8 @@ button:focus, a:focus {
 }
 
 .img_block .content_block {
-  text-align:center;
+  text-align: center;
   min-height: 100%;
-}
-.img_block .content_block {
   display: block;
   position: relative;
   overflow:hidden;
@@ -299,7 +277,7 @@ button:focus, a:focus {
   text-transform: uppercase;
 }
 .img_block .content_block .over_block {
-  background-color:rgba(0, 160, 150, 0);
+  background-color: rgba(0, 160, 150, 0);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -312,7 +290,7 @@ button:focus, a:focus {
   transition:all 1s;
 }
 .img_block .content_block:hover .over_block {
-  display:block;
+  display: block;
   background-color: rgba(4, 4, 4, 0.431);
 }
 .img_block .content_block span {
@@ -330,7 +308,15 @@ button:focus, a:focus {
 }
 .img_block .content_block:hover span {
   height: 55%;
-
+}
+@media screen and (max-device-width: 992px) {
+  .img_block .content_block .over_block{
+    display: block;
+    background-color: rgba(4, 4, 4, 0.431);
+  }
+  .img_block .content_block span {
+    height: 55%;
+  }
 }
 
 /* Block2_area */
@@ -406,7 +392,6 @@ button{
   background: #ffa700;
 }
 
-
 #wall_plaster_square, #roof_plaster_square, #window_plaster_width{
   width: 40%;
 }
@@ -423,6 +408,10 @@ button{
 }
 .arrow{
   height: 20px;
+}
+.up-arrow{
+  height: 14px;
+  width: 16px;
 }
 .button_info{
   width: 30px;
@@ -973,4 +962,68 @@ div.box{
 }
 .out_display{
   display: none;
+}
+
+/* Modal Registration */
+.button_reg{
+  position: fixed;
+  bottom: 120px;
+  right: 96px;
+  color: #fff;
+  font-size: 18px;
+  background: #ffa700;
+  border-radius: 1rem;
+  z-index: 10;
+  /* opacity: 0;
+  transition: 0.5s !important; */
+  cursor: default !important;
+}
+
+.button_reg_ready{
+  opacity: 1;
+  transition: 0.5s !important;
+  cursor: pointer !important;
+}
+.sp-scroll-up {
+  background-color: #afbec8;
+  border-radius: 50%;
+}
+.sp-scroll-up {
+  display: none;
+  position: fixed;
+  bottom: 120px;
+  right: 30px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 16px;
+  color: #fff;
+  z-index: 10;
+}
+.sp-scroll-up:hover, .sp-scroll-up:active {
+  color: #fff;
+  background: #ffa700;
+  transition: color 400ms, background-color 400ms;
+}
+
+.button_ver2_plaster_choice {
+  background-image: -webkit-linear-gradient(135deg, #fff 50%, transparent 50%);
+  background-image: linear-gradient(135deg, #fff 50%, transparent 50%);
+  background-position: 100%;
+  background-size: 400%;
+  -webkit-transition: background 700ms ease-in-out;
+  transition: background 700ms ease-in-out;
+}
+.button_ver2_plaster_choice:hover {
+  background-position: 0;
+  color: #ffa700 !important;
+  -webkit-transition: color 500ms ease-in-out;
+  transition: color 500ms ease-in-out;
+  text-decoration: none;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #ffa700 inset;
+}
+.button_ver2_plaster_choice, .button_choice:not(:disabled):not(.disabled) {
+  cursor: pointer;
 }

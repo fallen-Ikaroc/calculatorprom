@@ -140,41 +140,48 @@
 </head>
 <body>
 
+<a href="#modal_reg" class="align-self-end popup-content text-center button_reg button_ver2_plaster_choice pt-1 pb-1 pr-3 pl-3 m-0 font-weight-bold" id="">Вызвать замерщика</a>
+<a href="#" class="sp-scroll-up" aria-label="Scroll Up">
+  <div class="d-flex h-100 justify-content-center">
+    <img src="img/up-arrow.svg" class="up-arrow align-self-center">
+  </div>
+</a>
+
   <form method="post">
     <input type="text" name="name" placeholder="Введите ваше имя" style="display: block">
     <input type="text" name="surname" placeholder="Введите вашу фамилию" style="display: block">
     <input type="text" name="email" placeholder="Введите вашу почту" style="display: block">
     <input type="text" name="telephone" placeholder="Введите ваш номер" style="display: block">
     <div style="display: none">
-      <input id="type_of_wall" type"text" name="type_of_wall"  value='1'style="display: block">
+      <input id="type_of_wall" type"text" name="type_of_wall" value='1'style="display: block">
 
-      <input id="square_wall_for_mail" type"text" name="square_wall"  value='0' style="display: block">
+      <input id="square_wall_for_mail" type"text" name="square_wall" value='0' style="display: block">
 
-      <input id="thikness_wall_for_mail" type"text" name="thikness_wall"  value='15' style="display: block">
-      <input id="facing_wallk_for_mail" type"text" name="facing_wallk"  value='1' style="display: block">
-      <input id="facing_wall_for_mail" type"text" name="facing_wall"  value='1' style="display: block">
-      <input id="plaster_wall_for_mail" type"text" name="plaster_wall"  value='1' style="display: block">
+      <input id="thikness_wall_for_mail" type"text" name="thikness_wall" value='15' style="display: block">
+      <input id="facing_wallk_for_mail" type"text" name="facing_wallk" value='1' style="display: block">
+      <input id="facing_wall_for_mail" type"text" name="facing_wall" value='1' style="display: block">
+      <input id="plaster_wall_for_mail" type"text" name="plaster_wall" value='1' style="display: block">
 
-      <input id="square_roof_for_mail" type"text" name="square_roof"  value='0' style="display: block">
-      <input id="thikness_roof_for_mail" type"text" name="thikness_roof"  value='15' style="display: block">
-      <input id="plaster_roof_for_mail" type"text" name="plaster_roof"  value='1' style="display: block">
+      <input id="square_roof_for_mail" type"text" name="square_roof" value='0' style="display: block">
+      <input id="thikness_roof_for_mail" type"text" name="thikness_roof" value='15' style="display: block">
+      <input id="plaster_roof_for_mail" type"text" name="plaster_roof" value='1' style="display: block">
 
-      <input id="square_window_for_mail" type"text" name="square_window"  value='0' style="display: block">
-      <input id="width_window_for_mail" type"text" name="width_window"  value='0' style="display: block">
-      <input id="thikness_window_for_mail" type"text" name="thikness_window"  value='15' style="display: block">
-      <input id="plaster_window_for_mail" type"text" name="plaster_window"  value='1' style="display: block">
+      <input id="square_window_for_mail" type"text" name="square_window" value='0' style="display: block">
+      <input id="width_window_for_mail" type"text" name="width_window" value='0' style="display: block">
+      <input id="thikness_window_for_mail" type"text" name="thikness_window" value='15' style="display: block">
+      <input id="plaster_window_for_mail" type"text" name="plaster_window" value='1' style="display: block">
 
-      <input id="sum_square_for_mail" type"text" name="sum_square"  value='0' style="display: block">
-      <input id="sum_work_for_mail" type"text" name="sum_work"  value='0' style="display: block">
-      <input id="sum_material_for_mail" type"text" name="sum_material"  value='0' style="display: block">
-      <input id="sale_for_mail" type"text" name="sale"  value='0' style="display: block">
-      <input id="sum_for_mail" type"text" name="sum"  value='0' style="display: block">
+      <input id="sum_square_for_mail" type"text" name="sum_square" value='0' style="display: block">
+      <input id="sum_work_for_mail" type"text" name="sum_work" value='0' style="display: block">
+      <input id="sum_material_for_mail" type"text" name="sum_material" value='0' style="display: block">
+      <input id="sale_for_mail" type"text" name="sale" value='0' style="display: block">
+      <input id="sum_for_mail" type"text" name="sum" value='0' style="display: block">
     </div>
     <input type="submit" name="but" id="but" value="Отправить" /><br/>
   </form>
 
   <!-- Block1 -->
-  <div style="display: none;">
+  <div class="out_display">
     <div id="price_plaster1"><?php echo($plaster1)?></div>
     <div id="price_plaster2"><?php echo($plaster2)?></div>
     <div id="price_plaster3"><?php echo($plaster3)?></div>
@@ -193,6 +200,7 @@
     <div id="price_clear2"><?php echo($clear2)?></div>
     <div id="price_clear3"><?php echo($clear3)?></div>
   </div>
+
 <section id="block1">
 
   <div id="block1_position" class="p-5">
@@ -213,7 +221,7 @@
 
       <div class="shadow_1 card effect__click p-4 justify-content-center">
 
-      <!-- Выбор стены -->
+        <!-- Выбор стены -->
         <div id="block1_ver1" class="d-flex card__front">
 
           <div class="d-flex block1_ver1_1">
@@ -260,7 +268,7 @@
 
         </div>
 
-      <!-- Выбор штукатурки -->
+        <!-- Выбор штукатурки -->
         <div id="block1_ver2" class="d-flex card__back">
 
            <div class="d-flex block1_ver2_1">
@@ -1348,37 +1356,35 @@
 
   <section id="block0_commonresult" class="fixed-bottom block3_material_dn">
 
-    <div class="d-flex string_6 block0_commonresult_ver2">
+    <div class="d-flex string_6">
 
-      <!-- <div class="d-flex flex-fill"> -->
-        <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Сумма<br>площадей</div></div></div>
-        <div class="common_border align-self-center"></div>
-        <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum_square">0</div>&nbsp;м&sup2;</div></div>
+      <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Сумма<br>площадей</div></div></div>
+      <div class="common_border align-self-center"></div>
+      <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum_square">0</div>&nbsp;м&sup2;</div></div>
 
-        <div class="common_border align-self-center"></div>
+      <div class="common_border align-self-center"></div>
 
-        <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Стоимость<br>работ</div></div></div>
-        <div class="common_border align-self-center"></div>
-        <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum_work">0</div>&nbsp;руб</div></div>
+      <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Стоимость<br>работ</div></div></div>
+      <div class="common_border align-self-center"></div>
+      <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum_work">0</div>&nbsp;руб</div></div>
 
-        <div class="common_border align-self-center"></div>
+      <div class="common_border align-self-center"></div>
 
-        <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Стоимость<br>материалов</div></div></div>
-        <div class="common_border align-self-center"></div>
-        <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum_material">0</div>&nbsp;руб</div></div>
+      <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Стоимость<br>материалов</div></div></div>
+      <div class="common_border align-self-center"></div>
+      <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum_material">0</div>&nbsp;руб</div></div>
 
-        <div class="common_border align-self-center common_border_out_display"></div>
+      <div class="common_border align-self-center common_border_out_display"></div>
 
-        <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Ваша<br>скидка</div></div></div>
-        <div class="common_border align-self-center"></div>
-        <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum_sale_">0</div>&nbsp;руб</div></div>
+      <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Ваша<br>скидка</div></div></div>
+      <div class="common_border align-self-center"></div>
+      <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum_sale_">0</div>&nbsp;руб</div></div>
 
-        <div class="common_border align-self-center"></div>
+      <div class="common_border align-self-center"></div>
 
-        <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Общая<br>стоимость</div></div></div>
-        <div class="common_border align-self-center"></div>
-        <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum">0</div>&nbsp;руб</div></div>
-      </div>
+      <div class="d-flex flex-fill common_cell"><div class="text-center align-self-center w-100"><div>Общая<br>стоимость</div></div></div>
+      <div class="common_border align-self-center"></div>
+      <div class="d-flex flex-fill common_input_cell"><div class="d-flex justify-content-center align-self-center w-100"><div id="common_sum">0</div>&nbsp;руб</div></div>
 
     </div>
 
@@ -1768,6 +1774,37 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- Modal Registration -->
+  <div id="modal_reg" class="white-popup mfp-hide">
+
+    <div class="modal_sale_name text-right font-weight-bold pt-2 pb-2">
+      Скидки от площади работ в м&sup2;
+    </div>
+
+    <div class="d-flex flex-column text-center modal_plaster">
+
+      <div class="" style="">
+        <div class="d-flex font-weight-bold string_3">
+          <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">От 200 до 299</div></div>
+          <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">От 300 до 399</div></div>
+          <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">От 400 до 699</div></div>
+          <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">От 700 до 999</div></div>
+          <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">От 1000 до 1399</div></div>
+          <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Свыше 1400</div></div>
+        </div>
+        <div class="d-flex string_4">
+          <div class="d-flex flex-fill border_bottom_left"><div class="d-flex align-self-center justify-content-center w-100">2%</div></div>
+          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">3%</div></div>
+          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">4%</div></div>
+          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">6%</div></div>
+          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">8%</div></div>
+          <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100">10%</div></div>
+        </div>
+      </div>
+
     </div>
   </div>
 
