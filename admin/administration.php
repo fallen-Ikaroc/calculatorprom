@@ -44,7 +44,7 @@
     $plaster1=$price1;
     if($result1)
       $good1="Успешно!";
-    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/admin/administration.php">';
   }
   if( isset( $_GET['red2'] )  && isset($_GET['Price2']) ){
     $price2=htmlentities(mysqli_real_escape_string($link, $_GET['Price2']));
@@ -53,7 +53,7 @@
     $plaster2=$price2;
     if($result2)
       $good2="Успешно!";
-      echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
+      echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/admin/administration.php">';
   }
   if( isset( $_GET['red3'] )  && isset($_GET['Price3']) ){
     $price3=htmlentities(mysqli_real_escape_string($link, $_GET['Price3']));
@@ -62,7 +62,7 @@
     $plaster3=$price3;
     if($result3)
       $good3="Успешно!";
-    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/admin/administration.php">';
   }
   if( isset( $_GET['red4'] )  && isset($_GET['Price4']) ){
     $price4=htmlentities(mysqli_real_escape_string($link, $_GET['Price4']));
@@ -71,7 +71,7 @@
     $plaster4=$price4;
     if($result4)
       $good4="Успешно!";
-    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/admin/administration.php">';
   }
   if( isset( $_GET['red5'] )  && isset($_GET['Price5']) ){
     $price5=htmlentities(mysqli_real_escape_string($link, $_GET['Price5']));
@@ -80,7 +80,7 @@
     $grid1=$price5;
     if($result5)
       $good5="Успешно!";
-    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/admin/administration.php">';
   }
   if( isset( $_GET['red6'] )  && isset($_GET['Price6']) ){
     $price6=htmlentities(mysqli_real_escape_string($link, $_GET['Price6']));
@@ -89,7 +89,7 @@
     $grid2=$price6;
     if($result6)
       $good6="Успешно!";
-    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/admin/administration.php">';
   }
   if( isset( $_GET['red7'] )  && isset($_GET['Price7']) ){
     $price7=htmlentities(mysqli_real_escape_string($link, $_GET['Price7']));
@@ -98,7 +98,7 @@
     $primer1=$price7;
     if($result7)
       $good7="Успешно!";
-    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/admin/administration.php">';
   }
   if( isset( $_GET['red8'] )  && isset($_GET['Price8']) ){
     $price8=htmlentities(mysqli_real_escape_string($link, $_GET['Price8']));
@@ -107,7 +107,7 @@
     $primer2=$price8;
     if($result8)
       $good8="Успешно!";
-    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/admin/administration.php">';
   }
   if( isset( $_GET['red9'] )  && isset($_GET['Price9']) ){
     $price9=htmlentities(mysqli_real_escape_string($link, $_GET['Price9']));
@@ -116,7 +116,7 @@
     $pharos=$price9;
     if($result9)
       $good9="Успешно!";
-    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/admin/administration.php">';
   }
   if( isset( $_GET['red10'] )  && isset($_GET['Price10']) ){
     $price10=htmlentities(mysqli_real_escape_string($link, $_GET['Price10']));
@@ -125,7 +125,7 @@
     $shim=$price10;
     if($result10)
       $good10="Успешно!";
-    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/admin/administration.php">';
   }
   if( isset( $_GET['red11'] )  && isset($_GET['Price11']) ){
     $price11=htmlentities(mysqli_real_escape_string($link, $_GET['Price11']));
@@ -134,7 +134,7 @@
     $nail=$price11;
     if($result11)
       $good11="Успешно!";
-    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/admin/administration.php">';
   }
   if( isset( $_GET['red12'] )  && isset($_GET['Price12']) ){
     $price12=htmlentities(mysqli_real_escape_string($link, $_GET['Price12']));
@@ -143,7 +143,7 @@
     $dirty=$price12;
     if($result12)
       $good12="Успешно!";
-    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/admin/administration.php">';
   }
   if( isset( $_GET['red13'] )  && isset($_GET['Price13']) ){
     $price13=htmlentities(mysqli_real_escape_string($link, $_GET['Price13']));
@@ -152,7 +152,7 @@
     $clear1=$price13;
     if($result13)
       $good13="Успешно!";
-    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/admin/administration.php">';
   }
   if( isset( $_GET['red14'] )  && isset($_GET['Price14']) ){
     $price14=htmlentities(mysqli_real_escape_string($link, $_GET['Price14']));
@@ -161,7 +161,7 @@
     $clear2=$price14;
     if($result14)
       $good14="Успешно!";
-    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/admin/administration.php">';
   }
   if( isset( $_GET['red15'] )  && isset($_GET['Price15']) ){
     $price15=htmlentities(mysqli_real_escape_string($link, $_GET['Price15']));
@@ -170,7 +170,7 @@
     $clear3=$price15;
     if($result15)
       $good15="Успешно!";
-    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/admin/administration.php">';
   }
   if( isset( $_GET['red16'] )  && isset($_GET['Price16']) ){
     $price16=htmlentities(mysqli_real_escape_string($link, $_GET['Price16']));
@@ -179,7 +179,7 @@
     $dirty2=$price16;
     if($result16)
       $good16="Успешно!";
-    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/admin/administration.php">';
   }
   if( isset( $_GET['red17'] )  && isset($_GET['Price17']) ){
     $price17=htmlentities(mysqli_real_escape_string($link, $_GET['Price17']));
@@ -188,13 +188,16 @@
     $clear4=$price17;
     if($result17)
       $good17="Успешно!";
-    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/administration.php">';
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/admin/administration.php">';
+  }
+  if( isset( $_POST['out'] )){
+    echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/admin/index.html">';
   }
   mysqli_close($link);
   ?>
 
 <section class="administrative">
-
+  <form method="post"><input type="submit" value="Выйти" name="out"></form>
   <div class="heading">Строительный вопрос
     <div class="line_1"></div>
     <div class="line_2"></div>
