@@ -226,7 +226,7 @@
         </td>
         <td>
           <div class="d-flex">
-            <input class="column3_1" type="text" name="Price" size="6">
+            <input class="column3_1" type="number" name="Price">
             <input type="submit" name="red1" value="Подтвердить">
           </div>
         </td>
@@ -245,7 +245,7 @@
         </td>
         <td>
           <div class="d-flex">
-            <input class="column3_1" type="text" name="Price2" size="6">
+            <input class="column3_1" type="number" name="Price2">
             <input type="submit" name="red2" value="Подтвердить">
           </div>
         </td>
@@ -264,7 +264,7 @@
         </td>
         <td>
           <div class="d-flex">
-            <input class="column3_1" type="text" name="Price3" size="6">
+            <input class="column3_1" type="number" name="Price3">
             <input type="submit" name="red3" value="Подтвердить">
           </div>
         </td>
@@ -283,7 +283,7 @@
         </td>
         <td>
           <div class="d-flex">
-            <input class="column3_1" type="text" name="Price4" size="6">
+            <input class="column3_1" type="number" name="Price4">
             <input type="submit" name="red4" value="Подтвердить">
           </div>
         </td>
@@ -302,7 +302,7 @@
         </td>
         <td>
           <div class="d-flex">
-            <input class="column3_1" type="text" name="Price5" size="6">
+            <input class="column3_1" type="number" name="Price5">
             <input type="submit" name="red5" value="Подтвердить">
           </div>
         </td>
@@ -321,7 +321,7 @@
         </td>
         <td>
           <div class="d-flex">
-            <input class="column3_1" type="text" name="Price6" size="6">
+            <input class="column3_1" type="number" name="Price6">
             <input type="submit" name="red6" value="Подтвердить">
           </div>
         </td>
@@ -340,7 +340,7 @@
         </td>
         <td>
           <div class="d-flex">
-            <input class="column3_1" type="text" name="Price7" size="6">
+            <input class="column3_1" type="number" name="Price7">
             <input type="submit" name="red7" value="Подтвердить">
           </div>
         </td>
@@ -359,7 +359,7 @@
         </td>
         <td>
           <div class="d-flex">
-            <input class="column3_1" type="text" name="Price8" size="6">
+            <input class="column3_1" type="number" name="Price8">
             <input type="submit" name="red8" value="Подтвердить">
           </div>
         </td>
@@ -378,7 +378,7 @@
         </td>
         <td>
           <div class="d-flex">
-            <input class="column3_1" type="text" name="Price9" size="6">
+            <input class="column3_1" type="number" name="Price9">
             <input type="submit" name="red9" value="Подтвердить">
           </div>
         </td>
@@ -397,7 +397,7 @@
         </td>
         <td>
           <div class="d-flex">
-            <input class="column3_1" type="text" name="Price10" size="6">
+            <input class="column3_1" type="number" name="Price10">
             <input type="submit" name="red10" value="Подтвердить">
           </div>
         </td>
@@ -416,7 +416,7 @@
         </td>
         <td>
           <div class="d-flex">
-            <input class="column3_1" type="text" name="Price11" size="6">
+            <input class="column3_1" type="number" name="Price11">
             <input type="submit" name="red11" value="Подтвердить">
           </div>
         </td>
@@ -435,7 +435,7 @@
         </td>
         <td>
           <div class="d-flex">
-            <input class="column3_1" type="text" name="Price12" size="6">
+            <input class="column3_1" type="number" name="Price12">
             <input type="submit" name="red12" value="Подтвердить">
           </div>
         </td>
@@ -454,7 +454,7 @@
         </td>
         <td>
           <div class="d-flex">
-            <input class="column3_1" type="text" name="Price13" size="6">
+            <input class="column3_1" type="number" name="Price13">
             <input type="submit" name="red13" value="Подтвердить">
           </div>
         </td>
@@ -473,7 +473,7 @@
         </td>
         <td>
           <div class="d-flex">
-            <input class="column3_1" type="text" name="Price16" size="6">
+            <input class="column3_1" type="number" name="Price16">
             <input type="submit" name="red16" value="Подтвердить">
           </div>
         </td>
@@ -492,7 +492,7 @@
         </td>
         <td>
           <div class="d-flex">
-            <input class="column3_1" type="text" name="Price17" size="6">
+            <input class="column3_1" type="number" name="Price17">
             <input type="submit" name="red17" value="Подтвердить">
           </div>
         </td>
@@ -511,7 +511,7 @@
         </td>
         <td>
           <div class="d-flex">
-            <input class="column3_1" type="text" name="Price14" size="6">
+            <input class="column3_1" type="number" name="Price14">
             <input type="submit" name="red14" value="Подтвердить">
           </div>
         </td>
@@ -530,7 +530,7 @@
         </td>
         <td>
           <div class="d-flex">
-            <input class="column3_1" type="text" name="Price15" size="6">
+            <input class="column3_1" type="number" name="Price15">
             <input type="submit" name="red15" value="Подтвердить">
           </div>
         </td>

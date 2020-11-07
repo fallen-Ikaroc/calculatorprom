@@ -1,9 +1,29 @@
-/* Modal Plaster */
+/* Modals */
 jQuery(document).ready(function($) {
     $('.popup-content').magnificPopup({
         type: 'inline'
     });
 });
+
+jQuery(function ($) {
+
+  // go to top
+  $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+          $('.sp-scroll-up').fadeIn();
+      } else {
+          $('.sp-scroll-up').fadeOut(400);
+      }
+  });
+
+  $('.sp-scroll-up').click(function () {
+      $("html, body").animate({
+          scrollTop: 0
+      }, 600);
+      return false;
+  });
+});
+
 
 var place=1;
 var plaster=1;

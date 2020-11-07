@@ -94,8 +94,9 @@ table {
   margin-right: 2px;
   margin-left: 1px;
 }
-input[type="text" i] {
+input[type="number" i] {
   font-family: 'Roboto', sans-serif;
+  max-width: 4em;
   font-weight: 500;
   font-size: 18px;
   padding-top: 2px;
