@@ -5,6 +5,10 @@ jQuery(document).ready(function($) {
     });
 });
 
+$(function(){
+  $("#mask-phone").mask("+7 (999) 999-99-99");
+});
+
 jQuery(function ($) {
 
   // go to top
@@ -679,11 +683,15 @@ $(function(){
       $('#block3_material').addClass('block3_material_dn');
       $('#block4_workresult').addClass('block3_material_dn');
       $('#block0_commonresult').addClass('block3_material_dn');
+      $('#button_call').addClass('out_display');
+      $('#button_up').addClass('out_display');
     }
     else{
       $('#block3_material').removeClass('block3_material_dn');
       $('#block4_workresult').removeClass('block3_material_dn');
       $('#block0_commonresult').removeClass('block3_material_dn');
+      $('#button_call').removeClass('out_display');
+      $('#button_up').removeClass('out_display');
     }
   });
 

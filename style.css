@@ -494,7 +494,6 @@ button{
   border-top: 3px solid #2C3E50;
 }
 
-
 .border_top_left{
   border-right: 3px solid #2C3E50;
   border-bottom: 3px solid #2C3E50;
@@ -503,6 +502,13 @@ button{
   border-right: 3px solid #2C3E50;
   border-left: 3px solid #2C3E50;
   border-bottom: 3px solid #2C3E50;
+}
+.border_top_big{
+  border-right: 3px solid #2C3E50;
+  border-left: 3px solid #2C3E50;
+  border-bottom: 3px solid #2C3E50;
+  max-width: 185px;
+  width: 185px;
 }
 .border_top_thickness{
   border-right: 3px solid #2C3E50;
@@ -521,6 +527,13 @@ button{
   border-top: 3px solid #2C3E50;
   border-right: 3px solid #2C3E50;
   border-left: 3px solid #2C3E50;
+}
+.border_bottom_big{
+  border-top: 3px solid #2C3E50;
+  border-right: 3px solid #2C3E50;
+  border-left: 3px solid #2C3E50;
+  max-width: 185px;
+  width: 185px;
 }
 .border_bottom_thickness{
   border-top: 3px solid #2C3E50;
@@ -974,8 +987,6 @@ div.box{
   background: #ffa700;
   border-radius: 1rem;
   z-index: 10;
-  /* opacity: 0;
-  transition: 0.5s !important; */
   cursor: default !important;
 }
 
@@ -1007,6 +1018,121 @@ div.box{
   transition: color 400ms, background-color 400ms;
 }
 
+
+/* Modal Registration */
+#modal_reg{
+  color: #2C3E50;
+  max-width: 580px;
+  min-width: 580px;
+}
+.button_send{
+  color: #fff;
+  font-size: 16px;
+  background-color: #ffa700;
+  border-radius: 100px;
+  width: 18rem;
+  padding: 0.25rem;
+  border: 0px;
+  text-transform: uppercase;
+  cursor: default !important;
+  padding: 14px 18px;
+  border: 0 none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 auto;
+}
+.button_send:hover{
+  color: #ffa700;
+  background: #fff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #ffa700 inset;
+  cursor: pointer !important;
+}
+.contactus-label-center a {
+  line-height: 16px;
+  font-size: 14px;
+  color: #848484;
+  text-decoration: underline;
+}
+.contactus-label-center{
+  margin: 0 auto 1em auto;
+}
+.phm-go-back {
+  position: relative;
+  left: 11%;
+  top: 30px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #58778c;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  border: 1px solid #58778c;
+  padding: 7px 40px;
+  border-radius: 100px;
+}
+.phm-go-back:hover {
+  color: #fff;
+  background-color: #ffa700;
+  border-color: #ffa700;
+}
+
+input[type="text"].send_form, input[type="tel"].send_form, input[type="email"].send_form{
+  height: 50px !important;
+  padding: 4px 20px !important;
+  font-size: 14px !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+}
+input[type="text"].send_form, input[type="tel"].send_form, input[type="email"].send_form{
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #495057;
+  background-color: #fff;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, .15);
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+input[type="text"].send_form:focus, input[type="tel"].send_form:focus, input[type="email"].send_form:focus{
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+}
+
+/* для элемента input c type="checkbox" */
+.custom-checkbox {
+  position: absolute;
+  top: 297px;
+  left: 121px;
+  z-index: -1;
+  opacity: 0;
+}
+  /* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox+label {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+/* создание в label псевдоэлемента before со следующими стилями */
+.custom-checkbox+label::before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  border: 1px solid #ccc;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom-checkbox:checked+label::before {
+  background-color: #ffffff;
+  background-image: url(img/done_2.svg);
+}
+
+/* All Buttons */
 .button_ver2_plaster_choice {
   background-image: -webkit-linear-gradient(135deg, #fff 50%, transparent 50%);
   background-image: linear-gradient(135deg, #fff 50%, transparent 50%);

@@ -41,7 +41,6 @@
       $to = 'goshakkoshak65@gmail.com';
       $subject='the subject';
       $message='Имя: '.$_POST['name']."\r\n".
-               'Фамилия: '.$_POST['surname']."\r\n".
               'Почта: '.$_POST['email']."\r\n".
               'Телефон: '.$_POST['telephone']."\r\n"."\r\n";
       switch($_POST['type_of_wall']){
@@ -117,7 +116,7 @@
        }
        echo '<meta http-equiv="refresh" content="0;url=http://calc2.ru/">';
     }
-    if(array_key_exists('but',$_POST))
+    if(array_key_exists('button_send',$_POST))
     {
       testfun();
     }
@@ -129,7 +128,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="jquery-1.12.4.min.js"></script>
-  <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>
   <script src="bootstrap.min.js" type="text/javascript"></script>
@@ -137,50 +135,23 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
   <script src="script2.js" type="text/javascript"></script>
+  <script src="jquery.maskedinput.min.js"></script>
 </head>
 <body>
 
-<a href="#modal_reg" class="align-self-end popup-content text-center button_reg button_ver2_plaster_choice pt-1 pb-1 pr-3 pl-3 m-0 font-weight-bold" id="">Вызвать замерщика</a>
-<a href="#" class="sp-scroll-up" aria-label="Scroll Up">
-  <div class="d-flex h-100 justify-content-center">
-    <img src="img/up-arrow.svg" class="up-arrow align-self-center">
-  </div>
-</a>
+  <!-- Block0 -->
 
-  <form method="post">
-    <input type="text" name="name" placeholder="Введите ваше имя" style="display: block">
-    <input type="text" name="surname" placeholder="Введите вашу фамилию" style="display: block">
-    <input type="text" name="email" placeholder="Введите вашу почту" style="display: block">
-    <input type="text" name="telephone" placeholder="Введите ваш номер" style="display: block">
-    <div style="display: none">
-      <input id="type_of_wall" type"text" name="type_of_wall" value='1'style="display: block">
+<section id="block0">
 
-      <input id="square_wall_for_mail" type"text" name="square_wall" value='0' style="display: block">
+  <a href="/raboty-i-tseny/mekhanizirovannaya-shtukaturka" class="phm-go-back">Назад</a>
 
-      <input id="thikness_wall_for_mail" type"text" name="thikness_wall" value='15' style="display: block">
-      <input id="facing_wallk_for_mail" type"text" name="facing_wallk" value='1' style="display: block">
-      <input id="facing_wall_for_mail" type"text" name="facing_wall" value='1' style="display: block">
-      <input id="plaster_wall_for_mail" type"text" name="plaster_wall" value='1' style="display: block">
-
-      <input id="square_roof_for_mail" type"text" name="square_roof" value='0' style="display: block">
-      <input id="thikness_roof_for_mail" type"text" name="thikness_roof" value='15' style="display: block">
-      <input id="plaster_roof_for_mail" type"text" name="plaster_roof" value='1' style="display: block">
-
-      <input id="square_window_for_mail" type"text" name="square_window" value='0' style="display: block">
-      <input id="width_window_for_mail" type"text" name="width_window" value='0' style="display: block">
-      <input id="thikness_window_for_mail" type"text" name="thikness_window" value='15' style="display: block">
-      <input id="plaster_window_for_mail" type"text" name="plaster_window" value='1' style="display: block">
-
-      <input id="sum_square_for_mail" type"text" name="sum_square" value='0' style="display: block">
-      <input id="sum_work_for_mail" type"text" name="sum_work" value='0' style="display: block">
-      <input id="sum_material_for_mail" type"text" name="sum_material" value='0' style="display: block">
-      <input id="sale_for_mail" type"text" name="sale" value='0' style="display: block">
-      <input id="sum_for_mail" type"text" name="sum" value='0' style="display: block">
+  <a href="#modal_reg" class="align-self-end popup-content text-center button_reg out_display button_ver2_plaster_choice pt-1 pb-1 pr-3 pl-3 m-0 font-weight-bold" id="button_call">Вызвать замерщика</a>
+  <a href="#" class="sp-scroll-up" id="button_up" aria-label="Scroll Up">
+    <div class="d-flex h-100 justify-content-center">
+      <img src="img/up-arrow.svg" class="up-arrow align-self-center">
     </div>
-    <input type="submit" name="but" id="but" value="Отправить" /><br/>
-  </form>
+  </a>
 
-  <!-- Block1 -->
   <div class="out_display">
     <div id="price_plaster1"><?php echo($plaster1)?></div>
     <div id="price_plaster2"><?php echo($plaster2)?></div>
@@ -200,6 +171,11 @@
     <div id="price_clear2"><?php echo($clear2)?></div>
     <div id="price_clear3"><?php echo($clear3)?></div>
   </div>
+
+</section>
+
+
+  <!-- Block1 -->
 
 <section id="block1">
 
@@ -1398,22 +1374,22 @@
     </div>
     <div class="d-flex flex-column text-center modal_plaster">
 
-      <div class="" style="">
+      <div>
         <div class="d-flex font-weight-bold string_3">
-          <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">От 200 до 299</div></div>
-          <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">От 300 до 399</div></div>
-          <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">От 400 до 699</div></div>
-          <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">От 700 до 999</div></div>
-          <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">От 1000 до 1399</div></div>
-          <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Свыше 1400</div></div>
+          <div class="d-flex col border_top_left"><div class="text-center align-self-center w-100">От 200 до 299</div></div>
+          <div class="d-flex col border_top"><div class="text-center align-self-center w-100">От 300 до 399</div></div>
+          <div class="d-flex col border_top"><div class="text-center align-self-center w-100">От 400 до 699</div></div>
+          <div class="d-flex col border_top"><div class="text-center align-self-center w-100">От 700 до 999</div></div>
+          <div class="d-flex flex-fill border_top_big"><div class="text-center align-self-center w-100">От 1000 до 1399</div></div>
+          <div class="d-flex col border_top_right"><div class="text-center align-self-center w-100">Свыше 1400</div></div>
         </div>
         <div class="d-flex string_4">
-          <div class="d-flex flex-fill border_bottom_left"><div class="d-flex align-self-center justify-content-center w-100">2%</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">3%</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">4%</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">6%</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">8%</div></div>
-          <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100">10%</div></div>
+          <div class="d-flex col border_bottom_left"><div class="d-flex align-self-center justify-content-center w-100">2%</div></div>
+          <div class="d-flex col border_bottom"><div class="d-flex align-self-center justify-content-center w-100">3%</div></div>
+          <div class="d-flex col border_bottom"><div class="d-flex align-self-center justify-content-center w-100">4%</div></div>
+          <div class="d-flex col border_bottom"><div class="d-flex align-self-center justify-content-center w-100">6%</div></div>
+          <div class="d-flex flex-fill border_bottom_big"><div class="d-flex align-self-center justify-content-center w-100">8%</div></div>
+          <div class="d-flex col border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100">10%</div></div>
         </div>
       </div>
 
@@ -1780,32 +1756,45 @@
   <!-- Modal Registration -->
   <div id="modal_reg" class="white-popup mfp-hide">
 
-    <div class="modal_sale_name text-right font-weight-bold pt-2 pb-2">
-      Скидки от площади работ в м&sup2;
+    <div class="modal_sale_name text-center font-weight-bold pt-4 pb-4">
+      Вызвать замерщика
     </div>
 
-    <div class="d-flex flex-column text-center modal_plaster">
+    <form method="post" class="d-flex flex-column pb-4 pr-5 pl-5 m-0">
+      <input type="text" name="name" class="send_form mb-3" placeholder="Ваше имя*" required="">
+      <input type="tel" name="telephone" id="mask-phone" class="send_form mb-3" placeholder="Ваш телефон*" required="">
+      <input type="email" name="email" class="send_form mb-3" placeholder="Ваша почта*" required="">
+      <input type="checkbox" class="custom-checkbox" id="checkbox" name="checkbox" value="yes" checked="" required="">
+      <label for="checkbox" class="contactus-label-center">
+        <a href="/politika-konfidentsialnosti" target="_blank">Согласие на обработку персональных данных</a>
+      </label>
+      <input type="submit" name="but" id="button_send" class="button_send button_ver2_plaster_choice mb-2" value="Отправить">
 
-      <div class="" style="">
-        <div class="d-flex font-weight-bold string_3">
-          <div class="d-flex flex-fill border_top_left"><div class="text-center align-self-center w-100">От 200 до 299</div></div>
-          <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">От 300 до 399</div></div>
-          <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">От 400 до 699</div></div>
-          <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">От 700 до 999</div></div>
-          <div class="d-flex flex-fill border_top"><div class="text-center align-self-center w-100">От 1000 до 1399</div></div>
-          <div class="d-flex flex-fill border_top_right"><div class="text-center align-self-center w-100">Свыше 1400</div></div>
-        </div>
-        <div class="d-flex string_4">
-          <div class="d-flex flex-fill border_bottom_left"><div class="d-flex align-self-center justify-content-center w-100">2%</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">3%</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">4%</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">6%</div></div>
-          <div class="d-flex flex-fill border_bottom"><div class="d-flex align-self-center justify-content-center w-100">8%</div></div>
-          <div class="d-flex flex-fill border_bottom_right"><div class="d-flex align-self-center justify-content-center w-100">10%</div></div>
-        </div>
+      <div class="out_display">
+        <input id="type_of_wall" type"text" name="type_of_wall" value='1'>
+        <input id="square_wall_for_mail" type"text" name="square_wall" value='0'>
+        <input id="thikness_wall_for_mail" type"text" name="thikness_wall" value='15'>
+        <input id="facing_wallk_for_mail" type"text" name="facing_wallk" value='1'>
+        <input id="facing_wall_for_mail" type"text" name="facing_wall" value='1'>
+        <input id="plaster_wall_for_mail" type"text" name="plaster_wall" value='1'>
+
+        <input id="square_roof_for_mail" type"text" name="square_roof" value='0'>
+        <input id="thikness_roof_for_mail" type"text" name="thikness_roof" value='15'>
+        <input id="plaster_roof_for_mail" type"text" name="plaster_roof" value='1'>
+
+        <input id="square_window_for_mail" type"text" name="square_window" value='0'>
+        <input id="width_window_for_mail" type"text" name="width_window" value='0'>
+        <input id="thikness_window_for_mail" type"text" name="thikness_window" value='15'>
+        <input id="plaster_window_for_mail" type"text" name="plaster_window" value='1'>
+
+        <input id="sum_square_for_mail" type"text" name="sum_square" value='0'>
+        <input id="sum_work_for_mail" type"text" name="sum_work" value='0'>
+        <input id="sum_material_for_mail" type"text" name="sum_material" value='0'>
+        <input id="sale_for_mail" type"text" name="sale" value='0'>
+        <input id="sum_for_mail" type"text" name="sum" value='0'>
       </div>
+    </form>
 
-    </div>
   </div>
 
   <script src="script.js" type="text/javascript"></script>
