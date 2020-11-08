@@ -391,9 +391,9 @@ $(function(){
     $('#grid_outlay_quantity').text($('#wall_grid_quantity').html());
     $('#grid_outlay_sum').text($('#wall_grid_sum').html());
     $('#grid_outlay_price').text($('#wall_grid_price').html());
-    if($('#wall_grid_price').html()===price_grid1)
+    if(parseFloat($('#wall_grid_price').html())===price_grid1)
       $('#grid_outlay').text('Сетка тканая оцинкованная');
-    if($('#wall_grid_price').html()===price_grid2)
+    if(parseFloat($('#wall_grid_price').html())===price_grid2)
       $('#grid_outlay').text('Сетка стеклотканевая');
   });
 
@@ -812,7 +812,7 @@ function wall_grid(){
     var shim=(Math.ceil(square*5/100))*price_shim;
     $('#wall_grid_sum').text((Math.ceil(square/30))*price+nail+shim);
   }
-  if(place===2 || place===3 || place===3){
+  if(place===2 || place===3 || place===4){
     $('#wall_grid_consume').text('20');
     $('#wall_grid_quantity').text(Math.ceil(square/100));
     $('#wall_grid_weight').text((Math.ceil(square/100))*2.4);
