@@ -66,7 +66,8 @@ table {
   font-weight: 500;
   font-family: 'Russo One', sans-serif;
   max-width: 1070px;
-  margin: 0.5em auto;
+  margin: 0.5em auto 1em auto;
+  
 }
 .line_1{
   height: 11px;
@@ -179,6 +180,7 @@ input[type="submit" i], input[type="text" i], input[type="password" i] {
   margin-bottom: 1em;
   font-size: 22px !important;
   text-align: center;
+  margin-top: 1em;
 }
 .login_2{
   min-width: 300px;
@@ -193,9 +195,17 @@ input[type="submit" i], input[type="text" i], input[type="password" i] {
   background-color: #fff !important;
   cursor: pointer;
 }
+.login_3{
+  min-width: 300px;
+  margin-bottom: 1em;
+  font-size: 22px !important;
+  text-align: center;
+}
 .login_2:hover {
   color: #fff;
   background-color: #ffa700 !important;
   border-color: #ffa700 !important;
-
+}
+.login_2:focus {
+    outline: -webkit-focus-ring-color auto 0px;
 }

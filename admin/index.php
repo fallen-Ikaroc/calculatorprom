@@ -8,6 +8,7 @@ if(isset($_GET['logSESS'])) {$logSESS = $_GET['logSESS'];unset($logSESS);}
 if(isset($_POST['logSESS'])) {$logSESS = $_POST['logSESS'];unset($logSESS);}
 
   session_start();
+  
   $logSESS = $_SESSION['$logSESS'];
   if(!isset($logSESS))
   {
@@ -213,4 +214,5 @@ if( isset( $_GET['red17'] )  && isset($_GET['Price17']) ){
 require_once('templates/administration.php');
 
 mysqli_close($link);
+
 ?>

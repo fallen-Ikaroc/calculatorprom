@@ -649,7 +649,7 @@ $(function(){
 
     $('#block4_workresult_wall_id').addClass('block4_workresult_wall');
     $('#block3_material_wall_id').addClass('block3_material_wall');
-
+    $('#checkmark_wall').removeClass('checkmark_ready');
     $('#wall_primer_square').text($('#wall_plaster_square').val());
     $('#wall_grid_square').text($('#wall_plaster_square').val());
     wall_plaster();
@@ -661,7 +661,7 @@ $(function(){
 
     $('#block4_workresult_roof_id').addClass('block4_workresult_roof');
     $('#block3_material_roof_id').addClass('block3_material_roof');
-
+    $('#checkmark_roof').removeClass('checkmark_ready');
     $('#roof_primer_square').text($('#roof_plaster_square').val());
     roof_plaster();
     roof_primer();
@@ -671,7 +671,7 @@ $(function(){
     $('#window_plaster_width').val('0');
     $('#block4_workresult_window_id').addClass('block4_workresult_window');
     $('#block3_material_window_id').addClass('block3_material_window');
-
+    $('#checkmark_window').removeClass('checkmark_ready');
     $('#window_primer_square').text($('#window_plaster_square').val());
     window_plaster();
     window_primer();

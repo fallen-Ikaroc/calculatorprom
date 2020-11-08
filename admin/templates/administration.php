@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="description" content="<?=$header_metaD?>">
 <meta name="keywords" content="<?=$header_metaK?>">
-<link rel="stylesheet" type="text/css" href="style_admin.css"/>
+<link rel="stylesheet" type="text/css" href="templates/style_admin.css"/>
 </head>
 
 <body>
