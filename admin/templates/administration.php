@@ -5,17 +5,25 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="description" content="<?=$header_metaD?>">
 <meta name="keywords" content="<?=$header_metaK?>">
-<link rel="stylesheet" type="text/css" href="templates/style_admin.css"/>
+<link rel="stylesheet" type="text/css" href="style_admin.css"/>
 </head>
 
 <body>
-<p style="padding:3px;"><a style="font-weight:100;" href="index.php">Добро пожаловать в админ панель</a> </p>
+
 <section class="administrative">
-  <a href="exit.php" style="font-size:10px;font-weight:100;">(Выход)</a>
-  <div class="heading">Строительный вопрос
-    <div class="line_1"></div>
-    <div class="line_2"></div>
+
+  <div class="d-flex">
+    <a class="start" href="index.php">Добро пожаловать в админ панель</a>
   </div>
+
+  <div class="d-flex heading">
+    <div>Строительный вопрос
+      <div class="line_1"></div>
+      <div class="line_2"></div>
+    </div>
+    <a href="exit.php" class="phm-go-back">Выход</a>
+  </div>
+
   <form name="form" method="GET">
 
     <table class="table_pos" border="1">

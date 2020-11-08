@@ -38,7 +38,7 @@
     mysqli_close($link);
     function testfun()
     {
-      $to = 'goshakkoshak65@gmail.com';
+      $to = 'info@svopros.com';
       $subject='the subject';
       $message='Имя: '.$_POST['name']."\r\n".
               'Почта: '.$_POST['email']."\r\n".

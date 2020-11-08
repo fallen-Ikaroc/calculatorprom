@@ -25,6 +25,13 @@ table {
   font-weight: 500;
   font-family: 'Roboto', sans-serif;
 }
+.start{
+  color: #2C3E50;
+  font-size: 36px;
+  font-weight: 500;
+  font-family: 'Russo One', sans-serif;
+  margin: 1em auto 0 auto;
+}
 .d-flex{
   display: flex;
 }
@@ -59,7 +66,7 @@ table {
   font-weight: 500;
   font-family: 'Russo One', sans-serif;
   max-width: 1070px;
-  margin: 1em auto 0.5em auto;
+  margin: 0.5em auto;
 }
 .line_1{
   height: 11px;
@@ -94,7 +101,7 @@ table {
   margin-right: 2px;
   margin-left: 1px;
 }
-input[type="number" i] {
+input[type="number" i], input[type="text" i], input[type="password" i] {
   font-family: 'Roboto', sans-serif;
   max-width: 4em;
   font-weight: 500;
@@ -104,7 +111,7 @@ input[type="number" i] {
   padding-right: 2px;
   padding-left: 2px;
 }
-input[type="submit" i] {
+input[type="submit" i], input[type="text" i], input[type="password" i] {
   font-weight: 500;
   font-size: 18px;
   color: #2C3E50;
@@ -127,6 +134,23 @@ input[type="submit" i] {
   display: none;
   min-width: 112px;
 }
+.phm-go-back {
+  font-weight: 700;
+  font-size: 14px;
+  color: #58778c;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  border: 1px solid #58778c;
+  padding: 7px 40px;
+  border-radius: 100px;
+  max-height: 17px;
+  margin: auto 0 auto auto;
+}
+.phm-go-back:hover {
+  color: #fff;
+  background-color: #ffa700;
+  border-color: #ffa700;
+}
 @media screen and (max-device-width: 1145px) {
   .administrative{
     font-size: 20px;
@@ -142,4 +166,36 @@ input[type="submit" i] {
   .change_2{
     display: table-cell;
   }
+}
+.login_table{
+  margin-top: 1em;
+}
+.login{
+  display: flex;
+  flex-direction: column;
+}
+.login_1{
+  min-width: 300px;
+  margin-bottom: 1em;
+  font-size: 22px !important;
+  text-align: center;
+}
+.login_2{
+  min-width: 300px;
+  margin-bottom: 1em;
+  font-size: 18px !important;
+  color: #58778c;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  border: 1px solid #58778c !important;
+  padding: 7px 40px !important;
+  border-radius: 100px;
+  background-color: #fff !important;
+  cursor: pointer;
+}
+.login_2:hover {
+  color: #fff;
+  background-color: #ffa700 !important;
+  border-color: #ffa700 !important;
+
 }
