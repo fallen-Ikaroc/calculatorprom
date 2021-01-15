@@ -145,7 +145,7 @@
 
   <a href="/raboty-i-tseny/mekhanizirovannaya-shtukaturka" class="phm-go-back">Назад</a>
 
-  <a href="#modal_reg" class="align-self-end popup-content text-center button_reg out_display button_ver2_plaster_choice pt-1 pb-1 pr-3 pl-3 m-0 font-weight-bold" id="button_call">Вызвать замерщика</a>
+  <a href="#modal_reg" class="align-self-end popup-content text-center button_reg out_display button_ver2_plaster_choice pt-1 pb-1 pr-3 pl-3 m-0" id="button_call">Вызвать замерщика</a>
   <a href="#" class="sp-scroll-up" id="button_up" aria-label="Scroll Up">
     <div class="d-flex h-100 justify-content-center">
       <img src="img/up-arrow.svg" class="up-arrow align-self-center">
@@ -177,9 +177,9 @@
 
   <!-- Block1 -->
 
-<section id="block1">
+<section id="block1" class="phm-section">
 
-  <div id="block1_position" class="p-5">
+  <div id="block1_position" class="phm-container">
 
     <div class="heading_block1 text-center pb-5">Калькулятор штукатурных работ</div>
 
@@ -190,12 +190,12 @@
         <div class="line_2"></div>
       </div>
       <div class="flex-fill"></div>
-      <a class="align-self-end text-center button_type_object button_ver2_plaster_choice m-0 font-weight-bold" id="return_to_font">Изменить тип основания</a>
+      <a class="align-self-end text-center button_type_object button_ver2_plaster_choice m-0" id="return_to_font">Изменить тип основания</a>
     </div>
 
     <div class="d-flex align-items-center justify-content-center">
 
-      <div class="shadow_1 card effect__click p-4 justify-content-center">
+      <div class="card effect__click justify-content-center phm-card">
 
         <!-- Выбор стены -->
         <div id="block1_ver1" class="d-flex card__front">
@@ -249,7 +249,7 @@
 
            <div class="d-flex block1_ver2_1">
 
-            <div class="block1_brick d-flex flex-column text-center block1_ver2_plaster shadow_2">
+            <div id="block1_plaster1" class="block1_brick d-flex flex-column text-center block1_ver2_plaster box_outline">
               <div class="d-flex p-2">
                 <div class="d-flex align-self-center">
                   <div class="block1_ver2_plaster_info_position m-0"></div>
@@ -278,10 +278,10 @@
                   </div>
                 </div>
               </div>
-              <div class="p-2"><label for="block1_knaufg" class="block1_ver2_plaster_choice button_ver2_plaster_choice m-0 font-weight-bold">Выбрать</label></div>
+              <div class="p-2"><label for="block1_knaufg" class="block1_ver2_plaster_choice button_ver2_plaster_choice m-0">Выбрать</label></div>
             </div>
 
-            <div class="block1_monolith d-flex flex-column text-center block1_ver2_plaster shadow_2">
+            <div id="block1_plaster2" class="block1_monolith d-flex flex-column text-center block1_ver2_plaster">
               <div class="d-flex p-2">
                 <div class="d-flex align-self-center">
                   <div class="block1_ver2_plaster_info_position m-0"></div>
@@ -310,14 +310,14 @@
                   </div>
                 </div>
               </div>
-              <div class="p-2"><label for="block1_volma" class="block1_ver2_plaster_choice button_ver2_plaster_choice m-0 font-weight-bold">Выбрать</label></div>
+              <div class="p-2"><label for="block1_volma" class="block1_ver2_plaster_choice button_ver2_plaster_choice m-0">Выбрать</label></div>
             </div>
 
           </div>
 
           <div class="d-flex block1_ver2_2">
 
-            <div class="block1_aerocrete d-flex flex-column text-center block1_ver2_plaster shadow_2">
+            <div id="block1_plaster3" class="block1_aerocrete d-flex flex-column text-center block1_ver2_plaster">
               <div class="d-flex p-2">
                 <div class="d-flex align-self-center">
                   <div class="block1_ver2_plaster_info_position m-0"></div>
@@ -346,10 +346,10 @@
                   </div>
                 </div>
               </div>
-              <div class="p-2"><label for="block1_knaufc" class="block1_ver2_plaster_choice button_ver2_plaster_choice m-0 font-weight-bold">Выбрать</label></div>
+              <div class="p-2"><label for="block1_knaufc" class="block1_ver2_plaster_choice button_ver2_plaster_choice m-0">Выбрать</label></div>
             </div>
 
-            <div class="block1_cinder d-flex flex-column text-center block1_ver2_plaster shadow_2">
+            <div id="block1_plaster4" class="block1_cinder d-flex flex-column text-center block1_ver2_plaster">
               <div class="d-flex p-2">
                 <div class="d-flex align-self-center">
                   <div class="block1_ver2_plaster_info_position m-0"></div>
@@ -378,7 +378,7 @@
                   </div>
                 </div>
               </div>
-              <div class="p-2"><label for="block1_plitonit" class="block1_ver2_plaster_choice button_ver2_plaster_choice m-0 font-weight-bold">Выбрать</label></div>
+              <div class="p-2"><label for="block1_plitonit" class="block1_ver2_plaster_choice button_ver2_plaster_choice m-0">Выбрать</label></div>
             </div>
 
           </div>
@@ -410,9 +410,9 @@
 
   <!-- Block2 Area -->
 
-<section id="block2_area">
+<section id="block2_area" class="phm-section">
 
-  <div class="block_position p-5">
+  <div class="block_position phm-container">
 
     <div id="block2_wall">
 
@@ -479,7 +479,7 @@
                     Под плитку<br>
                     <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
                     Под камень
-                    <div class="text-center"><label for="block2_wall_type_dirty" class="w-50 block2_choice button_choice font-weight-bold">Выбрать</label></div>
+                    <div class="text-center"><label for="block2_wall_type_dirty" class="w-50 block2_choice button_choice">Выбрать</label></div>
                   </div>
 
                 </div>
@@ -499,7 +499,7 @@
                     Под шпатлёвку<br>
                     <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
                     Под обои
-                    <div class="text-center"><label for="block2_wall_type_clear" class="w-50 block2_choice button_choice font-weight-bold">Выбрать</label></div>
+                    <div class="text-center"><label for="block2_wall_type_clear" class="w-50 block2_choice button_choice">Выбрать</label></div>
                   </div>
 
                 </div>
@@ -522,7 +522,7 @@
                     Под плитку<br>
                     <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
                     Под камень
-                    <div class="text-center"><label for="block2_wall_type_dirty_fond" class="w-50 block2_choice button_choice font-weight-bold">Выбрать</label></div>
+                    <div class="text-center"><label for="block2_wall_type_dirty_fond" class="w-50 block2_choice button_choice">Выбрать</label></div>
                   </div>
 
                 </div>
@@ -541,7 +541,7 @@
                     Под шпатлёвку<br>
                     <img src="img/right-arrow.svg" class="arrow align-self-center pr-2">
                     Под обои
-                    <div class="text-center"><label for="block2_wall_type_clear_fond" class="w-50 block2_choice button_choice font-weight-bold">Выбрать</label></div>
+                    <div class="text-center"><label for="block2_wall_type_clear_fond" class="w-50 block2_choice button_choice">Выбрать</label></div>
                   </div>
 
                 </div>
@@ -880,9 +880,9 @@
 
   <!-- Block3 Material -->
 
-<section id="block3_material" class="block3_material_dn">
+<section id="block3_material" class="block3_material_dn phm-section">
 
-  <div class="block_position p-5">
+  <div class="block_position phm-container">
 
     <div class="d-flex pb-4">
       <div class="m-0">
@@ -1223,9 +1223,9 @@
 
   <!-- Block4 Workresult -->
 
-<section id="block4_workresult" class="block3_material_dn">
+<section id="block4_workresult" class="block3_material_dn phm-section">
 
-  <div class="block_position p-5">
+  <div class="block_position phm-container">
 
     <div class="d-flex pb-4">
       <div class="m-0">

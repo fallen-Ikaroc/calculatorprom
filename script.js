@@ -119,8 +119,7 @@ $(function(){
 
         $('#fond_card').removeClass('forcards');
         $('#other_card').addClass('forcards');
-
-
+    
         break;
       case 2:
         place=2;
@@ -144,7 +143,6 @@ $(function(){
         $('#fond_card').addClass('forcards');
         $('#other_card').removeClass('forcards');
 
-
         break;
       case 3:
         place=3;
@@ -167,8 +165,7 @@ $(function(){
 
         $('#fond_card').addClass('forcards');
         $('#other_card').removeClass('forcards');
-
-
+            
         break;
       case 4:
         place=4;
@@ -191,7 +188,6 @@ $(function(){
 
         $('#fond_card').addClass('forcards');
         $('#other_card').removeClass('forcards');
-
 
         break;
     }
@@ -219,6 +215,11 @@ $(function(){
         $('#plaster_wall_outlay_price').text(price_plaster1);
         $('#plaster_roof_outlay_price').text(price_plaster1);
         $('#plaster_window_outlay_price').text(price_plaster1);
+            
+        $('#block1_plaster1').addClass('box_outline');
+        $('#block1_plaster2').removeClass('box_outline');
+        $('#block1_plaster3').removeClass('box_outline');
+        $('#block1_plaster4').removeClass('box_outline'); 
         break;
       case 2:
         plaster=2;
@@ -235,6 +236,12 @@ $(function(){
         $('#plaster_wall_outlay_price').text(price_plaster2);
         $('#plaster_roof_outlay_price').text(price_plaster2);
         $('#plaster_window_outlay_price').text(price_plaster2);
+            
+            
+        $('#block1_plaster1').removeClass('box_outline');
+        $('#block1_plaster2').addClass('box_outline');
+        $('#block1_plaster3').removeClass('box_outline');
+        $('#block1_plaster4').removeClass('box_outline');
         break;
       case 3:
         plaster=3;
@@ -251,6 +258,11 @@ $(function(){
         $('#plaster_wall_outlay_price').text(price_plaster3);
         $('#plaster_roof_outlay_price').text(price_plaster3);
         $('#plaster_window_outlay_price').text(price_plaster3);
+            
+        $('#block1_plaster1').removeClass('box_outline');
+        $('#block1_plaster2').removeClass('box_outline');
+        $('#block1_plaster3').addClass('box_outline');
+        $('#block1_plaster4').removeClass('box_outline');
         break;
       case 4:
         plaster=4;
@@ -267,6 +279,11 @@ $(function(){
         $('#plaster_wall_outlay_price').text(price_plaster4);
         $('#plaster_roof_outlay_price').text(price_plaster4);
         $('#plaster_window_outlay_price').text(price_plaster4);
+            
+        $('#block1_plaster1').removeClass('box_outline');
+        $('#block1_plaster2').removeClass('box_outline');
+        $('#block1_plaster3').removeClass('box_outline');
+        $('#block1_plaster4').addClass('box_outline');
         break;
     }
     wall_plaster();
@@ -387,7 +404,7 @@ $(function(){
     $('#primer_wall_outlay_sum').text($('#wall_primer_sum').html());
   });
   $('#wall_grid_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
-    $('#gris_outlay_weight').text($('#wall_grid_weight').html());
+    $('#gris_outlay_weight').text((parseFloat($('#wall_grid_weight').html())).toFixed(2));
     $('#grid_outlay_quantity').text($('#wall_grid_quantity').html());
     $('#grid_outlay_sum').text($('#wall_grid_sum').html());
     $('#grid_outlay_price').text($('#wall_grid_price').html());
@@ -402,9 +419,9 @@ $(function(){
     $('#plaster_roof_outlay_weight').text($('#roof_plaster_weight').html());
     $('#plaster_roof_outlay_quantity').text($('#roof_plaster_quantity').html());
     $('#plaster_roof_outlay_sum').text($('#roof_plaster_sum').html());
-    $('#pharos_roof_outlay_quantity').text(Math.ceil(Math.ceil($('#roof_plaster_square').val()/2)/20));
-    $('#pharos_roof_outlay_sum').text((Math.ceil(Math.ceil($('#roof_plaster_square').val()/2)/20))*price_pharos);
-    $('#pharos_roof_outlay_weight').text((Math.ceil(Math.ceil($('#roof_plaster_square').val()/2)/20))*0.48);
+    $('#pharos_roof_outlay_quantity').text(Math.ceil(Math.ceil($('#roof_plaster_square').val()/3)));
+    $('#pharos_roof_outlay_sum').text((Math.ceil(Math.ceil($('#roof_plaster_square').val()/3)))*price_pharos);
+    $('#pharos_roof_outlay_weight').text(((Math.ceil(Math.ceil($('#roof_plaster_square').val()/3)))*0.024).toFixed(2));
   });
   $('#roof_primer_sum').bind('DOMNodeInserted DOMNodeRemoved', function(){
     $('#primer_roof_outlay_weight').text($('#roof_primer_weight').html());
