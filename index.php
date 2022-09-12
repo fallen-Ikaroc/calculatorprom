@@ -896,7 +896,7 @@
 
       <!-- Строка 0 -->
       <div class="d-flex string_3 font-weight-bold">
-        <div class="d-flex flex-fill border_top_left_2"><div class="text-center align-self-center w-100">Материал</div></div>
+        <div class="d-flex flex-fill border_top_left_2"><div class="text-center align-self-center ">Материал</div></div>
         <div class="d-flex flex-fill border_top_2"><div class="text-center align-self-center w-100">Площадь</div></div>
         <div class="d-flex flex-fill border_top_2"><div class="text-center align-self-center w-100">Расход</div></div>
         <div class="d-flex flex-fill border_top_2_small"><div class="text-center align-self-center w-100">Кол-во</div></div>
